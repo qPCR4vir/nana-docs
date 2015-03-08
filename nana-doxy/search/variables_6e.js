@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['name',['name',['../d6/d35/structnana_1_1filesystem_1_1fileinfo.html#a9e2e3ad6245c234bae15ca3328d12dde',1,'nana::filesystem::fileinfo::name()'],['../dc/d71/classnana_1_1place_1_1implement_1_1division.html#ad5cab7df6fb100150c5bc79793516e30',1,'nana::place::implement::division::name()'],['../db/d18/structnana_1_1detail_1_1font__tag.html#a6a3a2ea961b0a2815903ce647c30e86e',1,'nana::detail::font_tag::name()'],['../d0/dd4/structpng__s_p_l_t__struct.html#af3b088b149e790b9b98ebedde69a70f0',1,'png_sPLT_struct::name()'],['../d0/dee/structpng__unknown__chunk__t.html#aed965186b30a6f15541d20d7dd8a6849',1,'png_unknown_chunk_t::name()'],['../d4/d86/structgz__header__s.html#a60ae5eee2882d1c25b3bb328972f0149',1,'gz_header_s::name()']]],
+  ['name_5fmax',['name_max',['../d4/d86/structgz__header__s.html#af503d267de15a461b81dcbbfb0d628e5',1,'gz_header_s']]],
+  ['native_5fhandle',['native_handle',['../de/d84/structnana_1_1detail_1_1native__interface_1_1window__result.html#af88ba1fc72cf7ed60994f5fa29e1538f',1,'nana::detail::native_interface::window_result::native_handle()'],['../d5/d2c/structnana_1_1detail_1_1bedrock_1_1thread__context_1_1cursor__tag.html#ac6bcfc0fc3da120c2b2278f80d28f8f7',1,'nana::detail::bedrock::thread_context::cursor_tag::native_handle()'],['../d4/d51/structnana_1_1notifier_1_1implement.html#acd3159adcdc6b9026a9416559964d91f',1,'nana::notifier::implement::native_handle()']]],
+  ['nentries',['nentries',['../d0/dd4/structpng__s_p_l_t__struct.html#ac5844e98e4c43733bad6b83b54dc7a9f',1,'png_sPLT_struct']]],
+  ['net_5fwm_5fname',['net_wm_name',['../d4/da1/structnana_1_1detail_1_1atombase__tag.html#a188694c389a1b28c5b3bf7064f5cee4d',1,'nana::detail::atombase_tag']]],
+  ['net_5fwm_5fstate',['net_wm_state',['../d4/da1/structnana_1_1detail_1_1atombase__tag.html#a21790091100ee2c75501674a0fb20324',1,'nana::detail::atombase_tag']]],
+  ['net_5fwm_5fstate_5ffullscreen',['net_wm_state_fullscreen',['../d4/da1/structnana_1_1detail_1_1atombase__tag.html#a86f33be456a19248527d8a2f6fbb2ba3',1,'nana::detail::atombase_tag']]],
+  ['net_5fwm_5fstate_5fmaximized_5fhorz',['net_wm_state_maximized_horz',['../d4/da1/structnana_1_1detail_1_1atombase__tag.html#a43c8ad9b498c78ae88e819f6c18ffce1',1,'nana::detail::atombase_tag']]],
+  ['net_5fwm_5fstate_5fmaximized_5fvert',['net_wm_state_maximized_vert',['../d4/da1/structnana_1_1detail_1_1atombase__tag.html#a7b67b7e4efa3c42c04571def235df05a',1,'nana::detail::atombase_tag']]],
+  ['net_5fwm_5fstate_5fmodal',['net_wm_state_modal',['../d4/da1/structnana_1_1detail_1_1atombase__tag.html#a77271868ad623cc086a2d1d51c8ebbd0',1,'nana::detail::atombase_tag']]],
+  ['net_5fwm_5fstate_5fskip_5ftaskbar',['net_wm_state_skip_taskbar',['../d4/da1/structnana_1_1detail_1_1atombase__tag.html#a1e9be00c9d1f8c9e42c561802dd5f6aa',1,'nana::detail::atombase_tag']]],
+  ['net_5fwm_5fwindow_5ftype',['net_wm_window_type',['../d4/da1/structnana_1_1detail_1_1atombase__tag.html#affffb74c5ffaa07c0bf988ff2894bffd',1,'nana::detail::atombase_tag']]],
+  ['net_5fwm_5fwindow_5ftype_5fdialog',['net_wm_window_type_dialog',['../d4/da1/structnana_1_1detail_1_1atombase__tag.html#aafad88984a06bafe272066aa4614ab8d',1,'nana::detail::atombase_tag']]],
+  ['net_5fwm_5fwindow_5ftype_5fnormal',['net_wm_window_type_normal',['../d4/da1/structnana_1_1detail_1_1atombase__tag.html#ad889485d1b5d718c7f871ab71e18f47b',1,'nana::detail::atombase_tag']]],
+  ['net_5fwm_5fwindow_5ftype_5futility',['net_wm_window_type_utility',['../d4/da1/structnana_1_1detail_1_1atombase__tag.html#ae30ce6b9fd6e93cf555be5c09c6af097',1,'nana::detail::atombase_tag']]],
+  ['next',['next',['../d5/d6d/structnana_1_1widgets_1_1detail_1_1tree__node.html#a4f0b55822ab7c4854aae076b51588ba1',1,'nana::widgets::detail::tree_node::next()'],['../df/db6/structgz_file__s.html#a8c1f4682372cc228f4e37bf7f95870a8',1,'gzFile_s::next()']]],
+  ['next_5fin',['next_in',['../d7/d8a/structz__stream__s.html#a71613678076af3a9a4bb28d51a146150',1,'z_stream_s']]],
+  ['next_5fout',['next_out',['../d7/d8a/structz__stream__s.html#aed4a02cfe93e975314fed50b04427bf3',1,'z_stream_s']]],
+  ['no_5factivate',['no_activate',['../d5/d27/structnana_1_1appearance.html#a75d0f250c8ec213d499c3725a89564ef',1,'nana::appearance']]],
+  ['node',['node',['../da/d12/structnana_1_1drawerbase_1_1treebox_1_1trigger_1_1basic__implement_1_1adjust__tag.html#a35d37ce2ebb9bf565165d2eaf5c8f55a',1,'nana::drawerbase::treebox::trigger::basic_implement::adjust_tag']]],
+  ['node_5fstate',['node_state',['../d0/dcd/structnana_1_1drawerbase_1_1treebox_1_1trigger_1_1basic__implement.html#a8bad2990ad2608c7a9726fca7356abaf',1,'nana::drawerbase::treebox::trigger::basic_implement']]],
+  ['normal',['normal',['../d4/daa/structnana_1_1drawerbase_1_1treebox_1_1node__image__tag.html#a162ed337dd6482770ccd708e925366a1',1,'nana::drawerbase::treebox::node_image_tag']]],
+  ['notifier_5fptr',['notifier_ptr',['../df/d05/structnana_1_1arg__notifier.html#a3e51ca87fe2a6b6115a0a6084826a8fd',1,'nana::arg_notifier']]],
+  ['npos',['npos',['../d2/d76/namespacenana.html#a036f3e1d69c17cc1fda73b00b03b13d9',1,'nana']]]
+];
