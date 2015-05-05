@@ -17,5 +17,6 @@ var classnana_1_1date =
     [ "operator>", "da/d05/classnana_1_1date.html#abc597016af98c9e7ef25ac40736d171d", null ],
     [ "operator>=", "da/d05/classnana_1_1date.html#aa767a8cc09b8d8a78232e0358910001c", null ],
     [ "read", "da/d05/classnana_1_1date.html#ae9cfc1b599079c30c49b57234442e60c", null ],
+    [ "set", "da/d05/classnana_1_1date.html#a54701be4c6145ad1cdea85d46bcc9e1c", null ],
     [ "year_days", "da/d05/classnana_1_1date.html#acc60104a19bfcf9b0144fb30a1d1a5f4", null ]
 ];

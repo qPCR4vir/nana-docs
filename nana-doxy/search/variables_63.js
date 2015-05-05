@@ -22,6 +22,7 @@ var searchData=
   ['clipboard',['clipboard',['../d4/da1/structnana_1_1detail_1_1atombase__tag.html#a1ad05c5e89369b450fb8063332b6fcd3',1,'nana::detail::atombase_tag']]],
   ['color',['color',['../da/d6c/structnana_1_1detail_1_1drawable__impl__type_1_1pen__spec.html#a017956bb944e255a8e4a7d0f3e3cd30c',1,'nana::detail::drawable_impl_type::pen_spec::color()'],['../d7/daf/structnana_1_1detail_1_1drawable__impl__type_1_1brush__spec.html#add3ccf6b1ced5ef633ff8ca0884039e6',1,'nana::detail::drawable_impl_type::brush_spec::color()']]],
   ['color_5ftype',['color_type',['../d6/d1d/structpng__row__info__struct.html#a646244422549c66e6661cfcdb67c8e28',1,'png_row_info_struct']]],
+  ['columns_5forder',['columns_order',['../d3/dfa/structnana_1_1drawerbase_1_1listbox_1_1export__options.html#a8c99ed7b1d10aec2e6bd26256ff9f4e2',1,'nana::drawerbase::listbox::export_options']]],
   ['combox',['combox',['../df/dc4/structnana_1_1inputbox_1_1text_1_1implement.html#aeafc71a33e777b65744044e19c699a60',1,'nana::inputbox::text::implement']]],
   ['comm_5fmax',['comm_max',['../d4/d86/structgz__header__s.html#aa0529f45e5c08b3009cfc2a61a86aea0',1,'gz_header_s']]],
   ['comment',['comment',['../d4/d86/structgz__header__s.html#a1d4fd0807e838ce4bfde54aa021e18e9',1,'gz_header_s']]],

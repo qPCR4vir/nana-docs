@@ -30,6 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Nana C++ Library. Reference for users.
+   &#160;<span id="projectnumber">v1.0.2</span>
    </div>
    <div id="projectbrief">What we need to use nana</div>
   </td>
@@ -143,10 +144,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afe1387323bde27e8c838eac033b5d6a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca88bf32112a1346da97c630cdf1ab46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d65/classnana_1_1drawerbase_1_1menu_1_1menu__window.html#aca88bf32112a1346da97c630cdf1ab46">goto_next</a> (bool forward)</td></tr>
 <tr class="separator:aca88bf32112a1346da97c630cdf1ab46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3df63246fb306383ab3ede0372efb33"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d65/classnana_1_1drawerbase_1_1menu_1_1menu__window.html#ac3df63246fb306383ab3ede0372efb33">goto_submenu</a> ()</td></tr>
-<tr class="separator:ac3df63246fb306383ab3ede0372efb33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51f5c81ed58ce99c9bac1e3d65f9d7ca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d65/classnana_1_1drawerbase_1_1menu_1_1menu__window.html#a51f5c81ed58ce99c9bac1e3d65f9d7ca">exit_submenu</a> ()</td></tr>
-<tr class="separator:a51f5c81ed58ce99c9bac1e3d65f9d7ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae268c79ec2650a50ef94902b801a5326"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d65/classnana_1_1drawerbase_1_1menu_1_1menu__window.html#ae268c79ec2650a50ef94902b801a5326">submenu</a> (bool enter)</td></tr>
+<tr class="separator:ae268c79ec2650a50ef94902b801a5326"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab30be590d88ba34647243f24d67658ee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d65/classnana_1_1drawerbase_1_1menu_1_1menu__window.html#ab30be590d88ba34647243f24d67658ee">send_shortkey</a> (<a class="el" href="../../d2/d76/namespacenana.html#a35311db12836ce5d4401d47d08b4b97a">nana::char_t</a> <a class="el" href="../../da/dba/classnana_1_1key.html">key</a>)</td></tr>
 <tr class="separator:ab30be590d88ba34647243f24d67658ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af259f5c80ffb7a0cc4cfe2deec5afd89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d65/classnana_1_1drawerbase_1_1menu_1_1menu__window.html#af259f5c80ffb7a0cc4cfe2deec5afd89">pick</a> ()</td></tr>
@@ -361,29 +360,6 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a51f5c81ed58ce99c9bac1e3d65f9d7ca"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool nana::drawerbase::menu::menu_window::exit_submenu </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="aca88bf32112a1346da97c630cdf1ab46"></a>
 <div class="memitem">
 <div class="memproto">
@@ -396,29 +372,6 @@ Additional Inherited Members</h2></td></tr>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>forward</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ac3df63246fb306383ab3ede0372efb33"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool nana::drawerbase::menu::menu_window::goto_submenu </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -512,13 +465,37 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ae268c79ec2650a50ef94902b801a5326"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool nana::drawerbase::menu::menu_window::submenu </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/d76/namespacenana.html">nana</a></li><li class="navelem"><a class="el" href="../../d2/def/namespacenana_1_1drawerbase.html">drawerbase</a></li><li class="navelem"><a class="el" href="../../d3/deb/namespacenana_1_1drawerbase_1_1menu.html">menu</a></li><li class="navelem"><a class="el" href="../../dd/d65/classnana_1_1drawerbase_1_1menu_1_1menu__window.html">menu_window</a></li>
-    <li class="footer">Generated on Sun Mar 8 2015 18:54:47 for Nana C++ Library. Reference for users. by
+    <li class="footer">Generated on Tue May 5 2015 21:51:16 for Nana C++ Library. Reference for users. by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

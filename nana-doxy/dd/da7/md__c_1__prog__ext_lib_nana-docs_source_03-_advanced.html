@@ -30,6 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Nana C++ Library. Reference for users.
+   &#160;<span id="projectnumber">v1.0.2</span>
    </div>
    <div id="projectbrief">What we need to use nana</div>
   </td>
@@ -116,74 +117,79 @@ $(document).ready(function(){initNavTree('dd/da7/md__c_1__prog__ext_lib_nana-doc
 </div>
 <div class="textblock"><h1><a class="anchor" id="desing"></a>
 Think about the Design</h1>
-<p>Assuming the design of a framework that generates some data and it requires a module for representing these data in GUI. In general, we just introduce an interface for outputting these data, for example: </p>
+<p>Assuming the design of a framework that generates some data and it requires a module for representing these data in a GUI. In general, we just introduce an interface for outputting these data, for example: </p>
 <pre class="fragment">    struct data { std::string url; }; 
+
     class uiface 
     { public: 
             virtual ~uiface() = 0; 
             virtual void create_ui_element(const data&amp;) = 0; 
     }; 
+
     uiface::~uiface(){} 
+
     class framework 
-    { public: 
-            framework(): uiface_(0) 
+    { 
+            uiface *        uiface_{}; 
+            std::vector&lt;data&gt; cont_; 
+  public: 
+            framework() 
             { 
                     data dat; 
                     dat.url = "stdex.sf.net"; 
                     cont_.push_back(dat); 
+
                     dat.url = "nanaproject.wordpress.com"; 
                     cont_.push_back(dat); 
             } 
             void set(uiface * uif) { uiface_ = uif; } 
+
             void work() 
             { if(uiface_) 
-              { for(std::vector&lt;data&gt;::const_iterator i = cont_.begin(); i != cont_.end();   ++i) 
-                    { uiface_-&gt;create_ui_element(*i); 
-                    } 
-              } 
+                for(auto &amp; ui_el : cont_ ) 
+                      uiface_-&gt;create_ui_element(ui_el); 
             } 
-      private: 
-            uiface * uiface_; 
-            std::vector&lt;data&gt; cont_; 
     }; 
-</pre><p>Now we need a GUI and it creates some buttons for representing the data, and when a buttons is clicked, it outputs the data that button represents. And then, let’s define a GUI for that requirement. </p>
+</pre><p>Now we need a GUI that will create some buttons for representing the data. When a button is clicked, it outputs the data that the button represents. Letâ€™s define a GUI for that requirement. </p>
 <pre class="fragment">    namespace ui 
     { 
-            using namespace nana::gui; 
+            using namespace nana; 
             class bar : public form, public uiface 
-            { public: 
-                    bar() { gird_.bind(*this); } 
+            { 
+                    using btn_pair = std::pair&lt;std::shared_ptr&lt;button&gt;, data&gt; btn_pair; 
+            place plc_; 
+                    std::vector&lt;btn_pair&gt; ui_el_; 
+
+      public: 
+                    bar() { plc_.bind(*this); plc_.div("&lt;verical abc gap=3&gt;");} 
+
               private: 
-                    typedef std::pair&lt;std::shared_ptr&lt;button&gt;, data&gt; btn_pair; 
-                               //Now we implement the virtual function that declared by uiface 
-                    virtual void create_ui_element(const data&amp; dat) 
+                               //Now we implement the virtual function declared by uiface 
+                    void create_ui_element(const data&amp; dat) override
                     { 
                             btn_pair p(std::shared_ptr&lt;button&gt;(new button(*this)), dat); 
                                                       //Make the click event 
-                            p.first-&gt;make_event&lt;events::click&gt;(*this, &amp;bar::_m_click); 
-                            p.first-&gt;caption(nana::stringset_cast(dat.url)); 
-                            gird_.push(*(p.first), 0, 22); 
+                            p.first-&gt;events().click(  [&amp;](const arg_mouse&amp; ei){_m_click( ei);} ); 
+                            p.first-&gt;caption(nana::string(charset(dat.url))); 
+                            plc_["abc"]&lt;&lt; *(p.first); 
+            plc_.collocate();
                             ui_el_.push_back(p); 
                     } 
-                      private: 
-                    void _m_click(const eventinfo&amp; ei) 
+
+                    void _m_click(const arg_mouse&amp; ei) 
                     { 
                             //Check which button is clicked 
-                            for(std::vector&lt;btn_pair&gt;::iterator i = ui_el_.begin(); i != ui_el_.end();++i) 
-                            { if(i-&gt;first-&gt;handle() == ei.window) 
-                              {     //Show data 
-                                    i-&gt;second; 
-                                    std::cout&lt;&lt;"open "&lt;&lt;i-&gt;second.url&lt;&lt;std::endl; 
+                            for(btn_pair &amp;bp : ui_el_) 
+                            { if(bp.first-&gt;handle() == ei.window) 
+                              {     //Show data bp.second; 
+                                    std::cout&lt;&lt;"open "&lt;&lt;bp.second.url&lt;&lt;std::endl; 
                                     break; 
                               } 
                             } 
                     } 
-                     private: 
-                    gird gird_; 
-                    std::vector&lt;btn_pair&gt; ui_el_; 
             }; 
     } 
-</pre><p>It's done for implementing the GUI. Let's make the framework work. </p>
+</pre><p>The implementing of the GUI is done. Let's make the framework work. </p>
 <pre class="fragment">    #include &lt;nana/gui/wvl.hpp&gt; 
     #include &lt;nana/gui/widgets/button.hpp&gt; 
     #include &lt;nana/gui/layout.hpp&gt; 
@@ -191,51 +197,51 @@ Think about the Design</h1>
     include definition of framework... 
     int main() 
     { 
-    ui::bar bar; 
-    bar.show(); 
-    framework fw; 
-    fw.set(&amp;bar); 
-    fw.work(); 
-    nana::exec(); 
+            ui::bar bar; 
+            bar.show(); 
+            framework fw; 
+            fw.set(&amp;bar); 
+            fw.work(); 
+            nana::exec(); 
     } 
-</pre><p>Run the program. Refer to figure 2.2, when we click a button, the program would output the data that is represented by button.</p>
+</pre><p>Run the program. Refer to figure 2.2, when we click a button, the program would output the data that is represented by the button.</p>
 <div class="image">
 <img src="../../framework.jpg" alt="framework.jpg"/>
 <div class="caption">
 Figure 2.2 Design of a framework</div></div>
-<p> Let's rethink the implementation of class bar. It is a bit complicated, because a check of which button is clicked is needed. In fact, we can reduce the complexity of previous design by employing function object. Think about the following implementation. </p>
+<p> Let's rethink the implementation of the class <code>bar</code>. It is a bit complicated, because a check of which button is clicked is needed. In fact, we can reduce the complexity of the previous design by employing function object. Think about the following implementation. </p>
 <pre class="fragment">    class bar : public form, public uiface 
     {   struct command 
             {  data dat; 
                command(const data&amp; d): dat(d) {} 
                     void operator()() { std::cout&lt;&lt;"open "&lt;&lt;dat.url&lt;&lt;std::endl; } 
             }; 
+    place plc_; 
+            std::vector&lt;std::shared_ptr&lt;button&gt; &gt; ui_el_; 
       public: 
-            bar() { gird_.bind(*this); } 
+            bar() { plc_.bind(*this); plc_.div("&lt;verical abc gap=3&gt;");} 
       private: 
-                                                     //Now we implement the virtual function declared by uiface 
-            virtual void create_ui_element(const data&amp; dat) 
+                                                    //Now we implement the virtual function declared by uiface 
+            void create_ui_element(const data&amp; dat) override 
             { 
               std::shared_ptr&lt;button&gt; p(new button(*this)); 
                                                                              //Make the click event 
-              p-&gt;make_event&lt;events::click&gt;(command(dat)); 
-              p-&gt;caption(nana::stringset_cast(dat.url)); 
-              gird_.push(*p, 0, 22); 
+              p-&gt;event().click( command(dat) ); 
+              p-&gt;caption(nana::string(chartset(dat.url))); 
+              plc_["abc"]&lt;&lt; *p; 
+      plc_.collocate();
               ui_el_.push_back(p); 
             } 
-      private: 
-            gird gird_; 
-            std::vector&lt;std::shared_ptr&lt;button&gt; &gt; ui_el_; 
     }; 
 </pre><p>As you see it, the new implementation is more convenient. The check of which button is clicked and the pair structure are removed. In C++11, the standard library provides a bind function. Generating a function object by using <a class="elRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/utility/functional/bind.html">std::bind()</a> instead of giving a explicit definition of a class that used for a function. Let's remove the definition of struct bar::command and reimplement the create_ui_element(). </p>
-<pre class="fragment">    virtual void create_ui_element(const data&amp; dat) 
+<pre class="fragment">    void create_ui_element(const data&amp; dat) override 
     { 
-            std::shared_ptr&lt;button&gt; p(new button(*this)); 
+            std::shared_ptr&lt;button&gt; p(new button(*this, nana::string(chartset(dat.url)))); 
              //Make the click event 
-            typedef nana::functor&lt;void()&gt; fun; //or std::function&lt;void()&gt; 
-            p-&gt;make_event&lt;events::click&gt; ( fun (std::bind( &amp;bar::_m_click, this, dat) )); 
-            p-&gt;caption(nana::stringset_cast(dat.url)); 
-            gird_.push(*p, 0, 22); 
+            using fun = std::function&lt;void()&gt;; 
+            p-&gt;event().click( fun (std::bind( &amp;bar::_m_click, this, dat) )); 
+            plc_["abc"]&lt;&lt; *p; 
+    plc_.collocate();
             ui_el_.push_back(p); 
     } 
     void _m_click(const data&amp; dat) 
@@ -243,15 +249,15 @@ Figure 2.2 Design of a framework</div></div>
        std::cout&lt;&lt;"open "&lt;&lt;dat.url&lt;&lt;std::endl; 
     } 
 </pre><p>The member function <code>_m_click()</code> is very tiny, we can remove it with lambda expression in C++11.</p>
-<p>The main idea of this section is binding the execution context at some place in code and retaining the context for future use. As above code shown, we bind the data with a function object, and when the function object is called, we could easily refer to the data. By using the reasonable technical idioms, we can make the code more slighter, more expressive, the benefits are: flexible application, less comment and easy maintenance.</p>
+<p>The main idea of this section is binding the execution context at some place in code and retaining the context for future use. As the above code shown, we bind the data with a function object, and when the function object is called, we could easily refer to the data. By using the reasonable technical idioms, we can make the code more slighter, more expressive, the benefits are: flexible application, less comment and easy maintenance.</p>
 <h1><a class="anchor" id="impl_b"></a>
 How to implement a button</h1>
 <h2><a class="anchor" id="intro"></a>
 1 Introduction</h2>
-<p>This article explain how to implement a button widget and some basic knowledge about <a class="el" href="../../d7/dc0/classnana_1_1button.html" title="Define a button widget and provides the interfaces to be operational. ">nana::button</a>. It is a simple widget and a good start point to learn the implementation of a widget. The implementation of <a class="el" href="../../d7/dc0/classnana_1_1button.html" title="Define a button widget and provides the interfaces to be operational. ">nana::button</a> is defined in *"include/nana/gui/widgets/button.hpp"* and *"source/gui/widgets/button.cpp".*</p>
+<p>This article explain how to implement a button widget and some basic knowledge about <code><a class="el" href="../../d7/dc0/classnana_1_1button.html" title="Define a button widget and provides the interfaces to be operational. ">nana::button</a></code>. It is a simple widget and a good start point to learn the implementation of a widget. The implementation of <code><a class="el" href="../../d7/dc0/classnana_1_1button.html" title="Define a button widget and provides the interfaces to be operational. ">nana::button</a></code> is defined in *"include/nana/gui/widgets/button.hpp"* and *"source/gui/widgets/button.cpp".*</p>
 <p>Nana.GUI provides the framework for implementing a widget. A GUI-widget is made of a window manipulator and a drawer trigger, so, to implement a widget we need to implement these two parts.</p>
 <p><em>Window Manipulator</em></p>
-<p>This class provides some operations that make the widget visible for a user. For example <a class="el" href="../../d7/dc0/classnana_1_1button.html" title="Define a button widget and provides the interfaces to be operational. ">nana::button</a> is a manipulator.</p>
+<p>This class provides some operations that make the widget visible for the user. For example <code><a class="el" href="../../d7/dc0/classnana_1_1button.html" title="Define a button widget and provides the interfaces to be operational. ">nana::button</a></code> is a manipulator.</p>
 <p><em>Drawer Trigger</em></p>
 <p>A drawing operation is driven by the drawer trigger. It provied the internal of a widget, reacting to events and is invisible for an user. During the life time of a window manipulator and a drawer trigger, Nana.GUI does not involve creation and destruction of a drawer trigger.</p>
 <h2><a class="anchor" id="impl"></a>
@@ -261,34 +267,34 @@ How to implement a button</h1>
 <pre class="fragment">    template&lt;typename DrawerTrigger&gt;
     class basic_button: public widget_object&lt;category::widget_tag, DrawerTrigger&gt;
     {public:
-    basic_button(){}
-    basic_button(nana::widget&amp; widget, int x, int y, unsigned width,
-                            unsigned height)
-    { this-&gt;create(widget.handle(), x, y, width, height);
-    }
+      basic_button(){}
+      basic_button(nana::widget&amp; widget, rectangle r)
+      { 
+    this-&gt;create(widget.handle(), r);
+      }
     };
 </pre><p>This code defines the window manipulator of the button. </p>
 <pre class="fragment">    template&lt;typename DrawerTrigger&gt;
-</pre><p>The template parameter DrawerTrigger is used to specify a drawer trigger.</p>
-<p>basic_button inherit from widget_object&lt;category::widget_tag, DrawerTrigger&gt;. The widget_tag indicates the button is a Widget Window. Although all widgets are inherited from <a class="el" href="../../d9/dd8/classnana_1_1widget.html" title="Abstract class for defining the capacity interface. ">nana::widget</a>, the widgets just can be inherited from the template class widget_object&lt;&gt;.</p>
-<p>The default constructor does not create the widget unless the create() method is called. The second constructor will create the widget by calling the create() method. Nana.GUI guarantees the safety if an operation on a widget before its creation.</p>
+</pre><p>The template parameter <code>DrawerTrigger</code> is used to specify a drawer trigger.</p>
+<p><code>basic_button</code> inherit from <code>widget_object&lt;category::widget_tag, DrawerTrigger&gt;</code>. The <code>widget_tag</code> indicates the button is a Widget Window. Although all widgets are inherited from <code><a class="el" href="../../d9/dd8/classnana_1_1widget.html" title="Abstract class for defining the capacity interface. ">nana::widget</a></code>, the widgets just can be inherited from the template class <code>widget_object&lt;&gt;</code>.</p>
+<p>The default constructor does not create the widget unless the <code>create()</code> method is called. The second constructor will create the widget by calling the <code>create()</code> method. Nana.GUI guarantees the safety if an operation is made on a widget before its creation.</p>
 <h3><a class="anchor" id="trig"></a>
 2.2. Drawer Trigger</h3>
 <p>A drawer trigger is more complicate than a window manipulator; it reacts to mouse and keyboard events. In this implementation of the button, the code for drawing the button is written inside the drawer trigger directly. Now, let's dip into the definition of the drawer trigger.</p>
-<p>A drawer trigger must be inherited from std::drawer_trigger. </p>
+<p>A drawer trigger must be inherited from <code>std::drawer_trigger</code>. </p>
 <pre class="fragment">    using namespace nana;
     class button_drawer: public nana::drawer_trigger&lt;cagetory::widget_tag&gt;
     {public:
             button_drawer ();
             void bind_window(nana::widget &amp; widget);
      private:
-            void attached(nana::paint::graphics &amp;gra );
-            void detached();
-            void normal     (paint::graphics &amp;gra);
-            void mouse_leave(paint::graphics &amp;gra, const eventinfo &amp;ei);
-            void mouse_down (paint::graphics &amp;gra, const eventinfo &amp;ei);
-            void mouse_up   (paint::graphics &amp;gra, const eventinfo &amp;ei);
-            void focus              (paint::graphics &amp;gra, const eventinfo &amp;ei);
+            void attached(nana::paint::graphics &amp;gra ) override;
+            void detached() override;
+            void normal     (paint::graphics &amp;gra) override;
+            void mouse_leave(paint::graphics &amp;gra, const arg_mouse &amp;ei) override;
+            void mouse_down (paint::graphics &amp;gra, const arg_mouse &amp;ei) override;
+            void mouse_up   (paint::graphics &amp;gra, const arg_mouse &amp;ei) override;
+            void focus              (paint::graphics &amp;gra, const arg_mouse &amp;ei) override;
      private:
             void _m_draw_title(paint::graphics&amp;, bool is_mouse_down, bool is_focus);
             void _m_draw_background(paint::graphics&amp;, bool is_mouse_down);
@@ -298,24 +304,24 @@ How to implement a button</h1>
             bool            is_ms_down_ ;
             bool            is_focus_ ;
     };
-</pre><p>This button_drawer makes the constructor and a bind_window() member function public, and others private.</p>
-<p>void bind_window(nana::widget&amp; widget){widget_ = }</p>
-<p>Nana.GUI creates a widget and tells the drawer trigger the widget through bind_window().</p>
-<p>The private member functions with don't start with <em>m</em> are virtual functions that are defined by <a class="el" href="../../d7/d16/classnana_1_1drawer__trigger.html">nana::drawer_trigger</a>. These virtual functions are invoked inside the Nana.GUI. The name of some of these virtual functions starts with mouse_ because they are used for answering to mouse operations. You need to override these functions if you want some special capacities.</p>
-<p>The private member functions with start with <em>m</em> are defined by the button drawer trigger. They implements the drawing of the button. As will be readily seen, when a mouse event is raised, the drawer trigger calls these member functions for drawing the widget. </p>
+</pre><p>This <code>button_drawer</code> makes the constructor and the <code>bind_window()</code> member function public, and others private. </p>
+<pre class="fragment">void bind_window(nana::widget&amp; widget){widget_ = &amp;widget;}
+</pre><p>Nana.GUI creates a widget and tells the drawer trigger the widget through <code>bind_window()</code>.</p>
+<p>The private member functions with don't start with <code>_m_</code> are virtual functions that are defined by <code><a class="el" href="../../d7/d16/classnana_1_1drawer__trigger.html">nana::drawer_trigger</a></code>. These virtual functions are invoked inside the Nana.GUI. The name of some of these virtual functions starts with <code>mouse_</code> because they are used for answering to mouse operations. You need to override these functions if you want some special capacities.</p>
+<p>The private member functions with start with <code>_m_</code> are defined by the button drawer trigger. They implements the drawing of the button. As will be readily seen, when a mouse event is raised, the drawer trigger calls these member functions for drawing the widget. </p>
 <pre class="fragment">    nana::widget * widget_;
-</pre><p>This data member refers to a window manipulator which is connecting with the drawer trigger. </p>
+</pre><p>This data member refers to a window manipulator which is connected with the drawer trigger. </p>
 <pre class="fragment">    bool is_ms_down_;
 </pre><p>This indicates the current status of the left mouse button (is pressed down?).</p>
-<p>Now, let's return to the details of member functions with start with <em>m</em>. </p>
+<p>Now, let's return to the details of the member functions with start with <em>m</em>. </p>
 <pre class="fragment">    button_drawer::button_drawer()
     :widget_(0), is_ms_down_(false), is_focus_(false)
     {}
-</pre><p>The default constructor initializes the data members. is_ms_down_ will be modified by mouse_down() and by mouse_up(). is_focus_ will be modified by focus(). </p>
+</pre><p>The default constructor initializes the data members. <code>is_ms_down_</code> will be modified by <code>mouse_down()</code> and by <code>mouse_up()</code>. <code>is_focus_</code> will be modified by <code>focus()</code>. </p>
 <pre class="fragment">    void button_drawer::set(nana::widget&amp; widget)
     {  if(widget_ == 0) widget_ = &amp;widget;
     }
-</pre><p>Sets widget_, this function is invoked by window manipulator's get_drawer_trigger(). The following member functions are the essential of the drawer trigger. </p>
+</pre><p>Sets <code>widget_</code>, this function is invoked by the window manipulator's <code>get_drawer_trigger()</code>. The following member functions are the essential part of the drawer trigger. </p>
 <pre class="fragment">    void button_drawer::attached(nana::paint::graphics&amp;)
     {
             using namespace nana::API;
@@ -326,17 +332,17 @@ How to implement a button</h1>
             make_drawer_event&lt;events::mouse_up&gt;(window);
             make_drawer_event&lt;events::focus&gt;(window);
     }
-</pre><p>When a widget is creating, Nana.GUI is responsible for attaching the drawer trigger which is returned by the window manipulator to the Window Manager of Nana.GUI, at the same time, Nana.GUI calls the <code>attach()</code> method provided by the drawer trigger, in other words, the <code>attach()</code> method is the first method of a drawer trigger that Nana.GUI calls. When the drawer trigger is attached to the Window Manager, the connection is created between the drawer trigger and window manipulator that the drawer trigger will receive the callback of an event from a widget. In this member function, button_drawer registers the events through the handle of window manipulator. The drawer trigger has a special function for registering an event(it is different with <code>nana::API::register_event</code> and <code>make_event()</code> of a window manipulator). Register an event, and Nana.GUI calls back the corresponding function for answering the event. In button_drawer's <code>attach()</code>, it registers mouse_leave, mouse_down and mouse_up, you can register more events if you want button more specially good effect. The attach() has a parameter, it refers to a <a class="el" href="../../d6/d47/classnana_1_1paint_1_1graphics.html" title="off-screen resource defined as ref-counting, can refer one resource ">nana::paint::graphics</a> object, this object is the off-screen buffer of the widget, any drawing operation on this object, it will be displayed on the monitor. This object is created and destroyed by Nana.GUI. There is not any operation on this object. </p>
+</pre><p>When a widget is creating, Nana.GUI is responsible for attaching the drawer trigger which is returned by the window manipulator to the Window Manager of Nana.GUI. At the same time, Nana.GUI calls the <code>attach()</code> method provided by the drawer trigger, in other words, the <code>attach()</code> method is the first method of a drawer trigger that Nana.GUI calls. When the drawer trigger is attached to the Window Manager, the connection is created between the drawer trigger and the window manipulator that the drawer trigger will receive the callback of an event from a widget. In this member function, <code>button_drawer</code> registers the events through the handle of window manipulator. The drawer trigger has a special function for registering an event (it is different from <code>nana::API::register_event</code> and <code>make_event()</code> of a window manipulator). Register an event, and Nana.GUI calls back the corresponding function for answering the event. In button_drawer's <code>attach()</code>, it registers <code>mouse_leave</code>, <code>mouse_down</code> and <code>mouse_up</code>. You can register more events if you want button more specially good effect. The <code>attach()</code> has a parameter. It refers to a <code><a class="el" href="../../d6/d47/classnana_1_1paint_1_1graphics.html" title="off-screen resource defined as ref-counting, can refer one resource ">nana::paint::graphics</a></code> object. This object is the off-screen buffer of the widget Any drawing operation on this object will be displayed on the monitor. This object is created and destroyed by Nana.GUI. There is not any operation on this object. </p>
 <pre class="fragment">    void button_drawer::detached()
     { nana::API::unregister_drawer_event(widget_-&gt;handle()); }
-</pre><p>When a drawer trigger is detached from the Window Manager, Nana.GUI will callback the detach() method. In the button_drawer implementation, we just unregister the events that we registered in attach(). nana::API::unregister_drawer_event is responsible for destroying the all registered events for the specified window. </p>
+</pre><p>When a drawer trigger is detached from the Window Manager, Nana.GUI will callback the <code>detach()</code> method. In the button_drawer implementation, we just unregister the events that we registered in <code>attach()</code>. <code>nana::API::unregister_drawer_event</code> is responsible for destroying all registered events for the specified window. </p>
 <pre class="fragment">    void button_drawer::normal(paint::graphics&amp; ghc)
     {
             _m_draw_background      (ghc, is_ms_down_);
             _m_draw_border          (ghc, is_ms_down_);
             _m_draw_title           (ghc, is_ms_down_, is_focus);
     }
-</pre><p>The normal() method defined by a drawer trigger will be invoked after a widget is created completely, and <a class="el" href="../../d5/d1e/namespacenana_1_1_a_p_i.html#a339d6643ba8abd72b0c48839cda71046" title=": calls refresh() of a widget&#39;s drawer. if currently state is lazy_refresh, Nana.GUI may paste the dr...">nana::API::refresh_window()</a> will also invoke this normal() method. In this implementation, the normal() method calls the member functions start with <em>m</em> for operating the graphics object. </p>
+</pre><p>The <code>normal()</code> method defined by a drawer trigger will be invoked after a widget is created completely, and <code><a class="el" href="../../d5/d1e/namespacenana_1_1_a_p_i.html#a339d6643ba8abd72b0c48839cda71046" title=": calls refresh() of a widget&#39;s drawer. if currently state is lazy_refresh, Nana.GUI may paste the dr...">nana::API::refresh_window()</a></code> will also invoke this <code>normal()</code> method. In this implementation, the <code>normal()</code> method calls the member functions that start with <code>_m_</code> to operate the graphics object. </p>
 <pre class="fragment">    void button_drawer::mouse_leave(paint::graphics&amp; ghc, const eventinfo&amp;)
     {
             _m_draw_background      (ghc, false);
@@ -344,7 +350,7 @@ How to implement a button</h1>
             _m_draw_title           (ghc, false, is_focus_);
             nana::API::lazy_refresh();
     }
-</pre><p>When the mouse leaves the widget, Nana.GUI will call the mouse_leave, where the second parameter refers to an eventinfo object which provides some event information. In this implementation we don't take care about this parameter. It's worth noting that <a class="el" href="../../d5/d1e/namespacenana_1_1_a_p_i.html#a91a7f8cf23689ffa353728efbe7ba2bc" title="A widget drawer draws the widget surface in answering an event. ">nana::API::lazy_refresh()</a> is invoked last, it will let the graphics object display on monitor. lazy_refresh() only works in an event callback, hence we can't find it in normal() method. mouse_down(), mouse_up() and focus() are similar to mouse_leave(). Refer to "source/gui/widgets/button.cpp" for the details. Refer to Nana.Paint for the details of <a class="el" href="../../d6/d47/classnana_1_1paint_1_1graphics.html" title="off-screen resource defined as ref-counting, can refer one resource ">nana::paint::graphics</a>.</p>
+</pre><p>When the mouse leaves the widget, Nana.GUI will call the <code>mouse_leave</code>, where the second parameter refers to an <code>arg_mouse</code> object which provides some event information. In this implementation we don't take care about this parameter. It's worth noting that <code><a class="el" href="../../d5/d1e/namespacenana_1_1_a_p_i.html#a91a7f8cf23689ffa353728efbe7ba2bc" title="A widget drawer draws the widget surface in answering an event. ">nana::API::lazy_refresh()</a></code> is invoked last, it will let the graphics object display on monitor. <code>lazy_refresh()</code> only works in an event callback, hence we can't find it in <code>normal()</code> method. <code>mouse_down()</code>, <code>mouse_up()</code> and <code>focus()</code> are similar to <code>mouse_leave()</code>. Refer to "source/gui/widgets/button.cpp" for the details. Refer to Nana.Paint for the details of <code><a class="el" href="../../d6/d47/classnana_1_1paint_1_1graphics.html" title="off-screen resource defined as ref-counting, can refer one resource ">nana::paint::graphics</a></code>.</p>
 <h1><a class="anchor" id="tab"></a>
 The tabstop in Nana.GUI</h1>
 <p>A tabstop is used for switching the keyboard focus between two widgets by pressing the Tab. Nana.GUI defines 3 states for tabstop.</p>
@@ -522,7 +528,7 @@ A Method to prevent UI from blocking while busy</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Mar 8 2015 18:54:28 for Nana C++ Library. Reference for users. by
+    <li class="footer">Generated on Tue May 5 2015 21:50:59 for Nana C++ Library. Reference for users. by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

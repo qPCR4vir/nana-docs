@@ -16,6 +16,8 @@ var searchData=
   ['os_5farrow_5fright',['os_arrow_right',['../de/d48/structnana_1_1keyboard.html#aaf47acc00903a661c46cd6bd449190d2a2503cfb6d963020cb29731c284d72c84',1,'nana::keyboard']]],
   ['os_5farrow_5fup',['os_arrow_up',['../de/d48/structnana_1_1keyboard.html#aaf47acc00903a661c46cd6bd449190d2a4178c30d5adce869d75c643009328209',1,'nana::keyboard']]],
   ['os_5fdel',['os_del',['../de/d48/structnana_1_1keyboard.html#aaf47acc00903a661c46cd6bd449190d2ac3a786c050d585e9a2ce954b63f7fac4',1,'nana::keyboard']]],
+  ['os_5fend',['os_end',['../de/d48/structnana_1_1keyboard.html#aaf47acc00903a661c46cd6bd449190d2a37471636008330df953cf8a7f79469cd',1,'nana::keyboard']]],
+  ['os_5fhome',['os_home',['../de/d48/structnana_1_1keyboard.html#aaf47acc00903a661c46cd6bd449190d2a45c352a69139db94cf2f713663798a9e',1,'nana::keyboard']]],
   ['os_5finsert',['os_insert',['../de/d48/structnana_1_1keyboard.html#aaf47acc00903a661c46cd6bd449190d2a88daaf203766f54f7c3e7055b7e97a25',1,'nana::keyboard']]],
   ['os_5fpagedown',['os_pagedown',['../de/d48/structnana_1_1keyboard.html#aaf47acc00903a661c46cd6bd449190d2a4bd12441c56cf10facfd3ef4f9268cb3',1,'nana::keyboard']]],
   ['os_5fpageup',['os_pageup',['../de/d48/structnana_1_1keyboard.html#aaf47acc00903a661c46cd6bd449190d2a5f2950e553b505ba7f82ca6cd1a2a975',1,'nana::keyboard']]],

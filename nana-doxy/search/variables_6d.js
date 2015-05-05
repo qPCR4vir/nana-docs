@@ -10,7 +10,7 @@ var searchData=
   ['maximize',['maximize',['../d5/d27/structnana_1_1appearance.html#adcc27ac667dc94c770dca61ae5c98014',1,'nana::appearance']]],
   ['mbuilder',['mbuilder',['../d6/d4b/structnana_1_1menu_1_1implement.html#a7d237fc648d3c9af42a42aeef13e6beb',1,'nana::menu::implement']]],
   ['menu',['menu',['../dd/df3/structnana_1_1detail_1_1bedrock_1_1private__impl.html#a636bf71acfa1a4e6c0d37cfc7b6b4886',1,'nana::detail::bedrock::private_impl']]],
-  ['menu_5fobj',['menu_obj',['../d8/dd5/structnana_1_1drawerbase_1_1menubar_1_1item__type.html#abd061e48e73ea6cc9daae691d9310225',1,'nana::drawerbase::menubar::item_type']]],
+  ['menu_5fobj',['menu_obj',['../d8/dd5/structnana_1_1drawerbase_1_1menubar_1_1item__type.html#a6b57d4f9947f4f52e52ce0384a4960fd',1,'nana::drawerbase::menubar::item_type']]],
   ['menubar',['menubar',['../d4/d97/structnana_1_1detail_1_1basic__window_1_1other__tag_1_1attr__root__tag.html#ad89582df94171e9419d9e41381a02421',1,'nana::detail::basic_window::other_tag::attr_root_tag']]],
   ['mid_5fbutton',['mid_button',['../d6/d7c/structnana_1_1arg__mouse.html#a62503748efa2a0d97217ac4a7543c253',1,'nana::arg_mouse::mid_button()'],['../df/d05/structnana_1_1arg__notifier.html#a1f106a4acfe3a08c00b031be4d8529a7',1,'nana::arg_notifier::mid_button()']]],
   ['middle',['middle',['../dd/de5/structnana_1_1detail_1_1wparam__button.html#aac6d07e0dff3751490687b09675bb83d',1,'nana::detail::wparam_button']]],

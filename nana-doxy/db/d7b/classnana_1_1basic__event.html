@@ -30,6 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Nana C++ Library. Reference for users.
+   &#160;<span id="projectnumber">v1.0.2</span>
    </div>
    <div id="projectbrief">What we need to use nana</div>
   </td>
@@ -114,6 +115,9 @@ $(document).ready(function(){initNavTree('db/d7b/classnana_1_1basic__event.html'
 <div class="title">nana::basic_event&lt; Arg &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>the type of the members of <a class="el" href="../../dd/d19/structnana_1_1general__events.html" title="provides some fundamental events that every widget owns. ">general_events</a>  
+ <a href="../../db/d7b/classnana_1_1basic__event.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for nana::basic_event&lt; Arg &gt;:</div>
 <div class="dyncontent">
@@ -126,31 +130,33 @@ Inheritance diagram for nana::basic_event&lt; Arg &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a25eaf4265d25e1286d8c591dc39e5095"><td class="memItemLeft" align="right" valign="top">typedef const <br class="typebreak"/>
-<a class="elRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/types/remove_reference.html">std::remove_reference</a>&lt; Arg &gt;<br class="typebreak"/>
-::type &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d7b/classnana_1_1basic__event.html#a25eaf4265d25e1286d8c591dc39e5095">arg_reference</a></td></tr>
-<tr class="separator:a25eaf4265d25e1286d8c591dc39e5095"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca49c3ae6095aea96ca3428a38aa0723"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d7b/classnana_1_1basic__event.html#aca49c3ae6095aea96ca3428a38aa0723">arg_reference</a> = const typename <a class="elRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/types/remove_reference.html">std::remove_reference</a>&lt; Arg &gt;::type &amp;</td></tr>
+<tr class="separator:aca49c3ae6095aea96ca3428a38aa0723"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7cbb5a08f71135b9e385d857729e78f5"><td class="memTemplParams" colspan="2">template&lt;typename Function &gt; </td></tr>
 <tr class="memitem:a7cbb5a08f71135b9e385d857729e78f5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d2/d76/namespacenana.html#a68bd9618c0dd5b14783422f6e5cc683a">event_handle</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/d7b/classnana_1_1basic__event.html#a7cbb5a08f71135b9e385d857729e78f5">connect_front</a> (Function &amp;&amp;fn)</td></tr>
+<tr class="memdesc:a7cbb5a08f71135b9e385d857729e78f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">It will get called firstly, because it is set at the beginning of the chain.  <a href="#a7cbb5a08f71135b9e385d857729e78f5">More...</a><br/></td></tr>
 <tr class="separator:a7cbb5a08f71135b9e385d857729e78f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ef3d85347dfcf53d6d78ae7faa8f9a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d76/namespacenana.html#a68bd9618c0dd5b14783422f6e5cc683a">event_handle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d7b/classnana_1_1basic__event.html#a6ef3d85347dfcf53d6d78ae7faa8f9a2">connect</a> (void(*fn)(<a class="el" href="../../db/d7b/classnana_1_1basic__event.html#a25eaf4265d25e1286d8c591dc39e5095">arg_reference</a>))</td></tr>
+<tr class="memitem:a6ef3d85347dfcf53d6d78ae7faa8f9a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d76/namespacenana.html#a68bd9618c0dd5b14783422f6e5cc683a">event_handle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d7b/classnana_1_1basic__event.html#a6ef3d85347dfcf53d6d78ae7faa8f9a2">connect</a> (void(*fn)(<a class="el" href="../../db/d7b/classnana_1_1basic__event.html#aca49c3ae6095aea96ca3428a38aa0723">arg_reference</a>))</td></tr>
 <tr class="separator:a6ef3d85347dfcf53d6d78ae7faa8f9a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9edc15870680faf734bab7d249f7ebd9"><td class="memTemplParams" colspan="2">template&lt;typename Function &gt; </td></tr>
 <tr class="memitem:a9edc15870680faf734bab7d249f7ebd9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d2/d76/namespacenana.html#a68bd9618c0dd5b14783422f6e5cc683a">event_handle</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/d7b/classnana_1_1basic__event.html#a9edc15870680faf734bab7d249f7ebd9">connect</a> (Function &amp;&amp;fn)</td></tr>
+<tr class="memdesc:a9edc15870680faf734bab7d249f7ebd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">It will not get called if stop_propagation() was called.  <a href="#a9edc15870680faf734bab7d249f7ebd9">More...</a><br/></td></tr>
 <tr class="separator:a9edc15870680faf734bab7d249f7ebd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11ab4a6736eeca726b743dcb3de0e080"><td class="memTemplParams" colspan="2">template&lt;typename Function &gt; </td></tr>
 <tr class="memitem:a11ab4a6736eeca726b743dcb3de0e080"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d2/d76/namespacenana.html#a68bd9618c0dd5b14783422f6e5cc683a">event_handle</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/d7b/classnana_1_1basic__event.html#a11ab4a6736eeca726b743dcb3de0e080">operator()</a> (Function &amp;&amp;fn)</td></tr>
+<tr class="memdesc:a11ab4a6736eeca726b743dcb3de0e080"><td class="mdescLeft">&#160;</td><td class="mdescRight">It will not get called if stop_propagation() was called.  <a href="#a11ab4a6736eeca726b743dcb3de0e080">More...</a><br/></td></tr>
 <tr class="separator:a11ab4a6736eeca726b743dcb3de0e080"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96755430e57edf5e478b8959aeafee68"><td class="memTemplParams" colspan="2">template&lt;typename Function &gt; </td></tr>
 <tr class="memitem:a96755430e57edf5e478b8959aeafee68"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d2/d76/namespacenana.html#a68bd9618c0dd5b14783422f6e5cc683a">event_handle</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/d7b/classnana_1_1basic__event.html#a96755430e57edf5e478b8959aeafee68">connect_unignorable</a> (Function &amp;&amp;fn, bool in_front=false)</td></tr>
+<tr class="memdesc:a96755430e57edf5e478b8959aeafee68"><td class="mdescLeft">&#160;</td><td class="mdescRight">It will get called because it is unignorable.  <a href="#a96755430e57edf5e478b8959aeafee68">More...</a><br/></td></tr>
 <tr class="separator:a96755430e57edf5e478b8959aeafee68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1264371d83467935a998977fb210770e"><td class="memItemLeft" align="right" valign="top"><a class="elRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/types/size_t.html">std::size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d7b/classnana_1_1basic__event.html#a1264371d83467935a998977fb210770e">length</a> () const </td></tr>
 <tr class="separator:a1264371d83467935a998977fb210770e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89b3a99fbe3711c4b61fbb9638cdb806"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d7b/classnana_1_1basic__event.html#a89b3a99fbe3711c4b61fbb9638cdb806">emit</a> (<a class="el" href="../../db/d7b/classnana_1_1basic__event.html#a25eaf4265d25e1286d8c591dc39e5095">arg_reference</a> &amp;arg) const </td></tr>
-<tr class="separator:a89b3a99fbe3711c4b61fbb9638cdb806"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa692c75a995c0cb7aed7e2f20e69fa9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d7b/classnana_1_1basic__event.html#aa692c75a995c0cb7aed7e2f20e69fa9f">emit</a> (<a class="el" href="../../db/d7b/classnana_1_1basic__event.html#aca49c3ae6095aea96ca3428a38aa0723">arg_reference</a> &amp;arg)</td></tr>
+<tr class="separator:aa692c75a995c0cb7aed7e2f20e69fa9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac984a73ef46194c09258a29de2e21d55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d7b/classnana_1_1basic__event.html#ac984a73ef46194c09258a29de2e21d55">clear</a> ()</td></tr>
 <tr class="separator:ac984a73ef46194c09258a29de2e21d55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb0e594f16e6bb628cb48fab92fb24ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d7b/classnana_1_1basic__event.html#afb0e594f16e6bb628cb48fab92fb24ed">remove</a> (<a class="el" href="../../d2/d76/namespacenana.html#a68bd9618c0dd5b14783422f6e5cc683a">event_handle</a> evt) override</td></tr>
@@ -159,15 +165,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9917256f21b103cd10e99dc2294896e4 inherit pub_methods_classnana_1_1detail_1_1event__interface"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d7d/classnana_1_1detail_1_1event__interface.html#a9917256f21b103cd10e99dc2294896e4">~event_interface</a> ()=default</td></tr>
 <tr class="separator:a9917256f21b103cd10e99dc2294896e4 inherit pub_methods_classnana_1_1detail_1_1event__interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Typedef Documentation</h2>
-<a class="anchor" id="a25eaf4265d25e1286d8c591dc39e5095"></a>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename Arg&gt;<br/>
+class nana::basic_event&lt; Arg &gt;</h3>
+
+<p>the type of the members of <a class="el" href="../../dd/d19/structnana_1_1general__events.html" title="provides some fundamental events that every widget owns. ">general_events</a> </p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="aca49c3ae6095aea96ca3428a38aa0723"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename Arg&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef const <a class="elRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/types/remove_reference.html">std::remove_reference</a>&lt;Arg&gt;::type&amp; <a class="el" href="../../db/d7b/classnana_1_1basic__event.html">nana::basic_event</a>&lt; Arg &gt;::<a class="el" href="../../db/d7b/classnana_1_1basic__event.html#a25eaf4265d25e1286d8c591dc39e5095">arg_reference</a></td>
+          <td class="memname">using <a class="el" href="../../db/d7b/classnana_1_1basic__event.html">nana::basic_event</a>&lt; Arg &gt;::<a class="el" href="../../db/d7b/classnana_1_1basic__event.html#aca49c3ae6095aea96ca3428a38aa0723">arg_reference</a> =  const typename <a class="elRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/types/remove_reference.html">std::remove_reference</a>&lt;Arg&gt;::type &amp;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -212,7 +223,7 @@ template&lt;typename Arg&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="../../d2/d76/namespacenana.html#a68bd9618c0dd5b14783422f6e5cc683a">event_handle</a> <a class="el" href="../../db/d7b/classnana_1_1basic__event.html">nana::basic_event</a>&lt; Arg &gt;::connect </td>
           <td>(</td>
-          <td class="paramtype">void(*)(<a class="el" href="../../db/d7b/classnana_1_1basic__event.html#a25eaf4265d25e1286d8c591dc39e5095">arg_reference</a>)&#160;</td>
+          <td class="paramtype">void(*)(<a class="el" href="../../db/d7b/classnana_1_1basic__event.html#aca49c3ae6095aea96ca3428a38aa0723">arg_reference</a>)&#160;</td>
           <td class="paramname"><em>fn</em></td><td>)</td>
           <td></td>
         </tr>
@@ -252,6 +263,8 @@ template&lt;typename Function &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>It will not get called if stop_propagation() was called. </p>
+
 </div>
 </div>
 <a class="anchor" id="a7cbb5a08f71135b9e385d857729e78f5"></a>
@@ -279,6 +292,8 @@ template&lt;typename Function &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>It will get called firstly, because it is set at the beginning of the chain. </p>
 
 </div>
 </div>
@@ -318,9 +333,11 @@ template&lt;typename Function &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>It will get called because it is unignorable. </p>
+
 </div>
 </div>
-<a class="anchor" id="a89b3a99fbe3711c4b61fbb9638cdb806"></a>
+<a class="anchor" id="aa692c75a995c0cb7aed7e2f20e69fa9f"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -332,9 +349,9 @@ template&lt;typename Arg&gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="../../db/d7b/classnana_1_1basic__event.html">nana::basic_event</a>&lt; Arg &gt;::emit </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../db/d7b/classnana_1_1basic__event.html#a25eaf4265d25e1286d8c591dc39e5095">arg_reference</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../db/d7b/classnana_1_1basic__event.html#aca49c3ae6095aea96ca3428a38aa0723">arg_reference</a> &amp;&#160;</td>
           <td class="paramname"><em>arg</em></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -397,6 +414,8 @@ template&lt;typename Function &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>It will not get called if stop_propagation() was called. </p>
+
 </div>
 </div>
 <a class="anchor" id="afb0e594f16e6bb628cb48fab92fb24ed"></a>
@@ -433,7 +452,7 @@ template&lt;typename Arg&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/d76/namespacenana.html">nana</a></li><li class="navelem"><a class="el" href="../../db/d7b/classnana_1_1basic__event.html">basic_event</a></li>
-    <li class="footer">Generated on Sun Mar 8 2015 18:54:31 for Nana C++ Library. Reference for users. by
+    <li class="footer">Generated on Tue May 5 2015 21:51:03 for Nana C++ Library. Reference for users. by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

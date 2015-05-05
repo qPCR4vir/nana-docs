@@ -24,14 +24,18 @@ var examples =
     [ "FreeMe.cpp", "d3/d8c/_free_me_8cpp-example.html", null ],
     [ "HelloWord-Quit.cpp", "d1/d6b/_hello_word-_quit_8cpp-example.html", null ],
     [ "HelloWord.cpp", "d0/de4/_hello_word_8cpp-example.html", null ],
+    [ "inputbox.cpp", "d4/d1b/inputbox_8cpp-example.html", null ],
     [ "label_listener.cpp", "de/d16/label_listener_8cpp-example.html", null ],
     [ "lambda_event.Cpp11.cpp", "dd/d2c/lambda_event_8_cpp11_8cpp-example.html", null ],
     [ "listbox_Resolver.cpp", "d8/de2/listbox__resolver_8cpp-example.html", null ],
     [ "loader_1.cpp", "d7/d66/loader_1_8cpp-example.html", null ],
     [ "loader_2.cpp", "de/df4/loader_2_8cpp-example.html", null ],
     [ "mbox.cpp", "d5/de5/mbox_8cpp-example.html", null ],
+    [ "menu_debug.cpp", "d5/d2a/menu_debug_8cpp-example.html", null ],
+    [ "menu_popuper.cpp", "d8/df2/menu_popuper_8cpp-example.html", null ],
     [ "modal_form.cpp", "d6/da9/modal_form_8cpp-example.html", null ],
     [ "MontiHall.cpp", "de/ddc/_monti_hall_8cpp-example.html", null ],
+    [ "notepad.cpp", "d1/d53/notepad_8cpp-example.html", null ],
     [ "place_login.cpp", "d8/d0e/place_login_8cpp-example.html", null ],
     [ "png.cpp", "d3/d1a/png_8cpp-example.html", null ],
     [ "stretch_image.cpp", "d1/d81/stretch_image_8cpp-example.html", null ],
@@ -39,5 +43,8 @@ var examples =
     [ "thread-pool.cpp", "de/df2/thread-pool_8cpp-example.html", null ],
     [ "threading.cpp", "d7/ddb/threading_8cpp-example.html", null ],
     [ "various_events.Cpp11.cpp", "da/d9c/various_events_8_cpp11_8cpp-example.html", null ],
-    [ "window-dragger.cpp", "db/dbb/window-dragger_8cpp-example.html", null ]
+    [ "widget_show.cpp", "d3/de9/widget_show_8cpp-example.html", null ],
+    [ "widget_show2.cpp", "df/d14/widget_show2_8cpp-example.html", null ],
+    [ "window-dragger.cpp", "db/dbb/window-dragger_8cpp-example.html", null ],
+    [ "windows-subclassing.cpp", "df/d13/windows-subclassing_8cpp-example.html", null ]
 ];

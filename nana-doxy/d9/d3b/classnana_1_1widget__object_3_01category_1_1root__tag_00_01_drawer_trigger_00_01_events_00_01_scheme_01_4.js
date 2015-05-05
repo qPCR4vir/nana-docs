@@ -17,6 +17,8 @@ var classnana_1_1widget__object_3_01category_1_1root__tag_00_01_drawer_trigger_0
     [ "is_zoomed", "d9/d3b/classnana_1_1widget__object_3_01category_1_1root__tag_00_01_drawer_trigger_00_01_events_00_01_scheme_01_4.html#ac5f54bea5b40c719751de40567bbfb80", null ],
     [ "map_through_widgets", "d9/d3b/classnana_1_1widget__object_3_01category_1_1root__tag_00_01_drawer_trigger_00_01_events_00_01_scheme_01_4.html#ac6df036df2ab4c66a2806a4936b70625", null ],
     [ "native_handle", "d9/d3b/classnana_1_1widget__object_3_01category_1_1root__tag_00_01_drawer_trigger_00_01_events_00_01_scheme_01_4.html#a7c48a158c16fbede78d209393b9c6dd9", null ],
+    [ "outline_size", "d9/d3b/classnana_1_1widget__object_3_01category_1_1root__tag_00_01_drawer_trigger_00_01_events_00_01_scheme_01_4.html#a80165ce1eeddea0ab612bc86c9999cb9", null ],
+    [ "outline_size", "d9/d3b/classnana_1_1widget__object_3_01category_1_1root__tag_00_01_drawer_trigger_00_01_events_00_01_scheme_01_4.html#a0c9c8e301aee1a4c263a571b13f07a68", null ],
     [ "owner", "d9/d3b/classnana_1_1widget__object_3_01category_1_1root__tag_00_01_drawer_trigger_00_01_events_00_01_scheme_01_4.html#ada720271545db66972ea305b67147c34", null ],
     [ "restore", "d9/d3b/classnana_1_1widget__object_3_01category_1_1root__tag_00_01_drawer_trigger_00_01_events_00_01_scheme_01_4.html#a62362af5d61b4ea936a8b7c3d05e1ab3", null ],
     [ "scheme", "d9/d3b/classnana_1_1widget__object_3_01category_1_1root__tag_00_01_drawer_trigger_00_01_events_00_01_scheme_01_4.html#a1ba06974a2cedd716b187ad971dcbe24", null ],

@@ -30,6 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Nana C++ Library. Reference for users.
+   &#160;<span id="projectnumber">v1.0.2</span>
    </div>
    <div id="projectbrief">What we need to use nana</div>
   </td>
@@ -184,12 +185,15 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Layout managment - an object of class place is attached to a widget, and it automatically positions and resizes the children widgets. </p>
 <p>Generally, an object of class place attachs to a widget, and it automatically positions and resizes widgets which are the children of the attached widget.</p>
 <p>see <a href="http://www.nanapro.org/en-us/help/utilities/place.htm">http://www.nanapro.org/en-us/help/utilities/place.htm</a></p>
-<p>The class place is used for layout management. A place divides the surface of widget into fields, and then the children widgets are inserted into a specified field for layouting. The field is a basic concept for place. There are 4 different types of field, each type describes how widgets are positioned. These types of field are:</p>
+<p>The class place is used for layout management. Generally, an object of class place binds to a widget, and automatically positions and resizes the widgets which are the children of the that widget. The desired format or layout is set with <code><a class="el" href="../../dc/de3/classnana_1_1place.html#aaf7fe8bfe503d9ace74a122af547536f" title="Divides the attached widget into fields. ">div(const char* div_text)</a>;</code> which cause a default or root field (surface of the attached widget), to be divided into others fields in the specified manner using the position rules described below. Then the children widgets are inserted into the desired field for layouting using a map-like notation. If the field name specified is not (or will not) present in the <code>div-text</code>, an invisible field is creates and all widgets corresponding to the field will be hidden. An entire field can be temporary retired from the view using <code><a class="el" href="../../dc/de3/classnana_1_1place.html#a6a4a7fd9c286ee76380ead7e6a516f54" title="Displays/Discards an existing field. ">field_display(const char* name, bool display)</a>;</code>. A widget can be retired from a field using <code><a class="el" href="../../dc/de3/classnana_1_1place.html#af4bcfff57d900f889e20dc406f43244f" title="Erases a window from field. ">erase(window handle)</a>;</code>. A field can be also set invisible with <code><a class="el" href="../../dc/de3/classnana_1_1place.html#a0454a4cf6cff07e2bf4f758bb9b790ed" title="&lt;Shows/Hides an existing field. ">field_visible(const char* name, bool visibility)</a>;</code>. The difference is that an invisible field still occupy the space, while a field not displayed - not. Finally <code><a class="el" href="../../dc/de3/classnana_1_1place.html#aec97ac368d0357cb3222b3316f2306ff" title="Layouts the widgets. ">collocate()</a>;</code> collocates the fields and widgets through the rule set in <code><a class="el" href="../../dc/de3/classnana_1_1place.html#aaf7fe8bfe503d9ace74a122af547536f" title="Divides the attached widget into fields. ">div()</a></code>. In most cases, place collocates automatically when the binded window resizes. But when you reset a new divide text <code><a class="el" href="../../dc/de3/classnana_1_1place.html#aec97ac368d0357cb3222b3316f2306ff" title="Layouts the widgets. ">collocate()</a></code> should be invoked manually, otherwise the widgets will not be positioned until the place binded window is resized.</p>
+<p><em>In develop:</em> <code>void modify (const char *field_name, const char *div_text)</code> method to modifie a specified field.</p>
+<p><code>template&lt;typename Panel , typename... Args&gt; void dock (const char *dockname, Args &amp;&amp;...args)</code> - Add a panel factory</p>
+<p>The field is a basic concept for place. There are four different types of fields. Each type describes how widgets are positioned. These types of fields are:</p>
 <table class="doxtable">
 <tr>
-<th>Types </th><th>Description  </th></tr>
+<th>Field type </th><th>Description  </th></tr>
 <tr>
-<td>Horizontal</td><td>Widgets are positioned horizontally, such as the buttons in a toolbox. </td></tr>
+<td>Horizontal </td><td>Widgets are positioned horizontally, such as the buttons in a Windows task bar. This is the default. </td></tr>
 <tr>
 <td>Vertical </td><td>Widgets are positioned vertically, such as the items in a menu. </td></tr>
 <tr>
@@ -197,41 +201,42 @@ Public Member Functions</h2></td></tr>
 <tr>
 <td>Splitter </td><td>A splitter bar is used for adjusting the size of fields on both sides of it. </td></tr>
 </table>
-<ol type="1">
-<li>The definition of field manipulator: <div class="fragment"><div class="line"><span class="keyword">class </span>field_t</div>
-<div class="line">{</div>
-<div class="line">    <span class="keyword">public</span>:</div>
-<div class="line">    <span class="keyword">virtual</span> ~field_t() = 0;</div>
-<div class="line">    <span class="keyword">virtual</span> field_t&amp; operator&lt;&lt;(<a class="code" href="../../d2/d87/structnana_1_1detail_1_1window__handle__impl.html">nana::window</a>) = 0;</div>
-<div class="line">    <span class="keyword">virtual</span> field_t&amp; operator&lt;&lt;(<span class="keywordtype">unsigned</span> gap) = 0;</div>
-<div class="line">    <span class="keyword">virtual</span> field_t&amp; operator&lt;&lt;(<span class="keyword">const</span> implementation-specified-fixed-type&amp;) = 0;</div>
-<div class="line">    <span class="keyword">virtual</span> field_t&amp; operator&lt;&lt;(<span class="keyword">const</span> implementation-specified-percent-type&amp;) = 0;</div>
-<div class="line">    <span class="keyword">virtual</span> field_t&amp; operator&lt;&lt;(<span class="keyword">const</span> implementation-specified-room-type&amp;) = 0;</div>
-<div class="line"><span class="keyword">virtual</span> field_t&amp; fasten(<a class="code" href="../../d2/d87/structnana_1_1detail_1_1window__handle__impl.html">nana::window</a>) = 0;</div>
-<div class="line">};</div>
-</div><!-- fragment --></li>
-<li><p class="startli">The syntax of divide-text.</p>
-<p class="startli">The divide-text is used to divide a widget into fields to position and resize its children widgets.</p>
-<ul>
-<li><p class="startli">Define a field</p>
-<p class="startli">&lt;&gt;</p>
-</li>
-<li><p class="startli">Fields can be nested.</p>
-<p class="startli">&lt;&lt;&gt;&gt;</p>
-</li>
-<li>Root field</li>
-</ul>
-<p class="startli">There is an implicit root field. All the fields defined by divide-text are children of root field.</p>
-<ul>
-<li>Specify attributes for a field.</li>
-</ul>
-<p class="startli"><b>name</b> : Specify an identifier for a name of field</p>
-<p class="startli">&lt; <b>id_you_specified</b> &gt; : The field is named <code>id_you_specified</code>, and we can refer to it by using: <code>place_obj.field("id_you_specified")</code>.</p>
-<p class="startli"><b>vertical</b> : Specify a field wich all its children fields laied out vertical. If it is not specified, its children fields are laied out horizontally defaultly. For example: </p>
-<div class="fragment"><div class="line"><a class="code" href="../../dc/de3/classnana_1_1place.html#aa6cad0fae3996e8b294acf34c04748e1">place</a> plc(fm);</div>
+<h2>The syntax of divide-text.</h2>
+<h3>Simbols and keywords</h3>
+<p><a href="https://github.com/qPCR4vir/nana-docs/wiki/Layot-with--place#-define-a-field">&lt; and &gt;</a>, <a href="https://github.com/qPCR4vir/nana-docs/wiki/Layot-with--place#splitter-bar">|</a>, <a href="https://github.com/qPCR4vir/nana-docs/wiki/Layot-with--place#splitter-bar">%</a>, <a href="https://github.com/qPCR4vir/nana-docs/wiki/Layot-with--place#array">[ and ]</a>, <a href="https://github.com/qPCR4vir/nana-docs/wiki/Layot-with--place#arrange">arrange</a>, <a href="https://github.com/qPCR4vir/nana-docs/wiki/Layot-with--place#collapse">collapse</a>, <a href="https://github.com/qPCR4vir/nana-docs/wiki/Layot-with--place#gap">gap</a>, <a href="https://github.com/qPCR4vir/nana-docs/wiki/Layot-with--place#grid-x-y">grid</a>, <a href="https://github.com/qPCR4vir/nana-docs/wiki/Layot-with--place#margin">margin</a> <a href="https://github.com/qPCR4vir/nana-docs/wiki/Layot-with--place#min-or-max">min or max</a>, <a href="https://github.com/qPCR4vir/nana-docs/wiki/Layot-with--place#repeated">repeated</a>, <a href="https://github.com/qPCR4vir/nana-docs/wiki/Layot-with--place#variable">variable</a>, <a href="https://github.com/qPCR4vir/nana-docs/wiki/Layot-with--place#vertical-or-vert">vertical or vert</a>, <a href="https://github.com/qPCR4vir/nana-docs/wiki/Layot-with--place#weight">weight</a>,</p>
+<p>The divide-text is used to divide a widget into fields to position and resize its children widgets. </p>
+<h4>Define a field</h4>
+<pre class="fragment">    &lt;&gt;
+</pre><h4>Fields can be nested.</h4>
+<pre class="fragment">    &lt;&lt;&gt;&gt;
+</pre><h4>Root field</h4>
+<p>There is an implicit root field. All the fields defined by divide-text are children of root field.</p>
+<h4>Splitter bar</h4>
+<pre class="fragment">    &lt;a&gt;|&lt;b&gt; or &lt;a&gt;|30&lt;b&gt; or &lt;a&gt;|30%&lt;b&gt; ; &lt;horizontal &lt;a&gt;|&lt;b&gt;&gt; ; &lt;vertical &lt;a&gt;|&lt;b&gt;&gt;   
+</pre><p>Sets a splitter bar between field <code>a</code> and <code>b</code>. It can be vertical or horizontal. When a number is specified behind <code>|</code>, it stands for an initial weight of the right field. <code>30%</code> indicates the percent of total pixels = (weight of <code>a</code> + weight of <code>b</code>)*30%. In such cases the attribute weight will be ignored if specified for <code>a</code> or <code>b</code>. </p>
+<h4>Array</h4>
+<pre class="fragment">    [1,2,3]
+</pre><p>An array that has the elements 1, 2 and 3 - three elements. </p>
+<h4>repeated</h4>
+<pre class="fragment">    [1,2,3,repeated]
+</pre><p>The keyword repeated indicates the array is countless, and its elements are 1,2,3,1,2,3,1,2,3... </p>
+<h4>variable</h4>
+<pre class="fragment">    [1,2,variable,3]
+</pre><p>The keyword variable is an unspecified value. It is interpreted differently by different attributes of field(<code>arrange</code>, <code>gap</code>, <code>margin</code>). Refer to <em>Attributes of field</em> section for more details.</p>
+<h3>Specify attributes for a field.</h3>
+<h4>name</h4>
+<p>Specify an identifier for a name of field </p>
+<pre class="fragment">&lt; __id_you_specified__ &gt;  
+</pre><p>The field is named <code>id_you_specified</code>, and we can refer to it by using: </p>
+<pre class="fragment">place_obj.field("id_you_specified")  
+</pre><p><em>or</em> </p>
+<pre class="fragment">place_obj["id_you_specified"]
+</pre><h4>vertical or vert</h4>
+<p>Specify a field wich all its children fields laied out vertical. If it is not specified, its children fields are laied out horizontally defaultly. For example:</p>
+<div class="fragment"><div class="line"><a class="code" href="../../dc/de3/classnana_1_1place.html#aa6cad0fae3996e8b294acf34c04748e1">place</a> plc(fm);      <span class="comment">// fm is an instance of ::nana::form</span></div>
 <div class="line"></div>
 <div class="line">plc.div(<span class="stringliteral">&quot;&lt;abc&gt;&quot;</span>);</div>
-<div class="line">plc.field(<span class="stringliteral">&quot;abc&quot;</span>) &lt;&lt; btn0 &lt;&lt; btn1 &lt;&lt; btn2 &lt;&lt; btn3 ;</div>
+<div class="line">plc.field(<span class="stringliteral">&quot;abc&quot;</span>) &lt;&lt; btn0 &lt;&lt; btn1 &lt;&lt; btn2 &lt;&lt; btn3 ; <span class="comment">// These buttons are children of fm.</span></div>
 <div class="line">plc.collocate();</div>
 </div><!-- fragment --> <div class="image">
 <img src="../../place_horizontal.png" alt="place_horizontal.png"/>
@@ -239,54 +244,124 @@ Public Member Functions</h2></td></tr>
 Place Horizontal</div></div>
 <p> If we replace this line: </p>
 <pre class="fragment">plc.div("&lt;abc&gt;");
-</pre><p class="startli">into </p>
+</pre><p>into </p>
 <pre class="fragment">plc.div("&lt;vertical abc&gt;");
-</pre><p class="startli">we will get</p>
+</pre><p>we will get</p>
 <div class="image">
 <img src="../../place_vertical.png" alt="place_vertical.png"/>
 <div class="caption">
 Place Vertical</div></div>
-<p> <b>weight</b> : It stands for the width or height of a field. It depends on the type of its owner field's layout.</p>
-<p class="startli">Specify the weight in pixel: </p>
-<pre class="fragment">&lt;abc&gt;&lt;weight=200 def&gt;
-</pre><p class="startli">If the width of the form is 1000px, the field <code>abc</code> is 800px and <code>def</code> is 200. </p>
-<pre class="fragment">&lt;abc&gt;&lt;weight=60% def&gt;&lt;ghi&gt;
-</pre><p class="startli">If the width of form is 1000px, the field <code>abc</code> is 200px, <code>def</code> is 600px and <code>ghi</code> is 200px.</p>
-<p class="startli"><b>grid [X, Y]</b> : It specifies a field that lays its children widgets out as a grid. </p>
-<pre class="fragment">&lt;grid [3, 2]&gt;
-</pre><p class="startli">The field is divided a 3 X 2 grid. </p>
+ <h4>weight</h4>
+<p>It stands for the width or height of a field. It depends on the type of its owner field's layout.</p>
+<p>Specify the weight in pixel: </p>
+<pre class="fragment">    &lt;abc&gt;&lt;weight=200 def&gt;
+</pre><p>If the width of the form is 1000px, the field <code>abc</code> is 800px and <code>def</code> is 200. </p>
+<pre class="fragment">    &lt;abc&gt;&lt;weight=60% def&gt;&lt;ghi&gt;
+</pre><p>If the width of form is 1000px, the field <code>abc</code> is 200px, <code>def</code> is 600px and <code>ghi</code> is 200px.</p>
+<h4>min or max</h4>
+<p>Specifies the minimized or maximized weight for a field. If a field is specified with weight and min/max at same time, the weight attribute will be ignored.</p>
+<h4>arrange</h4>
+<p>Specifies weights for a group of widgets.</p>
+<pre class="fragment">place.div("&lt;abc arrange=[50,100]&gt;");
+place.field("abc")&lt;&lt;btn0&lt;&lt;btn1;
+</pre><div class="image">
+<img src="../../place_arrange.png" alt="place_arrange.png"/>
+<div class="caption">
+Place Vertical</div></div>
+<p>If the number of widgets in the field is larger than the number of elements in arrange, the extra widgets will be resized by place.</p>
+<pre class="fragment">place.div("&lt;abc arrange=[50,100]&gt;");
+place.field("abc")&lt;&lt;btn0&lt;&lt;btn1&lt;&lt;btn2&lt;&lt;btn3;
+</pre><p>Specifie <code>variable</code> in the array to indicates a corresponding widget's weight is not specified, and the widget will be resized by place. </p>
+<pre class="fragment">place.div("&lt;abc arrange=[30,variable,60,repeated]&gt;");
+place.field("abc")&lt;&lt;btn0&lt;&lt;btn1&lt;&lt;btn2&lt;&lt;btn3&lt;&lt;btn4&lt;&lt;btn5&lt;&lt;btn3;
+</pre><h4>grid [X, Y]</h4>
+<p>It specifies a field that lays its children widgets out as a grid. For example into a 3x2 block </p>
+<pre class="fragment">    &lt;grid [3, 2]&gt;
+</pre><p>The field is divided a 3 X 2 grid. For 3x3: </p>
 <pre class="fragment">place plc(fm);
-plc.div("&lt;grid [3, 2] abc&gt;");
-plc.field("abc")&lt;&lt;btn0&lt;&lt;btn1&lt;&lt;btn2&lt;&lt;plc.room(btn3, 3, 1);
-</pre> <div class="image">
+plc.div("&lt; abc grid=[3,3]&gt; ");
+std::vector&lt;std::shared_ptr&lt;button&gt;&gt; btns;
+for(auto i = 0; i &lt; 9; ++i) {
+   btns.emplace_back(new button(fm));
+   btns.back()-&gt;caption(L"Button");
+   plc.field("abc")&lt;&lt;btns.back()-&gt;handle();
+}
+</pre><div class="image">
 <img src="../../place_grid.png" alt="place_grid.png"/>
 <div class="caption">
 Place Grid</div></div>
-<p> <b>gap</b> : It specifies a gap in pixel between widgets in any field. </p>
-<pre class="fragment">&lt;grid [3, 2] gap=5&gt;
-</pre></li>
-<li><p class="startli">An illustration for the place.</p>
-<p class="startli">Let's create a user interface for login validation. The program GUI looks like: </p>
+ <h4>collapse</h4>
+<p>Merges blocks. </p>
+<pre class="fragment">&lt;grid=[3,2] collapse(0,1,3,1)&gt;
+</pre><div class="image">
+<img src="../../place_collapse.png" alt="place_collapse.png"/>
+<div class="caption">
+Place Grid</div></div>
+<p>It can be specified with more than one collapse, but overlapped collapses will be ignored. </p>
+<pre class="fragment">&lt;grid=[3,2] collapse(0,1,3,1) collapse(1,1,2,2)&gt; 
+</pre><p>The second collapse is ignored, because of overlap with the first.</p>
+<h4>gap</h4>
+<p>It specifies a gap in pixel between widgets in any field. </p>
+<pre class="fragment">    &lt;grid [3, 2] gap=5&gt;
+</pre><div class="image">
+<img src="../../place_gap.png" alt="place_gap.png"/>
+<div class="caption">
+Grid with gaps</div></div>
+<p> When a field is a grid, gap can be specified by an Array, but it always uses the first element, other elements will be ignored. the first element of array is variable for gap, the variable here is interpreted as zero. </p>
+<pre class="fragment">&lt;grid=[3,3] gap=[variable]&gt;
+</pre><p>is equal to </p>
+<pre class="fragment">&lt;grid=[3,3] gap=0&gt;
+</pre><p>The gap can also work with arrange. </p>
+<pre class="fragment">&lt;arrange=80 gap=5&gt;
+</pre><p><code>gap=5</code> is equal to <code>gap=[5,repeated]</code></p>
+<div class="image">
+<img src="../../place_arrange_gap.png" alt="place_arrange_gap.png"/>
+</div>
+<p>Gaps only appear between widgets. gap interprets an array differently than other attributes. Refer to margin and arrange for more details.</p>
+<h4>margin</h4>
+<p>Specifies the empty space at sides of the place field. It can have from 1 to 4 values </p>
+<pre class="fragment">&lt;margin=[10,20,30,40]&gt;
+</pre><p>top margin = 10</p>
+<p>right margin = 20</p>
+<p>bottom margin = 30</p>
+<p>left margin = 40</p>
+<pre class="fragment">&lt;margin=[10,20,30]&gt;
+</pre><p>top margin = 10</p>
+<p>right margin = 20</p>
+<p>bottom margin = 30</p>
+<pre class="fragment">&lt;margin=[10,20]&gt;
+</pre><p>top and bottom margin = 10</p>
+<p>left and right margin = 20</p>
+<pre class="fragment">&lt;margin=[10]&gt;
+</pre><p>top margin = 10 </p>
+<pre class="fragment">&lt;margin=20&gt;
+</pre><p>top, right, bottom and left margin = 10</p>
+<p>If variable is specified in the array, it stands for zero. </p>
+<pre class="fragment">&lt;margin=[variable]&gt;
+</pre><p>top margin = 0 </p>
+<pre class="fragment">&lt;margin=[variable,repeated]&gt;
+</pre><p>top, right, bottom and left margin = 0</p>
+<h3>An illustration for the place.</h3>
+<p>Let's create a user interface for login validation. The program GUI looks like: </p>
 <div class="image">
 <img src="../../place_illustrate.png" alt="place_illustrate.png"/>
 </div>
-<p class="startli">First of all, we should divide the form into fields. For this result, it may be divided like this </p>
+<p>First of all, we should divide the form into fields. For this result, it may be divided like this </p>
 <div class="image">
 <img src="../../place_illustrate_divided.png" alt="place_illustrate_divided.png"/>
 <div class="caption">
 Divided into fields</div></div>
 <p> The divide-text of red rectangle should be: </p>
 <pre class="fragment">&lt;&gt;&lt;weight=80% vertical children_fields_of_red_rectangle&gt;&lt;&gt;
-</pre><p class="startli">The root field is horizontal defaultly, so these 3 fields are laied out horizontally. The red rectangle in the middle takes 80% spaces, we specify its weight is 80%. As you see, the children of red rectangle are laied out vertically, it should be specified by vertical.</p>
-<p class="startli">The divide-text of orange rectangle: </p>
+</pre><p>The root field is horizontal defaultly, so these 3 fields are laied out horizontally. The red rectangle in the middle takes 80% spaces, we specify its weight is 80%. As you see, the children of red rectangle are laied out vertically, it should be specified by vertical.</p>
+<p>The divide-text of orange rectangle: </p>
 <pre class="fragment">&lt;&gt;&lt;weight=70% vertical children_fields_of_orange_rectangle&gt;&lt;&gt;
-</pre><p class="startli">The orange rectangle is laied out in the middle about 70% space, it also specified with vertical.</p>
-<p class="startli">The divide-text of green rectangle and blue rectangle: </p>
-<pre class="fragment">&lt;vertical textboxs&gt;&lt;weight=25 buttons&gt;
-</pre><p class="startli">The widgets in green rectangle are laied out vertically, and widgets in blue rectangle are laied out horizontally, so we only specify the vertical for the green rectangle. And the blue rectangle manages buttons and it is horizontal, in other words, the height of blue rectangle is same as buttons', so we specify its weight is 25 pixels. These 2 fields we will refer to and then insert widgets into them, so a name is given for each field.</p>
-<p class="startli">The combination of these divide-texts: </p>
-<pre class="fragment">&lt;&gt;&lt;weight=80% vertical &lt;&gt;&lt;weight=70% vertical &lt;vertical textboxs&gt;&lt;weight=25 buttons&gt;&gt;&lt;&gt;&gt;&lt;&gt;
-</pre><p class="startli">Let's start programming: </p>
+</pre><p>The orange rectangle is laied out in the middle about 70% space, it also specified with vertical. The divide-text of green and blue rectangles: </p>
+<pre class="fragment">&lt;vertical gap=10 textboxs arrange=[25,25]&gt;  &lt;weight=25 gap=10 buttons&gt;
+</pre><p>The widgets in green rectangle are laied out vertically, and widgets in blue rectangle are laied out horizontally, so we only specify the vertical for the green rectangle. The usr and pswd are single-line textboxs, and we should specify them with a fixed height. And the blue rectangle manages buttons and it is horizontal, in other words, the height of blue rectangle is same as buttons', so we specify its weight is 25 pixels. We will refer to these 2 fields to insert widgets into them, so a name is given for each field.</p>
+<p>The combination of these divide-texts: </p>
+<pre class="fragment">&lt;&gt;&lt;weight=80% vertical &lt;&gt;&lt;weight=70% vertical &lt;vertical gap=10 textboxs arrange=[25,25]&gt;  &lt;weight=25 gap=10 buttons&gt;&gt;&lt;&gt;&gt;&lt;&gt;
+</pre><p>Let's start programming: (place_login.cpp)</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;nana/gui/wvl.hpp&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;nana/gui/place.hpp&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;nana/gui/widgets/button.hpp&gt;</span></div>
@@ -294,33 +369,30 @@ Divided into fields</div></div>
 <div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
-<div class="line">    <span class="keyword">using namespace </span>nana::gui;</div>
+<div class="line">    <span class="keyword">using namespace </span>nana;</div>
 <div class="line"></div>
-<div class="line">             <span class="comment">//Define widgets</span></div>
+<div class="line">             <span class="comment">// Define widgets</span></div>
 <div class="line">    form fm;</div>
-<div class="line">    textbox usr(fm), pswd(fm);</div>
-<div class="line">    button login(fm), cancel(fm);</div>
+<div class="line">    <a class="code" href="../../de/d10/classnana_1_1textbox.html">textbox</a> usr  {fm},   </div>
+<div class="line">            pswd {fm};</div>
+<div class="line">    <a class="code" href="../../d7/dc0/classnana_1_1button.html">button</a>  login {fm, STR(<span class="stringliteral">&quot;Login&quot;</span>)}, </div>
+<div class="line">            cancel{fm, STR(<span class="stringliteral">&quot;Cancel&quot;</span>)};</div>
 <div class="line"></div>
-<div class="line">    usr.tip_string(STR(<span class="stringliteral">&quot;User:&quot;</span>)).multi_lines(<span class="keyword">false</span>);</div>
+<div class="line">    usr .tip_string(STR(<span class="stringliteral">&quot;User:&quot;</span>)    ).multi_lines(<span class="keyword">false</span>);</div>
 <div class="line">    pswd.tip_string(STR(<span class="stringliteral">&quot;Password:&quot;</span>)).multi_lines(<span class="keyword">false</span>).mask(<span class="charliteral">&#39;*&#39;</span>);</div>
 <div class="line"></div>
-<div class="line">    login.caption(STR(<span class="stringliteral">&quot;Login&quot;</span>));</div>
-<div class="line">    cancel.caption(STR(<span class="stringliteral">&quot;Cancel&quot;</span>));</div>
+<div class="line">            <span class="comment">// Define a place for the form.</span></div>
+<div class="line">    <a class="code" href="../../dc/de3/classnana_1_1place.html">place</a> plc {fm};</div>
 <div class="line"></div>
-<div class="line">            <span class="comment">//Define a place for the form.</span></div>
-<div class="line">    <a class="code" href="../../dc/de3/classnana_1_1place.html#aa6cad0fae3996e8b294acf34c04748e1">place</a> plc(fm);</div>
-<div class="line"></div>
-<div class="line">            <span class="comment">//Divide the form into fields</span></div>
-<div class="line">    plc.div(<span class="stringliteral">&quot;&lt;&gt;&lt;weight=80% vertical&lt;&gt;&lt;weight=70% vertical&lt;vertical textboxs&gt;&lt;weight=25 buttons&gt;&gt;&lt;&gt;&gt;&lt;&gt;&quot;</span>);</div>
+<div class="line">            <span class="comment">// Divide the form into fields</span></div>
+<div class="line">    plc.<a class="code" href="../../dc/de3/classnana_1_1place.html#aaf7fe8bfe503d9ace74a122af547536f">div</a>(<span class="stringliteral">&quot;&lt;&gt;&lt;weight=80% vertical&lt;&gt;&lt;weight=70% vertical &lt;vertical gap=10 textboxs arrange=[25,25]&gt;  &lt;weight=25 gap=10 buttons&gt; &gt;&lt;&gt;&gt;&lt;&gt;&quot;</span>);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//Insert widgets</span></div>
 <div class="line"></div>
-<div class="line">    <span class="comment">//The field textboxs is vertical, it automatically adjusts the widgets&#39; top</span></div>
-<div class="line">    <span class="comment">//and height. The usr and pswd are single-line textboxs, and we should specify</span></div>
-<div class="line">    <span class="comment">//them with a fixed height.</span></div>
-<div class="line">    plc.field(<span class="stringliteral">&quot;textboxs&quot;</span>)&lt;&lt;plc.fixed(usr, 25)&lt;&lt;10&lt;&lt;plc.fixed(pswd, 25);</div>
+<div class="line">    <span class="comment">//The field textboxs is vertical, it automatically adjusts the widgets&#39; top and height. </span></div>
+<div class="line">    plc.field(<span class="stringliteral">&quot;textboxs&quot;</span>)&lt;&lt; usr  &lt;&lt; pswd ;</div>
 <div class="line"></div>
-<div class="line">    plc.field(<span class="stringliteral">&quot;buttons&quot;</span>)&lt;&lt;login&lt;&lt;10&lt;&lt;cancel;</div>
+<div class="line">    plc.field(<span class="stringliteral">&quot;buttons&quot;</span>) &lt;&lt;login &lt;&lt; cancel;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//Finially, the widgets should be collocated.</span></div>
 <div class="line">    <span class="comment">//Do not miss this line, otherwise the widgets are not collocated</span></div>
@@ -330,9 +402,10 @@ Divided into fields</div></div>
 <div class="line">    fm.show();</div>
 <div class="line">    <a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">exec</a>();</div>
 <div class="line">}</div>
-</div><!-- fragment --> </li>
-</ol>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d5/d39/a_group_impl_8cpp-example.html#_a6">a_group_impl.cpp</a>, and <a class="el" href="../../d0/d14/calculator_8cpp-example.html#_a19">calculator.cpp</a>.</dd>
+</div><!-- fragment --><div class="image">
+<img src="../../place_illustrate.png" alt="place_illustrate.png"/>
+</div>
+ <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d5/d39/a_group_impl_8cpp-example.html#_a6">a_group_impl.cpp</a>, <a class="el" href="../../d5/d9f/background-effects_8cpp-example.html#_a9">background-effects.cpp</a>, <a class="el" href="../../d0/d14/calculator_8cpp-example.html#_a19">calculator.cpp</a>, <a class="el" href="../../d5/d2a/menu_debug_8cpp-example.html#_a1">menu_debug.cpp</a>, <a class="el" href="../../d1/d53/notepad_8cpp-example.html#_a1">notepad.cpp</a>, <a class="el" href="../../d8/d0e/place_login_8cpp-example.html#_a3">place_login.cpp</a>, <a class="el" href="../../d3/de9/widget_show_8cpp-example.html#_a4">widget_show.cpp</a>, and <a class="el" href="../../df/d14/widget_show2_8cpp-example.html#_a1">widget_show2.cpp</a>.</dd>
 </dl></div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a4dbc82b3457c591a5bb883fd2258c0db"></a>
 <div class="memitem">
@@ -437,7 +510,7 @@ Divided into fields</div></div>
 </div><div class="memdoc">
 
 <p>Layouts the widgets. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d14/calculator_8cpp-example.html#a32">calculator.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d5/d9f/background-effects_8cpp-example.html#a11">background-effects.cpp</a>, <a class="el" href="../../d0/d14/calculator_8cpp-example.html#a32">calculator.cpp</a>, and <a class="el" href="../../d5/d2a/menu_debug_8cpp-example.html#a11">menu_debug.cpp</a>.</dd>
 </dl>
 </div>
 </div>
@@ -456,7 +529,7 @@ Divided into fields</div></div>
 </div><div class="memdoc">
 
 <p>Divides the attached widget into fields. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d14/calculator_8cpp-example.html#a20">calculator.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d5/d9f/background-effects_8cpp-example.html#a10">background-effects.cpp</a>, <a class="el" href="../../d0/d14/calculator_8cpp-example.html#a20">calculator.cpp</a>, <a class="el" href="../../d5/d2a/menu_debug_8cpp-example.html#a3">menu_debug.cpp</a>, and <a class="el" href="../../d8/d0e/place_login_8cpp-example.html#a4">place_login.cpp</a>.</dd>
 </dl>
 </div>
 </div>
@@ -493,7 +566,7 @@ Divided into fields</div></div>
 </div><div class="memdoc">
 
 <p>Returns a field with the specified name. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d14/calculator_8cpp-example.html#a23">calculator.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d0/d14/calculator_8cpp-example.html#a23">calculator.cpp</a>, and <a class="el" href="../../d5/d2a/menu_debug_8cpp-example.html#a4">menu_debug.cpp</a>.</dd>
 </dl>
 </div>
 </div>
@@ -628,7 +701,7 @@ Divided into fields</div></div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/d76/namespacenana.html">nana</a></li><li class="navelem"><a class="el" href="../../dc/de3/classnana_1_1place.html">place</a></li>
-    <li class="footer">Generated on Sun Mar 8 2015 18:54:35 for Nana C++ Library. Reference for users. by
+    <li class="footer">Generated on Tue May 5 2015 21:51:08 for Nana C++ Library. Reference for users. by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

@@ -11,6 +11,8 @@ var classnana_1_1drawerbase_1_1listbox_1_1item__proxy =
     [ "empty", "df/d3e/classnana_1_1drawerbase_1_1listbox_1_1item__proxy.html#a945e051c05bd6f930af0b6cece0ab66d", null ],
     [ "fgcolor", "df/d3e/classnana_1_1drawerbase_1_1listbox_1_1item__proxy.html#af882172a099c1de29e571042117d2dcf", null ],
     [ "fgcolor", "df/d3e/classnana_1_1drawerbase_1_1listbox_1_1item__proxy.html#a48a5b3344349b00864634620d31021c6", null ],
+    [ "from_display", "df/d3e/classnana_1_1drawerbase_1_1listbox_1_1item__proxy.html#af5a6f86dc0249b6d560dd64cd4b9496e", null ],
+    [ "from_display", "df/d3e/classnana_1_1drawerbase_1_1listbox_1_1item__proxy.html#aa99c7034871126a05d81fd364099d12c", null ],
     [ "icon", "df/d3e/classnana_1_1drawerbase_1_1listbox_1_1item__proxy.html#a3c3e319c2a59f6daeee9351a55adf0cb", null ],
     [ "operator!=", "df/d3e/classnana_1_1drawerbase_1_1listbox_1_1item__proxy.html#afec79f7b82264fde893b246a41cfdcb0", null ],
     [ "operator*", "df/d3e/classnana_1_1drawerbase_1_1listbox_1_1item__proxy.html#a869fd81d8c2ef5bbead1cf8083ffb37b", null ],
@@ -32,6 +34,7 @@ var classnana_1_1drawerbase_1_1listbox_1_1item__proxy =
     [ "text", "df/d3e/classnana_1_1drawerbase_1_1listbox_1_1item__proxy.html#a861d020ecb5f216043d566233ce83165", null ],
     [ "text", "df/d3e/classnana_1_1drawerbase_1_1listbox_1_1item__proxy.html#a01042aa5e440b7d062a1cb11d7295f4a", null ],
     [ "text", "df/d3e/classnana_1_1drawerbase_1_1listbox_1_1item__proxy.html#aad1ebbb12c61ec53ac8162d4c470215e", null ],
+    [ "to_display", "df/d3e/classnana_1_1drawerbase_1_1listbox_1_1item__proxy.html#aaa75c433386745704869d3c3dd31bf44", null ],
     [ "value", "df/d3e/classnana_1_1drawerbase_1_1listbox_1_1item__proxy.html#a366918882a3357d2a1f99170228c1708", null ],
     [ "value", "df/d3e/classnana_1_1drawerbase_1_1listbox_1_1item__proxy.html#a9425ebbcc26703c2370b17f1c3ba9e06", null ],
     [ "value_ptr", "df/d3e/classnana_1_1drawerbase_1_1listbox_1_1item__proxy.html#a1d7175f6c2dc8b50fc53a7f229cb9548", null ]

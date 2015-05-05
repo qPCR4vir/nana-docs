@@ -30,6 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Nana C++ Library. Reference for users.
+   &#160;<span id="projectnumber">v1.0.2</span>
    </div>
    <div id="projectbrief">What we need to use nana</div>
   </td>
@@ -106,32 +107,32 @@ $(document).ready(function(){initNavTree('d0/deb/animate-bmp_8cpp-example.html',
 <div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
-<div class="line">    <span class="keyword">using namespace </span>nana::gui;</div>
+<div class="line">    <span class="keyword">using namespace </span>nana;</div>
 <div class="line">   </div>
 <div class="line">    <span class="comment">//Build frames</span></div>
-<div class="line">    frameset fset;</div>
-<div class="line">    fset.push_back(<a name="_a0"></a><a class="code" href="../../d9/de1/classnana_1_1paint_1_1image.html">nana::paint::image</a>(STR(<span class="stringliteral">&quot;a_pic0.bmp&quot;</span>)));</div>
+<div class="line">    <a name="_a0"></a><a class="code" href="../../dc/d2f/classnana_1_1frameset.html">frameset</a> fset;</div>
+<div class="line">    fset.<a name="a1"></a><a class="code" href="../../dc/d2f/classnana_1_1frameset.html#a19401d92d2233b30e88aa29305938c16">push_back</a>(<a name="_a2"></a><a class="code" href="../../d9/de1/classnana_1_1paint_1_1image.html">nana::paint::image</a>(STR(<span class="stringliteral">&quot;a_pic0.bmp&quot;</span>)));</div>
 <div class="line">    fset.push_back(<a class="code" href="../../d9/de1/classnana_1_1paint_1_1image.html">nana::paint::image</a>(STR(<span class="stringliteral">&quot;a_pic1.bmp&quot;</span>)));</div>
 <div class="line">    fset.push_back(<a class="code" href="../../d9/de1/classnana_1_1paint_1_1image.html">nana::paint::image</a>(STR(<span class="stringliteral">&quot;a_pic2.bmp&quot;</span>)));</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//A widget to display animation.</span></div>
-<div class="line">    form fm;</div>
-<div class="line">    fm.show();</div>
+<div class="line">    <a name="_a3"></a><a class="code" href="../../d6/d57/classnana_1_1form.html">form</a> fm;</div>
+<div class="line">    fm.<a name="a4"></a><a class="code" href="../../d9/dd8/classnana_1_1widget.html#aa6bc5708ecaff3ede2945d19797394d5">show</a>();</div>
 <div class="line"></div>
-<div class="line">    animation ani;</div>
-<div class="line">    ani.push_back(fset);</div>
-<div class="line">    ani.output(fm, <a name="_a1"></a><a class="code" href="../../d0/d24/structnana_1_1point.html">nana::point</a>());</div>
+<div class="line">    <a name="_a5"></a><a class="code" href="../../dd/d57/classnana_1_1animation.html">animation</a> ani;</div>
+<div class="line">    ani.<a name="a6"></a><a class="code" href="../../dd/d57/classnana_1_1animation.html#ae3074689e53818f63c237c186d1a9faf">push_back</a>(fset);</div>
+<div class="line">    ani.output(fm, <a name="_a7"></a><a class="code" href="../../d0/d24/structnana_1_1point.html">nana::point</a>());</div>
 <div class="line">    ani.looped(<span class="keyword">true</span>);</div>
 <div class="line">    ani.play();</div>
 <div class="line"></div>
-<div class="line">    <a name="a2"></a><a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">exec</a>();</div>
+<div class="line">    <a name="a8"></a><a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">exec</a>();</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Mar 8 2015 18:54:26 for Nana C++ Library. Reference for users. by
+    <li class="footer">Generated on Tue May 5 2015 21:50:55 for Nana C++ Library. Reference for users. by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

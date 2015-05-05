@@ -30,6 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Nana C++ Library. Reference for users.
+   &#160;<span id="projectnumber">v1.0.2</span>
    </div>
    <div id="projectbrief">What we need to use nana</div>
   </td>
@@ -111,33 +112,33 @@ $(document).ready(function(){initNavTree('d8/d0e/place_login_8cpp-example.html',
 <div class="line"></div>
 <div class="line">    <span class="keywordtype">int</span> main()</div>
 <div class="line">    {</div>
-<div class="line">        <span class="keyword">using namespace </span>nana::gui;</div>
+<div class="line">        <span class="keyword">using namespace </span>nana;</div>
 <div class="line"></div>
-<div class="line">                 <span class="comment">//Define widgets</span></div>
-<div class="line">        form fm;</div>
-<div class="line">        textbox usr(fm), pswd(fm);</div>
-<div class="line">        button login(fm), cancel(fm);</div>
+<div class="line">                 <span class="comment">// Define widgets</span></div>
+<div class="line">        <a name="_a0"></a><a class="code" href="../../d6/d57/classnana_1_1form.html">form</a> fm;</div>
+<div class="line">        <a name="_a1"></a><a class="code" href="../../de/d10/classnana_1_1textbox.html">textbox</a> usr  {fm},   </div>
+<div class="line">                pswd {fm};</div>
+<div class="line">        <a name="_a2"></a><a class="code" href="../../d7/dc0/classnana_1_1button.html">button</a>  login {fm, STR(<span class="stringliteral">&quot;Login&quot;</span>)}, </div>
+<div class="line">                cancel{fm, STR(<span class="stringliteral">&quot;Cancel&quot;</span>)};</div>
 <div class="line"></div>
 <div class="line">        usr .tip_string(STR(<span class="stringliteral">&quot;User:&quot;</span>)    ).multi_lines(<span class="keyword">false</span>);</div>
 <div class="line">        pswd.tip_string(STR(<span class="stringliteral">&quot;Password:&quot;</span>)).multi_lines(<span class="keyword">false</span>).mask(<span class="charliteral">&#39;*&#39;</span>);</div>
 <div class="line"></div>
-<div class="line">        login .caption(STR(<span class="stringliteral">&quot;Login&quot;</span>));</div>
-<div class="line">        cancel.caption(STR(<span class="stringliteral">&quot;Cancel&quot;</span>));</div>
+<div class="line">                <span class="comment">// Define a place for the form.</span></div>
+<div class="line">        <a name="_a3"></a><a class="code" href="../../dc/de3/classnana_1_1place.html">place</a> plc {fm};</div>
 <div class="line"></div>
-<div class="line">                <span class="comment">//Define a place for the form.</span></div>
-<div class="line">        place plc(fm);</div>
+<div class="line">                <span class="comment">// Divide the form into fields</span></div>
+<div class="line">                </div>
+<div class="line">        <span class="comment">//plc.div(&quot;margin= 10%   gap=20 vertical&lt; weight=70 gap=20 vertical textboxs arrange=[25,25]&gt; &lt;min=20&gt; &lt;weight=25 gap=10 buttons&gt;  &gt; &quot;);</span></div>
 <div class="line"></div>
-<div class="line">                <span class="comment">//Divide the form into fields</span></div>
-<div class="line">        plc.div(<span class="stringliteral">&quot;&lt;&gt;&lt;weight=80% vertical&lt;&gt;&lt;weight=70% vertical&lt;vertical textboxs&gt;&lt;weight=25 buttons&gt;&gt;&lt;&gt;&gt;&lt;&gt;&quot;</span>);</div>
+<div class="line">        plc.<a name="a4"></a><a class="code" href="../../dc/de3/classnana_1_1place.html#aaf7fe8bfe503d9ace74a122af547536f">div</a>(<span class="stringliteral">&quot;&lt;&gt;&lt;weight=80% vertical&lt;&gt;&lt;weight=70% vertical &lt;vertical gap=10 textboxs arrange=[25,25]&gt;  &lt;weight=25 gap=10 buttons&gt; &gt;&lt;&gt;&gt;&lt;&gt;&quot;</span>);</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">//Insert widgets</span></div>
 <div class="line"></div>
-<div class="line">        <span class="comment">//The field textboxs is vertical, it automatically adjusts the widgets&#39; top</span></div>
-<div class="line">        <span class="comment">//and height. The usr and pswd are single-line textboxs, and we should specify</span></div>
-<div class="line">        <span class="comment">//them with a fixed height.</span></div>
-<div class="line">        plc.field(<span class="stringliteral">&quot;textboxs&quot;</span>) &lt;&lt; plc.fixed(usr, 25) &lt;&lt; 10 &lt;&lt; plc.fixed(pswd, 25);</div>
+<div class="line">        <span class="comment">//The field textboxs is vertical, it automatically adjusts the widgets&#39; top and height. </span></div>
+<div class="line">        plc.field(<span class="stringliteral">&quot;textboxs&quot;</span>)&lt;&lt; usr  &lt;&lt; pswd ;</div>
 <div class="line"></div>
-<div class="line">        plc.field(<span class="stringliteral">&quot;buttons&quot;</span>) &lt;&lt; login &lt;&lt; 10 &lt;&lt; cancel;</div>
+<div class="line">        plc.field(<span class="stringliteral">&quot;buttons&quot;</span>) &lt;&lt;login &lt;&lt; cancel;</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">//Finially, the widgets should be collocated.</span></div>
 <div class="line">        <span class="comment">//Do not miss this line, otherwise the widgets are not collocated</span></div>
@@ -145,14 +146,14 @@ $(document).ready(function(){initNavTree('d8/d0e/place_login_8cpp-example.html',
 <div class="line">        plc.collocate();</div>
 <div class="line"></div>
 <div class="line">        fm.show();</div>
-<div class="line">        <a name="a0"></a><a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">exec</a>();</div>
+<div class="line">        <a name="a5"></a><a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">exec</a>();</div>
 <div class="line">    }</div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Mar 8 2015 18:54:27 for Nana C++ Library. Reference for users. by
+    <li class="footer">Generated on Tue May 5 2015 21:50:57 for Nana C++ Library. Reference for users. by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

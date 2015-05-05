@@ -30,6 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Nana C++ Library. Reference for users.
+   &#160;<span id="projectnumber">v1.0.2</span>
    </div>
    <div id="projectbrief">What we need to use nana</div>
   </td>
@@ -109,23 +110,23 @@ $(document).ready(function(){initNavTree('d7/ddb/threading_8cpp-example.html','.
 <div class="line">}</div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
-<div class="line">  <span class="keyword">using namespace </span>nana::gui;</div>
+<div class="line">  <span class="keyword">using namespace </span>nana;</div>
 <div class="line">  <span class="keyword">using namespace </span>nana::threads;</div>
 <div class="line">    <a name="_a0"></a><a class="code" href="../../d5/da5/classnana_1_1threads_1_1pool.html">pool</a> thrpool;</div>
-<div class="line">    form fm;</div>
-<div class="line">    fm.make_event&lt;<a name="a1"></a><a class="code" href="../../d2/d76/namespacenana.html#aec14d9a922f2b2a5c52680e6f4c9c2d3aa8affc088cbca89fa20dbd98c91362e4">events::click</a>&gt;(<a class="code" href="../../d5/d4c/namespacenana_1_1threads.html#a522742773009913c5b4961c02de4873e">pool_push</a>(thrpool, foo));</div>
-<div class="line">    fm.make_event&lt;<a class="code" href="../../d2/d76/namespacenana.html#aec14d9a922f2b2a5c52680e6f4c9c2d3aa8affc088cbca89fa20dbd98c91362e4">events::click</a>&gt;(<a class="code" href="../../d5/d4c/namespacenana_1_1threads.html#a522742773009913c5b4961c02de4873e">pool_push</a>(thrpool, []{</div>
+<div class="line">    <a name="_a1"></a><a class="code" href="../../d6/d57/classnana_1_1form.html">form</a> fm;</div>
+<div class="line">    fm.<a name="a2"></a><a class="code" href="../../d3/d95/classnana_1_1widget__object.html#afafd1a1bafe56cd6e5903d8db910aad8">events</a>().<a name="a3"></a><a class="code" href="../../dd/d19/structnana_1_1general__events.html#a74eba5017dbd5dbfdb6f32b9b485682f">click</a>(<a class="code" href="../../d5/d4c/namespacenana_1_1threads.html#a522742773009913c5b4961c02de4873e">pool_push</a>(thrpool, foo));</div>
+<div class="line">    fm.events().click(<a class="code" href="../../d5/d4c/namespacenana_1_1threads.html#a522742773009913c5b4961c02de4873e">pool_push</a>(thrpool, []{</div>
 <div class="line">                                              <span class="comment">//A lambda is also allowed.</span></div>
 <div class="line">                                      }));</div>
 <div class="line">    fm.show();</div>
-<div class="line">    <a name="a2"></a><a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">exec</a>();</div>
+<div class="line">    <a name="a4"></a><a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">exec</a>();</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Mar 8 2015 18:54:28 for Nana C++ Library. Reference for users. by
+    <li class="footer">Generated on Tue May 5 2015 21:50:58 for Nana C++ Library. Reference for users. by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

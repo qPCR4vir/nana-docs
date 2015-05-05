@@ -1,7 +1,7 @@
 var classnana_1_1drawerbase_1_1scroll_1_1drawer =
 [
     [ "states", "df/d65/structnana_1_1drawerbase_1_1scroll_1_1drawer_1_1states.html", "df/d65/structnana_1_1drawerbase_1_1scroll_1_1drawer_1_1states" ],
-    [ "graph_reference", "dc/db0/classnana_1_1drawerbase_1_1scroll_1_1drawer.html#a0c2f694f80ef282fef3fcb4c24d56bae", null ],
+    [ "graph_reference", "dc/db0/classnana_1_1drawerbase_1_1scroll_1_1drawer.html#a035967ef2d4f84e225ecd79edfbce7a3", null ],
     [ "drawer", "dc/db0/classnana_1_1drawerbase_1_1scroll_1_1drawer.html#aed1a4f3a411bbec40767999370976f54", null ],
     [ "auto_scroll", "dc/db0/classnana_1_1drawerbase_1_1scroll_1_1drawer.html#ae6d9cd2914c030d5af0c4adf318f6251", null ],
     [ "draw", "dc/db0/classnana_1_1drawerbase_1_1scroll_1_1drawer.html#a2d2ed4a6f2a2e290605882940d001d4b", null ],

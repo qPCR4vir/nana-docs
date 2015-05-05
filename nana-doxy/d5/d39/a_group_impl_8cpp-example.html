@@ -30,6 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Nana C++ Library. Reference for users.
+   &#160;<span id="projectnumber">v1.0.2</span>
    </div>
    <div id="projectbrief">What we need to use nana</div>
   </td>
@@ -155,26 +156,49 @@ $(document).ready(function(){initNavTree('d5/d39/a_group_impl_8cpp-example.html'
 <div class="line">        <a name="_a8"></a><a class="code" href="../../dd/d8c/classnana_1_1label.html">label</a>           titel<span class="comment">/*  {*this}*/</span>;</div>
 <div class="line">        <a name="_a9"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a>     fmt;</div>
 <div class="line"></div>
-<div class="line">        group1(<a name="_a10"></a><a class="code" href="../../d9/dd8/classnana_1_1widget.html">widget</a> &amp;owner, ::<a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/string/basic_string.html">nana::string</a> titel={}, <a name="_a11"></a><a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">rectangle</a> r={})</div>
-<div class="line">            : <a class="code" href="../../d1/d87/classnana_1_1panel.html">panel</a>  (owner, r), </div>
-<div class="line">              titel  (*<span class="keyword">this</span>, titel),</div>
-<div class="line">              fmt    (<span class="stringliteral">&quot;vertical margin=[0,3,3,3] &lt;weight=18 &lt;weight=5&gt; &lt;titel weight=43&gt; &gt;&quot;</span>)</div>
+<div class="line">        group1 ( <a name="_a10"></a><a class="code" href="../../d9/dd8/classnana_1_1widget.html">widget</a> &amp;owner, </div>
+<div class="line">                 ::<a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/string/basic_string.html">nana::string</a> titel_={}, </div>
+<div class="line">                 <span class="keywordtype">bool</span> format=<span class="keyword">false</span>, </div>
+<div class="line">                 <span class="keywordtype">unsigned</span> gap=2, </div>
+<div class="line">                 <a name="_a11"></a><a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">rectangle</a> r={})</div>
+<div class="line">        : <a class="code" href="../../d1/d87/classnana_1_1panel.html">panel</a> (owner, r),</div>
+<div class="line">          titel (*<span class="keyword">this</span>, titel_)</div>
 <div class="line">        {</div>
-<div class="line">            plc[<span class="stringliteral">&quot;titel&quot;</span>] &lt;&lt; titel;</div>
-<div class="line">            <a class="code" href="../../d9/d46/classnana_1_1drawing.html">drawing</a> dw(*<span class="keyword">this</span>);</div>
-<div class="line">                    dw.<a class="code" href="../../d9/d46/classnana_1_1drawing.html#a2e16374087087d476041ad8e7e42169b">draw</a>([](<a class="code" href="../../d6/d47/classnana_1_1paint_1_1graphics.html">paint::graphics</a>&amp; graph)</div>
-<div class="line">                    {</div>
-<div class="line">                            graph.<a class="code" href="../../d6/d47/classnana_1_1paint_1_1graphics.html#aee430e71db8c8fa8726ccc531c4b229e">rectangle</a>(<span class="keyword">false</span>, <a class="code" href="../../d2/d76/namespacenana.html#a1c3db4107603ee927761eec5fe67ef98a48d37c13adb7f2f9b70a66b861a02ef0">colors::gray_border</a>);</div>
-<div class="line">                    });</div>
-<div class="line">            plc.div(fmt.c_str());</div>
+<div class="line">            titel.format(format);</div>
+<div class="line">            <a name="_a12"></a><a class="code" href="../../da/df8/structnana_1_1size.html">nana::size</a> sz = titel.measure(1000);</div>
+<div class="line">            <a name="_a13"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_stringstream.html">std::stringstream</a> ft;</div>
 <div class="line"></div>
+<div class="line">            ft &lt;&lt; <span class="stringliteral">&quot;vertical margin=[0,&quot;</span> &lt;&lt; gap &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; gap &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; gap &lt;&lt; <span class="stringliteral">&quot;]&quot;</span></div>
+<div class="line">               &lt;&lt; <span class="stringliteral">&quot; &lt;weight=&quot;</span> &lt;&lt; sz.<a name="a14"></a><a class="code" href="../../da/df8/structnana_1_1size.html#af6029a534e26ca73afc26551fa3c0b36">height</a> &lt;&lt; <span class="stringliteral">&quot; &lt;weight=5&gt; &lt;titel weight=&quot;</span> &lt;&lt; sz.<a name="a15"></a><a class="code" href="../../da/df8/structnana_1_1size.html#a3f4812408ab661b7d7fe3f990d73f4ec">width</a>+1 &lt;&lt; <span class="stringliteral">&quot;&gt; &gt;&quot;</span>;</div>
+<div class="line">            fmt = ft.<a name="a16"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_stringstream/str.html">str</a>();</div>
+<div class="line"></div>
+<div class="line">            plc[<span class="stringliteral">&quot;titel&quot;</span>] &lt;&lt; titel;</div>
+<div class="line"></div>
+<div class="line">            <a name="_a17"></a><a class="code" href="../../dd/d1e/classnana_1_1color.html">color</a> obg = owner.<a name="a18"></a><a class="code" href="../../d9/dd8/classnana_1_1widget.html#a7aa74edbc2bb11f769043cbf0475446f">bgcolor</a>();</div>
+<div class="line">            titel.bgcolor(obg.<a name="a19"></a><a class="code" href="../../dd/d1e/classnana_1_1color.html#a74a0546c9a0b9bac31a7ff6eeb9cfd73">blend</a>(<a name="a20"></a><a class="code" href="../../d2/d76/namespacenana.html#a1c3db4107603ee927761eec5fe67ef98a1ffd9e753c8054cc61456ac7fac1ac89">colors::black</a>, 0.975) );</div>
+<div class="line">            <a class="code" href="../../dd/d1e/classnana_1_1color.html">color</a> bg=obg.<a class="code" href="../../dd/d1e/classnana_1_1color.html#a74a0546c9a0b9bac31a7ff6eeb9cfd73">blend</a>(<a class="code" href="../../d2/d76/namespacenana.html#a1c3db4107603ee927761eec5fe67ef98a1ffd9e753c8054cc61456ac7fac1ac89">colors::black</a>, 0.950 );</div>
+<div class="line">            <a class="code" href="../../d5/d1e/namespacenana_1_1_a_p_i.html#a7c9f0212bd8dd426ab2e0cb9bbb4ef1d">bgcolor</a>(bg);</div>
+<div class="line"></div>
+<div class="line">            <a class="code" href="../../d9/d46/classnana_1_1drawing.html">drawing</a> dw(*<span class="keyword">this</span>);</div>
+<div class="line">                    dw.<a class="code" href="../../d9/d46/classnana_1_1drawing.html#a2e16374087087d476041ad8e7e42169b">draw</a>([gap,sz,bg,obg](<a class="code" href="../../d6/d47/classnana_1_1paint_1_1graphics.html">paint::graphics</a>&amp; graph)</div>
+<div class="line">                    {</div>
+<div class="line">                            graph.<a class="code" href="../../d6/d47/classnana_1_1paint_1_1graphics.html#aee430e71db8c8fa8726ccc531c4b229e">rectangle</a>(<span class="keyword">true</span>, obg);</div>
+<div class="line">                graph.<a name="a21"></a><a class="code" href="../../d6/d47/classnana_1_1paint_1_1graphics.html#ae8cbbfb403102b0b2fdf214ca97c7bc6">round_rectangle</a>(<a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">rectangle</a>(       <a name="_a22"></a><a class="code" href="../../d0/d24/structnana_1_1point.html">point</a> ( gap-1,   sz.<a class="code" href="../../da/df8/structnana_1_1size.html#af6029a534e26ca73afc26551fa3c0b36">height</a>/2), </div>
+<div class="line">                                                 <a class="code" href="../../da/df8/structnana_1_1size.html">nana::size</a>  (graph.<a name="a23"></a><a class="code" href="../../d6/d47/classnana_1_1paint_1_1graphics.html#ae1f2c8cfe739929d4b911d597ae28469">width</a>()-2*(gap-1),   graph.<a name="a24"></a><a class="code" href="../../d6/d47/classnana_1_1paint_1_1graphics.html#a31727ca67797fa8c8d4db3dba7e20b3a">height</a>()-sz.<a class="code" href="../../da/df8/structnana_1_1size.html#af6029a534e26ca73afc26551fa3c0b36">height</a>/2-(gap-1))),</div>
+<div class="line">                                      3,3, <a class="code" href="../../d2/d76/namespacenana.html#a1c3db4107603ee927761eec5fe67ef98a48d37c13adb7f2f9b70a66b861a02ef0">colors::gray_border</a>,     <span class="keyword">true</span>, bg);</div>
+<div class="line">           });</div>
+<div class="line"></div>
+<div class="line">           plc.div(fmt.c_str());</div>
 <div class="line">        }</div>
 <div class="line">    };</div>
+<div class="line"></div>
 <div class="line">}</div>
 <div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
-<div class="line">        <a name="_a12"></a><a class="code" href="../../d6/d57/classnana_1_1form.html">form</a> fm(<a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">rectangle</a>{ 10, 10, 600, 300 });</div>
+<div class="line"></div>
+<div class="line">        <a name="_a25"></a><a class="code" href="../../d6/d57/classnana_1_1form.html">form</a> fm;</div>
+<div class="line">    fm.<a class="code" href="../../d9/dd8/classnana_1_1widget.html#a7aa74edbc2bb11f769043cbf0475446f">bgcolor</a>(<a name="a26"></a><a class="code" href="../../d2/d76/namespacenana.html#a1c3db4107603ee927761eec5fe67ef98a28a62909f84c7a965ea755d99db1ca2b">colors::mint_cream</a> );</div>
 <div class="line">    <a class="code" href="../../dc/de3/classnana_1_1place.html">place</a> plc(fm);</div>
 <div class="line"></div>
 <div class="line"></div>
@@ -182,38 +206,42 @@ $(document).ready(function(){initNavTree('d5/d39/a_group_impl_8cpp-example.html'
 <div class="line">        grp.create(fm );</div>
 <div class="line">    grp.create_widget&lt;<a class="code" href="../../dd/d8c/classnana_1_1label.html">label</a>&gt;(STR(<span class="stringliteral">&quot;Group:&quot;</span>));</div>
 <div class="line"></div>
-<div class="line">    plc[<span class="stringliteral">&quot;abc&quot;</span>] &lt;&lt; grp;</div>
+<div class="line">    plc[<span class="stringliteral">&quot;left&quot;</span>] &lt;&lt; grp;</div>
 <div class="line"></div>
-<div class="line">    dm::group1 grp1(fm, STR(<span class="stringliteral">&quot;Group1:&quot;</span>), <a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">rectangle</a>{ 220, 10, 200, 200 });</div>
-<div class="line">    <a name="_a13"></a><a class="code" href="../../d7/dc0/classnana_1_1button.html">button</a> b1{grp1, STR(<span class="stringliteral">&quot;add button&quot;</span>)};</div>
+<div class="line">    dm::group1 grp1(fm, STR(<span class="stringliteral">&quot;A new &lt;bold=true, color=0xff0000, font=\&quot;Consolas\&quot;&gt;Group:&lt;/&gt;&quot;</span>), <span class="keyword">true</span> );</div>
+<div class="line">    <a class="code" href="../../dd/d8c/classnana_1_1label.html">label</a> lab{grp1, STR(<span class="stringliteral">&quot;A label &quot;</span>)};</div>
+<div class="line">    <a name="_a27"></a><a class="code" href="../../d7/dc0/classnana_1_1button.html">button</a> b1{grp1, STR(<span class="stringliteral">&quot;add button&quot;</span>)};</div>
 <div class="line">    <a class="code" href="../../d7/dc0/classnana_1_1button.html">button</a> b2{grp1, STR(<span class="stringliteral">&quot;button2&quot;</span>)};</div>
 <div class="line">    <a class="code" href="../../d7/dc0/classnana_1_1button.html">button</a> b3{grp1, STR(<span class="stringliteral">&quot;button3&quot;</span>)};</div>
-<div class="line">    grp1.fmt += <span class="stringliteral">&quot;&lt;vertical margin=2 gap= 2 buttons&gt;&quot;</span>;</div>
-<div class="line">    grp1.plc[<span class="stringliteral">&quot;buttons&quot;</span>] &lt;&lt; b1 &lt;&lt; b2 &lt;&lt; b3;</div>
+<div class="line">    grp1.fmt += <span class="stringliteral">&quot;&lt;vertical margin=2 gap= 2 &lt;lab&gt; | 70% &lt; &lt;left&gt; | 70% &lt;right&gt;&gt; &gt;&quot;</span>;</div>
+<div class="line">    grp1.plc[<span class="stringliteral">&quot;lab&quot;</span>] &lt;&lt; lab.text_align(<a name="a28"></a><a class="code" href="../../d2/d76/namespacenana.html#ad3d2f08c451a6752b3f7d53e0f863087a7c4f29407893c334a6cb7a87bf045c0d">align::right</a>)  ;</div>
+<div class="line">    grp1.plc[<span class="stringliteral">&quot;left&quot;</span>] &lt;&lt; b1  ;</div>
+<div class="line">    grp1.plc[<span class="stringliteral">&quot;right&quot;</span>] &lt;&lt; b2 &lt;&lt; b3;</div>
 <div class="line">    grp1.plc.div(grp1.fmt.c_str());</div>
-<div class="line">    grp1.plc.collocate();</div>
+<div class="line">    <span class="comment">//grp1.plc.collocate();    // problem !!!!!!!!!!!!!!</span></div>
 <div class="line"></div>
-<div class="line">    plc[<span class="stringliteral">&quot;abc&quot;</span>] &lt;&lt; grp1;</div>
-<div class="line">    plc.div(<span class="stringliteral">&quot;horizontal gap=3 margin=30 abc&quot;</span>);</div>
+<div class="line">    plc[<span class="stringliteral">&quot;right&quot;</span>] &lt;&lt; grp1;</div>
+<div class="line">    plc.div(<span class="stringliteral">&quot;horizontal gap=3 margin=30  &lt; &lt;left&gt; | 70% &lt;right&gt;&gt; &quot;</span>);</div>
 <div class="line">    plc.collocate();</div>
+<div class="line">    grp1.plc.collocate();    <span class="comment">// OK</span></div>
 <div class="line"></div>
 <div class="line">        b1.events().click([&amp;grp]</div>
 <div class="line">        {</div>
 <div class="line">                <span class="keyword">auto</span> p = grp.create_widget&lt;<a class="code" href="../../d7/dc0/classnana_1_1button.html">button</a>&gt;();</div>
-<div class="line">                p-&gt;<a name="a14"></a><a class="code" href="../../d9/dd8/classnana_1_1widget.html#ab4a216a092654c3c539d00fb1db76934">caption</a>(L<span class="stringliteral">&quot;Button&quot;</span>);</div>
+<div class="line">                p-&gt;<a name="a29"></a><a class="code" href="../../d9/dd8/classnana_1_1widget.html#ab4a216a092654c3c539d00fb1db76934">caption</a>(L<span class="stringliteral">&quot;Button&quot;</span>);</div>
 <div class="line">        });</div>
 <div class="line"></div>
-<div class="line">        fm.show();</div>
+<div class="line">        fm.<a name="a30"></a><a class="code" href="../../d9/dd8/classnana_1_1widget.html#aa6bc5708ecaff3ede2945d19797394d5">show</a>();</div>
 <div class="line"></div>
 <div class="line">        ::nana::exec();</div>
 <div class="line">}</div>
-<div class="line"><span class="comment">/// ![](groups.png)</span></div>
+<div class="line"><span class="comment">/// </span></div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Mar 8 2015 18:54:26 for Nana C++ Library. Reference for users. by
+    <li class="footer">Generated on Tue May 5 2015 21:50:55 for Nana C++ Library. Reference for users. by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

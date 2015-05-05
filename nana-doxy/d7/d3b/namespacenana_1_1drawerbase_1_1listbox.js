@@ -14,6 +14,7 @@ var namespacenana_1_1drawerbase_1_1listbox =
     [ "trigger", "d5/d62/classnana_1_1drawerbase_1_1listbox_1_1trigger.html", "d5/d62/classnana_1_1drawerbase_1_1listbox_1_1trigger" ],
     [ "item_proxy", "df/d3e/classnana_1_1drawerbase_1_1listbox_1_1item__proxy.html", "df/d3e/classnana_1_1drawerbase_1_1listbox_1_1item__proxy" ],
     [ "cat_proxy", "da/d11/classnana_1_1drawerbase_1_1listbox_1_1cat__proxy.html", "da/d11/classnana_1_1drawerbase_1_1listbox_1_1cat__proxy" ],
+    [ "export_options", "d3/dfa/structnana_1_1drawerbase_1_1listbox_1_1export__options.html", "d3/dfa/structnana_1_1drawerbase_1_1listbox_1_1export__options" ],
     [ "listbox_events", "d5/ddb/structnana_1_1drawerbase_1_1listbox_1_1listbox__events.html", "d5/ddb/structnana_1_1drawerbase_1_1listbox_1_1listbox__events" ],
     [ "scheme", "dc/d9d/structnana_1_1drawerbase_1_1listbox_1_1scheme.html", "dc/d9d/structnana_1_1drawerbase_1_1listbox_1_1scheme" ]
 ];

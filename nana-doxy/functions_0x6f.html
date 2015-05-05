@@ -30,6 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Nana C++ Library. Reference for users.
+   &#160;<span id="projectnumber">v1.0.2</span>
    </div>
    <div id="projectbrief">What we need to use nana</div>
   </td>
@@ -162,8 +163,11 @@ $(document).ready(function(){initNavTree('functions_0x6f.html','');});
 <li>offset_x_adjust
 : <a class="el" href="da/d12/structnana_1_1drawerbase_1_1treebox_1_1trigger_1_1basic__implement_1_1adjust__tag.html#a1431ca4feec0a28fc30a4bb4e9d7a213">nana::drawerbase::treebox::trigger::basic_implement&lt; Renderer &gt;::adjust_tag</a>
 </li>
-<li>offset_y
-: <a class="el" href="dc/d71/structnana_1_1drawerbase_1_1listbox_1_1essence__t_1_1scroll__part.html#a38342be35e22ad056563bd155e088237">nana::drawerbase::listbox::essence_t::scroll_part</a>
+<li>offset_y_abs
+: <a class="el" href="dc/d71/structnana_1_1drawerbase_1_1listbox_1_1essence__t_1_1scroll__part.html#ab9ec2ed0f79b22cd3a7b754a2a6dff2b">nana::drawerbase::listbox::essence_t::scroll_part</a>
+</li>
+<li>offset_y_dpl
+: <a class="el" href="dc/d71/structnana_1_1drawerbase_1_1listbox_1_1essence__t_1_1scroll__part.html#a2fd7fb2c79953d5fefc0a4e71903437c">nana::drawerbase::listbox::essence_t::scroll_part</a>
 </li>
 <li>ok
 : <a class="el" href="d8/d97/classnana_1_1msgbox.html#a305112845be74452713ff42e871a21f2a85aa04a2aff7e1f20f01865acf689f19">nana::msgbox</a>
@@ -182,11 +186,21 @@ $(document).ready(function(){initNavTree('functions_0x6f.html','');});
 : <a class="el" href="df/d8f/unionnana_1_1frame_1_1uframes.html#a33879a242247f00a592b37afd1ecef80">nana::frame::uframes</a>
 , <a class="el" href="da/dd2/structnana_1_1frame.html#a217ef16102b78e1bb00560e2062f1d47a3d9c0b6e0b8c31d44e2d378d9632f00a">nana::frame</a>
 </li>
+<li>only_checked_items
+: <a class="el" href="d3/dfa/structnana_1_1drawerbase_1_1listbox_1_1export__options.html#a68fbbbf5c285795d83a33fb9c40b9e64">nana::drawerbase::listbox::export_options</a>
+</li>
+<li>only_selected_items
+: <a class="el" href="d3/dfa/structnana_1_1drawerbase_1_1listbox_1_1export__options.html#af74c3bb91fa33263e68c70c5a6363b10">nana::drawerbase::listbox::export_options</a>
+</li>
+<li>only_visible_columns
+: <a class="el" href="d3/dfa/structnana_1_1drawerbase_1_1listbox_1_1export__options.html#a02a1fc24d3855a7f8de0b85eb260b17f">nana::drawerbase::listbox::export_options</a>
+</li>
 <li>opaque
 : <a class="el" href="d7/d8a/structz__stream__s.html#ab72467f908d2ce65d5b42ee6556ef8bb">z_stream_s</a>
 </li>
 <li>open()
-: <a class="el" href="d7/d74/classnana_1_1audio_1_1detail_1_1audio__stream.html#ab3b5da18757ca68ac165b7572299e6d9">nana::audio::detail::audio_stream</a>
+: <a class="el" href="d8/d8a/classnana_1_1audio_1_1detail_1_1audio__device.html#ae9c230207cc86705a409a543190b8334">nana::audio::detail::audio_device</a>
+, <a class="el" href="d7/d74/classnana_1_1audio_1_1detail_1_1audio__stream.html#ab3b5da18757ca68ac165b7572299e6d9">nana::audio::detail::audio_stream</a>
 , <a class="el" href="d3/da1/classnana_1_1audio_1_1player.html#af2b66ae7667b1151a6382d386cad60c2">nana::audio::player</a>
 , <a class="el" href="d0/d07/classnana_1_1paint_1_1pixel__buffer.html#ae62903564b957adbe2aa8dda8a602527">nana::paint::pixel_buffer</a>
 , <a class="el" href="d9/de1/classnana_1_1paint_1_1image.html#af75fae7d11ae14943bfc5ab19b56aea4">nana::paint::image</a>
@@ -195,7 +209,6 @@ $(document).ready(function(){initNavTree('functions_0x6f.html','');});
 , <a class="el" href="dc/d4f/classnana_1_1paint_1_1detail_1_1image__ico.html#a3623356f6b68936d6c76ff905a3587fa">nana::paint::detail::image_ico</a>
 , <a class="el" href="dd/d04/classnana_1_1system_1_1shared__wrapper.html#af9db14349ae6178b4a5e0104c0a07964">nana::system::shared_wrapper</a>
 , <a class="el" href="d7/db7/classnana_1_1paint_1_1detail_1_1image__png.html#a6d5e6487233f9a5f03fc71ca21254786">nana::paint::detail::image_png</a>
-, <a class="el" href="d8/d8a/classnana_1_1audio_1_1detail_1_1audio__device.html#ae9c230207cc86705a409a543190b8334">nana::audio::detail::audio_device</a>
 </li>
 <li>open_display()
 : <a class="el" href="d5/dd4/classnana_1_1detail_1_1platform__spec.html#a4e0cf174011fc29eb512af23a5ed06e1">nana::detail::platform_spec</a>
@@ -261,7 +274,9 @@ $(document).ready(function(){initNavTree('functions_0x6f.html','');});
 : <a class="el" href="d9/dd8/classnana_1_1widget.html#ab0bfcebf2326d4c47e9f719d7861ba64">nana::widget</a>
 </li>
 <li>operator!=()
-: <a class="el" href="dd/d1e/classnana_1_1color.html#a1bdb40a1e4e1c185e694c73e579e8277">nana::color</a>
+: <a class="el" href="da/d11/classnana_1_1drawerbase_1_1listbox_1_1cat__proxy.html#ac00c0d53b23ffa54d055dcb580eefdff">nana::drawerbase::listbox::cat_proxy</a>
+, <a class="el" href="d5/d96/classnana_1_1drawerbase_1_1treebox_1_1item__proxy.html#a3e33ed55ba795d94d350e0161ebdc57f">nana::drawerbase::treebox::item_proxy</a>
+, <a class="el" href="dd/d1e/classnana_1_1color.html#a1bdb40a1e4e1c185e694c73e579e8277">nana::color</a>
 , <a class="el" href="d0/d24/structnana_1_1point.html#a22b2f528c0e0ab7f670c1289f2c94e66">nana::point</a>
 , <a class="el" href="de/d1b/structnana_1_1upoint.html#a2fef9867b7f33c58227fba8f638a8c4d">nana::upoint</a>
 , <a class="el" href="da/df8/structnana_1_1size.html#a93b9b8be6db1ef54e00a48f01c9bdea1">nana::size</a>
@@ -271,11 +286,11 @@ $(document).ready(function(){initNavTree('functions_0x6f.html','');});
 , <a class="el" href="d4/d65/classnana_1_1drawerbase_1_1combox_1_1item__proxy.html#af9fcaf706a66e9407d1b46c1edba0c99">nana::drawerbase::combox::item_proxy</a>
 , <a class="el" href="de/d8a/structnana_1_1drawerbase_1_1listbox_1_1index__pair.html#ac9b56c81453e7842a406d282856465f8">nana::drawerbase::listbox::index_pair</a>
 , <a class="el" href="df/d3e/classnana_1_1drawerbase_1_1listbox_1_1item__proxy.html#afec79f7b82264fde893b246a41cfdcb0">nana::drawerbase::listbox::item_proxy</a>
-, <a class="el" href="da/d11/classnana_1_1drawerbase_1_1listbox_1_1cat__proxy.html#ac00c0d53b23ffa54d055dcb580eefdff">nana::drawerbase::listbox::cat_proxy</a>
-, <a class="el" href="d5/d96/classnana_1_1drawerbase_1_1treebox_1_1item__proxy.html#a3e33ed55ba795d94d350e0161ebdc57f">nana::drawerbase::treebox::item_proxy</a>
 </li>
 <li>operator()()
-: <a class="el" href="d8/d1e/classnana_1_1form__loader.html#ac3b5849df9b1d0e577e73735ca6812cb">nana::form_loader&lt; Form, IsMakeVisible &gt;</a>
+: <a class="el" href="dc/dfa/classnana_1_1detail_1_1font__deleter.html#ab47a0eb70a1e9f00f519b28f5e3c183e">nana::detail::font_deleter</a>
+, <a class="el" href="db/d7b/classnana_1_1basic__event.html#a11ab4a6736eeca726b743dcb3de0e080">nana::basic_event&lt; Arg &gt;</a>
+, <a class="el" href="d8/d1e/classnana_1_1form__loader.html#ac3b5849df9b1d0e577e73735ca6812cb">nana::form_loader&lt; Form, IsMakeVisible &gt;</a>
 , <a class="el" href="dc/d96/structnana_1_1detail_1_1window__handle__deleter.html#aeaeb5d71638a0fce82e7bcdc9129921f">nana::detail::window_handle_deleter</a>
 , <a class="el" href="d8/d5e/classnana_1_1detail_1_1handle__manager.html#a6e2aee31fdbfb33309c0ab16e5249e53">nana::detail::handle_manager&lt; HandleType, Condition, Deleter &gt;</a>
 , <a class="el" href="d2/d2a/classnana_1_1internationalization.html#a2e36fa048993d814760a7a82fb5c91e5">nana::internationalization</a>
@@ -294,8 +309,6 @@ $(document).ready(function(){initNavTree('functions_0x6f.html','');});
 , <a class="el" href="db/de9/structnana_1_1paint_1_1helper_1_1extent__auto__changing__lines.html#a02d162a44d08f885f57955649bf1591f">nana::paint::helper::extent_auto_changing_lines</a>
 , <a class="el" href="d4/d86/classnana_1_1threads_1_1pool__pusher.html#a6e7b33068cbcd9cb69aab26d9599b451">nana::threads::pool_pusher&lt; Function &gt;</a>
 , <a class="el" href="d0/d8f/structnana_1_1detail_1_1font__tag_1_1deleter.html#a9e7e31192fde82a3e7c405d178580e35">nana::detail::font_tag::deleter</a>
-, <a class="el" href="dc/dfa/classnana_1_1detail_1_1font__deleter.html#ab47a0eb70a1e9f00f519b28f5e3c183e">nana::detail::font_deleter</a>
-, <a class="el" href="db/d7b/classnana_1_1basic__event.html#a11ab4a6736eeca726b743dcb3de0e080">nana::basic_event&lt; Arg &gt;</a>
 </li>
 <li>operator*()
 : <a class="el" href="da/d49/classnana_1_1filesystem_1_1basic__file__iterator.html#ab584283a7298f312cf77c6cdf95922ea">nana::filesystem::basic_file_iterator&lt; FileInfo &gt;</a>
@@ -336,14 +349,15 @@ $(document).ready(function(){initNavTree('functions_0x6f.html','');});
 , <a class="el" href="d5/d96/classnana_1_1drawerbase_1_1treebox_1_1item__proxy.html#a2c1a13725042d45768ac13990757c4e6">nana::drawerbase::treebox::item_proxy</a>
 </li>
 <li>operator&lt;()
-: <a class="el" href="d0/d24/structnana_1_1point.html#ab1c11ddf5b0d78f4f4b9f48f876b282f">nana::point</a>
+: <a class="el" href="da/d05/classnana_1_1date.html#a57ed1c2472659f3bfbc09d1d5fd31011">nana::date</a>
+, <a class="el" href="d0/d24/structnana_1_1point.html#ab1c11ddf5b0d78f4f4b9f48f876b282f">nana::point</a>
 , <a class="el" href="de/d1b/structnana_1_1upoint.html#a29c95e8dc4e3052579b7412d5c672748">nana::upoint</a>
-, <a class="el" href="da/d05/classnana_1_1date.html#a57ed1c2472659f3bfbc09d1d5fd31011">nana::date</a>
 </li>
 <li>operator&lt;&lt;()
-: <a class="el" href="d8/d97/classnana_1_1msgbox.html#affc8766dbe71a27bd33fc0a75b58a47b">nana::msgbox</a>
+: <a class="el" href="d8/d97/classnana_1_1msgbox.html#a508fba89cfab06ff89c351d9fce5dd03">nana::msgbox</a>
+, <a class="el" href="d0/d3c/classnana_1_1drawerbase_1_1listbox_1_1oresolver.html#a9d504333666ee494cfff945ef6c76c61">nana::drawerbase::listbox::oresolver</a>
+, <a class="el" href="d8/d97/classnana_1_1msgbox.html#adff482fd5f00053ae53095b3839b2696">nana::msgbox</a>
 , <a class="el" href="d0/d3c/classnana_1_1drawerbase_1_1listbox_1_1oresolver.html#af7643face6af5467f170c7cb1c49752b">nana::drawerbase::listbox::oresolver</a>
-, <a class="el" href="d8/d97/classnana_1_1msgbox.html#a508fba89cfab06ff89c351d9fce5dd03">nana::msgbox</a>
 </li>
 <li>operator&lt;=()
 : <a class="el" href="d0/d24/structnana_1_1point.html#a4ea37b017a2c2c3b95b9329a3ff67349">nana::point</a>
@@ -351,88 +365,88 @@ $(document).ready(function(){initNavTree('functions_0x6f.html','');});
 , <a class="el" href="da/d05/classnana_1_1date.html#ac4bcb8ebf6d5208c43c391ac642ac601">nana::date</a>
 </li>
 <li>operator=()
-: <a class="el" href="d6/d47/classnana_1_1i18n__eval.html#a4b51fc452f83eb34343066260d98cbe5">nana::i18n_eval</a>
+: <a class="el" href="d4/d9f/classnana_1_1place__parts_1_1margin.html#ad83183d7b5268245456cdf315b92e519">nana::place_parts::margin</a>
 , <a class="el" href="d4/d36/classnana_1_1any.html#ab914504c09b7e0faa1bbc86b21873490">nana::any</a>
 , <a class="el" href="d3/d99/classnana_1_1charset.html#a52b7bd51990dcb2172f650f99cc80cfe">nana::charset</a>
 , <a class="el" href="d0/d24/structnana_1_1point.html#aa95d481f2eb10df7b2f41513b9d992fa">nana::point</a>
-, <a class="el" href="df/d3e/classnana_1_1drawerbase_1_1listbox_1_1item__proxy.html#a50449965a92622416dea67c7935989bb">nana::drawerbase::listbox::item_proxy</a>
+, <a class="el" href="da/df8/structnana_1_1size.html#afdff9c14c6ec99ed895508d5cc81c0e2">nana::size</a>
 , <a class="el" href="dd/d2d/structnana_1_1rectangle.html#a842235025e7be18dd7a7b7f726f78927">nana::rectangle</a>
 , <a class="el" href="d4/d3c/classnana_1_1paint_1_1font.html#a4518e61405090c5aa3bb6a8c0346172e">nana::paint::font</a>
-, <a class="el" href="d6/d47/classnana_1_1paint_1_1graphics.html#a584ef7a61287b937753587e0ba4e04e9">nana::paint::graphics</a>
 , <a class="el" href="da/dd2/structnana_1_1frame.html#a23ad5e1488c30efde87ac2e6fb565b9b">nana::frame</a>
 , <a class="el" href="d6/d71/classnana_1_1system_1_1timepiece.html#a63ab66b4d2412b06cd7e6c6e934dda80">nana::system::timepiece</a>
-, <a class="el" href="da/d11/classnana_1_1drawerbase_1_1listbox_1_1cat__proxy.html#a9e7ae37dc15861b9c713bd06042901f4">nana::drawerbase::listbox::cat_proxy</a>
 , <a class="el" href="dd/d4f/structnana_1_1nonmovable.html#a4bdeb6df4c035adaa22cb4ee820db8d3">nana::nonmovable</a>
 , <a class="el" href="d9/de1/classnana_1_1paint_1_1image.html#a72cd84122788d3eb359e4d59ffee8728">nana::paint::image</a>
-, <a class="el" href="d2/d44/structnana_1_1drawerbase_1_1treebox_1_1trigger_1_1treebox__node__type.html#a6f9a4bdb9d013f109688fc75f989c406">nana::drawerbase::treebox::trigger::treebox_node_type</a>
-, <a class="el" href="d0/d1b/classnana_1_1color__proxy.html#a22df7f31a8a72a2f893495c62c90097a">nana::color_proxy</a>
-, <a class="el" href="d0/d73/classnana_1_1filebox.html#accba1e1201d76a686048e4d548f68219">nana::filebox</a>
-, <a class="el" href="d2/de3/classnana_1_1pat_1_1cloneable.html#ac28ac15d69eaf6ba58816677399a85f6">nana::pat::cloneable&lt; Base, Mutable &gt;</a>
-, <a class="el" href="d7/d45/classnana_1_1element_1_1bground.html#a01467ea5a35aa82542903bee1b061f26">nana::element::bground</a>
-, <a class="el" href="d6/d47/classnana_1_1i18n__eval.html#a8ad8f60aa62b80a14ee700db998cb048">nana::i18n_eval</a>
-, <a class="el" href="d3/d01/structnana_1_1drawerbase_1_1listbox_1_1cell.html#ad658d366361fa58133269756b1779d19">nana::drawerbase::listbox::cell</a>
-, <a class="el" href="d8/d97/classnana_1_1msgbox.html#aeefa060e2ef72aebdfcf62c27526b06f">nana::msgbox</a>
-, <a class="el" href="d3/d01/structnana_1_1drawerbase_1_1listbox_1_1cell.html#a7a2ed2e742ca00de788e789482a83208">nana::drawerbase::listbox::cell</a>
-, <a class="el" href="d4/d65/classnana_1_1drawerbase_1_1combox_1_1item__proxy.html#a78c8d1658bc5465daa34f967c6daa30b">nana::drawerbase::combox::item_proxy</a>
 , <a class="el" href="d6/d46/classnana_1_1state__cursor.html#a884baef74c2390922958d5144175f9ec">nana::state_cursor</a>
+, <a class="el" href="d0/d1b/classnana_1_1color__proxy.html#a22df7f31a8a72a2f893495c62c90097a">nana::color_proxy</a>
+, <a class="el" href="d2/d44/structnana_1_1drawerbase_1_1treebox_1_1trigger_1_1treebox__node__type.html#a6f9a4bdb9d013f109688fc75f989c406">nana::drawerbase::treebox::trigger::treebox_node_type</a>
+, <a class="el" href="d2/de3/classnana_1_1pat_1_1cloneable.html#ac28ac15d69eaf6ba58816677399a85f6">nana::pat::cloneable&lt; Base, Mutable &gt;</a>
+, <a class="el" href="d6/d47/classnana_1_1i18n__eval.html#a8ad8f60aa62b80a14ee700db998cb048">nana::i18n_eval</a>
+, <a class="el" href="d8/d97/classnana_1_1msgbox.html#aeefa060e2ef72aebdfcf62c27526b06f">nana::msgbox</a>
+, <a class="el" href="d0/d73/classnana_1_1filebox.html#accba1e1201d76a686048e4d548f68219">nana::filebox</a>
+, <a class="el" href="d4/d65/classnana_1_1drawerbase_1_1combox_1_1item__proxy.html#a78c8d1658bc5465daa34f967c6daa30b">nana::drawerbase::combox::item_proxy</a>
+, <a class="el" href="d3/d01/structnana_1_1drawerbase_1_1listbox_1_1cell.html#ad658d366361fa58133269756b1779d19">nana::drawerbase::listbox::cell</a>
 , <a class="el" href="d6/dcf/classnana_1_1place__parts_1_1repeated__array.html#a7ffd7b6bd98cd542e03c89f75c07c0d8">nana::place_parts::repeated_array</a>
 , <a class="el" href="de/ddc/structnana_1_1drawerbase_1_1listbox_1_1item__t.html#a7df34d84e29244a41a736aae3ff819af">nana::drawerbase::listbox::item_t</a>
-, <a class="el" href="d4/d9f/classnana_1_1place__parts_1_1margin.html#ad83183d7b5268245456cdf315b92e519">nana::place_parts::margin</a>
-, <a class="el" href="d0/d1b/classnana_1_1color__proxy.html#a987851072149b2f6360ae04a0daafec1">nana::color_proxy</a>
+, <a class="el" href="d7/d45/classnana_1_1element_1_1bground.html#a01467ea5a35aa82542903bee1b061f26">nana::element::bground</a>
+, <a class="el" href="d3/d01/structnana_1_1drawerbase_1_1listbox_1_1cell.html#a7a2ed2e742ca00de788e789482a83208">nana::drawerbase::listbox::cell</a>
+, <a class="el" href="df/d3e/classnana_1_1drawerbase_1_1listbox_1_1item__proxy.html#a50449965a92622416dea67c7935989bb">nana::drawerbase::listbox::item_proxy</a>
+, <a class="el" href="da/d11/classnana_1_1drawerbase_1_1listbox_1_1cat__proxy.html#a9e7ae37dc15861b9c713bd06042901f4">nana::drawerbase::listbox::cat_proxy</a>
 , <a class="el" href="d5/d96/classnana_1_1drawerbase_1_1treebox_1_1item__proxy.html#a3804873aae451b06b96baa98d288b21b">nana::drawerbase::treebox::item_proxy</a>
+, <a class="el" href="d6/d47/classnana_1_1i18n__eval.html#a4b51fc452f83eb34343066260d98cbe5">nana::i18n_eval</a>
 , <a class="el" href="d2/de3/classnana_1_1pat_1_1cloneable.html#ad791756016e4c1f0573b079f6c275931">nana::pat::cloneable&lt; Base, Mutable &gt;</a>
 , <a class="el" href="d0/d1b/classnana_1_1color__proxy.html#ab28469b9dcd9deed1adde9cbb30de645">nana::color_proxy</a>
 , <a class="el" href="d2/dee/structnana_1_1noncopyable.html#a0ed402c5684a2cd5ed204f5cddbb32f8">nana::noncopyable</a>
-, <a class="el" href="da/df8/structnana_1_1size.html#afdff9c14c6ec99ed895508d5cc81c0e2">nana::size</a>
+, <a class="el" href="d6/d47/classnana_1_1paint_1_1graphics.html#a584ef7a61287b937753587e0ba4e04e9">nana::paint::graphics</a>
 , <a class="el" href="d4/d36/classnana_1_1any.html#ab8e0575b9a57fe5f10b87043322892ff">nana::any</a>
 </li>
 <li>operator==()
 : <a class="el" href="df/d3e/classnana_1_1drawerbase_1_1listbox_1_1item__proxy.html#a75ef7dc2ddec4804240e4094079322dc">nana::drawerbase::listbox::item_proxy</a>
-, <a class="el" href="d4/d3c/classnana_1_1paint_1_1font.html#a683a3a2595703987d49f67bd97d6db18">nana::paint::font</a>
-, <a class="el" href="d5/d96/classnana_1_1drawerbase_1_1treebox_1_1item__proxy.html#a89d005cc25956bde3eba02dc06f1ed9a">nana::drawerbase::treebox::item_proxy</a>
-, <a class="el" href="d4/d65/classnana_1_1drawerbase_1_1combox_1_1item__proxy.html#ad5c1be02073a3de68b39f7a2d57391d2">nana::drawerbase::combox::item_proxy</a>
 , <a class="el" href="da/d11/classnana_1_1drawerbase_1_1listbox_1_1cat__proxy.html#a05008bd78f3e07c38324e5a084e8f097">nana::drawerbase::listbox::cat_proxy</a>
 , <a class="el" href="d5/d96/classnana_1_1drawerbase_1_1treebox_1_1item__proxy.html#ad6ae24d03ade80063887114af77b7e8d">nana::drawerbase::treebox::item_proxy</a>
-, <a class="el" href="da/d05/classnana_1_1date.html#ac41db5c8f1cdecab9f792b4bc9034eff">nana::date</a>
+, <a class="el" href="d4/d65/classnana_1_1drawerbase_1_1combox_1_1item__proxy.html#a4bd3922545d530fb65f235e578a3afae">nana::drawerbase::combox::item_proxy</a>
+, <a class="el" href="d5/d96/classnana_1_1drawerbase_1_1treebox_1_1item__proxy.html#a89d005cc25956bde3eba02dc06f1ed9a">nana::drawerbase::treebox::item_proxy</a>
+, <a class="el" href="d4/d65/classnana_1_1drawerbase_1_1combox_1_1item__proxy.html#a5b27eb1de9ed694b52d3a847ecdfe327">nana::drawerbase::combox::item_proxy</a>
+, <a class="el" href="d5/d96/classnana_1_1drawerbase_1_1treebox_1_1item__proxy.html#acab1bf45937414f702133b68189d031e">nana::drawerbase::treebox::item_proxy</a>
 , <a class="el" href="dd/d1e/classnana_1_1color.html#a58e66a7eda25c916512b8c8edeac6a28">nana::color</a>
+, <a class="el" href="dd/d2d/structnana_1_1rectangle.html#a86d3f56e308e6ea2e0565b2e4b588c6a">nana::rectangle</a>
 , <a class="el" href="d0/d24/structnana_1_1point.html#a5c3d659ae0ae877813e04900e8f75ef7">nana::point</a>
+, <a class="el" href="df/d3e/classnana_1_1drawerbase_1_1listbox_1_1item__proxy.html#aea21035afa412b237d8f46340fa76b36">nana::drawerbase::listbox::item_proxy</a>
+, <a class="el" href="da/d05/classnana_1_1date.html#ac41db5c8f1cdecab9f792b4bc9034eff">nana::date</a>
 , <a class="el" href="da/df8/structnana_1_1size.html#ac285745521f72d2cfb8ec6ab6bdf460e">nana::size</a>
 , <a class="el" href="d4/d65/classnana_1_1drawerbase_1_1combox_1_1item__proxy.html#a15f8ff538a41984faef126a48797434f">nana::drawerbase::combox::item_proxy</a>
+, <a class="el" href="de/d1b/structnana_1_1upoint.html#a710c4bfa0a95f1c91b7d8918ac08014d">nana::upoint</a>
 , <a class="el" href="de/d8a/structnana_1_1drawerbase_1_1listbox_1_1index__pair.html#a12826fdf2a18b869f27d0064138599a4">nana::drawerbase::listbox::index_pair</a>
-, <a class="el" href="dd/d2d/structnana_1_1rectangle.html#a86d3f56e308e6ea2e0565b2e4b588c6a">nana::rectangle</a>
 , <a class="el" href="df/d3e/classnana_1_1drawerbase_1_1listbox_1_1item__proxy.html#a26bdef930970d2d39dcc4e208a742e41">nana::drawerbase::listbox::item_proxy</a>
 , <a class="el" href="d5/d96/classnana_1_1drawerbase_1_1treebox_1_1item__proxy.html#a8a0c846b50c10d0909fcf2924a6c8cfe">nana::drawerbase::treebox::item_proxy</a>
-, <a class="el" href="de/d1b/structnana_1_1upoint.html#a710c4bfa0a95f1c91b7d8918ac08014d">nana::upoint</a>
-, <a class="el" href="d4/d65/classnana_1_1drawerbase_1_1combox_1_1item__proxy.html#a4bd3922545d530fb65f235e578a3afae">nana::drawerbase::combox::item_proxy</a>
-, <a class="el" href="d5/d96/classnana_1_1drawerbase_1_1treebox_1_1item__proxy.html#acab1bf45937414f702133b68189d031e">nana::drawerbase::treebox::item_proxy</a>
-, <a class="el" href="df/d3e/classnana_1_1drawerbase_1_1listbox_1_1item__proxy.html#a4b51731f49447a2894d1bbcb488b2e64">nana::drawerbase::listbox::item_proxy</a>
+, <a class="el" href="d4/d3c/classnana_1_1paint_1_1font.html#a683a3a2595703987d49f67bd97d6db18">nana::paint::font</a>
+, <a class="el" href="d4/d65/classnana_1_1drawerbase_1_1combox_1_1item__proxy.html#ad5c1be02073a3de68b39f7a2d57391d2">nana::drawerbase::combox::item_proxy</a>
 </li>
 <li>operator&gt;()
-: <a class="el" href="da/d05/classnana_1_1date.html#abc597016af98c9e7ef25ac40736d171d">nana::date</a>
-, <a class="el" href="de/d8a/structnana_1_1drawerbase_1_1listbox_1_1index__pair.html#a4be396528539f4234e59c8e7b062bb48">nana::drawerbase::listbox::index_pair</a>
+: <a class="el" href="d0/d24/structnana_1_1point.html#abc9acc4628cb33c06e2a0fa4388c51b9">nana::point</a>
+, <a class="el" href="da/d05/classnana_1_1date.html#abc597016af98c9e7ef25ac40736d171d">nana::date</a>
 , <a class="el" href="de/d1b/structnana_1_1upoint.html#a09f18b9da50092eb237fbd1a6963f9cb">nana::upoint</a>
-, <a class="el" href="d0/d24/structnana_1_1point.html#abc9acc4628cb33c06e2a0fa4388c51b9">nana::point</a>
+, <a class="el" href="de/d8a/structnana_1_1drawerbase_1_1listbox_1_1index__pair.html#a4be396528539f4234e59c8e7b062bb48">nana::drawerbase::listbox::index_pair</a>
 </li>
 <li>operator&gt;=()
-: <a class="el" href="d0/d24/structnana_1_1point.html#a5fdf92bdbd6f2e5d05ec798bfd08d4ff">nana::point</a>
-, <a class="el" href="da/d05/classnana_1_1date.html#aa767a8cc09b8d8a78232e0358910001c">nana::date</a>
+: <a class="el" href="da/d05/classnana_1_1date.html#aa767a8cc09b8d8a78232e0358910001c">nana::date</a>
 , <a class="el" href="de/d1b/structnana_1_1upoint.html#a03eac8ef80ec136736dae68aa5865d3b">nana::upoint</a>
+, <a class="el" href="d0/d24/structnana_1_1point.html#a5fdf92bdbd6f2e5d05ec798bfd08d4ff">nana::point</a>
 </li>
 <li>operator&gt;&gt;()
-: <a class="el" href="d6/d05/classnana_1_1drawerbase_1_1listbox_1_1iresolver.html#a4d9b35d88143cf6004a4f7453ed9be80">nana::drawerbase::listbox::iresolver</a>
+: <a class="el" href="d6/d05/classnana_1_1drawerbase_1_1listbox_1_1iresolver.html#af069d07b208b8c06dd61b1acef6cc82b">nana::drawerbase::listbox::iresolver</a>
 </li>
 <li>operator[]()
-: <a class="el" href="d1/dda/classnana_1_1listbox.html#a0eb7f02c07696108984c868203b02a4a">nana::listbox</a>
-, <a class="el" href="d6/d10/classnana_1_1tabbar.html#a088c82ca72f64c3bbebb2e701b8f4aa0">nana::tabbar&lt; T &gt;</a>
-, <a class="el" href="d0/d07/classnana_1_1paint_1_1pixel__buffer.html#a966dbf1fae65a325f246eb322c587923">nana::paint::pixel_buffer</a>
-, <a class="el" href="dc/de3/classnana_1_1place.html#aec4e85a9056ab761b81dbab145036e84">nana::place</a>
+: <a class="el" href="dc/de3/classnana_1_1place.html#aec4e85a9056ab761b81dbab145036e84">nana::place</a>
 , <a class="el" href="d1/dda/classnana_1_1listbox.html#a47c515229d7f10ab519bbb583bc45add">nana::listbox</a>
+, <a class="el" href="d0/d07/classnana_1_1paint_1_1pixel__buffer.html#a966dbf1fae65a325f246eb322c587923">nana::paint::pixel_buffer</a>
+, <a class="el" href="d6/d10/classnana_1_1tabbar.html#a088c82ca72f64c3bbebb2e701b8f4aa0">nana::tabbar&lt; T &gt;</a>
 , <a class="el" href="de/d10/classnana_1_1combox.html#a4d5c5f5ac4d2e8a1b16c9a58287487c9">nana::combox</a>
 </li>
 <li>option()
-: <a class="el" href="dd/d1d/classnana_1_1drawerbase_1_1combox_1_1drawer__impl.html#a27f21eb87b586bb918d40ceaf71b7d9e">nana::drawerbase::combox::drawer_impl</a>
+: <a class="el" href="dd/d1d/classnana_1_1drawerbase_1_1combox_1_1drawer__impl.html#a4d8a202d7fd9cef724c9f320cc00abb8">nana::drawerbase::combox::drawer_impl</a>
 , <a class="el" href="de/d10/classnana_1_1combox.html#a0ef13780990389dca63394bc35202790">nana::combox</a>
-, <a class="el" href="dd/d1d/classnana_1_1drawerbase_1_1combox_1_1drawer__impl.html#a4d8a202d7fd9cef724c9f320cc00abb8">nana::drawerbase::combox::drawer_impl</a>
+, <a class="el" href="dd/d1d/classnana_1_1drawerbase_1_1combox_1_1drawer__impl.html#a27f21eb87b586bb918d40ceaf71b7d9e">nana::drawerbase::combox::drawer_impl</a>
+, <a class="el" href="de/d10/classnana_1_1combox.html#a207a14dab0e622c8f0356008517d3369">nana::combox</a>
 </li>
 <li>options
 : <a class="el" href="df/dc4/structnana_1_1inputbox_1_1text_1_1implement.html#a3e0016383bf33c680023ef84d2aa9b16">nana::inputbox::text::implement</a>
@@ -461,6 +475,12 @@ $(document).ready(function(){initNavTree('functions_0x6f.html','');});
 <li>os_del
 : <a class="el" href="de/d48/structnana_1_1keyboard.html#aaf47acc00903a661c46cd6bd449190d2ac3a786c050d585e9a2ce954b63f7fac4">nana::keyboard</a>
 </li>
+<li>os_end
+: <a class="el" href="de/d48/structnana_1_1keyboard.html#aaf47acc00903a661c46cd6bd449190d2a37471636008330df953cf8a7f79469cd">nana::keyboard</a>
+</li>
+<li>os_home
+: <a class="el" href="de/d48/structnana_1_1keyboard.html#aaf47acc00903a661c46cd6bd449190d2a45c352a69139db94cf2f713663798a9e">nana::keyboard</a>
+</li>
 <li>os_insert
 : <a class="el" href="de/d48/structnana_1_1keyboard.html#aaf47acc00903a661c46cd6bd449190d2a88daaf203766f54f7c3e7055b7e97a25">nana::keyboard</a>
 </li>
@@ -477,6 +497,9 @@ $(document).ready(function(){initNavTree('functions_0x6f.html','');});
 <li>other_tag()
 : <a class="el" href="d9/d03/structnana_1_1detail_1_1basic__window_1_1other__tag.html#ab210e2b8ac5fa41d1b2c37ab4a1619f0">nana::detail::basic_window::other_tag</a>
 </li>
+<li>outline_size()
+: <a class="el" href="d9/d3b/classnana_1_1widget__object_3_01category_1_1root__tag_00_01_drawer_trigger_00_01_events_00_01_scheme_01_4.html#a0c9c8e301aee1a4c263a571b13f07a68">nana::widget_object&lt; category::root_tag, DrawerTrigger, Events, Scheme &gt;</a>
+</li>
 <li>output()
 : <a class="el" href="dd/d57/classnana_1_1animation.html#a9eef1ffa3ab8cac51d6c0701ad1be205">nana::animation</a>
 </li>
@@ -488,12 +511,12 @@ $(document).ready(function(){initNavTree('functions_0x6f.html','');});
 </li>
 <li>owner
 : <a class="el" href="d4/de0/structnana_1_1drawerbase_1_1menu_1_1menu__type.html#a8ac19d2c4a1c41396dab1888f665d23f">nana::drawerbase::menu::menu_type</a>
-, <a class="el" href="d5/d96/classnana_1_1drawerbase_1_1treebox_1_1item__proxy.html#aa4aaf0a2bbbf3656dc5c8717b47ccd8f">nana::drawerbase::treebox::item_proxy</a>
-, <a class="el" href="de/d3c/structnana_1_1detail_1_1basic__window.html#a8f3faa2d4c746e1e828b70db4bfe2b9f">nana::detail::basic_window</a>
-, <a class="el" href="d0/d73/classnana_1_1filebox.html#af011bf4c86f978c5a1218bdee923c6f8">nana::filebox</a>
-, <a class="el" href="d9/d3b/classnana_1_1widget__object_3_01category_1_1root__tag_00_01_drawer_trigger_00_01_events_00_01_scheme_01_4.html#ada720271545db66972ea305b67147c34">nana::widget_object&lt; category::root_tag, DrawerTrigger, Events, Scheme &gt;</a>
 , <a class="el" href="d8/d11/structnana_1_1detail_1_1bedrock_1_1private__impl_1_1menu__tag.html#a9c62a6d0648713fb1d316348fb48bd5e">nana::detail::bedrock::private_impl::menu_tag</a>
+, <a class="el" href="de/d3c/structnana_1_1detail_1_1basic__window.html#a8f3faa2d4c746e1e828b70db4bfe2b9f">nana::detail::basic_window</a>
+, <a class="el" href="d9/d3b/classnana_1_1widget__object_3_01category_1_1root__tag_00_01_drawer_trigger_00_01_events_00_01_scheme_01_4.html#ada720271545db66972ea305b67147c34">nana::widget_object&lt; category::root_tag, DrawerTrigger, Events, Scheme &gt;</a>
 , <a class="el" href="d5/d6d/structnana_1_1widgets_1_1detail_1_1tree__node.html#a0f1a97d13b0831b71c838fbc1b478e65">nana::widgets::detail::tree_node&lt; T &gt;</a>
+, <a class="el" href="d5/d96/classnana_1_1drawerbase_1_1treebox_1_1item__proxy.html#aa4aaf0a2bbbf3656dc5c8717b47ccd8f">nana::drawerbase::treebox::item_proxy</a>
+, <a class="el" href="d0/d73/classnana_1_1filebox.html#af011bf4c86f978c5a1218bdee923c6f8">nana::filebox</a>
 , <a class="el" href="da/ddb/structnana_1_1filebox_1_1implement.html#a3f333feedf81deb72a13f64d686471b2">nana::filebox::implement</a>
 </li>
 </ul>
@@ -502,7 +525,7 @@ $(document).ready(function(){initNavTree('functions_0x6f.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Mar 8 2015 18:55:08 for Nana C++ Library. Reference for users. by
+    <li class="footer">Generated on Tue May 5 2015 21:51:31 for Nana C++ Library. Reference for users. by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

@@ -30,6 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Nana C++ Library. Reference for users.
+   &#160;<span id="projectnumber">v1.0.2</span>
    </div>
    <div id="projectbrief">What we need to use nana</div>
   </td>
@@ -101,55 +102,86 @@ $(document).ready(function(){initNavTree('da/d9c/various_events_8_cpp11_8cpp-exa
 <div class="title">various_events.Cpp11.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;nana/gui/wvl.hpp&gt;</span> </div>
-<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span> </div>
-<div class="line"><span class="keywordtype">void</span> foo() </div>
-<div class="line">{ </div>
-<div class="line">    <a name="a0"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/utility/program/system.html">std::system</a>(<span class="stringliteral">&quot;cls&quot;</span>); </div>
-<div class="line">    <a name="_a1"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::cout</a>&lt;&lt;<span class="stringliteral">&quot;foo&quot;</span>&lt;&lt;<a name="a2"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/manip/endl.html">std::endl</a>; </div>
-<div class="line">} </div>
-<div class="line"><span class="keywordtype">void</span> foo_with_eventinfo(<span class="keyword">const</span> nana::gui::eventinfo&amp; ei) </div>
-<div class="line">{ </div>
-<div class="line">  <a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::cout</a> &lt;&lt; <span class="stringliteral">&quot;foo_with_eventinfo, mouse pos = (&quot;</span></div>
-<div class="line">   &lt;&lt; ei.mouse.x  &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>  &lt;&lt;  ei.mouse.y  &lt;&lt; <span class="stringliteral">&quot;)&quot;</span> &lt;&lt; <a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/manip/endl.html">std::endl</a>; </div>
-<div class="line">} </div>
-<div class="line"><span class="keyword">class </span>click_stat </div>
-<div class="line">{ <span class="keyword">public</span>: </div>
-<div class="line">    click_stat(): n_(0) {} </div>
-<div class="line">    <span class="keywordtype">void</span> respond   ()   { <a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::cout</a>&lt;&lt;<span class="stringliteral">&quot;click_stat = &quot;</span>&lt;&lt;++n_&lt;&lt;<a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/manip/endl.html">std::endl</a>; } </div>
-<div class="line">    <span class="keywordtype">void</span> respond_ei(<span class="keyword">const</span> nana::gui::eventinfo&amp; ei) </div>
+<div class="fragment"><div class="line"><span class="preprocessor">    #include &lt;nana/gui/wvl.hpp&gt;</span> </div>
+<div class="line"><span class="preprocessor">    #include &lt;iostream&gt;</span> </div>
+<div class="line">    <span class="keywordtype">void</span> foo() </div>
 <div class="line">    { </div>
-<div class="line">         <a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::cout</a> &lt;&lt; <span class="stringliteral">&quot;click_state width eventinfo = &quot;</span> &lt;&lt; n_ </div>
-<div class="line">        &lt;&lt; <span class="stringliteral">&quot;, mouse pos = (&quot;</span>  &lt;&lt;ei.mouse.x&lt;&lt;<span class="stringliteral">&quot;, &quot;</span>&lt;&lt;ei.mouse.y&lt;&lt;<span class="stringliteral">&quot;)&quot;</span></div>
-<div class="line">        &lt;&lt; <a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/manip/endl.html">std::endl</a>; </div>
+<div class="line">        <span class="comment">//std::system(&quot;cls&quot;); </span></div>
+<div class="line">        <a name="_a0"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::cout</a>&lt;&lt;<span class="stringliteral">&quot;foo&quot;</span>&lt;&lt;<a name="a1"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/manip/endl.html">std::endl</a>; </div>
 <div class="line">    } </div>
-<div class="line"> <span class="keyword">private</span>: </div>
-<div class="line">   <span class="keywordtype">int</span> n_; </div>
-<div class="line">}; </div>
-<div class="line"><span class="keywordtype">int</span> main() </div>
-<div class="line">{ </div>
-<div class="line">    <span class="keyword">using namespace </span>nana::gui; </div>
-<div class="line">    <span class="keyword">typedef</span> <a name="_a3"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/utility/functional/function.html">std::function&lt;void()&gt;</a>                   fun_t; </div>
-<div class="line">    <span class="keyword">typedef</span> <a name="_a4"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/utility/functional/function.html">std::function&lt;void(const eventinfo&amp;)&gt;</a>   fun_with_param_t; </div>
-<div class="line">    form        fm; </div>
-<div class="line">    click_stat  cs; </div>
-<div class="line">    fun_t       f(foo); </div>
-<div class="line">    fm.make_event&lt;<a name="a5"></a><a class="code" href="../../d2/d76/namespacenana.html#aec14d9a922f2b2a5c52680e6f4c9c2d3aa8affc088cbca89fa20dbd98c91362e4">events::click</a>&gt;(f); </div>
-<div class="line">    f = fun_t(cs, &amp;click_stat::respond); </div>
-<div class="line">    fm.make_event&lt;<a class="code" href="../../d2/d76/namespacenana.html#aec14d9a922f2b2a5c52680e6f4c9c2d3aa8affc088cbca89fa20dbd98c91362e4">events::click</a>&gt;(f); </div>
-<div class="line">    fun_with_param_t fp(foo_with_eventinfo); </div>
-<div class="line">    fm.make_event&lt;<a class="code" href="../../d2/d76/namespacenana.html#aec14d9a922f2b2a5c52680e6f4c9c2d3aa8affc088cbca89fa20dbd98c91362e4">events::click</a>&gt;(fp); </div>
-<div class="line">    fp = fun_with_param_t(cs, &amp;click_stat::respond_ei); </div>
-<div class="line">    fm.make_event&lt;<a class="code" href="../../d2/d76/namespacenana.html#aec14d9a922f2b2a5c52680e6f4c9c2d3aa8affc088cbca89fa20dbd98c91362e4">events::click</a>&gt;(fp); </div>
-<div class="line">    fm.show(); </div>
-<div class="line">    <a name="a6"></a><a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">exec</a>(); </div>
-<div class="line">} </div>
+<div class="line">    <span class="keywordtype">int</span> bar() </div>
+<div class="line">    { </div>
+<div class="line">        <span class="comment">//std::system(&quot;cls&quot;); </span></div>
+<div class="line">        <a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::cout</a>&lt;&lt;<span class="stringliteral">&quot;bar&quot;</span>&lt;&lt;<a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/manip/endl.html">std::endl</a>; </div>
+<div class="line">        <span class="keywordflow">return</span> 1;</div>
+<div class="line">    } </div>
+<div class="line">    <span class="keywordtype">void</span> foo_with_eventinfo(<span class="keyword">const</span> <a name="_a2"></a><a class="code" href="../../d6/d7c/structnana_1_1arg__mouse.html">nana::arg_mouse</a>&amp; ei) </div>
+<div class="line">    { </div>
+<div class="line">      <a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::cout</a> &lt;&lt; <span class="stringliteral">&quot;foo_with_eventinfo, mouse pos = (&quot;</span></div>
+<div class="line">       &lt;&lt; ei.<a name="a3"></a><a class="code" href="../../d6/d7c/structnana_1_1arg__mouse.html#a9bc3e4160ed6638ab0286a15f0623b60">pos</a>.<a name="a4"></a><a class="code" href="../../d0/d24/structnana_1_1point.html#af41b47be4303c8713b92abfb9a7863d0">x</a>  &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>  &lt;&lt;  ei.<a class="code" href="../../d6/d7c/structnana_1_1arg__mouse.html#a9bc3e4160ed6638ab0286a15f0623b60">pos</a>.<a name="a5"></a><a class="code" href="../../d0/d24/structnana_1_1point.html#aeb5848c69ddfe797209eb559898ae6a5">y</a>  &lt;&lt; <span class="stringliteral">&quot;)&quot;</span> &lt;&lt; <a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/manip/endl.html">std::endl</a>; </div>
+<div class="line">    } </div>
+<div class="line">    <span class="keyword">class </span>click_stat </div>
+<div class="line">    { <span class="keyword">public</span>: </div>
+<div class="line">        click_stat(): n_(0), id(++glob_id) { } </div>
+<div class="line">        click_stat(<span class="keyword">const</span> click_stat&amp;o):n_(o.n_), id(++glob_id) {} ; </div>
+<div class="line"></div>
+<div class="line">        <span class="keywordtype">void</span> respond   ()   { <a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::cout</a>&lt;&lt;<span class="stringliteral">&quot;click_stat     &quot;</span>&lt;&lt;<span class="keywordtype">id</span>&lt;&lt; <span class="stringliteral">&quot; = &quot;</span>&lt;&lt;++n_&lt;&lt;<a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/manip/endl.html">std::endl</a>; } </div>
+<div class="line">        <span class="keywordtype">int</span>  respond_I ()   { <a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::cout</a>&lt;&lt;<span class="stringliteral">&quot;click_stat int &quot;</span>&lt;&lt;<span class="keywordtype">id</span>&lt;&lt; <span class="stringliteral">&quot; = &quot;</span>&lt;&lt;++n_&lt;&lt;<a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/manip/endl.html">std::endl</a>; <span class="keywordflow">return</span> 1;} </div>
+<div class="line">        <span class="keywordtype">void</span> respond_ei(<span class="keyword">const</span> <a class="code" href="../../d6/d7c/structnana_1_1arg__mouse.html">nana::arg_mouse</a>&amp; ei) </div>
+<div class="line">        { </div>
+<div class="line">             <a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::cout</a> &lt;&lt; <span class="stringliteral">&quot;click_state &quot;</span>&lt;&lt;<span class="keywordtype">id</span>&lt;&lt; <span class="stringliteral">&quot; width eventinfo = &quot;</span> &lt;&lt; ++n_ </div>
+<div class="line">            &lt;&lt; <span class="stringliteral">&quot;, mouse pos = (&quot;</span>  &lt;&lt;ei.<a class="code" href="../../d6/d7c/structnana_1_1arg__mouse.html#a9bc3e4160ed6638ab0286a15f0623b60">pos</a>.<a class="code" href="../../d0/d24/structnana_1_1point.html#af41b47be4303c8713b92abfb9a7863d0">x</a>&lt;&lt;<span class="stringliteral">&quot;, &quot;</span>&lt;&lt;ei.<a class="code" href="../../d6/d7c/structnana_1_1arg__mouse.html#a9bc3e4160ed6638ab0286a15f0623b60">pos</a>.<a class="code" href="../../d0/d24/structnana_1_1point.html#aeb5848c69ddfe797209eb559898ae6a5">y</a>&lt;&lt;<span class="stringliteral">&quot;)&quot;</span></div>
+<div class="line">            &lt;&lt; <a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/manip/endl.html">std::endl</a>; </div>
+<div class="line">        } </div>
+<div class="line">     <span class="keyword">private</span>: </div>
+<div class="line">        <span class="comment">//click_stat(const click_stat&amp;) ; </span></div>
+<div class="line">       <span class="keywordtype">int</span> n_;</div>
+<div class="line">       <span class="keyword">const</span> <span class="keywordtype">int</span> id; </div>
+<div class="line">       <span class="keyword">static</span> <span class="keywordtype">int</span> glob_id ;</div>
+<div class="line">    }; </div>
+<div class="line">    <span class="keywordtype">int</span> click_stat::glob_id{0};</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordtype">int</span> main() </div>
+<div class="line">    { </div>
+<div class="line">        <span class="keyword">using namespace </span>nana; </div>
+<div class="line">        <span class="keyword">using</span> fun_t            = <a name="_a6"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/utility/functional/function.html">std::function&lt;void(      void      )&gt;</a>  ; </div>
+<div class="line">        <span class="keyword">using</span> fun_with_param_t = <a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/utility/functional/function.html">std::function&lt;void(const arg_mouse&amp;)&gt;</a>  ; </div>
+<div class="line"></div>
+<div class="line">        <a name="_a7"></a><a class="code" href="../../d6/d57/classnana_1_1form.html">form</a>        fm; </div>
+<div class="line">        click_stat  cs; </div>
+<div class="line">    </div>
+<div class="line">        fm.<a name="a8"></a><a class="code" href="../../d3/d95/classnana_1_1widget__object.html#afafd1a1bafe56cd6e5903d8db910aad8">events</a>().<a name="a9"></a><a class="code" href="../../dd/d19/structnana_1_1general__events.html#a74eba5017dbd5dbfdb6f32b9b485682f">click</a>(foo); </div>
+<div class="line">        fun_t       f=foo; </div>
+<div class="line">        fm.events().click(f); </div>
+<div class="line">        fm.events().click(bar); </div>
+<div class="line"></div>
+<div class="line">        fm.events().click(foo_with_eventinfo); </div>
+<div class="line">        fun_with_param_t fp(foo_with_eventinfo); </div>
+<div class="line">        fm.events().click(fp); </div>
+<div class="line"></div>
+<div class="line">        fm.events().click( [&amp;cs](){cs.respond();}                  ); </div>
+<div class="line">        f= <a name="a10"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/utility/functional/bind.html">std::bind</a>( &amp;click_stat::respond, cs); </div>
+<div class="line">        fm.events().click(  f                                      ); </div>
+<div class="line">        fm.events().click( <a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/utility/functional/bind.html">std::bind</a>( &amp;click_stat::respond  , &amp;cs) ); </div>
+<div class="line">        fm.events().click( [&amp; ](){cs.respond();}                   ); </div>
+<div class="line">        <span class="comment">//fm.events().click( std::bind( &amp;click_stat::respond_I, &amp;cs) ); </span></div>
+<div class="line">        fm.events().click( [&amp; ](){cs.respond_I();}                   ); </div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line">        fp= <a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/utility/functional/bind.html">std::bind</a>( &amp;click_stat::respond_ei, &amp;cs , std::placeholders::_1 ); </div>
+<div class="line">        fm.events().click(   fp                                                            ); </div>
+<div class="line">        fm.events().click( [&amp;](<span class="keyword">const</span> <a class="code" href="../../d6/d7c/structnana_1_1arg__mouse.html">arg_mouse</a>&amp;ma){cs.respond_ei(ma);}                     ); </div>
+<div class="line">        fm.events().click( <a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/utility/functional/bind.html">std::bind</a>( &amp;click_stat::respond_ei, cs, std::placeholders::_1)  ); </div>
+<div class="line"></div>
+<div class="line">        fm.show(); </div>
+<div class="line">        <a name="a11"></a><a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">exec</a>(); </div>
+<div class="line">    } </div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Mar 8 2015 18:54:28 for Nana C++ Library. Reference for users. by
+    <li class="footer">Generated on Tue May 5 2015 21:50:58 for Nana C++ Library. Reference for users. by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

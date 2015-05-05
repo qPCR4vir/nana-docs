@@ -26,5 +26,7 @@ var structnana_1_1keyboard =
     [ "os_arrow_right", "de/d48/structnana_1_1keyboard.html#aaf47acc00903a661c46cd6bd449190d2a2503cfb6d963020cb29731c284d72c84", null ],
     [ "os_arrow_down", "de/d48/structnana_1_1keyboard.html#aaf47acc00903a661c46cd6bd449190d2a4145926a69ee781abd668a1380d81e74", null ],
     [ "os_insert", "de/d48/structnana_1_1keyboard.html#aaf47acc00903a661c46cd6bd449190d2a88daaf203766f54f7c3e7055b7e97a25", null ],
-    [ "os_del", "de/d48/structnana_1_1keyboard.html#aaf47acc00903a661c46cd6bd449190d2ac3a786c050d585e9a2ce954b63f7fac4", null ]
+    [ "os_del", "de/d48/structnana_1_1keyboard.html#aaf47acc00903a661c46cd6bd449190d2ac3a786c050d585e9a2ce954b63f7fac4", null ],
+    [ "os_end", "de/d48/structnana_1_1keyboard.html#aaf47acc00903a661c46cd6bd449190d2a37471636008330df953cf8a7f79469cd", null ],
+    [ "os_home", "de/d48/structnana_1_1keyboard.html#aaf47acc00903a661c46cd6bd449190d2a45c352a69139db94cf2f713663798a9e", null ]
 ];

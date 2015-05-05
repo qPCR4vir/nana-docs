@@ -1,8 +1,7 @@
 var classnana_1_1drawerbase_1_1float__listbox_1_1drawer__impl =
 [
-    [ "graph_reference", "db/db7/classnana_1_1drawerbase_1_1float__listbox_1_1drawer__impl.html#a476fe1a5c10953a2a9573473044ae278", null ],
-    [ "widget_reference", "db/db7/classnana_1_1drawerbase_1_1float__listbox_1_1drawer__impl.html#a4d49584cf6c45d8b84894afffc19466a", null ],
-    [ "drawer_impl", "db/db7/classnana_1_1drawerbase_1_1float__listbox_1_1drawer__impl.html#a4957facca7e6ddb92161c5bf8b893da8", null ],
+    [ "graph_reference", "db/db7/classnana_1_1drawerbase_1_1float__listbox_1_1drawer__impl.html#aacba5743dfd923955e0b12bd7390d1f6", null ],
+    [ "widget_reference", "db/db7/classnana_1_1drawerbase_1_1float__listbox_1_1drawer__impl.html#ae24dc4cfcf3c57cbb5d2acc637baa595", null ],
     [ "attach", "db/db7/classnana_1_1drawerbase_1_1float__listbox_1_1drawer__impl.html#a1dda1b869b5ed0c0f92258ffc4ffa5ad", null ],
     [ "clear_state", "db/db7/classnana_1_1drawerbase_1_1float__listbox_1_1drawer__impl.html#af073071c5a957974f3cc9d3b758f0beb", null ],
     [ "detach", "db/db7/classnana_1_1drawerbase_1_1float__listbox_1_1drawer__impl.html#a3f51e3f980e4870fa3ee6715a61e2c06", null ],

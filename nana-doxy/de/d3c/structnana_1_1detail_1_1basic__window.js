@@ -21,7 +21,6 @@ var structnana_1_1detail_1_1basic__window =
     [ "is_draw_through", "de/d3c/structnana_1_1detail_1_1basic__window.html#a031baa985d1c301a9a065883fdf9d36f", null ],
     [ "set_events", "de/d3c/structnana_1_1detail_1_1basic__window.html#a3d4ef51fe0fa8319ce088680ef05bc97", null ],
     [ "visible_parents", "de/d3c/structnana_1_1detail_1_1basic__window.html#ad78e49ccd96cbca77c23d2faa144b0e9", null ],
-    [ "attached_events", "de/d3c/structnana_1_1detail_1_1basic__window.html#ad1b12cfdd6feb1e986773085dca6788e", null ],
     [ "bground", "de/d3c/structnana_1_1detail_1_1basic__window.html#ac18028dba5c5faf600541ebbb962662c", null ],
     [ "bground_fade_rate", "de/d3c/structnana_1_1detail_1_1basic__window.html#a0c370cd6b91dafb6df5713241ebe677e", null ],
     [ "caret", "de/d3c/structnana_1_1detail_1_1basic__window.html#a8ae3f5399f1662e6de584efac0b8ab51", null ],

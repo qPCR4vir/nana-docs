@@ -30,6 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Nana C++ Library. Reference for users.
+   &#160;<span id="projectnumber">v1.0.2</span>
    </div>
    <div id="projectbrief">What we need to use nana</div>
   </td>
@@ -115,63 +116,63 @@ $(document).ready(function(){initNavTree('d5/d9f/background-effects_8cpp-example
 <div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
-<div class="line">    <span class="keyword">using namespace </span>nana::gui;</div>
+<div class="line">    <span class="keyword">using namespace </span>nana;</div>
 <div class="line"></div>
-<div class="line">    form fm;</div>
+<div class="line">    <a name="_a0"></a><a class="code" href="../../d6/d57/classnana_1_1form.html">form</a> fm;</div>
 <div class="line"></div>
-<div class="line">    button btn(fm, <a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Normal Button&quot;</span>);</div>
+<div class="line">    <a name="_a1"></a><a class="code" href="../../d7/dc0/classnana_1_1button.html">button</a> btn(fm, <a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Normal Button&quot;</span>);</div>
 <div class="line"></div>
-<div class="line">    button btn0(fm, <a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Basic Mode&quot;</span>);</div>
+<div class="line">    <a class="code" href="../../d7/dc0/classnana_1_1button.html">button</a> btn0(fm, <a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Basic Mode&quot;</span>);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//It is basic mode when the third parameter of effects_bground() is specified by zero.</span></div>
-<div class="line">    <a name="a0"></a><a class="code" href="../../d5/d1e/namespacenana_1_1_a_p_i.html#a37f76dbf1408f97b0f946d1c0ef846ab">API::effects_bground</a>(btn0, effects::bground_transparent(0), 0);</div>
+<div class="line">    <a name="a2"></a><a class="code" href="../../d5/d1e/namespacenana_1_1_a_p_i.html#a37f76dbf1408f97b0f946d1c0ef846ab">API::effects_bground</a>(btn0, <a name="_a3"></a><a class="code" href="../../de/d2b/classnana_1_1effects_1_1bground__transparent.html">effects::bground_transparent</a>(0), 0);</div>
 <div class="line"></div>
-<div class="line">    button btn1(fm, <a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Blend Mode: Transparent&quot;</span>);</div>
-<div class="line">    <a class="code" href="../../d5/d1e/namespacenana_1_1_a_p_i.html#a37f76dbf1408f97b0f946d1c0ef846ab">API::effects_bground</a>(btn1, effects::bground_transparent(0), 0.5);</div>
+<div class="line">    <a class="code" href="../../d7/dc0/classnana_1_1button.html">button</a> btn1(fm, <a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Blend Mode: Transparent&quot;</span>);</div>
+<div class="line">    <a class="code" href="../../d5/d1e/namespacenana_1_1_a_p_i.html#a37f76dbf1408f97b0f946d1c0ef846ab">API::effects_bground</a>(btn1, <a class="code" href="../../de/d2b/classnana_1_1effects_1_1bground__transparent.html">effects::bground_transparent</a>(0), 0.5);</div>
 <div class="line"></div>
-<div class="line">    button btn2(fm, <a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Blend Mode: Blur&quot;</span>);</div>
-<div class="line">    <a class="code" href="../../d5/d1e/namespacenana_1_1_a_p_i.html#a37f76dbf1408f97b0f946d1c0ef846ab">API::effects_bground</a>(btn2, effects::bground_blur(2), 0.5);</div>
+<div class="line">    <a class="code" href="../../d7/dc0/classnana_1_1button.html">button</a> btn2(fm, <a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Blend Mode: Blur&quot;</span>);</div>
+<div class="line">    <a class="code" href="../../d5/d1e/namespacenana_1_1_a_p_i.html#a37f76dbf1408f97b0f946d1c0ef846ab">API::effects_bground</a>(btn2, <a name="_a4"></a><a class="code" href="../../df/dd3/classnana_1_1effects_1_1bground__blur.html">effects::bground_blur</a>(2), 0.5);</div>
 <div class="line"></div>
-<div class="line">    label lb0(fm, <a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Normal Label&quot;</span>);</div>
-<div class="line">    lb0.foreground(0xFFFFFF);</div>
+<div class="line">    <a name="_a5"></a><a class="code" href="../../dd/d8c/classnana_1_1label.html">label</a> lb0(fm, <a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Normal Label&quot;</span>);</div>
+<div class="line">    lb0.<a name="a6"></a><a class="code" href="../../d9/dd8/classnana_1_1widget.html#a772206b7598575c854acc3d9bf65da3e">fgcolor</a>(<a name="a7"></a><a class="code" href="../../d2/d76/namespacenana.html#a6fae8ac394c3ea0a8d1040fb1dcc5955">color_rgb</a>(0xFFFFFF));</div>
 <div class="line"></div>
-<div class="line">    label lb1(fm, <a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Basic Mode: Transparent&quot;</span>);</div>
-<div class="line">    lb1.foreground(0xFFFFFF);</div>
+<div class="line">    <a class="code" href="../../dd/d8c/classnana_1_1label.html">label</a> lb1(fm, <a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Basic Mode: Transparent&quot;</span>);</div>
+<div class="line">    lb1.<a class="code" href="../../d9/dd8/classnana_1_1widget.html#a772206b7598575c854acc3d9bf65da3e">fgcolor</a>(<a class="code" href="../../d2/d76/namespacenana.html#a6fae8ac394c3ea0a8d1040fb1dcc5955">color_rgb</a>(0xFFFFFF));</div>
 <div class="line">    <span class="comment">//Equal to lb1.transparent(true);</span></div>
-<div class="line">    <a class="code" href="../../d5/d1e/namespacenana_1_1_a_p_i.html#a37f76dbf1408f97b0f946d1c0ef846ab">API::effects_bground</a>(lb1, effects::bground_transparent(0), 0);</div>
+<div class="line">    <a class="code" href="../../d5/d1e/namespacenana_1_1_a_p_i.html#a37f76dbf1408f97b0f946d1c0ef846ab">API::effects_bground</a>(lb1, <a class="code" href="../../de/d2b/classnana_1_1effects_1_1bground__transparent.html">effects::bground_transparent</a>(0), 0);</div>
 <div class="line"></div>
-<div class="line">    label lb2(fm, <a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Basic Mode: Transparent and blend with its background color&quot;</span>);</div>
-<div class="line">    lb2.foreground(0xFFFFFF);</div>
-<div class="line">    lb2.background(0xFF0000);</div>
-<div class="line">    <a class="code" href="../../d5/d1e/namespacenana_1_1_a_p_i.html#a37f76dbf1408f97b0f946d1c0ef846ab">API::effects_bground</a>(lb2, effects::bground_transparent(10), 0);</div>
+<div class="line">    <a class="code" href="../../dd/d8c/classnana_1_1label.html">label</a> lb2(fm, <a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Basic Mode: Transparent and blend with its background color&quot;</span>);</div>
+<div class="line">    lb2.<a class="code" href="../../d9/dd8/classnana_1_1widget.html#a772206b7598575c854acc3d9bf65da3e">fgcolor</a>(<a class="code" href="../../d2/d76/namespacenana.html#a6fae8ac394c3ea0a8d1040fb1dcc5955">color_rgb</a>(0xFFFFFF));</div>
+<div class="line">    lb2.<a name="a8"></a><a class="code" href="../../d9/dd8/classnana_1_1widget.html#a7aa74edbc2bb11f769043cbf0475446f">bgcolor</a>(<a class="code" href="../../d2/d76/namespacenana.html#a6fae8ac394c3ea0a8d1040fb1dcc5955">color_rgb</a>(0xFF0000));</div>
+<div class="line">    <a class="code" href="../../d5/d1e/namespacenana_1_1_a_p_i.html#a37f76dbf1408f97b0f946d1c0ef846ab">API::effects_bground</a>(lb2, <a class="code" href="../../de/d2b/classnana_1_1effects_1_1bground__transparent.html">effects::bground_transparent</a>(10), 0);</div>
 <div class="line"></div>
-<div class="line">    label lb3(fm, <a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Basic Mode: Blur&quot;</span>);</div>
-<div class="line">    lb3.foreground(0xFFFFFF);</div>
-<div class="line">    <a class="code" href="../../d5/d1e/namespacenana_1_1_a_p_i.html#a37f76dbf1408f97b0f946d1c0ef846ab">API::effects_bground</a>(lb3, effects::bground_blur(2), 0);</div>
+<div class="line">    <a class="code" href="../../dd/d8c/classnana_1_1label.html">label</a> lb3(fm, <a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Basic Mode: Blur&quot;</span>);</div>
+<div class="line">    lb3.<a class="code" href="../../d9/dd8/classnana_1_1widget.html#a772206b7598575c854acc3d9bf65da3e">fgcolor</a>(<a class="code" href="../../d2/d76/namespacenana.html#a6fae8ac394c3ea0a8d1040fb1dcc5955">color_rgb</a>(0xFFFFFF));</div>
+<div class="line">    <a class="code" href="../../d5/d1e/namespacenana_1_1_a_p_i.html#a37f76dbf1408f97b0f946d1c0ef846ab">API::effects_bground</a>(lb3, <a class="code" href="../../df/dd3/classnana_1_1effects_1_1bground__blur.html">effects::bground_blur</a>(2), 0);</div>
 <div class="line"></div>
-<div class="line">    place pl(fm);</div>
-<div class="line">    pl.div(<span class="stringliteral">&quot;&lt;&gt;&lt;weight=80% abc vertical&gt;&lt;&gt;&quot;</span>);</div>
-<div class="line">    pl.field(<span class="stringliteral">&quot;abc&quot;</span>)&lt;&lt;5&lt;&lt;btn&lt;&lt;5&lt;&lt;btn0&lt;&lt;5&lt;&lt;btn1&lt;&lt;5&lt;&lt;btn2&lt;&lt;5&lt;&lt;lb0&lt;&lt;5&lt;&lt;lb1&lt;&lt;5&lt;&lt;lb2&lt;&lt;5&lt;&lt;lb3&lt;&lt;5;</div>
-<div class="line">    pl.collocate();</div>
+<div class="line">    <a name="_a9"></a><a class="code" href="../../dc/de3/classnana_1_1place.html">place</a> pl(fm);</div>
+<div class="line">    pl.<a name="a10"></a><a class="code" href="../../dc/de3/classnana_1_1place.html#aaf7fe8bfe503d9ace74a122af547536f">div</a>(<span class="stringliteral">&quot;&lt;&gt;&lt;weight=80% abc vertical gap=5&gt;&lt;&gt;&quot;</span>);</div>
+<div class="line">    pl[<span class="stringliteral">&quot;abc&quot;</span>] &lt;&lt;  btn &lt;&lt; btn0  &lt;&lt; btn1 &lt;&lt; btn2&lt;&lt; lb0&lt;&lt; lb1&lt;&lt; lb2&lt;&lt; lb3 ;</div>
+<div class="line">    pl.<a name="a11"></a><a class="code" href="../../dc/de3/classnana_1_1place.html#aec97ac368d0357cb3222b3316f2306ff">collocate</a>();</div>
 <div class="line"></div>
 <div class="line">    fm.show();</div>
 <div class="line"></div>
-<div class="line">    <a name="_a1"></a><a class="code" href="../../d9/de1/classnana_1_1paint_1_1image.html">nana::paint::image</a> img(<a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;image.bmp&quot;</span>);</div>
-<div class="line">    drawing dw(fm);</div>
-<div class="line">    dw.draw([&amp;img](<a name="_a2"></a><a class="code" href="../../d6/d47/classnana_1_1paint_1_1graphics.html">nana::paint::graphics</a> &amp; graph)</div>
+<div class="line">    <a name="_a12"></a><a class="code" href="../../d9/de1/classnana_1_1paint_1_1image.html">nana::paint::image</a> img(<a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;image.bmp&quot;</span>);</div>
+<div class="line">    <a name="_a13"></a><a class="code" href="../../d9/d46/classnana_1_1drawing.html">drawing</a> dw(fm);</div>
+<div class="line">    dw.<a name="a14"></a><a class="code" href="../../d9/d46/classnana_1_1drawing.html#a2e16374087087d476041ad8e7e42169b">draw</a>([&amp;img](<a name="_a15"></a><a class="code" href="../../d6/d47/classnana_1_1paint_1_1graphics.html">nana::paint::graphics</a> &amp; graph)</div>
 <div class="line">    {</div>
-<div class="line">        img.<a name="a3"></a><a class="code" href="../../d9/de1/classnana_1_1paint_1_1image.html#afc328beb149ff98859c63b2015730eeb">paste</a>(graph, 0, 0);</div>
+<div class="line">        img.<a name="a16"></a><a class="code" href="../../d9/de1/classnana_1_1paint_1_1image.html#afc328beb149ff98859c63b2015730eeb">paste</a>(graph, 0, 0);</div>
 <div class="line">    });</div>
-<div class="line">    dw.update();</div>
+<div class="line">    dw.<a name="a17"></a><a class="code" href="../../d9/d46/classnana_1_1drawing.html#a9506f81c5a1c67f51e351f6bf7786091">update</a>();</div>
 <div class="line"></div>
-<div class="line">    <a name="a4"></a><a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">exec</a>();</div>
+<div class="line">    <a name="a18"></a><a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">exec</a>();</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Mar 8 2015 18:54:26 for Nana C++ Library. Reference for users. by
+    <li class="footer">Generated on Tue May 5 2015 21:50:55 for Nana C++ Library. Reference for users. by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

@@ -29,7 +29,6 @@ var searchData=
   ['any_5fobjective_3c_20std_3a_3asize_5ft_2c_201_20_3e',['any_objective&lt; std::size_t, 1 &gt;',['../d9/d48/classnana_1_1concepts_1_1any__objective.html',1,'nana::concepts']]],
   ['appear',['appear',['../d1/d1c/structnana_1_1appear.html',1,'nana']]],
   ['appearance',['appearance',['../d5/d27/structnana_1_1appearance.html',1,'nana']]],
-  ['area_5frotator',['area_rotator',['../d4/d4a/classnana_1_1area__rotator.html',1,'nana']]],
   ['arg_5fcategorize',['arg_categorize',['../d7/dee/structnana_1_1arg__categorize.html',1,'nana']]],
   ['arg_5fcombox',['arg_combox',['../d5/dd5/structnana_1_1arg__combox.html',1,'nana']]],
   ['arg_5fdestroy',['arg_destroy',['../d8/deb/structnana_1_1arg__destroy.html',1,'nana']]],

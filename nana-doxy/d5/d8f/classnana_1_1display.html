@@ -30,6 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Nana C++ Library. Reference for users.
+   &#160;<span id="projectnumber">v1.0.2</span>
    </div>
    <div id="projectbrief">What we need to use nana</div>
   </td>
@@ -132,9 +133,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae912bd961cf6d65c1add1a3442f1ead8"><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/types/size_t.html">std::size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d8f/classnana_1_1display.html#ae912bd961cf6d65c1add1a3442f1ead8">get_index</a> () const =0</td></tr>
 <tr class="memdesc:ae912bd961cf6d65c1add1a3442f1ead8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The index of monitor.  <a href="#ae912bd961cf6d65c1add1a3442f1ead8">More...</a><br/></td></tr>
 <tr class="separator:ae912bd961cf6d65c1add1a3442f1ead8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a339c2f8e865b511f43daf2f102f79f8a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d8f/classnana_1_1display.html#a339c2f8e865b511f43daf2f102f79f8a">is_primary_monitor</a> () const =0</td></tr>
+<tr class="separator:a339c2f8e865b511f43daf2f102f79f8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a614bef3583b2ffef5cdb7d08bd563198"><td class="memItemLeft" align="right" valign="top">virtual const ::<a class="el" href="../../dd/d2d/structnana_1_1rectangle.html">nana::rectangle</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d8f/classnana_1_1display.html#a614bef3583b2ffef5cdb7d08bd563198">area</a> () const =0</td></tr>
 <tr class="memdesc:a614bef3583b2ffef5cdb7d08bd563198"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the positional coordinates and size of the display device in reference to the desktop area.  <a href="#a614bef3583b2ffef5cdb7d08bd563198">More...</a><br/></td></tr>
 <tr class="separator:a614bef3583b2ffef5cdb7d08bd563198"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79cbfb40f0d840bab76422e0088aa95c"><td class="memItemLeft" align="right" valign="top">virtual const ::<a class="el" href="../../dd/d2d/structnana_1_1rectangle.html">nana::rectangle</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d8f/classnana_1_1display.html#a79cbfb40f0d840bab76422e0088aa95c">workarea</a> () const =0</td></tr>
+<tr class="separator:a79cbfb40f0d840bab76422e0088aa95c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The monitor display metrics. </p>
@@ -217,13 +222,63 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a339c2f8e865b511f43daf2f102f79f8a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool nana::display::is_primary_monitor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="../../d3/de4/classnana_1_1real__display.html#aef29a2ca05d52591e50d3fbe2e86781c">nana::real_display</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a79cbfb40f0d840bab76422e0088aa95c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const ::<a class="el" href="../../dd/d2d/structnana_1_1rectangle.html">nana::rectangle</a>&amp; nana::display::workarea </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="../../d3/de4/classnana_1_1real__display.html#a300dc92457411fc62ec55e92da8af6b3">nana::real_display</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/d76/namespacenana.html">nana</a></li><li class="navelem"><a class="el" href="../../d5/d8f/classnana_1_1display.html">display</a></li>
-    <li class="footer">Generated on Sun Mar 8 2015 18:54:33 for Nana C++ Library. Reference for users. by
+    <li class="footer">Generated on Tue May 5 2015 21:51:05 for Nana C++ Library. Reference for users. by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

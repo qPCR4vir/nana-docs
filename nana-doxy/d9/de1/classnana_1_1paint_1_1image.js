@@ -7,6 +7,7 @@ var classnana_1_1paint_1_1image =
     [ "image", "d9/de1/classnana_1_1paint_1_1image.html#a416f33ba5c0025127f810e4cc9bb61c9", null ],
     [ "image", "d9/de1/classnana_1_1paint_1_1image.html#a3c88451d82480b7bddbdc8bb529611e5", null ],
     [ "~image", "d9/de1/classnana_1_1paint_1_1image.html#a0f268203f20dae8b949a7671677f1d0f", null ],
+    [ "alpha", "d9/de1/classnana_1_1paint_1_1image.html#a2d2e433095f5f80ea3f81c93f162d353", null ],
     [ "close", "d9/de1/classnana_1_1paint_1_1image.html#ab11c42d605ba8e983ca35681754279d9", null ],
     [ "empty", "d9/de1/classnana_1_1paint_1_1image.html#aa50b5cec4ae1190e07c00895e97596d8", null ],
     [ "open", "d9/de1/classnana_1_1paint_1_1image.html#af75fae7d11ae14943bfc5ab19b56aea4", null ],
