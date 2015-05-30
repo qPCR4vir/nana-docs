@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Nana C++ Library. Reference for users.
-   &#160;<span id="projectnumber">v1.0.2</span>
+   &#160;<span id="projectnumber">v1.0.2 with examples</span>
    </div>
    <div id="projectbrief">What we need to use nana</div>
   </td>
@@ -105,30 +105,30 @@ $(document).ready(function(){initNavTree('d6/da9/modal_form_8cpp-example.html','
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;nana/gui/wvl.hpp&gt;</span> </div>
 <div class="line"><span class="preprocessor">#include &lt;nana/gui/widgets/button.hpp&gt;</span> </div>
 <div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span> </div>
-<div class="line"><span class="keywordtype">void</span> foo(<span class="keyword">const</span> nana::gui::eventinfo&amp; ei) </div>
+<div class="line"><span class="keywordtype">void</span> foo(<span class="keyword">const</span> <a name="_a0"></a><a class="code" href="../../d6/d7c/structnana_1_1arg__mouse.html">nana::arg_mouse</a>&amp; ei) </div>
 <div class="line">{ </div>
-<div class="line">    <span class="keyword">using namespace </span>nana::gui; </div>
-<div class="line">    form fm(ei.window, <a name="a0"></a><a class="code" href="../../d5/d1e/namespacenana_1_1_a_p_i.html#aeda48472927c65f3f790297e5fb2df84">API::make_center</a>(ei.window, 400, 300)); </div>
-<div class="line">    fm.caption(STR(<span class="stringliteral">&quot;I am a modal form&quot;</span>)); </div>
-<div class="line">    <a name="_a1"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::cout</a>&lt;&lt;<span class="stringliteral">&quot;Block execution till modal form is closed&quot;</span>&lt;&lt;<a name="a2"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/manip/endl.html">std::endl</a>; </div>
-<div class="line">    <a name="a3"></a><a class="code" href="../../d5/d1e/namespacenana_1_1_a_p_i.html#ae6e1fbc1c0c422296f0124a05d0486ee">API::modal_window</a>(fm); </div>
+<div class="line">    <span class="keyword">using namespace </span>nana; </div>
+<div class="line">    <a name="_a1"></a><a class="code" href="../../d6/d57/classnana_1_1form.html">form</a> fm(ei.<a name="a2"></a><a class="code" href="../../d6/d7c/structnana_1_1arg__mouse.html#a50641b86783c83c3519ff379052ee3a8">window_handle</a>, <a name="a3"></a><a class="code" href="../../d5/d1e/namespacenana_1_1_a_p_i.html#aeda48472927c65f3f790297e5fb2df84">API::make_center</a>(ei.<a class="code" href="../../d6/d7c/structnana_1_1arg__mouse.html#a50641b86783c83c3519ff379052ee3a8">window_handle</a>, 400, 300)); </div>
+<div class="line">    fm.<a name="a4"></a><a class="code" href="../../d9/dd8/classnana_1_1widget.html#ab4a216a092654c3c539d00fb1db76934">caption</a>(STR(<span class="stringliteral">&quot;I am a modal form&quot;</span>)); </div>
+<div class="line">    <a name="_a5"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::cout</a>&lt;&lt;<span class="stringliteral">&quot;Block execution till modal form is closed&quot;</span>&lt;&lt;<a name="a6"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/manip/endl.html">std::endl</a>; </div>
+<div class="line">    <a name="a7"></a><a class="code" href="../../d5/d1e/namespacenana_1_1_a_p_i.html#ae6e1fbc1c0c422296f0124a05d0486ee">API::modal_window</a>(fm); </div>
 <div class="line">    <a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::cout</a>&lt;&lt;<span class="stringliteral">&quot;modal form is closed&quot;</span>&lt;&lt;<a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/manip/endl.html">std::endl</a>; </div>
 <div class="line">} </div>
 <div class="line"><span class="keywordtype">int</span> main() </div>
 <div class="line">{ </div>
-<div class="line">    <span class="keyword">using namespace </span>nana::gui; </div>
-<div class="line">    form fm; </div>
-<div class="line">    fm.caption(STR(<span class="stringliteral">&quot;Click me to open a modal form&quot;</span>)); </div>
-<div class="line">    fm.make_event&lt;<a name="a4"></a><a class="code" href="../../d2/d76/namespacenana.html#aec14d9a922f2b2a5c52680e6f4c9c2d3aa8affc088cbca89fa20dbd98c91362e4">events::click</a>&gt;(foo); </div>
+<div class="line">    <span class="keyword">using namespace </span>nana; </div>
+<div class="line">    <a class="code" href="../../d6/d57/classnana_1_1form.html">form</a> fm; </div>
+<div class="line">    fm.<a class="code" href="../../d9/dd8/classnana_1_1widget.html#ab4a216a092654c3c539d00fb1db76934">caption</a>(STR(<span class="stringliteral">&quot;Click me to open a modal form&quot;</span>)); </div>
+<div class="line">    fm.events().click(foo); </div>
 <div class="line">    fm.show(); </div>
-<div class="line">    <a name="a5"></a><a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">exec</a>(); </div>
+<div class="line">    <a name="a8"></a><a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">exec</a>(); </div>
 <div class="line">} </div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue May 5 2015 21:50:57 for Nana C++ Library. Reference for users. by
+    <li class="footer">Generated on Sat May 30 2015 05:03:03 for Nana C++ Library. Reference for users. by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

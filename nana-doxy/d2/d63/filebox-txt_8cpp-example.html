@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Nana C++ Library. Reference for users.
-   &#160;<span id="projectnumber">v1.0.2</span>
+   &#160;<span id="projectnumber">v1.0.2 with examples</span>
    </div>
    <div id="projectbrief">What we need to use nana</div>
   </td>
@@ -104,24 +104,29 @@ $(document).ready(function(){initNavTree('d2/d63/filebox-txt_8cpp-example.html',
 <div class="contents">
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;nana/gui/wvl.hpp&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;nana/gui/filebox.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span> </div>
+<div class="line"></div>
 <div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
-<div class="line">    <span class="keyword">using namespace </span>nana::gui;</div>
-<div class="line">    filebox fb(0, <span class="keyword">true</span>);</div>
-<div class="line">    fb.add_filter(STR(<span class="stringliteral">&quot;Text File&quot;</span>), STR(<span class="stringliteral">&quot;*.text;*.doc&quot;</span>));</div>
-<div class="line">    fb.add_filter(STR(<span class="stringliteral">&quot;All Files&quot;</span>), STR(<span class="stringliteral">&quot;*.*&quot;</span>));</div>
+<div class="line">    <span class="keyword">using namespace </span>nana;</div>
+<div class="line">    <a name="_a0"></a><a class="code" href="../../d0/d73/classnana_1_1filebox.html">filebox</a> fb(0, <span class="keyword">true</span>);</div>
+<div class="line">    fb.<a name="a1"></a><a class="code" href="../../d0/d73/classnana_1_1filebox.html#adbd36d10448c3c682a93e5a9e0788381">add_filter</a>(STR(<span class="stringliteral">&quot;Text File&quot;</span>), STR(<span class="stringliteral">&quot;*.text;*.doc&quot;</span>));</div>
+<div class="line">    fb.<a class="code" href="../../d0/d73/classnana_1_1filebox.html#adbd36d10448c3c682a93e5a9e0788381">add_filter</a>(STR(<span class="stringliteral">&quot;All Files&quot;</span>), STR(<span class="stringliteral">&quot;*.*&quot;</span>));</div>
 <div class="line">    <span class="keywordflow">if</span>(fb())</div>
 <div class="line">    {</div>
-<div class="line">        <a name="_a0"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/string/basic_string.html">nana::string</a> file = fb.file();</div>
+<div class="line">        <a name="_a2"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/string/basic_string.html">nana::string</a> file = fb.<a name="a3"></a><a class="code" href="../../d0/d73/classnana_1_1filebox.html#a7731b398f7273c765198cf280387281c">file</a>();</div>
+<div class="line">        <a name="_a4"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::wcout</a> &lt;&lt; <a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Selected file:  &quot;</span> &lt;&lt; file &lt;&lt; <a name="a5"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/manip/endl.html">std::endl</a>; </div>
 <div class="line">    }</div>
+<div class="line">    <span class="keywordtype">char</span> a;</div>
+<div class="line">    <a name="_a6"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_istream.html">std::cin</a> &gt;&gt; a;</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue May 5 2015 21:50:56 for Nana C++ Library. Reference for users. by
+    <li class="footer">Generated on Sat May 30 2015 05:03:02 for Nana C++ Library. Reference for users. by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

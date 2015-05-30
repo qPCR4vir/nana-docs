@@ -18,7 +18,7 @@ var searchData=
   ['diehard',['diehard',['../d5/d50/structnana_1_1output__t.html#a69b6f3aeef3129409f5267c8b9527d9b',1,'nana::output_t']]],
   ['dimension',['dimension',['../de/d3c/structnana_1_1detail_1_1basic__window.html#a065b9b5afcf112c824f55295d31dd9b6',1,'nana::detail::basic_window::dimension()'],['../d5/db9/classnana_1_1place_1_1implement_1_1div__grid.html#ab8e0d9a027defc8a77f6a165556783c8',1,'nana::place::implement::div_grid::dimension()']]],
   ['directional_5foverride',['directional_override',['../da/da4/structnana_1_1unicode__bidi_1_1remember.html#a282800a6b5ae07b451a1087e44036571',1,'nana::unicode_bidi::remember']]],
-  ['directory',['directory',['../d6/d35/structnana_1_1filesystem_1_1fileinfo.html#a11df1f470b7821e946755c6e48206d8b',1,'nana::filesystem::fileinfo']]],
+  ['directory',['directory',['../d6/d35/structnana_1_1filesystem_1_1fileinfo.html#a11df1f470b7821e946755c6e48206d8b',1,'nana::filesystem::fileinfo::directory()'],['../d8/d05/structnana_1_1experimental_1_1filesystem_1_1attribute.html#a0b7b74ba9b0a49f17413263330cc06a8',1,'nana::experimental::filesystem::attribute::directory()']]],
   ['display',['display',['../dc/d71/classnana_1_1place_1_1implement_1_1division.html#ade923600167a7285abe4845b7d4a9fb7',1,'nana::place::implement::division']]],
   ['displays',['displays',['../d6/d86/structnana_1_1screen_1_1implement.html#ad8fd3b260a90fdd8d06df4587879c99f',1,'nana::screen::implement']]],
   ['distance',['distance',['../d0/dee/structnana_1_1arg__wheel.html#ae960130f613e86fa01a963fafc772a78',1,'nana::arg_wheel']]],

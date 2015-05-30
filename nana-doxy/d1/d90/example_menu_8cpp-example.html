@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Nana C++ Library. Reference for users.
-   &#160;<span id="projectnumber">v1.0.2</span>
+   &#160;<span id="projectnumber">v1.0.2 with examples</span>
    </div>
    <div id="projectbrief">What we need to use nana</div>
   </td>
@@ -102,46 +102,48 @@ $(document).ready(function(){initNavTree('d1/d90/example_menu_8cpp-example.html'
 <div class="title">example_menu.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><span class="preprocessor">                #include &lt;nana/gui/wvl.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">                #include &lt;nana/gui/widgets/button.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">                #include &lt;nana/gui/widgets/menu.hpp&gt;</span></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;nana/gui/wvl.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;nana/gui/widgets/button.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;nana/gui/widgets/menu.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span> </div>
 <div class="line"></div>
-<div class="line">                <span class="keywordtype">void</span> on_menu_item(nana::gui::menu::item_proxy&amp; ip)</div>
-<div class="line">                {</div>
-<div class="line">                         <a name="_a0"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/types/size_t.html">std::size_t</a> index = ip.index(); <span class="comment">//Get the index of the clicking item.</span></div>
-<div class="line">                }</div>
+<div class="line"><span class="keywordtype">void</span> on_menu_item(<a name="_a0"></a><a class="code" href="../../d5/d55/classnana_1_1drawerbase_1_1menu_1_1menu__item__type_1_1item__proxy.html">nana::menu::item_proxy</a>&amp; ip)</div>
+<div class="line">{</div>
+<div class="line">        <a name="_a1"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/types/size_t.html">std::size_t</a> index = ip.<a name="a2"></a><a class="code" href="../../d5/d55/classnana_1_1drawerbase_1_1menu_1_1menu__item__type_1_1item__proxy.html#ae44250d4e78453365f601690da111d03">index</a>(); <span class="comment">//Get the index of the clicking item.</span></div>
+<div class="line">    <a name="_a3"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::cout</a> &lt;&lt; <span class="stringliteral">&quot;Menu item index:  &quot;</span> &lt;&lt; index &lt;&lt; <a name="a4"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/manip/endl.html">std::endl</a>; </div>
+<div class="line">}</div>
 <div class="line"></div>
-<div class="line">                <span class="keywordtype">int</span> main()</div>
-<div class="line">                {</div>
-<div class="line">                        <span class="keyword">using namespace </span>nana::gui;</div>
-<div class="line">                        form fm;</div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">        <span class="keyword">using namespace </span>nana;</div>
+<div class="line">        <a name="_a5"></a><a class="code" href="../../d6/d57/classnana_1_1form.html">form</a> fm;</div>
+<div class="line">    fm.<a name="a6"></a><a class="code" href="../../d9/dd8/classnana_1_1widget.html#ab4a216a092654c3c539d00fb1db76934">caption</a>(L<span class="stringliteral">&quot;Popup the menu when right clicking the button&quot;</span>);</div>
 <div class="line"></div>
-<div class="line">                        ;<span class="comment">//We need a menu object</span></div>
-<div class="line">                        menu mobj;</div>
-<div class="line">                        mobj.append ( STR(<span class="stringliteral">&quot;Item 0&quot;</span>), &amp;on_menu_item);</div>
-<div class="line">                        mobj.append_splitter();</div>
-<div class="line">                        mobj.append ( STR(<span class="stringliteral">&quot;Item 1&quot;</span>), &amp;on_menu_item);</div>
+<div class="line">        ;<span class="comment">//We need a menu object</span></div>
+<div class="line">        <a name="_a7"></a><a class="code" href="../../d2/d1a/classnana_1_1menu.html">menu</a> mobj;</div>
+<div class="line">        mobj.<a name="a8"></a><a class="code" href="../../d2/d1a/classnana_1_1menu.html#aab9c4f6c6791a8a8d198ce3e1a079dd5">append</a> ( STR(<span class="stringliteral">&quot;Item 0&quot;</span>), &amp;on_menu_item);</div>
+<div class="line">        mobj.append_splitter();</div>
+<div class="line">        mobj.append ( STR(<span class="stringliteral">&quot;Item 1&quot;</span>), &amp;on_menu_item);</div>
 <div class="line"></div>
-<div class="line">                        ;<span class="comment">//Now we need a button.</span></div>
-<div class="line">                        button btn(fm, <a name="_a1"></a><a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">nana::rectangle</a>(<a name="_a2"></a><a class="code" href="../../d0/d24/structnana_1_1point.html">nana::point</a>(10, 10), <a name="_a3"></a><a class="code" href="../../da/df8/structnana_1_1size.html">nana::size</a>(100, 25)));</div>
-<div class="line">                        btn.caption(STR(<span class="stringliteral">&quot;Popup Menu&quot;</span>));</div>
+<div class="line">        ;<span class="comment">//Now we need a button.</span></div>
+<div class="line">        <a name="_a9"></a><a class="code" href="../../d7/dc0/classnana_1_1button.html">button</a> btn(fm, <a name="_a10"></a><a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">nana::rectangle</a>(<a name="_a11"></a><a class="code" href="../../d0/d24/structnana_1_1point.html">nana::point</a>(10, 10), <a name="_a12"></a><a class="code" href="../../da/df8/structnana_1_1size.html">nana::size</a>(100, 25)));</div>
+<div class="line">        btn.caption(STR(<span class="stringliteral">&quot;Popup Menu&quot;</span>));</div>
 <div class="line"></div>
-<div class="line">                        ;<span class="comment">//Popup the menu when right clicking the button.</span></div>
-<div class="line">                        btn.make_event&lt;<a name="a4"></a><a class="code" href="../../d2/d76/namespacenana.html#aec14d9a922f2b2a5c52680e6f4c9c2d3aa8affc088cbca89fa20dbd98c91362e4">events::click</a>&gt;(<a name="a5"></a><a class="code" href="../../d2/d76/namespacenana.html#aec6c8a2c2f45d76f0533ff4b7fb72a5e">menu_popuper</a>(mobj));</div>
+<div class="line">        ;<span class="comment">//Popup the menu when right clicking the button.</span></div>
+<div class="line">        <span class="comment">//btn.events().click(menu_popuper(mobj)) ;</span></div>
 <div class="line"></div>
-<div class="line">                        ;<span class="comment">//Or popuping the menu with a specified coordinate when any mouse button is clicked.</span></div>
-<div class="line">                        ;<span class="comment">//btn.make_event&lt;events::click&gt; ( menu_popuper( mobj, btn, nana::point(0, 26),</span></div>
-<div class="line">                        ;<span class="comment">//                                mouse::any_button );</span></div>
+<div class="line">        ;<span class="comment">//Or popuping the menu with a specified coordinate when any mouse button is clicked.</span></div>
+<div class="line">        btn.events().click( <a name="a13"></a><a class="code" href="../../d2/d76/namespacenana.html#aec6c8a2c2f45d76f0533ff4b7fb72a5e">menu_popuper</a>( mobj, btn, <a class="code" href="../../d0/d24/structnana_1_1point.html">nana::point</a>(100, 36),   <a name="a14"></a><a class="code" href="../../d2/d76/namespacenana.html#a19ba554a683a93eb1f6ba803c2959c8aa003a8f30ec2c1f46c4d08117d72dc4ff">mouse::any_button</a> ));</div>
 <div class="line"></div>
-<div class="line">                        fm.show();</div>
-<div class="line">                        <a name="a6"></a><a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">exec</a>();</div>
-<div class="line">                }</div>
+<div class="line">        fm.show();</div>
+<div class="line">        <a name="a15"></a><a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">exec</a>();</div>
+<div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue May 5 2015 21:50:56 for Nana C++ Library. Reference for users. by
+    <li class="footer">Generated on Sat May 30 2015 05:03:02 for Nana C++ Library. Reference for users. by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

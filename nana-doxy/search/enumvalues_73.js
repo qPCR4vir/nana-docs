@@ -26,7 +26,8 @@ var searchData=
   ['slate_5fgrey',['slate_grey',['../d2/d76/namespacenana.html#a1c3db4107603ee927761eec5fe67ef98ab9a5527091c58510c379a416c8b7d1a3',1,'nana']]],
   ['slider',['slider',['../d5/d8d/classnana_1_1drawerbase_1_1slider_1_1controller.html#a917d6417895c16ab202ece093518a789a10bf08f0bbd6689475be65b4ae441bd9',1,'nana::drawerbase::slider::controller']]],
   ['snow',['snow',['../d2/d76/namespacenana.html#a1c3db4107603ee927761eec5fe67ef98a2b93fbdf27d43547bec8794054c28e00',1,'nana']]],
-  ['solid',['Solid',['../d7/daf/structnana_1_1detail_1_1drawable__impl__type_1_1brush__spec.html#ab4e0929979a6105f5c92495601c08167a26ccaf21b7471b6163f5fe460d99a1e8',1,'nana::detail::drawable_impl_type::brush_spec::Solid()'],['../df/d3b/classnana_1_1facade_3_01element_1_1arrow_01_4.html#a85a8265c5c91d03e434d7b41ad76b117aec03f91ae56e478455e3786e91559194',1,'nana::facade&lt; element::arrow &gt;::solid()']]],
+  ['socket',['socket',['../d7/d51/namespacenana_1_1experimental_1_1filesystem.html#aa715ef1cbd3086ab6ba01bafe427fb37a61f2529360aec54f5dc9804b842cf3fa',1,'nana::experimental::filesystem']]],
+  ['solid',['solid',['../df/d3b/classnana_1_1facade_3_01element_1_1arrow_01_4.html#a85a8265c5c91d03e434d7b41ad76b117aec03f91ae56e478455e3786e91559194',1,'nana::facade&lt; element::arrow &gt;::solid()'],['../d7/daf/structnana_1_1detail_1_1drawable__impl__type_1_1brush__spec.html#ab4e0929979a6105f5c92495601c08167a26ccaf21b7471b6163f5fe460d99a1e8',1,'nana::detail::drawable_impl_type::brush_spec::Solid()']]],
   ['somewhere',['somewhere',['../dd/dab/structnana_1_1drawerbase_1_1categorize_1_1renderer_1_1ui__element.html#abe47ed3d0ae499f15a9a66c11e37451ca9db834c5f1cbd5bdb53bbd668a37a0be',1,'nana::drawerbase::categorize::renderer::ui_element']]],
   ['south',['south',['../d2/d76/namespacenana.html#a4dad70e3dd72ae2d6a69dde9cb9c6d04a50fd76e33fe5b9617c5ca99008af8904',1,'nana']]],
   ['southeast',['southeast',['../d2/d76/namespacenana.html#a4dad70e3dd72ae2d6a69dde9cb9c6d04afc3ae6a234c02654c52d9013f1406f34',1,'nana']]],
@@ -40,5 +41,6 @@ var searchData=
   ['strong',['strong',['../d8/d7f/classnana_1_1unicode__bidi.html#adf135c82592dcde7bb26fd90d84f3f83a6f7f9432d35dea629c8384dab312259a',1,'nana::unicode_bidi']]],
   ['substitute',['substitute',['../de/d48/structnana_1_1keyboard.html#aaf47acc00903a661c46cd6bd449190d2af1f5ff37b991e596a69d595d009083a8',1,'nana::keyboard']]],
   ['super',['super',['../dd/d00/namespacenana_1_1category.html#a85512d536658f20d199b9fa20df34818a1b3231655cebb7a1f783eddf27d254ca',1,'nana::category']]],
+  ['symlink',['symlink',['../d7/d51/namespacenana_1_1experimental_1_1filesystem.html#aa715ef1cbd3086ab6ba01bafe427fb37aa978acc8a7ae15f49f58f3495f0d85ba',1,'nana::experimental::filesystem']]],
   ['sync_5fidel',['sync_idel',['../de/d48/structnana_1_1keyboard.html#aaf47acc00903a661c46cd6bd449190d2a908165096f4a3a7e86a6cc339478c39c',1,'nana::keyboard']]]
 ];

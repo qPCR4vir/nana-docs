@@ -25,6 +25,8 @@ var classnana_1_1drawerbase_1_1listbox_1_1cat__proxy =
     [ "operator==", "da/d11/classnana_1_1drawerbase_1_1listbox_1_1cat__proxy.html#a05008bd78f3e07c38324e5a084e8f097", null ],
     [ "position", "da/d11/classnana_1_1drawerbase_1_1listbox_1_1cat__proxy.html#a898328f26c510fb0cd65b3fbd538e025", null ],
     [ "push_back", "da/d11/classnana_1_1drawerbase_1_1listbox_1_1cat__proxy.html#a92fb75d4c2155649ed0ce286c0392921", null ],
+    [ "select", "da/d11/classnana_1_1drawerbase_1_1listbox_1_1cat__proxy.html#affea0304412907bdbdc959d587a306d2", null ],
+    [ "selected", "da/d11/classnana_1_1drawerbase_1_1listbox_1_1cat__proxy.html#a774664a7dd9b98322bf737be96f967c2", null ],
     [ "size", "da/d11/classnana_1_1drawerbase_1_1listbox_1_1cat__proxy.html#aae83efac83e9817cc354bbc5cab43b1e", null ],
     [ "text", "da/d11/classnana_1_1drawerbase_1_1listbox_1_1cat__proxy.html#a6fed2653c8485addddb222493e5b6fd3", null ],
     [ "text", "da/d11/classnana_1_1drawerbase_1_1listbox_1_1cat__proxy.html#a3816daeadb9666838e54df64cd8c5c80", null ]

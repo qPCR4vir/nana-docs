@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Nana C++ Library. Reference for users.
-   &#160;<span id="projectnumber">v1.0.2</span>
+   &#160;<span id="projectnumber">v1.0.2 with examples</span>
    </div>
    <div id="projectbrief">What we need to use nana</div>
   </td>
@@ -102,33 +102,43 @@ $(document).ready(function(){initNavTree('d9/dda/example_listbox_8cpp-example.ht
 <div class="title">example_listbox.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><span class="preprocessor">        #include &lt;nana/gui/wvl.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">        #include &lt;nana/gui/widgets/listbox.hpp&gt;</span></div>
-<div class="line">                <span class="keywordtype">int</span> main()</div>
-<div class="line">                {</div>
-<div class="line">                   <span class="keyword">using namespace </span>nana::gui;</div>
-<div class="line">                   form fm;</div>
-<div class="line">                   listbox lb(fm, <a name="_a0"></a><a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">nana::rectangle</a>(10, 10, 280, 120));</div>
-<div class="line">                   lb.append_header(STR(<span class="stringliteral">&quot;Header&quot;</span>), 200);</div>
-<div class="line">                   lb.at(0).append(STR(<span class="stringliteral">&quot;int&quot;</span>));</div>
-<div class="line">                   lb.at(0).append(STR(<span class="stringliteral">&quot;double&quot;</span>));</div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;nana/gui/wvl.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;nana/gui/widgets/listbox.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span> </div>
 <div class="line"></div>
-<div class="line">                   lb.anyobj(0, 0, 10);     </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">        <span class="keyword">using namespace </span>nana;</div>
+<div class="line">        <a name="_a0"></a><a class="code" href="../../d6/d57/classnana_1_1form.html">form</a> fm;</div>
+<div class="line">        <a name="_a1"></a><a class="code" href="../../d1/dda/classnana_1_1listbox.html">listbox</a> lb(fm, <a name="_a2"></a><a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">nana::rectangle</a>(10, 10, 280, 120));</div>
 <div class="line"></div>
-<div class="line">                   lb.anyobj(0, 1, 0.1);   </div>
+<div class="line">        lb.<a name="a3"></a><a class="code" href="../../d1/dda/classnana_1_1listbox.html#a4fb6019697cc302d3269b6be431ce04b">append_header</a>(STR(<span class="stringliteral">&quot;Header&quot;</span>), 200);</div>
 <div class="line"></div>
-<div class="line">                   <span class="keywordtype">int</span> * pi = lb.anyobj&lt;<span class="keywordtype">int</span>&gt;(0, 0);       <span class="comment">// it returns a nullptr if there is not an int object specified.</span></div>
-<div class="line">                   <span class="keywordtype">double</span> * pd = lb.anyobj&lt;<span class="keywordtype">double</span>&gt;(0, 1); <span class="comment">// it returns a nullptr if there is not an double object specified.</span></div>
+<div class="line">    <span class="comment">// this will attemp to use   </span></div>
+<div class="line">    <span class="comment">// item_proxy cat_proxy::append (T &amp;&amp;t, bool set_value=false) </span></div>
+<div class="line">    <span class="comment">// to add a value any of wchar_t[4]  = &quot;int&quot;</span></div>
+<div class="line">        <span class="comment">// lb.at(0).append(STR(&quot;int&quot;));</span></div>
+<div class="line">    lb.<a name="a4"></a><a class="code" href="../../d1/dda/classnana_1_1listbox.html#a71254ea5f0a66e06d8cf6fbba530d3cc">at</a>(0).<a name="a5"></a><a class="code" href="../../da/d11/classnana_1_1drawerbase_1_1listbox_1_1cat__proxy.html#af653fecf47c6f20a9d49058c268aaa3e">append</a>({STR(<span class="stringliteral">&quot;int&quot;</span>)});</div>
+<div class="line">    lb.<a class="code" href="../../d1/dda/classnana_1_1listbox.html#a71254ea5f0a66e06d8cf6fbba530d3cc">at</a>(0).<a class="code" href="../../da/d11/classnana_1_1drawerbase_1_1listbox_1_1cat__proxy.html#af653fecf47c6f20a9d49058c268aaa3e">append</a>({STR(<span class="stringliteral">&quot;double&quot;</span>)});</div>
 <div class="line"></div>
-<div class="line">                   fm.show();</div>
-<div class="line">                   <a name="a1"></a><a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">exec</a>();</div>
-<div class="line">                 }</div>
+<div class="line">        lb.<a name="a6"></a><a class="code" href="../../d9/d48/classnana_1_1concepts_1_1any__objective.html#a1afaa38228d7a4eb8cc4591414eed6e6">anyobj</a>(0, 0, 10);     </div>
+<div class="line">        lb.<a class="code" href="../../d9/d48/classnana_1_1concepts_1_1any__objective.html#a1afaa38228d7a4eb8cc4591414eed6e6">anyobj</a>(0, 1, 0.1);   </div>
+<div class="line"></div>
+<div class="line">        <span class="keywordtype">int</span> * pi = lb.<a class="code" href="../../d9/d48/classnana_1_1concepts_1_1any__objective.html#a1afaa38228d7a4eb8cc4591414eed6e6">anyobj</a>&lt;<span class="keywordtype">int</span>&gt;(0, 0);          <span class="comment">// it returns a nullptr if there is not an int object specified.</span></div>
+<div class="line">    <a name="_a7"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::cout</a> &lt;&lt; <span class="stringliteral">&quot;Index: (0,0) -&gt; int value: &quot;</span> &lt;&lt; *pi &lt;&lt; <a name="a8"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/manip/endl.html">std::endl</a>; </div>
+<div class="line"></div>
+<div class="line">        <span class="keywordtype">double</span> * pd = lb.<a class="code" href="../../d9/d48/classnana_1_1concepts_1_1any__objective.html#a1afaa38228d7a4eb8cc4591414eed6e6">anyobj</a>&lt;<span class="keywordtype">double</span>&gt;(0, 1); <span class="comment">// it returns a nullptr if there is not an double object specified.</span></div>
+<div class="line">    <a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::cout</a> &lt;&lt; <span class="stringliteral">&quot;Index: (0,1) -&gt; double value: &quot;</span> &lt;&lt; *pd; </div>
+<div class="line"></div>
+<div class="line">        fm.show();</div>
+<div class="line">        <a name="a9"></a><a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">exec</a>();</div>
+<div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue May 5 2015 21:50:56 for Nana C++ Library. Reference for users. by
+    <li class="footer">Generated on Sat May 30 2015 05:03:02 for Nana C++ Library. Reference for users. by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

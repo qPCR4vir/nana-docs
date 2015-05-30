@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Nana C++ Library. Reference for users.
-   &#160;<span id="projectnumber">v1.0.2</span>
+   &#160;<span id="projectnumber">v1.0.2 with examples</span>
    </div>
    <div id="projectbrief">What we need to use nana</div>
   </td>
@@ -119,7 +119,7 @@ Screenshot of categorize.</div></div>
 <div class="line">                        {</div>
 <div class="line">                                <span class="keyword">enum</span> <a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828">t</a></div>
 <div class="line">                                {</div>
-<div class="line">                                        <a class="code" href="../../d2/d76/namespacenana.html#a278f991de5b82b0d32a35563193235d0a334c4a4c42fdb79d7ebc3e73b517e6f8">none</a>,           <span class="comment">//Out of the widget</span></div>
+<div class="line">                                        <a class="code" href="../../d7/d51/namespacenana_1_1experimental_1_1filesystem.html#aa715ef1cbd3086ab6ba01bafe427fb37a334c4a4c42fdb79d7ebc3e73b517e6f8">none</a>,           <span class="comment">//Out of the widget</span></div>
 <div class="line">                                        somewhere, item_root, item_name, item_arrow</div>
 <div class="line">                                };</div>
 <div class="line">                                <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code" href="../../d2/d76/namespacenana.html#a036f3e1d69c17cc1fda73b00b03b13d9">npos</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(-1);</div>
@@ -128,11 +128,11 @@ Screenshot of categorize.</div></div>
 <div class="line">                                ui_element();</div>
 <div class="line">                        };</div>
 <div class="line">                        <span class="keyword">virtual</span> ~renderer() = 0;</div>
-<div class="line">                        <span class="keyword">virtual</span> <span class="keywordtype">void</span> background(graph_reference, nana::gui::window, <span class="keyword">const</span> <a name="_a1"></a><a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">nana::rectangle</a>&amp;, </div>
+<div class="line">                        <span class="keyword">virtual</span> <span class="keywordtype">void</span> background(graph_reference, <a name="_a1"></a><a class="code" href="../../d2/d87/structnana_1_1detail_1_1window__handle__impl.html">nana::window</a>, <span class="keyword">const</span> <a name="_a2"></a><a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">nana::rectangle</a>&amp;, </div>
 <div class="line">                                                                        <span class="keyword">const</span>   ui_element&amp;)     = 0;</div>
 <div class="line">                        <span class="keyword">virtual</span> <span class="keywordtype">void</span> root_arrow(graph_reference, <span class="keyword">const</span> <a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">nana::rectangle</a>&amp;, state_t) = 0;</div>
 <div class="line">                        <span class="keyword">virtual</span> <span class="keywordtype">void</span> item(graph_reference, <span class="keyword">const</span> <a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">nana::rectangle</a>&amp;, <span class="keywordtype">size_t</span> index,</div>
-<div class="line">                        <span class="keyword">const</span> <a name="_a2"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/string/basic_string.html">nana::string</a>&amp; name, <span class="keywordtype">unsigned</span> text_height,</div>
+<div class="line">                        <span class="keyword">const</span> <a name="_a3"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/string/basic_string.html">nana::string</a>&amp; name, <span class="keywordtype">unsigned</span> text_height,</div>
 <div class="line">                        <span class="keywordtype">bool</span> has_child, state_t) = 0;</div>
 <div class="line">                        <span class="keyword">virtual</span> <span class="keywordtype">void</span> border(graph_reference) = 0;</div>
 <div class="line">                };</div>
@@ -140,20 +140,20 @@ Screenshot of categorize.</div></div>
 <div class="line"></div>
 <div class="line"></div>
 <div class="line"></div>
-<div class="line">        <span class="keywordtype">void</span> selected(nana::gui::categorize&lt;int&gt; &amp; categ, <span class="keywordtype">int</span>&amp;)</div>
+<div class="line">        <span class="keywordtype">void</span> selected(<a name="_a4"></a><a class="code" href="../../d7/dee/structnana_1_1arg__categorize.html">nana::arg_categorize&lt;int&gt;</a>  categ)</div>
 <div class="line">        {</div>
-<div class="line">                nana::gui::msgbox mb(categ, STR(<span class="stringliteral">&quot;categorize&quot;</span>));</div>
+<div class="line">                <a name="_a5"></a><a class="code" href="../../d8/d97/classnana_1_1msgbox.html">nana::msgbox</a> mb(categ.<a name="a6"></a><a class="code" href="../../d7/dee/structnana_1_1arg__categorize.html#a4ef25eed71d9c57e4fa9e4af50d7594a">widget</a>, STR(<span class="stringliteral">&quot;categorize&quot;</span>));</div>
 <div class="line">                mb.icon(mb.icon_information);</div>
-<div class="line">                mb&lt;&lt;STR(<span class="stringliteral">&quot;The value of selected is &quot;</span>)&lt;&lt;categ.value()&lt;&lt;STR(<span class="stringliteral">&quot;, caption is \&quot;&quot;</span>)</div>
-<div class="line">                &lt;&lt;categ.caption()&lt;&lt;STR(<span class="stringliteral">&quot;\&quot;&quot;</span>); <span class="comment">//caption() method, see Note 3.</span></div>
+<div class="line">                mb&lt;&lt;STR(<span class="stringliteral">&quot;The value of selected is &quot;</span>)&lt;&lt;categ.<a name="a7"></a><a class="code" href="../../d7/dee/structnana_1_1arg__categorize.html#a5bd25dd58d1dd5bc16c7b086ed39ee3f">value</a>&lt;&lt;STR(<span class="stringliteral">&quot;, caption is \&quot;&quot;</span>)</div>
+<div class="line">                &lt;&lt;categ.<a class="code" href="../../d7/dee/structnana_1_1arg__categorize.html#a4ef25eed71d9c57e4fa9e4af50d7594a">widget</a>.caption()&lt;&lt;STR(<span class="stringliteral">&quot;\&quot;&quot;</span>); <span class="comment">//caption() method, see Note 3.</span></div>
 <div class="line">                mb();</div>
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordtype">int</span> main()</div>
 <div class="line">        {</div>
-<div class="line">                <span class="keyword">using namespace </span>nana::gui;</div>
-<div class="line">                form fm;</div>
-<div class="line">                categorize&lt;int&gt; categ(fm, <a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">nana::rectangle</a>(10, 10, 200, 24));</div>
+<div class="line">                <span class="keyword">using namespace </span>nana;</div>
+<div class="line">                <a name="_a8"></a><a class="code" href="../../d6/d57/classnana_1_1form.html">form</a> fm;</div>
+<div class="line">                <a name="_a9"></a><a class="code" href="../../d5/d30/classnana_1_1categorize.html">categorize&lt;int&gt;</a> categ(fm, <a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">nana::rectangle</a>(10, 10, 200, 24));</div>
 <div class="line"></div>
 <div class="line">                categ.childset(STR(<span class="stringliteral">&quot;Invalid Category&quot;</span>), 0); <span class="comment">// Invalid category because of empty current category.</span></div>
 <div class="line"></div>
@@ -170,19 +170,19 @@ Screenshot of categorize.</div></div>
 <div class="line">                        ; <span class="comment">// it does not displace the current category, and therefore &quot;Another Child&quot;</span></div>
 <div class="line">                        ; <span class="comment">// is a child of &quot;Second&quot;.</span></div>
 <div class="line"></div>
-<div class="line">                categ.ext_event().selected = selected;</div>
+<div class="line">                categ.events().selected(selected);</div>
 <div class="line">                        ; <span class="comment">// This may crash in VC2012-RC due to compiler bug.</span></div>
 <div class="line">                        ; <span class="comment">// Please refer to compatibility-issue for more details</span></div>
 <div class="line"></div>
 <div class="line">                fm.show();</div>
-<div class="line">                <a name="a3"></a><a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">exec</a>();</div>
+<div class="line">                <a name="a10"></a><a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">exec</a>();</div>
 <div class="line">        }</div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue May 5 2015 21:50:55 for Nana C++ Library. Reference for users. by
+    <li class="footer">Generated on Sat May 30 2015 05:03:02 for Nana C++ Library. Reference for users. by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

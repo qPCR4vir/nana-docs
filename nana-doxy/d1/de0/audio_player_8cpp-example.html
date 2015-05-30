@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Nana C++ Library. Reference for users.
-   &#160;<span id="projectnumber">v1.0.2</span>
+   &#160;<span id="projectnumber">v1.0.2 with examples</span>
    </div>
    <div id="projectbrief">What we need to use nana</div>
   </td>
@@ -112,20 +112,26 @@ $(document).ready(function(){initNavTree('d1/de0/audio_player_8cpp-example.html'
 <div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
-<div class="line">    <a name="_a0"></a><a class="code" href="../../d3/da1/classnana_1_1audio_1_1player.html">nana::audio::player</a> player(STR(<span class="stringliteral">&quot;./audio.wav&quot;</span>));</div>
+<div class="line">    <a name="_a0"></a><a class="code" href="../../d3/da1/classnana_1_1audio_1_1player.html">nana::audio::player</a> player(STR(<span class="stringliteral">&quot;../Examples/audio1.wav&quot;</span>));</div>
 <div class="line">    <a name="_a1"></a><a class="code" href="../../d5/da5/classnana_1_1threads_1_1pool.html">nana::threads::pool</a> pool(1); <span class="comment">//Only 1 thread.</span></div>
 <div class="line"></div>
 <div class="line">    <span class="keyword">using namespace </span>nana;</div>
 <div class="line"></div>
 <div class="line">    <a name="_a2"></a><a class="code" href="../../d6/d57/classnana_1_1form.html">form</a> fm;</div>
-<div class="line">    <a name="_a3"></a><a class="code" href="../../d7/dc0/classnana_1_1button.html">button</a> btn(fm, <a name="_a4"></a><a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">nana::rectangle</a>(10, 10, 100, 24));</div>
-<div class="line">    btn.<a name="a5"></a><a class="code" href="../../d9/dd8/classnana_1_1widget.html#ab4a216a092654c3c539d00fb1db76934">caption</a>(STR(<span class="stringliteral">&quot;Play the audio&quot;</span>));</div>
+<div class="line">    <a name="_a3"></a><a class="code" href="../../d7/dc0/classnana_1_1button.html">button</a> btn     (fm, <a name="_a4"></a><a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">nana::rectangle</a>(10, 10, 180, 24));</div>
+<div class="line">    <a class="code" href="../../d7/dc0/classnana_1_1button.html">button</a> btn_wait(fm, <a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">nana::rectangle</a>(10, 40, 180, 24));</div>
+<div class="line">    btn     .<a name="a5"></a><a class="code" href="../../d9/dd8/classnana_1_1widget.html#ab4a216a092654c3c539d00fb1db76934">caption</a>(STR(<span class="stringliteral">&quot;Play the audio&quot;</span>));</div>
+<div class="line">    btn_wait.<a class="code" href="../../d9/dd8/classnana_1_1widget.html#ab4a216a092654c3c539d00fb1db76934">caption</a>(STR(<span class="stringliteral">&quot;Play and wait 5 min !!!!&quot;</span>));</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//C++11</span></div>
 <div class="line">    btn.<a name="a6"></a><a class="code" href="../../d3/d95/classnana_1_1widget__object.html#afafd1a1bafe56cd6e5903d8db910aad8">events</a>().<a name="a7"></a><a class="code" href="../../dd/d19/structnana_1_1general__events.html#a74eba5017dbd5dbfdb6f32b9b485682f">click</a>(<a class="code" href="../../d5/d4c/namespacenana_1_1threads.html#a522742773009913c5b4961c02de4873e">pool_push</a>(pool, [&amp;]()</div>
 <div class="line">                           {</div>
 <div class="line">                               player.<a name="a8"></a><a class="code" href="../../d3/da1/classnana_1_1audio_1_1player.html#a6d6e441c42f9d43428e54a25cf0b1b7c">play</a>();</div>
 <div class="line">                           }));</div>
+<div class="line">    btn_wait.<a class="code" href="../../d3/d95/classnana_1_1widget__object.html#afafd1a1bafe56cd6e5903d8db910aad8">events</a>().<a class="code" href="../../dd/d19/structnana_1_1general__events.html#a74eba5017dbd5dbfdb6f32b9b485682f">click</a>([&amp;]()</div>
+<div class="line">                       {</div>
+<div class="line">                         player.<a class="code" href="../../d3/da1/classnana_1_1audio_1_1player.html#a6d6e441c42f9d43428e54a25cf0b1b7c">play</a>();</div>
+<div class="line">                       });</div>
 <div class="line"></div>
 <div class="line">    fm.show();</div>
 <div class="line"></div>
@@ -136,7 +142,7 @@ $(document).ready(function(){initNavTree('d1/de0/audio_player_8cpp-example.html'
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue May 5 2015 21:50:55 for Nana C++ Library. Reference for users. by
+    <li class="footer">Generated on Sat May 30 2015 05:03:02 for Nana C++ Library. Reference for users. by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

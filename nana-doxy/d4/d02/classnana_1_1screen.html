@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Nana C++ Library. Reference for users.
-   &#160;<span id="projectnumber">v1.0.2</span>
+   &#160;<span id="projectnumber">v1.0.2 with examples</span>
    </div>
    <div id="projectbrief">What we need to use nana</div>
   </td>
@@ -115,6 +115,9 @@ $(document).ready(function(){initNavTree('d4/d02/classnana_1_1screen.html','../.
 <div class="title">nana::screen Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Provides some functions to get the metrics of the monitors.  
+ <a href="../../d4/d02/classnana_1_1screen.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -129,27 +132,68 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a74b0de58e6d8deecd25f49fd2186a160"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reload has no preconditions, it's safe to call on moved-from.  <a href="#a74b0de58e6d8deecd25f49fd2186a160">More...</a><br/></td></tr>
 <tr class="separator:a74b0de58e6d8deecd25f49fd2186a160"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9be2d2d3ac485cf7ee507adf0937ea34"><td class="memItemLeft" align="right" valign="top"><a class="elRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/types/size_t.html">std::size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d02/classnana_1_1screen.html#a9be2d2d3ac485cf7ee507adf0937ea34">count</a> () const </td></tr>
-<tr class="memdesc:a9be2d2d3ac485cf7ee507adf0937ea34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of display monitors.  <a href="#a9be2d2d3ac485cf7ee507adf0937ea34">More...</a><br/></td></tr>
+<tr class="memdesc:a9be2d2d3ac485cf7ee507adf0937ea34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of display monitors installed in the system.  <a href="#a9be2d2d3ac485cf7ee507adf0937ea34">More...</a><br/></td></tr>
 <tr class="separator:a9be2d2d3ac485cf7ee507adf0937ea34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3aa7b709856aa12e68a57bfaefb29ac0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d8f/classnana_1_1display.html">display</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d02/classnana_1_1screen.html#a3aa7b709856aa12e68a57bfaefb29ac0">from_point</a> (const <a class="el" href="../../d0/d24/structnana_1_1point.html">point</a> &amp;)</td></tr>
+<tr class="memdesc:a3aa7b709856aa12e68a57bfaefb29ac0"><td class="mdescLeft">&#160;</td><td class="mdescRight">gets the display monitor that contains the specified point  <a href="#a3aa7b709856aa12e68a57bfaefb29ac0">More...</a><br/></td></tr>
 <tr class="separator:a3aa7b709856aa12e68a57bfaefb29ac0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a867637c059f081131f346f6f0fb1090d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d8f/classnana_1_1display.html">display</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d02/classnana_1_1screen.html#a867637c059f081131f346f6f0fb1090d">from_window</a> (<a class="el" href="../../d2/d76/namespacenana.html#a569d8074a6e3f0717f9b17b3da4dd57f">window</a>)</td></tr>
+<tr class="memdesc:a867637c059f081131f346f6f0fb1090d"><td class="mdescLeft">&#160;</td><td class="mdescRight">gets the display monitor that contains the specified window  <a href="#a867637c059f081131f346f6f0fb1090d">More...</a><br/></td></tr>
 <tr class="separator:a867637c059f081131f346f6f0fb1090d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a969e9f660546ed6f9f76ebf91452593f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d8f/classnana_1_1display.html">display</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d02/classnana_1_1screen.html#a969e9f660546ed6f9f76ebf91452593f">get_display</a> (<a class="elRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/types/size_t.html">std::size_t</a> index) const </td></tr>
 <tr class="separator:a969e9f660546ed6f9f76ebf91452593f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8bcfc594205baaed175fb6579898b79"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d8f/classnana_1_1display.html">display</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d02/classnana_1_1screen.html#ab8bcfc594205baaed175fb6579898b79">get_primary</a> () const </td></tr>
 <tr class="separator:ab8bcfc594205baaed175fb6579898b79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ae8273045f43cb670dd90cbd0ca791c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d02/classnana_1_1screen.html#a9ae8273045f43cb670dd90cbd0ca791c">for_each</a> (<a class="elRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/utility/functional/function.html">std::function</a>&lt; void(<a class="el" href="../../d5/d8f/classnana_1_1display.html">display</a> &amp;)&gt;) const </td></tr>
+<tr class="memdesc:a9ae8273045f43cb670dd90cbd0ca791c"><td class="mdescLeft">&#160;</td><td class="mdescRight">applies a given function to all display monitors  <a href="#a9ae8273045f43cb670dd90cbd0ca791c">More...</a><br/></td></tr>
 <tr class="separator:a9ae8273045f43cb670dd90cbd0ca791c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:af5a77980505eaba89c59c786ea3ae0fc"><td class="memItemLeft" align="right" valign="top">::<a class="el" href="../../da/df8/structnana_1_1size.html">nana::size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d02/classnana_1_1screen.html#af5a77980505eaba89c59c786ea3ae0fc">desktop_size</a> ()</td></tr>
+<tr class="memdesc:af5a77980505eaba89c59c786ea3ae0fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">gets the size in pixel of the whole virtual desktop  <a href="#af5a77980505eaba89c59c786ea3ae0fc">More...</a><br/></td></tr>
 <tr class="separator:af5a77980505eaba89c59c786ea3ae0fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7963a7184c07ecdd2bbf4f877c163009"><td class="memItemLeft" align="right" valign="top">::<a class="el" href="../../da/df8/structnana_1_1size.html">nana::size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d02/classnana_1_1screen.html#a7963a7184c07ecdd2bbf4f877c163009">primary_monitor_size</a> ()</td></tr>
 <tr class="separator:a7963a7184c07ecdd2bbf4f877c163009"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Provides some functions to get the metrics of the monitors. </p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;nana/gui/screen.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;nana/gui.hpp&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">using namespace </span>nana;</div>
+<div class="line"></div>
+<div class="line">    <span class="keyword">auto</span> s = <a class="code" href="../../d4/d02/classnana_1_1screen.html#aaf2af734b52c3d729fea787418c82a55">screen</a>();</div>
+<div class="line">    <span class="keyword">auto</span> pa = s.get_primary().workarea();</div>
+<div class="line">    form fm0, fm1, fm2, fm3;</div>
+<div class="line"></div>
+<div class="line">    fm0.<a class="code" href="../../d9/dd8/classnana_1_1widget.html#a4e9fd1f4f527cf179a1424cd54950c49">move</a>(pa.x, pa.y);</div>
+<div class="line">    fm0.outline_size({pa.width / 2, pa.height / 2});</div>
+<div class="line">    fm0.caption(L<span class="stringliteral">&quot;screen 0&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    fm1.move(pa.x + pa.width / 2, pa.y);</div>
+<div class="line">    fm1.outline_size({pa.width / 2, pa.height / 2});</div>
+<div class="line">    fm1.caption(L<span class="stringliteral">&quot;screen 1&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    fm2.move(pa.x, pa.y + pa.height / 2);</div>
+<div class="line">    fm2.outline_size({pa.width / 2, pa.height / 2});</div>
+<div class="line">    fm2.caption(L<span class="stringliteral">&quot;screen 2&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    fm3.move(pa.x + pa.width / 2, pa.y + pa.height / 2);</div>
+<div class="line">    fm3.outline_size({pa.width / 2, pa.height / 2});</div>
+<div class="line">    fm3.caption(L<span class="stringliteral">&quot;screen 3&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    fm0.show();</div>
+<div class="line">    fm1.show();</div>
+<div class="line">    fm2.show();</div>
+<div class="line">    fm3.show();</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">exec</a>();</div>
+<div class="line">}</div>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/dfd/screen_8cpp-example.html#_a0">screen.cpp</a>.</dd>
+</dl></div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aaf2af734b52c3d729fea787418c82a55"></a>
 <div class="memitem">
 <div class="memproto">
@@ -179,7 +223,7 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the number of display monitors. </p>
+<p>Returns the number of display monitors installed in the system. </p>
 
 </div>
 </div>
@@ -204,6 +248,8 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>gets the size in pixel of the whole virtual desktop </p>
+
 </div>
 </div>
 <a class="anchor" id="a9ae8273045f43cb670dd90cbd0ca791c"></a>
@@ -219,6 +265,8 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>applies a given function to all display monitors </p>
 
 </div>
 </div>
@@ -236,6 +284,8 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>gets the display monitor that contains the specified point </p>
+
 </div>
 </div>
 <a class="anchor" id="a867637c059f081131f346f6f0fb1090d"></a>
@@ -251,6 +301,8 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>gets the display monitor that contains the specified window </p>
 
 </div>
 </div>
@@ -305,6 +357,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>gets the resolution in pixel of the primary monitor, if there is only one monitor installed in the system, the return value of primary_monitor_size is equal to desktop_size's. </p>
 
 </div>
 </div>
@@ -331,7 +384,7 @@ Static Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/d76/namespacenana.html">nana</a></li><li class="navelem"><a class="el" href="../../d4/d02/classnana_1_1screen.html">screen</a></li>
-    <li class="footer">Generated on Tue May 5 2015 21:51:05 for Nana C++ Library. Reference for users. by
+    <li class="footer">Generated on Sat May 30 2015 05:03:06 for Nana C++ Library. Reference for users. by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

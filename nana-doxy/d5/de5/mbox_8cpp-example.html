@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Nana C++ Library. Reference for users.
-   &#160;<span id="projectnumber">v1.0.2</span>
+   &#160;<span id="projectnumber">v1.0.2 with examples</span>
    </div>
    <div id="projectbrief">What we need to use nana</div>
   </td>
@@ -104,27 +104,27 @@ $(document).ready(function(){initNavTree('d5/de5/mbox_8cpp-example.html','../../
 <div class="contents">
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;nana/gui/wvl.hpp&gt;</span></div>
 <div class="line"></div>
-<div class="line"><span class="keywordtype">void</span> when_exit(<span class="keyword">const</span> nana::gui::eventinfo&amp; ei)</div>
+<div class="line"><span class="keywordtype">void</span> when_exit(<span class="keyword">const</span> <a name="_a0"></a><a class="code" href="../../d0/d2c/structnana_1_1arg__unload.html">nana::arg_unload</a>&amp; ei)</div>
 <div class="line">{</div>
-<div class="line">    nana::gui::msgbox m(ei.window, STR(<span class="stringliteral">&quot;msgbox example&quot;</span>), nana::gui::msgbox::yes_no);</div>
-<div class="line">    m.icon(m.icon_question);</div>
+<div class="line">    <a name="_a1"></a><a class="code" href="../../d8/d97/classnana_1_1msgbox.html">nana::msgbox</a> m(ei.<a name="a2"></a><a class="code" href="../../d0/d2c/structnana_1_1arg__unload.html#a07f966d960b5ecb4779b7f70e828c928">window_handle</a>, STR(<span class="stringliteral">&quot;msgbox example&quot;</span>), <a name="a3"></a><a class="code" href="../../d8/d97/classnana_1_1msgbox.html#a305112845be74452713ff42e871a21f2a358de86da7da377bd12ac4febaaec55e">nana::msgbox::yes_no</a>);</div>
+<div class="line">    m.<a name="a4"></a><a class="code" href="../../d8/d97/classnana_1_1msgbox.html#aa7a087be7daafa4ffcfe17a64cceee14">icon</a>(m.<a name="a5"></a><a class="code" href="../../d8/d97/classnana_1_1msgbox.html#a31f60532b1939da3197181648f1fe803a6543efef522647218229fab72b80dc0b">icon_question</a>);</div>
 <div class="line">    m&lt;&lt;STR(<span class="stringliteral">&quot;Are you sure you want to exit the game?&quot;</span>);</div>
-<div class="line">    ei.unload.cancel = (m() != m.pick_yes);</div>
+<div class="line">    ei.<a name="a6"></a><a class="code" href="../../d0/d2c/structnana_1_1arg__unload.html#ab5228dd3e0e98380b6f869c2419ce063">cancel</a> = (m() != m.<a name="a7"></a><a class="code" href="../../d8/d97/classnana_1_1msgbox.html#a4f96465b7fc07ca07e5ebe969c9991f5a1ea950d9ff4f0d6923e788ffecc7c04d">pick_yes</a>);</div>
 <div class="line">}</div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
-<div class="line">    <span class="keyword">using namespace </span>nana::gui;</div>
-<div class="line">    form fm;</div>
-<div class="line">    fm.make_event&lt;<a name="a0"></a><a class="code" href="../../d2/d76/namespacenana.html#aec14d9a922f2b2a5c52680e6f4c9c2d3af972c1d6198baf47dd8fd9a05832db0f">events::unload</a>&gt;(when_exit);</div>
+<div class="line">    <span class="keyword">using namespace </span>nana;</div>
+<div class="line">    <a name="_a8"></a><a class="code" href="../../d6/d57/classnana_1_1form.html">form</a> fm;</div>
+<div class="line">    fm.<a name="a9"></a><a class="code" href="../../d3/d95/classnana_1_1widget__object.html#afafd1a1bafe56cd6e5903d8db910aad8">events</a>().<a name="a10"></a><a class="code" href="../../d9/d7f/structnana_1_1detail_1_1events__root__extension.html#ac4c367675d9e3ee1fbe775af84a62947">unload</a>(when_exit);</div>
 <div class="line">    fm.show();</div>
-<div class="line">    <a name="a1"></a><a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">exec</a>();</div>
+<div class="line">    <a name="a11"></a><a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">exec</a>();</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue May 5 2015 21:50:57 for Nana C++ Library. Reference for users. by
+    <li class="footer">Generated on Sat May 30 2015 05:03:03 for Nana C++ Library. Reference for users. by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

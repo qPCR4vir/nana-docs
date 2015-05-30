@@ -2,6 +2,7 @@ var searchData=
 [
   ['cache',['cache',['../dd/df3/structnana_1_1detail_1_1bedrock_1_1private__impl.html#a927743636e2171fee2e7c790e7cdc020',1,'nana::detail::bedrock::private_impl']]],
   ['cancel',['cancel',['../d0/d2c/structnana_1_1arg__unload.html#ab5228dd3e0e98380b6f869c2419ce063',1,'nana::arg_unload']]],
+  ['capacity',['capacity',['../d7/dfd/structnana_1_1experimental_1_1filesystem_1_1space__info.html#a1c20fc8a64aefef9ac46b9e3da35d723',1,'nana::experimental::filesystem::space_info']]],
   ['caption',['caption',['../d4/d22/structnana_1_1detail_1_1signals.html#a95c2ed6fb1b6ef07b1d1ce9dc77637bd',1,'nana::detail::signals']]],
   ['captured',['captured',['../dc/d6d/structnana_1_1detail_1_1basic__window_1_1flags__type.html#a3c72c4391dfd071b381432372e8da1d2',1,'nana::detail::basic_window::flags_type']]],
   ['caret',['caret',['../de/d3c/structnana_1_1detail_1_1basic__window.html#a8ae3f5399f1662e6de584efac0b8ab51',1,'nana::detail::basic_window']]],

@@ -16,6 +16,7 @@ var searchData=
   ['black',['black',['../d2/d76/namespacenana.html#a1c3db4107603ee927761eec5fe67ef98a1ffd9e753c8054cc61456ac7fac1ac89',1,'nana::black()'],['../dc/d5e/namespacenana_1_1widgets_1_1skeletons.html#a15b3bae04116a938253c00cb951caccda1ffd9e753c8054cc61456ac7fac1ac89',1,'nana::widgets::skeletons::black()']]],
   ['blanched_5falmond',['blanched_almond',['../d2/d76/namespacenana.html#a1c3db4107603ee927761eec5fe67ef98a7fbe63cdab154c0227420b368fcaea3d',1,'nana']]],
   ['blend',['blend',['../d2/d76/namespacenana.html#a3b26751d087eb0d978b895f876c65a3dac195f144a8d768f2bb87f155ed2117a4',1,'nana']]],
+  ['block',['block',['../d7/d51/namespacenana_1_1experimental_1_1filesystem.html#aa715ef1cbd3086ab6ba01bafe427fb37a14511f2f5564650d129ca7cabc333278',1,'nana::experimental::filesystem']]],
   ['blue',['blue',['../d2/d76/namespacenana.html#a1c3db4107603ee927761eec5fe67ef98a48d6215903dff56238e52e8891380c8f',1,'nana::blue()'],['../dc/d5e/namespacenana_1_1widgets_1_1skeletons.html#a15b3bae04116a938253c00cb951caccda48d6215903dff56238e52e8891380c8f',1,'nana::widgets::skeletons::blue()']]],
   ['blue_5fviolet',['blue_violet',['../d2/d76/namespacenana.html#a1c3db4107603ee927761eec5fe67ef98a25d876582c42c77bd9fe6c152f88a752',1,'nana']]],
   ['bn',['BN',['../d8/d7f/classnana_1_1unicode__bidi.html#ab4d218792adebd435c0808cfa7fce137afc37fbde490e37c1258738a18b9aa4c7',1,'nana::unicode_bidi::BN()'],['../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828ac7ea4908f83c085b99bb032390f2290b',1,'nana::bidi_charmap::BN()']]],

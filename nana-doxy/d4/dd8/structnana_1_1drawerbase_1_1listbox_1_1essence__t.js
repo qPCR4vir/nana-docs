@@ -17,6 +17,7 @@ var structnana_1_1drawerbase_1_1listbox_1_1essence__t =
     [ "essence_t", "d4/dd8/structnana_1_1drawerbase_1_1listbox_1_1essence__t.html#a57209677877fb8a389737d2f412ae81f", null ],
     [ "adjust_scroll_life", "d4/dd8/structnana_1_1drawerbase_1_1listbox_1_1essence__t.html#a602ccd2c11aaab2aa5e364cd2e19efda", null ],
     [ "adjust_scroll_value", "d4/dd8/structnana_1_1drawerbase_1_1listbox_1_1essence__t.html#aa75a93085b0320e81a31ffbcc8e3f548", null ],
+    [ "auto_width", "d4/dd8/structnana_1_1drawerbase_1_1listbox_1_1essence__t.html#ae6e3a3cc2d52167e08148fb892b11700", null ],
     [ "calc_where", "d4/dd8/structnana_1_1drawerbase_1_1listbox_1_1essence__t.html#a543f7df32eb0243e1f5e2d976e8d02c7", null ],
     [ "checkarea", "d4/dd8/structnana_1_1drawerbase_1_1listbox_1_1essence__t.html#acb75137b877695d81d5c66f8408ee525", null ],
     [ "def_export_options", "d4/dd8/structnana_1_1drawerbase_1_1listbox_1_1essence__t.html#aeb0c3f39039dbc41e8e93ac56de38a45", null ],

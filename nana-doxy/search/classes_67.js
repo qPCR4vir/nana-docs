@@ -8,6 +8,7 @@ var searchData=
   ['graphics',['graphics',['../d6/d47/classnana_1_1paint_1_1graphics.html',1,'nana::paint']]],
   ['greater',['greater',['http://en.cppreference.com/w/cpp/utility/functional/greater.html',1,'std']]],
   ['greater_5fequal',['greater_equal',['http://en.cppreference.com/w/cpp/utility/functional/greater_equal.html',1,'std']]],
+  ['group',['group',['../d6/d61/classnana_1_1group.html',1,'nana']]],
   ['gz_5fheader_5fs',['gz_header_s',['../d4/d86/structgz__header__s.html',1,'']]],
   ['gzfile_5fs',['gzFile_s',['../df/db6/structgz_file__s.html',1,'']]]
 ];

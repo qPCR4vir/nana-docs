@@ -1,8 +1,10 @@
 var searchData=
 [
+  ['m_5fpath',['m_path',['../de/d41/structnana_1_1experimental_1_1filesystem_1_1directory__entry.html#aa234e06ceceda9e2b348d162b98283c8',1,'nana::experimental::filesystem::directory_entry']]],
   ['make_5fbground_5fdeclared',['make_bground_declared',['../dc/d6d/structnana_1_1detail_1_1basic__window_1_1flags__type.html#aaaddd6fb88a5e55615a32a5e08ee9f77',1,'nana::detail::basic_window::flags_type']]],
   ['margin',['margin',['../dc/d71/classnana_1_1place_1_1implement_1_1division.html#a097f71da5741e281863d3f3996ebc634',1,'nana::place::implement::division']]],
   ['mask_5fcharacter',['mask_character',['../df/dc4/structnana_1_1inputbox_1_1text_1_1implement.html#a5f0c144a260e675f12baa68fac159daf',1,'nana::inputbox::text::implement']]],
+  ['max_5fheader_5fwidth',['max_header_width',['../dc/d9d/structnana_1_1drawerbase_1_1listbox_1_1scheme.html#a24931e4ce193a8b9152aa3658dc52ff5',1,'nana::drawerbase::listbox::scheme']]],
   ['max_5fitems',['max_items',['../d6/d5b/structnana_1_1drawerbase_1_1float__listbox_1_1module__def.html#a4e36e94cf0949c71096c74f064c832ab',1,'nana::drawerbase::float_listbox::module_def']]],
   ['max_5fpixels',['max_pixels',['../d4/de0/structnana_1_1drawerbase_1_1menu_1_1menu__type.html#a03c211d07d537509cdc8a4f75f3d9a2b',1,'nana::drawerbase::menu::menu_type']]],
   ['max_5fpx',['max_px',['../dc/d71/classnana_1_1place_1_1implement_1_1division.html#ad01e69fcb5747a72022abf6bb10bfff7',1,'nana::place::implement::division']]],
@@ -20,7 +22,7 @@ var searchData=
   ['minute',['minute',['../de/d89/structnana_1_1time_1_1value.html#a8afb2ec6a03f45ccb7d18e151b8e634b',1,'nana::time::value::minute()'],['../de/d2f/structpng__time__struct.html#ad3ce11e9d92b77a33b3f7480bf0fff8c',1,'png_time_struct::minute()']]],
   ['misc_5fregister',['misc_register',['../d3/d1b/structnana_1_1detail_1_1window__manager_1_1wdm__private__impl.html#aa30a22b105d87a830ec6baaaca07e856',1,'nana::detail::window_manager::wdm_private_impl']]],
   ['modal',['modal',['../dc/d6d/structnana_1_1detail_1_1basic__window_1_1flags__type.html#a6699d9c3cffcf0ae6e152343fc1eddba',1,'nana::detail::basic_window::flags_type']]],
-  ['modified',['modified',['../df/d6b/structnana_1_1filesystem_1_1attribute.html#a4697d3fe06898731e317975a5298de92',1,'nana::filesystem::attribute']]],
+  ['modified',['modified',['../d8/d05/structnana_1_1experimental_1_1filesystem_1_1attribute.html#a153835b905d00a30c8ed22b317b7ca11',1,'nana::experimental::filesystem::attribute::modified()'],['../df/d6b/structnana_1_1filesystem_1_1attribute.html#a4697d3fe06898731e317975a5298de92',1,'nana::filesystem::attribute::modified()']]],
   ['month',['month',['../d9/df6/structnana_1_1date_1_1value.html#a6f7d2ff54e2f3379e9c4da201d0cdd43',1,'nana::date::value::month()'],['../d9/d5c/structnana_1_1inputbox_1_1date_1_1implement.html#a252577af3dc584b8d4e14d86720d20c5',1,'nana::inputbox::date::implement::month()'],['../d4/d00/classnana_1_1drawerbase_1_1date__chooser_1_1trigger.html#aecdf5a4ae358fb5986bb4c6136ee9aea',1,'nana::drawerbase::date_chooser::trigger::month()'],['../de/d2f/structpng__time__struct.html#a3ab550977ee2cb1165c0398131f2e601',1,'png_time_struct::month()']]],
   ['motif_5fwm_5fhints',['motif_wm_hints',['../d4/da1/structnana_1_1detail_1_1atombase__tag.html#ac01090044903ef65696c799d1e5ba478',1,'nana::detail::atombase_tag']]],
   ['motion_5fpointer_5fpos',['motion_pointer_pos',['../d1/d09/structnana_1_1detail_1_1bedrock_1_1thread__context_1_1platform__detail__tag.html#a604ba87787726aaae2fa0b9d4a0872f8',1,'nana::detail::bedrock::thread_context::platform_detail_tag']]],

@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Nana C++ Library. Reference for users.
-   &#160;<span id="projectnumber">v1.0.2</span>
+   &#160;<span id="projectnumber">v1.0.2 with examples</span>
    </div>
    <div id="projectbrief">What we need to use nana</div>
   </td>
@@ -104,6 +104,7 @@ $(document).ready(function(){initNavTree('d8/de2/listbox__resolver_8cpp-example.
 <div class="contents">
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;nana/gui/wvl.hpp&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;nana/gui/widgets/listbox.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"></div>
 <div class="line"><span class="keyword">struct </span>person</div>
 <div class="line">{</div>
@@ -112,46 +113,43 @@ $(document).ready(function(){initNavTree('d8/de2/listbox__resolver_8cpp-example.
 <div class="line">    <span class="keywordtype">unsigned</span>     age;</div>
 <div class="line">};</div>
 <div class="line"></div>
-<div class="line"><span class="keyword">class </span>resolver : <span class="keyword">public</span> nana::gui::listbox::resolver_interface&lt;person&gt;</div>
+<div class="line"><a name="_a1"></a><a class="code" href="../../d0/d3c/classnana_1_1drawerbase_1_1listbox_1_1oresolver.html">nana::listbox::oresolver</a>&amp; operator &lt;&lt; ( <a class="code" href="../../d0/d3c/classnana_1_1drawerbase_1_1listbox_1_1oresolver.html">nana::listbox::oresolver</a>&amp; or , <span class="keyword">const</span> person&amp; pr)</div>
 <div class="line">{</div>
-<div class="line">    <a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/string/basic_string.html">nana::string</a> decode(<a name="_a1"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/types/size_t.html">std::size_t</a> i, <span class="keyword">const</span> person&amp; pr)<span class="keyword"> const override</span></div>
-<div class="line"><span class="keyword">    </span>{</div>
-<div class="line">                <a name="_a2"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_stringstream.html">std::stringstream</a> ss;</div>
-<div class="line">                <span class="keywordflow">switch</span>(i)</div>
-<div class="line">                {</div>
-<div class="line">                        <span class="keywordflow">case</span> 0: <span class="keywordflow">return</span> pr.name;</div>
-<div class="line">                        <span class="keywordflow">case</span> 1: <span class="keywordflow">return</span> (pr.gender ? STR(<span class="stringliteral">&quot;Male&quot;</span>) : STR(<span class="stringliteral">&quot;Female&quot;</span>));</div>
-<div class="line">                        <span class="keywordflow">case</span> 2: ss&lt;&lt;pr.age; <span class="keywordflow">return</span> <a name="_a3"></a><a class="code" href="../../d3/d99/classnana_1_1charset.html">nana::charset</a>(ss.<a name="a4"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_stringstream/str.html">str</a>());</div>
-<div class="line">                }</div>
-<div class="line">                <span class="keywordflow">return</span> <a name="a5"></a><a class="code" href="../../d2/d76/namespacenana.html#a2c61daedac4021de1dc57f8b5924a1b7">nana::string</a>();</div>
-<div class="line">        }  </div>
+<div class="line">        or &lt;&lt; pr.name;</div>
+<div class="line">        or &lt;&lt; (pr.gender ? STR(<span class="stringliteral">&quot;Male&quot;</span>) : STR(<span class="stringliteral">&quot;Female&quot;</span>));</div>
+<div class="line">        or &lt;&lt; pr.age;  </div>
+<div class="line">        <span class="keywordflow">return</span> or ;</div>
+<div class="line">}</div>
+<div class="line"><a name="_a2"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::wostream</a> &amp; operator &lt;&lt; (<a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::wostream</a>&amp; or , <span class="keyword">const</span> person&amp; pr)</div>
+<div class="line">{</div>
+<div class="line">        or &lt;&lt; pr.name;</div>
+<div class="line">        or &lt;&lt; (pr.gender ? STR(<span class="stringliteral">&quot;Male&quot;</span>) : STR(<span class="stringliteral">&quot;Female&quot;</span>));</div>
+<div class="line">        or &lt;&lt; pr.age;</div>
+<div class="line">        <span class="keywordflow">return</span> or ;</div>
+<div class="line">}</div>
+<div class="line"><a name="_a3"></a><a class="code" href="../../d6/d05/classnana_1_1drawerbase_1_1listbox_1_1iresolver.html">nana::listbox::iresolver</a>&amp; operator &gt;&gt; ( <a class="code" href="../../d6/d05/classnana_1_1drawerbase_1_1listbox_1_1iresolver.html">nana::listbox::iresolver</a>&amp; or , person&amp; pr)</div>
+<div class="line">{</div>
+<div class="line">        or &gt;&gt; pr.name;</div>
+<div class="line">        <a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/string/basic_string.html">nana::string</a> gender;</div>
+<div class="line">        or &gt;&gt; gender;</div>
+<div class="line">        pr.gender = gender == STR(<span class="stringliteral">&quot;Male&quot;</span>) ;</div>
+<div class="line">        or &gt;&gt; pr.age;  </div>
+<div class="line">        <span class="keywordflow">return</span> or ;</div>
+<div class="line">}</div>
 <div class="line"></div>
-<div class="line">        <span class="keywordtype">void</span> encode(person&amp; pr, <a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/types/size_t.html">std::size_t</a> i, <span class="keyword">const</span> <a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/string/basic_string.html">nana::string</a>&amp; s)<span class="keyword">const override</span></div>
-<div class="line"><span class="keyword">        </span>{</div>
-<div class="line">                <a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_stringstream.html">std::stringstream</a> ss;</div>
-<div class="line">                <span class="keywordflow">switch</span>(i)</div>
-<div class="line">                {</div>
-<div class="line">                        <span class="keywordflow">case</span> 0: pr.name = s;                      <span class="keywordflow">break</span>;</div>
-<div class="line">                        <span class="keywordflow">case</span> 1: pr.gender = (s == STR(<span class="stringliteral">&quot;Male&quot;</span>)); <span class="keywordflow">break</span>;</div>
-<div class="line">                        <span class="keywordflow">case</span> 2:</div>
-<div class="line">                                        ss&lt;&lt;static_cast&lt;std::string&gt;(<a class="code" href="../../d3/d99/classnana_1_1charset.html">nana::charset</a>(s));</div>
-<div class="line">                                        ss&gt;&gt;pr.age;</div>
-<div class="line">                                        <span class="keywordflow">break</span>;</div>
-<div class="line">                }</div>
-<div class="line">        }</div>
-<div class="line">};</div>
+<div class="line"></div>
 <div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
-<div class="line">        <span class="keyword">using namespace </span>nana::gui;</div>
+<div class="line">        <span class="keyword">using namespace </span>nana;</div>
 <div class="line"></div>
-<div class="line">        form fm;</div>
-<div class="line">        listbox lb(fm, <a name="_a6"></a><a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">nana::rectangle</a>(10, 10, 280, 120));</div>
+<div class="line">        <a name="_a4"></a><a class="code" href="../../d6/d57/classnana_1_1form.html">form</a> fm;</div>
+<div class="line">        <a name="_a5"></a><a class="code" href="../../d1/dda/classnana_1_1listbox.html">listbox</a> lb(fm, <a name="_a6"></a><a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">nana::rectangle</a>(10, 10, 280, 120));</div>
 <div class="line">        lb.append_header(STR(<span class="stringliteral">&quot;Name&quot;</span>), 100);</div>
 <div class="line">        lb.append_header(STR(<span class="stringliteral">&quot;Gender&quot;</span>), 60);</div>
 <div class="line">        lb.append_header(STR(<span class="stringliteral">&quot;Age&quot;</span>), 60);</div>
 <div class="line"></div>
-<div class="line">        lb.resolver(resolver()); <span class="comment">//Pass the user defined resolver to the listbox</span></div>
+<div class="line">        <span class="comment">//lb.resolver(resolver()); //Pass the user defined resolver to the listbox</span></div>
 <div class="line"></div>
 <div class="line">        person pr;</div>
 <div class="line">        pr.name = STR(<span class="stringliteral">&quot;Peter&quot;</span>);</div>
@@ -159,17 +157,19 @@ $(document).ready(function(){initNavTree('d8/de2/listbox__resolver_8cpp-example.
 <div class="line">        pr.age = 10;</div>
 <div class="line">        lb.at(0).append (pr); <span class="comment">//person to item. resolver::decode() is required</span></div>
 <div class="line"></div>
-<div class="line">        lb.at(0).at(0).resolve_to( pr); <span class="comment">//item to person. resolver::encode() is required</span></div>
-<div class="line"></div>
+<div class="line">        person prr;</div>
+<div class="line">        lb.at(0).at(0).resolve_to( prr); <span class="comment">//item to person. resolver::encode() is required</span></div>
+<div class="line">        <a name="_a7"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::wcout</a> &lt;&lt; pr &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">        <a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::wcout</a> &lt;&lt; prr &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line">        fm.show();</div>
-<div class="line">        <a name="a7"></a><a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">exec</a>();</div>
+<div class="line">        <a name="a8"></a><a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">exec</a>();</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue May 5 2015 21:50:57 for Nana C++ Library. Reference for users. by
+    <li class="footer">Generated on Sat May 30 2015 05:03:03 for Nana C++ Library. Reference for users. by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

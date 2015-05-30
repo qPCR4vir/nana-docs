@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Nana C++ Library. Reference for users.
-   &#160;<span id="projectnumber">v1.0.2</span>
+   &#160;<span id="projectnumber">v1.0.2 with examples</span>
    </div>
    <div id="projectbrief">What we need to use nana</div>
   </td>
@@ -102,98 +102,12 @@ $(document).ready(function(){initNavTree('d8/d6e/design_1_8cpp-example.html','..
 <div class="title">design_1.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;nana/gui/wvl.hpp&gt;</span> </div>
-<div class="line"><span class="preprocessor">#include &lt;nana/gui/widgets/button.hpp&gt;</span> </div>
-<div class="line"><span class="preprocessor">#include &lt;nana/gui/layout.hpp&gt;</span> </div>
-<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span> </div>
-<div class="line"></div>
-<div class="line"></div>
-<div class="line"><span class="keyword">struct </span><a class="code" href="../../dc/d5e/namespacenana_1_1widgets_1_1skeletons.html#a15b3bae04116a938253c00cb951caccda8d777f385d3dfec8815d20f7496026dc">data</a> { <a name="_a0"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a> <a class="code" href="../../dc/d5e/namespacenana_1_1widgets_1_1skeletons.html#a15b3bae04116a938253c00cb951caccda572d4e421e5e6b9bc11d815e8a027112">url</a>; }; </div>
-<div class="line"></div>
-<div class="line"><span class="keyword">class </span>uiface </div>
-<div class="line">{ <span class="keyword">public</span>: </div>
-<div class="line">    <span class="keyword">virtual</span> ~uiface() = 0; </div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> create_ui_element(<span class="keyword">const</span> data&amp;) = 0; </div>
-<div class="line">}; </div>
-<div class="line"></div>
-<div class="line">uiface::~uiface(){} </div>
-<div class="line"></div>
-<div class="line"><span class="keyword">class </span>framework </div>
-<div class="line">{ <span class="keyword">public</span>: </div>
-<div class="line">    framework(): uiface_(0) </div>
-<div class="line">    { </div>
-<div class="line">        <a class="code" href="../../dc/d5e/namespacenana_1_1widgets_1_1skeletons.html#a15b3bae04116a938253c00cb951caccda8d777f385d3dfec8815d20f7496026dc">data</a> dat; </div>
-<div class="line">        dat.url = <span class="stringliteral">&quot;stdex.sf.net&quot;</span>; </div>
-<div class="line">        cont_.push_back(dat); </div>
-<div class="line">        dat.url = <span class="stringliteral">&quot;nanaproject.wordpress.com&quot;</span>; </div>
-<div class="line">        cont_.push_back(dat); </div>
-<div class="line">    } </div>
-<div class="line">    <span class="keywordtype">void</span> set(uiface * uif) { uiface_ = uif; } </div>
-<div class="line">    <span class="keywordtype">void</span> work() </div>
-<div class="line">    { <span class="keywordflow">if</span>(uiface_) </div>
-<div class="line">      { <span class="keywordflow">for</span>(<a name="_a1"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector&lt;data&gt;::const_iterator</a> i = cont_.<a name="a2"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/container/vector/begin.html">begin</a>(); i != cont_.end();   ++i) </div>
-<div class="line">        { uiface_-&gt;create_ui_element(*i); </div>
-<div class="line">        } </div>
-<div class="line">      } </div>
-<div class="line">    } </div>
-<div class="line">  <span class="keyword">private</span>: </div>
-<div class="line">    uiface * uiface_; </div>
-<div class="line">    <a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector&lt;data&gt;</a> cont_; </div>
-<div class="line">}; </div>
-<div class="line"></div>
-<div class="line"><span class="keyword">namespace </span>ui </div>
-<div class="line">{ </div>
-<div class="line">    <span class="keyword">using namespace </span>nana::gui; </div>
-<div class="line"></div>
-<div class="line">    <span class="keyword">class </span>bar : <span class="keyword">public</span> form, <span class="keyword">public</span> uiface </div>
-<div class="line">    { <span class="keyword">public</span>: </div>
-<div class="line">        bar() { gird_.bind(*<span class="keyword">this</span>); } </div>
-<div class="line">      <span class="keyword">private</span>: </div>
-<div class="line">        <span class="keyword">typedef</span> <a name="_a3"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/utility/pair.html">std::pair&lt;std::shared_ptr&lt;button&gt;</a>, <a class="code" href="../../dc/d5e/namespacenana_1_1widgets_1_1skeletons.html#a15b3bae04116a938253c00cb951caccda8d777f385d3dfec8815d20f7496026dc">data</a>&gt; btn_pair; </div>
-<div class="line">               <span class="comment">//Now we implement the virtual function that declared by uiface </span></div>
-<div class="line">        <span class="keyword">virtual</span> <span class="keywordtype">void</span> create_ui_element(<span class="keyword">const</span> data&amp; dat) </div>
-<div class="line">        { </div>
-<div class="line">            btn_pair p(<a name="_a4"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/memory/shared_ptr.html">std::shared_ptr&lt;button&gt;</a>(<span class="keyword">new</span> button(*<span class="keyword">this</span>)), dat); </div>
-<div class="line">                          <span class="comment">//Make the click event </span></div>
-<div class="line">            p.first-&gt;make_event&lt;events::click&gt;(*<span class="keyword">this</span>, &amp;bar::_m_click); </div>
-<div class="line">            p.first-&gt;caption(<a name="_a5"></a><a class="code" href="../../d3/d99/classnana_1_1charset.html">nana::charset</a>(dat.url)); </div>
-<div class="line">            gird_.push(*(p.first), 0, 22); </div>
-<div class="line">            ui_el_.push_back(p); </div>
-<div class="line">        } </div>
-<div class="line">      <span class="keyword">private</span>: </div>
-<div class="line">        <span class="keywordtype">void</span> _m_click(<span class="keyword">const</span> eventinfo&amp; ei) </div>
-<div class="line">        { </div>
-<div class="line">            <span class="comment">//Check which button is clicked </span></div>
-<div class="line">            <span class="keywordflow">for</span>(<a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector&lt;btn_pair&gt;::iterator</a> i = ui_el_.<a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/container/vector/begin.html">begin</a>(); i != ui_el_.end();++i) </div>
-<div class="line">            { <span class="keywordflow">if</span>(i-&gt;first-&gt;handle() == ei.window) </div>
-<div class="line">              {     <span class="comment">//Show data </span></div>
-<div class="line">                i-&gt;second; </div>
-<div class="line">                <a name="_a6"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::cout</a>&lt;&lt;<span class="stringliteral">&quot;open &quot;</span>&lt;&lt;i-&gt;second.url&lt;&lt;<a name="a7"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/manip/endl.html">std::endl</a>; </div>
-<div class="line">                <span class="keywordflow">break</span>; </div>
-<div class="line">              } </div>
-<div class="line">            } </div>
-<div class="line">        } </div>
-<div class="line">     <span class="keyword">private</span>: </div>
-<div class="line">        gird gird_; </div>
-<div class="line">        <a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector&lt;btn_pair&gt;</a> ui_el_; </div>
-<div class="line">    }; </div>
-<div class="line">} </div>
-<div class="line"></div>
-<div class="line"><span class="keywordtype">int</span> main() </div>
-<div class="line">{ </div>
-<div class="line">ui::bar bar; </div>
-<div class="line">bar.show(); </div>
-<div class="line">framework fw; </div>
-<div class="line">fw.set(&amp;bar); </div>
-<div class="line">fw.work(); </div>
-<div class="line">nana::gui::exec(); </div>
-<div class="line">} </div>
-</div><!-- fragment --> </div><!-- contents -->
+<div class="fragment"></div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue May 5 2015 21:50:55 for Nana C++ Library. Reference for users. by
+    <li class="footer">Generated on Sat May 30 2015 05:03:02 for Nana C++ Library. Reference for users. by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

@@ -6,6 +6,7 @@ var searchData=
   ['red',['red',['../d2/d76/namespacenana.html#a1c3db4107603ee927761eec5fe67ef98abda9643ac6601722a28f238714274da4',1,'nana::red()'],['../dc/d5e/namespacenana_1_1widgets_1_1skeletons.html#a15b3bae04116a938253c00cb951caccdabda9643ac6601722a28f238714274da4',1,'nana::widgets::skeletons::red()']]],
   ['redo',['redo',['../de/d48/structnana_1_1keyboard.html#aaf47acc00903a661c46cd6bd449190d2a06f5dc82cbf207ec8b4650671dd8e4da',1,'nana::keyboard']]],
   ['refresh',['refresh',['../de/d3c/structnana_1_1detail_1_1basic__window.html#a7a7933ada58a4e852c665aaec7c12b94a03b62516184fb6ef591f45bd4974b753',1,'nana::detail::basic_window']]],
+  ['regular',['regular',['../d7/d51/namespacenana_1_1experimental_1_1filesystem.html#aa715ef1cbd3086ab6ba01bafe427fb37aaf37d08ae228a87dc6b265fd1019c97d',1,'nana::experimental::filesystem']]],
   ['remote_5fthread_5fdestroy_5fwindow',['remote_thread_destroy_window',['../dc/d73/structnana_1_1detail_1_1messages.html#abfd923cb01743356e198eb512106c630a0985bb7a9b96642ca1af11898f2595d2',1,'nana::detail::messages']]],
   ['remote_5fthread_5fmove_5fwindow',['remote_thread_move_window',['../dc/d73/structnana_1_1detail_1_1messages.html#abfd923cb01743356e198eb512106c630afa21c7d117d8b5bf29395c5d30507515',1,'nana::detail::messages']]],
   ['remote_5fthread_5fset_5fwindow_5fpos',['remote_thread_set_window_pos',['../dc/d73/structnana_1_1detail_1_1messages.html#abfd923cb01743356e198eb512106c630a222650920531575e2a7b8700dc2a9df6',1,'nana::detail::messages']]],

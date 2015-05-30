@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Nana C++ Library. Reference for users.
-   &#160;<span id="projectnumber">v1.0.2</span>
+   &#160;<span id="projectnumber">v1.0.2 with examples</span>
    </div>
    <div id="projectbrief">What we need to use nana</div>
   </td>
@@ -103,17 +103,7 @@ $(document).ready(function(){initNavTree('df/d13/windows-subclassing_8cpp-exampl
 </div><!--header-->
 <div class="contents">
 <p>![]( )</p>
-<div class="fragment"><div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> *      A helper class for subclassing under Windows.</span></div>
-<div class="line"><span class="comment"> *      This is a demo for Nana C++ Library.</span></div>
-<div class="line"><span class="comment"> *</span></div>
-<div class="line"><span class="comment"> *      Nana library does not provide functions to access the Windows Messages. But</span></div>
-<div class="line"><span class="comment"> *      the demo is intend to define a helper to access the Window Messages by subclassing</span></div>
-<div class="line"><span class="comment"> *      it.</span></div>
-<div class="line"><span class="comment"> *</span></div>
-<div class="line"><span class="comment"> *      A C++11 compiler is required for the demo.</span></div>
-<div class="line"><span class="comment"> */</span></div>
-<div class="line"></div>
+<div class="fragment"><div class="line"></div>
 <div class="line"><span class="preprocessor">#include &lt;map&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;functional&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;mutex&gt;</span></div>
@@ -211,7 +201,7 @@ $(document).ready(function(){initNavTree('df/d13/windows-subclassing_8cpp-exampl
 <div class="line">                {</div>
 <div class="line">                        <span class="keywordflow">if</span>(native_ &amp;&amp; (<span class="keyword">nullptr</span> == old_proc_))</div>
 <div class="line">                        {</div>
-<div class="line">                                old_proc_ = (WNDPROC)::SetWindowLongPtr(native_, GWL_WNDPROC, (LONG_PTR)_m_subclass_proc);</div>
+<div class="line">                                old_proc_ = (WNDPROC)::SetWindowLongPtr(native_, -4 <span class="comment">/* GWL_WNDPROC*/</span>, (LONG_PTR)_m_subclass_proc);</div>
 <div class="line">                                <span class="keywordflow">if</span>(old_proc_)</div>
 <div class="line">                                        table_[native_] = <span class="keyword">this</span>;</div>
 <div class="line">                        }</div>
@@ -221,7 +211,7 @@ $(document).ready(function(){initNavTree('df/d13/windows-subclassing_8cpp-exampl
 <div class="line">                        <span class="keywordflow">if</span>(old_proc_)</div>
 <div class="line">                        {</div>
 <div class="line">                                table_.erase(native_);</div>
-<div class="line">                                ::SetWindowLongPtr(native_, GWL_WNDPROC, (LONG_PTR)old_proc_);</div>
+<div class="line">                                ::SetWindowLongPtr(native_, -4 <span class="comment">/* GWL_WNDPROC*/</span>, (LONG_PTR)old_proc_);</div>
 <div class="line">                                old_proc_ = <span class="keyword">nullptr</span>;</div>
 <div class="line"></div>
 <div class="line">                        }</div>
@@ -325,7 +315,7 @@ $(document).ready(function(){initNavTree('df/d13/windows-subclassing_8cpp-exampl
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue May 5 2015 21:50:58 for Nana C++ Library. Reference for users. by
+    <li class="footer">Generated on Sat May 30 2015 05:03:03 for Nana C++ Library. Reference for users. by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

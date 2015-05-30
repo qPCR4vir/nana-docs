@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Nana C++ Library. Reference for users.
-   &#160;<span id="projectnumber">v1.0.2</span>
+   &#160;<span id="projectnumber">v1.0.2 with examples</span>
    </div>
    <div id="projectbrief">What we need to use nana</div>
   </td>
@@ -109,14 +109,14 @@ $(document).ready(function(){initNavTree('df/d21/draw_8cpp-example.html','../../
 <div class="line">{</div>
 <div class="line">    <span class="keyword">using namespace </span>nana;</div>
 <div class="line"></div>
-<div class="line">    <a name="_a0"></a><a class="code" href="../../d6/d57/classnana_1_1form.html">form</a> fm;</div>
-<div class="line">    <a name="_a1"></a><a class="code" href="../../d9/d46/classnana_1_1drawing.html">drawing</a> dw(fm);</div>
-<div class="line">    dw.<a name="a2"></a><a class="code" href="../../d9/d46/classnana_1_1drawing.html#a2e16374087087d476041ad8e7e42169b">draw</a>([](<a name="_a3"></a><a class="code" href="../../d6/d47/classnana_1_1paint_1_1graphics.html">paint::graphics</a>&amp; graph)</div>
+<div class="line">    <a name="_a0"></a><a class="code" href="../../d6/d57/classnana_1_1form.html">form</a> fm {<a name="a1"></a><a class="code" href="../../d5/d1e/namespacenana_1_1_a_p_i.html#aeda48472927c65f3f790297e5fb2df84">API::make_center</a>(340, 340)};</div>
+<div class="line">    <a name="_a2"></a><a class="code" href="../../d9/d46/classnana_1_1drawing.html">drawing</a> dw(fm);</div>
+<div class="line">    dw.<a name="a3"></a><a class="code" href="../../d9/d46/classnana_1_1drawing.html#a2e16374087087d476041ad8e7e42169b">draw</a>([](<a name="_a4"></a><a class="code" href="../../d6/d47/classnana_1_1paint_1_1graphics.html">paint::graphics</a>&amp; graph)</div>
 <div class="line">    {</div>
-<div class="line">        graph.<a name="a4"></a><a class="code" href="../../d6/d47/classnana_1_1paint_1_1graphics.html#aee430e71db8c8fa8726ccc531c4b229e">rectangle</a>(<a name="_a5"></a><a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">rectangle</a>{5, 5, 50, 50}, <span class="keyword">true</span>, <a name="a6"></a><a class="code" href="../../d2/d76/namespacenana.html#a1c3db4107603ee927761eec5fe67ef98abda9643ac6601722a28f238714274da4">colors::red</a> );</div>
-<div class="line">        graph.<a name="a7"></a><a class="code" href="../../d6/d47/classnana_1_1paint_1_1graphics.html#a056773fa29429ef8dc1642219c624c44">line</a>(<a name="_a8"></a><a class="code" href="../../d0/d24/structnana_1_1point.html">point</a>(5, 5), <a class="code" href="../../d0/d24/structnana_1_1point.html">point</a>(55, 55), <a name="a9"></a><a class="code" href="../../d2/d76/namespacenana.html#a1c3db4107603ee927761eec5fe67ef98a48d6215903dff56238e52e8891380c8f">colors::blue</a>);</div>
-<div class="line">        graph.<a name="a10"></a><a class="code" href="../../d6/d47/classnana_1_1paint_1_1graphics.html#a17427f95e7b7834ec602f46f57bda1c8">line_begin</a>(200,100);</div>
-<div class="line">        graph.<a name="a11"></a><a class="code" href="../../d6/d47/classnana_1_1paint_1_1graphics.html#a9faa96f7d337b2f8e5bf9ef5bbe416d3">line_to</a>(<a class="code" href="../../d0/d24/structnana_1_1point.html">point</a>(300,300));</div>
+<div class="line">        graph.<a name="a5"></a><a class="code" href="../../d6/d47/classnana_1_1paint_1_1graphics.html#aee430e71db8c8fa8726ccc531c4b229e">rectangle</a>(<a name="_a6"></a><a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">rectangle</a>{5, 5, 50, 50}, <span class="keyword">true</span>, <a name="a7"></a><a class="code" href="../../d2/d76/namespacenana.html#a1c3db4107603ee927761eec5fe67ef98abda9643ac6601722a28f238714274da4">colors::red</a> );</div>
+<div class="line">        graph.<a name="a8"></a><a class="code" href="../../d6/d47/classnana_1_1paint_1_1graphics.html#a056773fa29429ef8dc1642219c624c44">line</a>(<a name="_a9"></a><a class="code" href="../../d0/d24/structnana_1_1point.html">point</a>(5, 5), <a class="code" href="../../d0/d24/structnana_1_1point.html">point</a>(55, 55), <a name="a10"></a><a class="code" href="../../d2/d76/namespacenana.html#a1c3db4107603ee927761eec5fe67ef98a48d6215903dff56238e52e8891380c8f">colors::blue</a>);</div>
+<div class="line">        graph.<a name="a11"></a><a class="code" href="../../d6/d47/classnana_1_1paint_1_1graphics.html#a17427f95e7b7834ec602f46f57bda1c8">line_begin</a>(200,100);</div>
+<div class="line">        graph.<a name="a12"></a><a class="code" href="../../d6/d47/classnana_1_1paint_1_1graphics.html#a9faa96f7d337b2f8e5bf9ef5bbe416d3">line_to</a>(<a class="code" href="../../d0/d24/structnana_1_1point.html">point</a>(300,300));</div>
 <div class="line">        graph.<a class="code" href="../../d6/d47/classnana_1_1paint_1_1graphics.html#a9faa96f7d337b2f8e5bf9ef5bbe416d3">line_to</a>(<a class="code" href="../../d0/d24/structnana_1_1point.html">point</a>(100,200));</div>
 <div class="line">        graph.<a class="code" href="../../d6/d47/classnana_1_1paint_1_1graphics.html#a9faa96f7d337b2f8e5bf9ef5bbe416d3">line_to</a>(<a class="code" href="../../d0/d24/structnana_1_1point.html">point</a>(300,200));</div>
 <div class="line">        graph.<a class="code" href="../../d6/d47/classnana_1_1paint_1_1graphics.html#a9faa96f7d337b2f8e5bf9ef5bbe416d3">line_to</a>(<a class="code" href="../../d0/d24/structnana_1_1point.html">point</a>(100,300));</div>
@@ -124,7 +124,7 @@ $(document).ready(function(){initNavTree('df/d21/draw_8cpp-example.html','../../
 <div class="line"></div>
 <div class="line">    });</div>
 <div class="line"></div>
-<div class="line">    dw.<a name="a12"></a><a class="code" href="../../d9/d46/classnana_1_1drawing.html#a9506f81c5a1c67f51e351f6bf7786091">update</a>();</div>
+<div class="line">    dw.<a name="a13"></a><a class="code" href="../../d9/d46/classnana_1_1drawing.html#a9506f81c5a1c67f51e351f6bf7786091">update</a>();</div>
 <div class="line">    fm.show();</div>
 <div class="line">    ::nana::exec();</div>
 <div class="line">}</div>
@@ -133,7 +133,7 @@ $(document).ready(function(){initNavTree('df/d21/draw_8cpp-example.html','../../
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue May 5 2015 21:50:55 for Nana C++ Library. Reference for users. by
+    <li class="footer">Generated on Sat May 30 2015 05:03:02 for Nana C++ Library. Reference for users. by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

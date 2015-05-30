@@ -18,6 +18,7 @@ var searchData=
   ['layouter',['layouter',['../da/d79/classnana_1_1drawerbase_1_1tabbar_1_1layouter.html',1,'nana::drawerbase::tabbar']]],
   ['lazy',['lazy',['../de/d3c/structnana_1_1detail_1_1basic__window.html#a7a7933ada58a4e852c665aaec7c12b94a0ffe34b4e04c2b282c5a388b1ad8aa7a',1,'nana::detail::basic_window']]],
   ['lazy_5frefresh',['lazy_refresh',['../d5/d1e/namespacenana_1_1_a_p_i.html#a91a7f8cf23689ffa353728efbe7ba2bc',1,'nana::API']]],
+  ['lbl',['lbl',['../d6/d61/classnana_1_1group.html#a63adcca3079e3d558f65544fca05699c',1,'nana::group']]],
   ['lconv',['lconv',['http://en.cppreference.com/w/cpp/locale/lconv.html',1,'std']]],
   ['ldexp',['ldexp',['http://en.cppreference.com/w/cpp/numeric/math/ldexp.html',1,'std']]],
   ['ldiv',['ldiv',['http://en.cppreference.com/w/cpp/numeric/math/div.html',1,'std']]],

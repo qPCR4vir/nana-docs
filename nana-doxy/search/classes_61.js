@@ -68,6 +68,7 @@ var searchData=
   ['attr_5fframe_5ftag',['attr_frame_tag',['../db/d5d/structnana_1_1detail_1_1basic__window_1_1other__tag_1_1attr__frame__tag.html',1,'nana::detail::basic_window::other_tag']]],
   ['attr_5froot_5ftag',['attr_root_tag',['../d4/d97/structnana_1_1detail_1_1basic__window_1_1other__tag_1_1attr__root__tag.html',1,'nana::detail::basic_window::other_tag']]],
   ['attribute',['attribute',['../df/d6b/structnana_1_1filesystem_1_1attribute.html',1,'nana::filesystem']]],
+  ['attribute',['attribute',['../d8/d05/structnana_1_1experimental_1_1filesystem_1_1attribute.html',1,'nana::experimental::filesystem']]],
   ['attribute_5ftag',['attribute_tag',['../d2/d5c/structnana_1_1drawerbase_1_1treebox_1_1trigger_1_1basic__implement_1_1attribute__tag.html',1,'nana::drawerbase::treebox::trigger::basic_implement']]],
   ['audio_5fdevice',['audio_device',['../d8/d8a/classnana_1_1audio_1_1detail_1_1audio__device.html',1,'nana::audio::detail']]],
   ['audio_5fstream',['audio_stream',['../d7/d74/classnana_1_1audio_1_1detail_1_1audio__stream.html',1,'nana::audio::detail']]],

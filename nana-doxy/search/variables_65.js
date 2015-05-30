@@ -30,6 +30,7 @@ var searchData=
   ['expended',['expended',['../df/d28/structnana_1_1drawerbase_1_1treebox_1_1node__attribute.html#a60d005ea981400bb1f10aec6d5ae1e88',1,'nana::drawerbase::treebox::node_attribute']]],
   ['expose',['expose',['../dd/d19/structnana_1_1general__events.html#a1c3e0c9393064b7c67e81fefbc69ef39',1,'nana::general_events']]],
   ['exposed',['exposed',['../d4/d34/structnana_1_1arg__expose.html#a97ea1602aefc5a3aedd98c877b9b0542',1,'nana::arg_expose']]],
+  ['ext_5fw',['ext_w',['../dc/d9d/structnana_1_1drawerbase_1_1listbox_1_1scheme.html#af6f4d4a184f1c53802fecab3b1f5598a',1,'nana::drawerbase::listbox::scheme']]],
   ['extents',['extents',['../db/de9/structnana_1_1paint_1_1helper_1_1extent__auto__changing__lines.html#a8955447f508a97c99d0e7bcd3f90fc09',1,'nana::paint::helper::extent_auto_changing_lines']]],
   ['extra',['extra',['../d4/d86/structgz__header__s.html#a397959afc459da7e296c676a3d4c1915',1,'gz_header_s']]],
   ['extra_5fheight',['extra_height',['../de/d3c/structnana_1_1detail_1_1basic__window.html#a8ba4b18d6edf363b594c6243fe66d499',1,'nana::detail::basic_window::extra_height()'],['../de/d84/structnana_1_1detail_1_1native__interface_1_1window__result.html#a3c01702f9320cb94e9cef98ef04c0fa5',1,'nana::detail::native_interface::window_result::extra_height()']]],

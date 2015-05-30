@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Nana C++ Library. Reference for users.
-   &#160;<span id="projectnumber">v1.0.2</span>
+   &#160;<span id="projectnumber">v1.0.2 with examples</span>
    </div>
    <div id="projectbrief">What we need to use nana</div>
   </td>
@@ -110,27 +110,31 @@ $(document).ready(function(){initNavTree('db/d62/example_combox_8cpp-example.htm
 <div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span> </div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
-<div class="line">        <span class="keyword">using namespace </span>nana::gui;         <span class="comment">//No Minimize button, no maximize button and sizable frame.</span></div>
-<div class="line">        form fm(<a name="a0"></a><a class="code" href="../../d5/d1e/namespacenana_1_1_a_p_i.html#aeda48472927c65f3f790297e5fb2df84">API::make_center</a>(240, 100), appear::decorate&lt;&gt;());</div>
-<div class="line">        fm.caption(STR(<span class="stringliteral">&quot;Nana C++ Library - Example&quot;</span>));</div>
-<div class="line">        combox child ( fm, <a name="_a1"></a><a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">nana::rectangle</a> ( 20, 3, 150, 30) );</div>
-<div class="line">        child.push_back(STR(<span class="stringliteral">&quot;Item 1&quot;</span>));</div>
-<div class="line">        child.push_back(STR(<span class="stringliteral">&quot;Item 2&quot;</span>));</div>
-<div class="line">        child.push_back(STR(<span class="stringliteral">&quot;Item 3&quot;</span>));</div>
-<div class="line">        child.push_back(STR(<span class="stringliteral">&quot;Item 4&quot;</span>));</div>
-<div class="line">        child.push_back(STR(<span class="stringliteral">&quot;Item 5&quot;</span>));</div>
+<div class="line">        <span class="keyword">using namespace </span>nana;      <span class="comment">//No Minimize button, no maximize button and sizable frame.</span></div>
+<div class="line">        <a name="_a0"></a><a class="code" href="../../d6/d57/classnana_1_1form.html">form</a> fm(<a name="a1"></a><a class="code" href="../../d5/d1e/namespacenana_1_1_a_p_i.html#aeda48472927c65f3f790297e5fb2df84">API::make_center</a>(240, 100), <a name="_a2"></a><a class="code" href="../../d6/d12/structnana_1_1appear_1_1decorate.html">appear::decorate&lt;&gt;</a>());</div>
+<div class="line">        fm.<a name="a3"></a><a class="code" href="../../d9/dd8/classnana_1_1widget.html#ab4a216a092654c3c539d00fb1db76934">caption</a>(STR(<span class="stringliteral">&quot;Nana C++ Library - Example&quot;</span>));</div>
+<div class="line">        <a name="_a4"></a><a class="code" href="../../de/d10/classnana_1_1combox.html">combox</a> child ( fm, <a name="_a5"></a><a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">nana::rectangle</a> ( 20, 3, 150, 30) );</div>
+<div class="line">        child.<a name="a6"></a><a class="code" href="../../de/d10/classnana_1_1combox.html#aaa0b298ae019a621a4e3bd684d89eb66">push_back</a>(STR(<span class="stringliteral">&quot;Item 1&quot;</span>));</div>
+<div class="line">        child.<a class="code" href="../../de/d10/classnana_1_1combox.html#aaa0b298ae019a621a4e3bd684d89eb66">push_back</a>(STR(<span class="stringliteral">&quot;Item 2&quot;</span>));</div>
+<div class="line">        child.<a class="code" href="../../de/d10/classnana_1_1combox.html#aaa0b298ae019a621a4e3bd684d89eb66">push_back</a>(STR(<span class="stringliteral">&quot;Item 3&quot;</span>));</div>
+<div class="line">        child.<a class="code" href="../../de/d10/classnana_1_1combox.html#aaa0b298ae019a621a4e3bd684d89eb66">push_back</a>(STR(<span class="stringliteral">&quot;Item 4&quot;</span>));</div>
+<div class="line">        child.<a class="code" href="../../de/d10/classnana_1_1combox.html#aaa0b298ae019a621a4e3bd684d89eb66">push_back</a>(STR(<span class="stringliteral">&quot;Item 5&quot;</span>));</div>
 <div class="line">                                <span class="comment">// This function will be called after changing the combox text by selecting </span></div>
 <div class="line">                                <span class="comment">// a text from the drop-down list.</span></div>
-<div class="line">        child.ext_event().selected = [](combox&amp;){ <a name="_a2"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::cout</a>&lt;&lt;<span class="stringliteral">&quot;selected a new text&quot;</span>&lt;&lt;<a name="a3"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/manip/endl.html">std::endl</a>; };</div>
-<div class="line">        fm.show();</div>
-<div class="line">        <a name="a4"></a><a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">exec</a>();</div>
+<div class="line">       <span class="comment">// dont use the arg info</span></div>
+<div class="line">        <span class="comment">//child.events().selected ( []( ){ std::cout&lt;&lt;&quot;selected a new text&quot;&lt;&lt;std::endl; });</span></div>
+<div class="line"></div>
+<div class="line">       <span class="comment">// use the arg info</span></div>
+<div class="line">        child.<a name="a7"></a><a class="code" href="../../d3/d95/classnana_1_1widget__object.html#afafd1a1bafe56cd6e5903d8db910aad8">events</a>().<a name="a8"></a><a class="code" href="../../de/dbe/structnana_1_1drawerbase_1_1combox_1_1combox__events.html#ae59c3190078733f3560517318e34f793">selected</a> ( [](<span class="keyword">const</span> <a name="_a9"></a><a class="code" href="../../d5/dd5/structnana_1_1arg__combox.html">arg_combox</a> &amp;ar_cbx){ <a name="_a10"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::wcout</a>&lt;&lt;ar_cbx.<a name="a11"></a><a class="code" href="../../d5/dd5/structnana_1_1arg__combox.html#a3eeb7f1fc21af40312f5a2a922b640d0">widget</a>.<a class="code" href="../../d9/dd8/classnana_1_1widget.html#ab4a216a092654c3c539d00fb1db76934">caption</a>()&lt;&lt;<a name="a12"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/manip/endl.html">std::endl</a>; });</div>
+<div class="line">        fm.<a name="a13"></a><a class="code" href="../../d9/dd8/classnana_1_1widget.html#aa6bc5708ecaff3ede2945d19797394d5">show</a>();</div>
+<div class="line">        <a name="a14"></a><a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">exec</a>();</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue May 5 2015 21:50:55 for Nana C++ Library. Reference for users. by
+    <li class="footer">Generated on Sat May 30 2015 05:03:02 for Nana C++ Library. Reference for users. by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

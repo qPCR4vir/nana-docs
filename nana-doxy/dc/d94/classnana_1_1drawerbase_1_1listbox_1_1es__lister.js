@@ -38,6 +38,8 @@ var classnana_1_1drawerbase_1_1listbox_1_1es__lister =
     [ "expand", "dc/d94/classnana_1_1drawerbase_1_1listbox_1_1es__lister.html#ae248d838ad699f8064ab55d52a4b5365", null ],
     [ "expand", "dc/d94/classnana_1_1drawerbase_1_1listbox_1_1es__lister.html#a06c9572880d23466a4d1dfa3072824ed", null ],
     [ "find_first_selected", "dc/d94/classnana_1_1drawerbase_1_1listbox_1_1es__lister.html#ad7418d95bbdfda0f7353a44cedd6b512", null ],
+    [ "first", "dc/d94/classnana_1_1drawerbase_1_1listbox_1_1es__lister.html#af582ccd5c5e14f10759fb56e3ef7c56e", null ],
+    [ "first_displ", "dc/d94/classnana_1_1drawerbase_1_1listbox_1_1es__lister.html#ad7d34209ae57b7ec979b8d87cd89fd99", null ],
     [ "forward", "dc/d94/classnana_1_1drawerbase_1_1listbox_1_1es__lister.html#aa75bc8b4e2727d342478c2cd10356b77", null ],
     [ "get_cells", "dc/d94/classnana_1_1drawerbase_1_1listbox_1_1es__lister.html#a65562773e7b36573542d294ed738e17d", null ],
     [ "good", "dc/d94/classnana_1_1drawerbase_1_1listbox_1_1es__lister.html#ab684e0e91eb0abb6e3dd44bfbc8af6c4", null ],

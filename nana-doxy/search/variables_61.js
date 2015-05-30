@@ -22,9 +22,10 @@ var searchData=
   ['area',['area',['../d6/d55/structnana_1_1widgets_1_1detail_1_1compset_1_1comp__attribute__t.html#a6619a2cac35339d097cc288d9cbcab4c',1,'nana::widgets::detail::compset::comp_attribute_t']]],
   ['attach',['attach',['../db/d5d/structnana_1_1detail_1_1basic__window_1_1other__tag_1_1attr__frame__tag.html#ac6963f082e1d2bf83d1544be8c7646ab',1,'nana::detail::basic_window::other_tag::attr_frame_tag']]],
   ['attached',['attached',['../d2/d74/classnana_1_1place_1_1implement_1_1field__impl.html#a1a5fabfa7a55ce4a8f195129626db500',1,'nana::place::implement::field_impl']]],
-  ['attr',['attr',['../d0/dcd/structnana_1_1drawerbase_1_1treebox_1_1trigger_1_1basic__implement.html#a6ff1397f5f8b8c2604291167ce757e94',1,'nana::drawerbase::treebox::trigger::basic_implement']]],
+  ['attr',['attr',['../de/d41/structnana_1_1experimental_1_1filesystem_1_1directory__entry.html#aa7ca81ad1c1fd7d8c0a19d0d26d0135e',1,'nana::experimental::filesystem::directory_entry::attr()'],['../d0/dcd/structnana_1_1drawerbase_1_1treebox_1_1trigger_1_1basic__implement.html#a6ff1397f5f8b8c2604291167ce757e94',1,'nana::drawerbase::treebox::trigger::basic_implement::attr()']]],
   ['attribute',['attribute',['../d9/d03/structnana_1_1detail_1_1basic__window_1_1other__tag.html#a4216507eb6e9e0f982205d38657df32a',1,'nana::detail::basic_window::other_tag']]],
   ['auto_5fdraw',['auto_draw',['../d4/dd8/structnana_1_1drawerbase_1_1listbox_1_1essence__t.html#a2bf2a5b03d624c9ee6d7e428ba1c8786',1,'nana::drawerbase::listbox::essence_t::auto_draw()'],['../d2/d5c/structnana_1_1drawerbase_1_1treebox_1_1trigger_1_1basic__implement_1_1attribute__tag.html#af1881aa55a88ee196db14178bbae07d0',1,'nana::drawerbase::treebox::trigger::basic_implement::attribute_tag::auto_draw()']]],
   ['avail_5fin',['avail_in',['../d7/d8a/structz__stream__s.html#a0cf177f50dbb49692f27480cbcfde794',1,'z_stream_s']]],
-  ['avail_5fout',['avail_out',['../d7/d8a/structz__stream__s.html#a45ad2364307af9d944fd39d4eca3ca3c',1,'z_stream_s']]]
+  ['avail_5fout',['avail_out',['../d7/d8a/structz__stream__s.html#a45ad2364307af9d944fd39d4eca3ca3c',1,'z_stream_s']]],
+  ['available',['available',['../d7/dfd/structnana_1_1experimental_1_1filesystem_1_1space__info.html#a0b8005a38d65c64937210e079845fb12',1,'nana::experimental::filesystem::space_info']]]
 ];

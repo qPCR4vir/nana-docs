@@ -75,6 +75,7 @@ var searchData=
   ['_7eexception',['~exception',['http://en.cppreference.com/w/cpp/error/exception/~exception.html',1,'std::exception']]],
   ['_7efactory_5finterface',['~factory_interface',['../d1/d13/structnana_1_1element_1_1provider_1_1factory__interface.html#a07f21ef98f7b245df1d19c770cd1bc04',1,'nana::element::provider::factory_interface']]],
   ['_7efield_5fimpl',['~field_impl',['../d2/d74/classnana_1_1place_1_1implement_1_1field__impl.html#a702ddbe7588a8120d607b752de604d3c',1,'nana::place::implement::field_impl']]],
+  ['_7efile_5fstatus',['~file_status',['../d3/db2/classnana_1_1experimental_1_1filesystem_1_1file__status.html#a3d94a8cb15a48f4ad5733cf7377381e6',1,'nana::experimental::filesystem::file_status']]],
   ['_7efilebox',['~filebox',['../d0/d73/classnana_1_1filebox.html#ac893a95ca2a46b4a69bb8a24c865fe70',1,'nana::filebox']]],
   ['_7efilebuf',['~filebuf',['http://en.cppreference.com/w/cpp/io/basic_filebuf/~basic_filebuf.html',1,'std::filebuf']]],
   ['_7efont',['~font',['../d4/d3c/classnana_1_1paint_1_1font.html#abd838edc2ac1286372299ebf99920542',1,'nana::paint::font']]],

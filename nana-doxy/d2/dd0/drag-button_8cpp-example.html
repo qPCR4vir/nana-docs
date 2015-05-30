@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Nana C++ Library. Reference for users.
-   &#160;<span id="projectnumber">v1.0.2</span>
+   &#160;<span id="projectnumber">v1.0.2 with examples</span>
    </div>
    <div id="projectbrief">What we need to use nana</div>
   </td>
@@ -102,35 +102,31 @@ $(document).ready(function(){initNavTree('d2/dd0/drag-button_8cpp-example.html',
 <div class="title">drag-button.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<p>See <a href="https://nanapro.codeplex.com/discussions/444058">How to make widget movable by mouse the best way</a></p>
-<p>and <a href="https://nanapro.codeplex.com/discussions/444621">How to get nana::paint::image from nana::paint::graphics</a></p>
-<p>and <a href="https://nanapro.codeplex.com/discussions/444121">Is it possible to make event inside event handler?</a></p>
-<p>and <a href="https://nanapro.codeplex.com/discussions/445024">nana::drawing and nana::API::update_window</a></p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;nana/gui/wvl.hpp&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;nana/gui/widgets/button.hpp&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;nana/gui/dragger.hpp&gt;</span></div>
 <div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
-<div class="line">    <span class="keyword">using namespace </span>nana::gui;</div>
+<div class="line">    <span class="keyword">using namespace </span>nana;</div>
 <div class="line"></div>
-<div class="line">    form fm;</div>
-<div class="line">    button btn(fm, <a name="_a0"></a><a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">nana::rectangle</a>(10, 10, 100, 20));</div>
-<div class="line">    btn.caption(STR(<span class="stringliteral">&quot;Drag Me&quot;</span>));</div>
+<div class="line">    <a name="_a0"></a><a class="code" href="../../d6/d57/classnana_1_1form.html">form</a> fm;</div>
+<div class="line">    <a name="_a1"></a><a class="code" href="../../d7/dc0/classnana_1_1button.html">button</a> btn(fm, <a name="_a2"></a><a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">nana::rectangle</a>(10, 10, 100, 20));</div>
+<div class="line">    btn.<a name="a3"></a><a class="code" href="../../d9/dd8/classnana_1_1widget.html#ab4a216a092654c3c539d00fb1db76934">caption</a>(STR(<span class="stringliteral">&quot;Drag Me&quot;</span>));</div>
 <div class="line">    </div>
-<div class="line">    dragger dg;</div>
-<div class="line">    dg.trigger(btn);  <span class="comment">//When you drag the btn, then</span></div>
+<div class="line">    <a name="_a4"></a><a class="code" href="../../d6/dec/classnana_1_1dragger.html">dragger</a> dg;</div>
+<div class="line">    dg.<a name="a5"></a><a class="code" href="../../d6/dec/classnana_1_1dragger.html#a05d1714f5693ce19f3106463e1d6ac24">trigger</a>(btn);  <span class="comment">//When you drag the btn, then</span></div>
 <div class="line">    dg.target(btn);   <span class="comment">//move the btn</span></div>
 <div class="line"></div>
 <div class="line">    fm.show();</div>
-<div class="line">    <a name="a1"></a><a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">exec</a>();</div>
+<div class="line">    <a name="a6"></a><a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">exec</a>();</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue May 5 2015 21:50:55 for Nana C++ Library. Reference for users. by
+    <li class="footer">Generated on Sat May 30 2015 05:03:02 for Nana C++ Library. Reference for users. by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

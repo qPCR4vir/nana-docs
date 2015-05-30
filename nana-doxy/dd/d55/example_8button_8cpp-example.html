@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Nana C++ Library. Reference for users.
-   &#160;<span id="projectnumber">v1.0.2</span>
+   &#160;<span id="projectnumber">v1.0.2 with examples</span>
    </div>
    <div id="projectbrief">What we need to use nana</div>
   </td>
@@ -105,23 +105,46 @@ $(document).ready(function(){initNavTree('dd/d55/example_8button_8cpp-example.ht
 <div class="image">
 <img src="../../btn_over.jpg" alt="btn_over.jpg"/>
 </div>
- <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;nana/gui/wvl.hpp&gt;</span></div>
+ <div class="fragment"><div class="line"><span class="comment">// http://nanapro.codeplex.com/discussions/544169</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &lt;nana/gui/wvl.hpp&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;nana/gui/widgets/button.hpp&gt;</span></div>
+<div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
-<div class="line">                {</div>
-<div class="line">                  nana::gui::form form;</div>
-<div class="line">                  nana::gui::button btn(form, <a name="_a0"></a><a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">nana::rectangle</a>(5, 5, 94, 23));</div>
-<div class="line">                  btn.image(STR(<span class="stringliteral">&quot;button_image.bmp&quot;</span>));</div>
-<div class="line">                  btn.image_valid_area(<a name="a1"></a><a class="code" href="../../d2/d76/namespacenana.html#aa6c1e34e0e396f3e017f3f0459cc2e2da4505cad087312551a6fbbe6ebe163e0f">nana::arrange::horizontal</a>, <a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">nana::rectangle</a>(0, 0, 94 * 5, 23));</div>
-<div class="line">                  form.show();</div>
-<div class="line">                  nana::gui::exec();</div>
-<div class="line">                }</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">using namespace </span>nana;</div>
+<div class="line"></div>
+<div class="line">    <a name="_a0"></a><a class="code" href="../../d6/d57/classnana_1_1form.html">form</a> fm;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">//Define a background for a button.</span></div>
+<div class="line">    <a name="_a1"></a><a class="code" href="../../d7/d45/classnana_1_1element_1_1bground.html">element::bground</a> <a class="code" href="../../d0/d60/namespacenana_1_1drawerbase_1_1treebox.html#a264d0232fc4a37766c0f8d30ebab824bab37c8081ee0ea0775b1e344ddfa736cc">bground</a>;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">//Load the BMP file</span></div>
+<div class="line">    <span class="comment">//The second parameter is passed by true to indicate that each state aligns vertically.</span></div>
+<div class="line">    <span class="comment">//The third parameter specifies the valid area of the picture. It uses the whole picture when the width or height of the valid area is zero.</span></div>
+<div class="line">    <a class="code" href="../../d0/d60/namespacenana_1_1drawerbase_1_1treebox.html#a264d0232fc4a37766c0f8d30ebab824bab37c8081ee0ea0775b1e344ddfa736cc">bground</a>.image(<a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;../Examples/bground.6states.bmp&quot;</span>, <span class="keyword">true</span>, {});</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">//Defaultly the button will stretch the whole background of state to fit the widget,</span></div>
+<div class="line">    <span class="comment">//but it&#39;s easy to make the border deformation occurred. Now we need to specified the pixels</span></div>
+<div class="line">    <span class="comment">//of 4 borders, and these border areas will not be deformed when stretching.</span></div>
+<div class="line">    <a class="code" href="../../d0/d60/namespacenana_1_1drawerbase_1_1treebox.html#a264d0232fc4a37766c0f8d30ebab824bab37c8081ee0ea0775b1e344ddfa736cc">bground</a>.stretch_parts(4, 4, 4, 4);  <span class="comment">//left, top, right, bottom</span></div>
+<div class="line"></div>
+<div class="line">    <span class="comment">//Create the button</span></div>
+<div class="line">    <a name="_a2"></a><a class="code" href="../../d7/dc0/classnana_1_1button.html">button</a> btn(fm, <a name="_a3"></a><a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">nana::rectangle</a>(20, 20, 140, 40));</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">//Set the bground object.</span></div>
+<div class="line">    btn.<a name="a4"></a><a class="code" href="../../d7/dc0/classnana_1_1button.html#a102d37d5366ea2769cd6b66931ea00fe">set_bground</a>(<a class="code" href="../../d0/d60/namespacenana_1_1drawerbase_1_1treebox.html#a264d0232fc4a37766c0f8d30ebab824bab37c8081ee0ea0775b1e344ddfa736cc">bground</a>);</div>
+<div class="line"></div>
+<div class="line">    fm.<a name="a5"></a><a class="code" href="../../d9/dd8/classnana_1_1widget.html#aa6bc5708ecaff3ede2945d19797394d5">show</a>();</div>
+<div class="line">    <a name="a6"></a><a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">exec</a>();</div>
+<div class="line">}</div>
+<div class="line"></div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue May 5 2015 21:50:55 for Nana C++ Library. Reference for users. by
+    <li class="footer">Generated on Sat May 30 2015 05:03:02 for Nana C++ Library. Reference for users. by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

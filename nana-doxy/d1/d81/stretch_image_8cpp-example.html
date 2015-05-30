@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Nana C++ Library. Reference for users.
-   &#160;<span id="projectnumber">v1.0.2</span>
+   &#160;<span id="projectnumber">v1.0.2 with examples</span>
    </div>
    <div id="projectbrief">What we need to use nana</div>
   </td>
@@ -140,64 +140,116 @@ proximal interoplation - Stretch the image through proximal interoplation</div><
  <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;nana/gui/wvl.hpp&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;nana/gui/drawing.hpp&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;nana/paint/image_process_selector.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"></div>
-<div class="line"><span class="keyword">using namespace </span>nana::gui;</div>
+<div class="line"><span class="keyword">using namespace </span>nana;</div>
+<div class="line"></div>
+<div class="line"><a name="_a0"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::ostream</a>&amp; operator &lt;&lt; (<a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::ostream</a>&amp; os, <span class="keyword">const</span> <a name="_a1"></a><a class="code" href="../../d0/d24/structnana_1_1point.html">point</a>&amp; p)</div>
+<div class="line">{</div>
+<div class="line">        <span class="keywordflow">return</span> os &lt;&lt; <span class="stringliteral">&quot;point{&quot;</span> &lt;&lt; p.<a name="a2"></a><a class="code" href="../../d0/d24/structnana_1_1point.html#af41b47be4303c8713b92abfb9a7863d0">x</a> &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; p.<a name="a3"></a><a class="code" href="../../d0/d24/structnana_1_1point.html#aeb5848c69ddfe797209eb559898ae6a5">y</a> &lt;&lt; <span class="stringliteral">&quot;}&quot;</span>;</div>
+<div class="line">}</div>
+<div class="line"><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::ostream</a>&amp; operator&lt;&lt; (<a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::ostream</a>&amp; os, <span class="keyword">const</span> <a name="_a4"></a><a class="code" href="../../da/df8/structnana_1_1size.html">nana::size</a>&amp; z)</div>
+<div class="line">{</div>
+<div class="line">        <span class="keywordflow">return</span> os &lt;&lt; <span class="stringliteral">&quot;size{&quot;</span> &lt;&lt; z.<a name="a5"></a><a class="code" href="../../da/df8/structnana_1_1size.html#a3f4812408ab661b7d7fe3f990d73f4ec">width</a> &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; z.<a name="a6"></a><a class="code" href="../../da/df8/structnana_1_1size.html#af6029a534e26ca73afc26551fa3c0b36">height</a> &lt;&lt; <span class="stringliteral">&quot;}&quot;</span>;</div>
+<div class="line">}</div>
+<div class="line"><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::ostream</a>&amp; operator&lt;&lt; (<a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::ostream</a>&amp; os, <span class="keyword">const</span> <a name="_a7"></a><a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">rectangle</a>&amp; r)</div>
+<div class="line">{</div>
+<div class="line">        <span class="keywordflow">return</span> os &lt;&lt; <span class="stringliteral">&quot;rect{&quot;</span> &lt;&lt; <a class="code" href="../../d0/d24/structnana_1_1point.html">point</a>(r) &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; <a class="code" href="../../da/df8/structnana_1_1size.html">size</a>(r) &lt;&lt; <span class="stringliteral">&quot;}&quot;</span>;</div>
+<div class="line">}</div>
+<div class="line"></div>
 <div class="line"></div>
 <div class="line"><span class="keyword">class </span>tsform</div>
-<div class="line">    : <span class="keyword">public</span> form</div>
+<div class="line">    : <span class="keyword">public</span> <a name="_a8"></a><a class="code" href="../../d6/d57/classnana_1_1form.html">form</a></div>
 <div class="line">{</div>
+<div class="line">    <a name="_a9"></a><a class="code" href="../../d9/de1/classnana_1_1paint_1_1image.html">nana::paint::image</a> img_;</div>
+<div class="line">        <a name="_a10"></a><a class="code" href="../../d6/d47/classnana_1_1paint_1_1graphics.html">paint::graphics</a> gr_;</div>
+<div class="line"></div>
 <div class="line"><span class="keyword">public</span>:</div>
 <div class="line">    tsform()</div>
 <div class="line">    {</div>
+<div class="line">                <span class="keywordflow">if</span> (!img_.open(STR(<span class="stringliteral">&quot;../Examples/bground.6states.bmp&quot;</span>)))</div>
+<div class="line">                        <span class="keywordflow">throw</span> <a name="_a11"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/error/runtime_error.html">std::runtime_error</a>(<span class="stringliteral">&quot;Imposible to open the image&quot;</span>);    </div>
+<div class="line">        </div>
+<div class="line">                <a name="_a12"></a><a class="code" href="../../d9/d46/classnana_1_1drawing.html">drawing</a> dw(*<span class="keyword">this</span>);</div>
+<div class="line">                dw.draw([<span class="keyword">this</span>](<a class="code" href="../../d6/d47/classnana_1_1paint_1_1graphics.html">paint::graphics</a>&amp; graph)</div>
+<div class="line">                {</div>
+<div class="line">                        <a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">rectangle</a> r { <a class="code" href="../../d0/d24/structnana_1_1point.html">point</a>{ 0,0 }, img_.size() };</div>
+<div class="line">                        <a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">rectangle</a> rw{ <a class="code" href="../../d0/d24/structnana_1_1point.html">point</a>{ 0,0 }, <a class="code" href="../../da/df8/structnana_1_1size.html">size</a>() };</div>
+<div class="line">                        <span class="comment">//nana::size sz{size()};</span></div>
 <div class="line"></div>
-<div class="line">        img_.open(STR(<span class="stringliteral">&quot;image01.bmp&quot;</span>));    </div>
 <div class="line"></div>
-<div class="line">        <span class="comment">//Copy the image to the window</span></div>
-<div class="line">        <a name="_a0"></a><a class="code" href="../../da/df8/structnana_1_1size.html">nana::size</a> sz = <a class="code" href="../../dc/d5e/namespacenana_1_1widgets_1_1skeletons.html#a15b3bae04116a938253c00cb951caccdaf7bd60b75b29d79b660a2859395c1a24">size</a>();</div>
-<div class="line">       </div>
-<div class="line">        drawing dw(*<span class="keyword">this</span>);</div>
-<div class="line">        dw.bitblt(0, 0, sz.<a name="a1"></a><a class="code" href="../../da/df8/structnana_1_1size.html#a3f4812408ab661b7d7fe3f990d73f4ec">width</a>, sz.<a name="a2"></a><a class="code" href="../../da/df8/structnana_1_1size.html#af6029a534e26ca73afc26551fa3c0b36">height</a>, img_, 0, 0);</div>
-<div class="line">        dw.update();</div>
+<div class="line">                        graph.<a name="a13"></a><a class="code" href="../../d6/d47/classnana_1_1paint_1_1graphics.html#aee430e71db8c8fa8726ccc531c4b229e">rectangle</a>(<a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">rectangle</a>{ 5, 5, 50, 50 }, <span class="keyword">true</span>, <a name="a14"></a><a class="code" href="../../d2/d76/namespacenana.html#a1c3db4107603ee927761eec5fe67ef98abda9643ac6601722a28f238714274da4">colors::red</a>);</div>
+<div class="line">                        graph.<a name="a15"></a><a class="code" href="../../d6/d47/classnana_1_1paint_1_1graphics.html#a056773fa29429ef8dc1642219c624c44">line</a>(<a class="code" href="../../d0/d24/structnana_1_1point.html">point</a>(5, 5), <a class="code" href="../../d0/d24/structnana_1_1point.html">point</a>(55, 55), <a name="a16"></a><a class="code" href="../../d2/d76/namespacenana.html#a1c3db4107603ee927761eec5fe67ef98a48d6215903dff56238e52e8891380c8f">colors::blue</a>);</div>
+<div class="line">                        graph.<a name="a17"></a><a class="code" href="../../d6/d47/classnana_1_1paint_1_1graphics.html#a17427f95e7b7834ec602f46f57bda1c8">line_begin</a>(200, 100);</div>
+<div class="line">                        graph.<a name="a18"></a><a class="code" href="../../d6/d47/classnana_1_1paint_1_1graphics.html#a9faa96f7d337b2f8e5bf9ef5bbe416d3">line_to</a>(<a class="code" href="../../d0/d24/structnana_1_1point.html">point</a>(300, 300));</div>
+<div class="line">                        graph.<a class="code" href="../../d6/d47/classnana_1_1paint_1_1graphics.html#a9faa96f7d337b2f8e5bf9ef5bbe416d3">line_to</a>(<a class="code" href="../../d0/d24/structnana_1_1point.html">point</a>(100, 200));</div>
+<div class="line">                        graph.<a class="code" href="../../d6/d47/classnana_1_1paint_1_1graphics.html#a9faa96f7d337b2f8e5bf9ef5bbe416d3">line_to</a>(<a class="code" href="../../d0/d24/structnana_1_1point.html">point</a>(300, 200));</div>
+<div class="line">                        graph.<a class="code" href="../../d6/d47/classnana_1_1paint_1_1graphics.html#a9faa96f7d337b2f8e5bf9ef5bbe416d3">line_to</a>(<a class="code" href="../../d0/d24/structnana_1_1point.html">point</a>(100, 300));</div>
+<div class="line">                        graph.<a class="code" href="../../d6/d47/classnana_1_1paint_1_1graphics.html#a9faa96f7d337b2f8e5bf9ef5bbe416d3">line_to</a>(<a class="code" href="../../d0/d24/structnana_1_1point.html">point</a>(200, 100));</div>
 <div class="line"></div>
+<div class="line">                        img_.stretch(r, gr_, rw );</div>
+<div class="line"></div>
+<div class="line">                        <a name="_a19"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::cout</a> &lt;&lt; <span class="stringliteral">&quot;Pict: &quot;</span> &lt;&lt; r &lt;&lt; <span class="stringliteral">&quot;, Windows: &quot;</span> &lt;&lt; rw &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">                });</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">//      // get the graphycs !?</span></div>
+<div class="line">                <span class="comment">//if (!API::window_graphics(*this, gr_))</span></div>
+<div class="line">                <span class="comment">//      throw std::runtime_error(&quot;Imposible to get the graph&quot;);</span></div>
+<div class="line">  <span class="comment">//      </span></div>
+<div class="line"></div>
+<div class="line">  <span class="comment">//      //Copy the image to the window</span></div>
+<div class="line">                <span class="comment">//img_.paste( rectangle{ point{0,0}, img_.size() },</span></div>
+<div class="line">                <span class="comment">//                        gr_,</span></div>
+<div class="line">                <span class="comment">//                        {0,0});</span></div>
+<div class="line">                <span class="comment">//img_.stretch( rectangle{ point{0,0}, img_.size() },</span></div>
+<div class="line">                <span class="comment">//                        gr_,</span></div>
+<div class="line">                <span class="comment">//                        size()  );</span></div>
+<div class="line"></div>
+<div class="line">                dw.update();</div>
 <div class="line">        <span class="comment">//Register events</span></div>
-<div class="line">        make_event&lt;events::click&gt;(*<span class="keyword">this</span>, &amp;tsform::_m_click);</div>
-<div class="line">        make_event&lt;events::size&gt;(*<span class="keyword">this</span>, &amp;tsform::_m_size);</div>
+<div class="line">        <a class="code" href="../../d5/d1e/namespacenana_1_1_a_p_i.html#a0a5fa378a313bd333b3ab8ae86d69bcc">events</a>().click  ( [<span class="keyword">this</span>](){_m_click();} );  </div>
+<div class="line">        <span class="comment">//events().resized( [this](){_m_size ();} );  </span></div>
 <div class="line">    }</div>
 <div class="line"><span class="keyword">private</span>:</div>
 <div class="line">    <span class="comment">//Switchs the algorithm between two algorithms in every click on the form.</span></div>
 <div class="line">    <span class="keywordtype">void</span> _m_click()</div>
 <div class="line">    {</div>
 <div class="line">        <span class="keyword">static</span> <span class="keywordtype">bool</span> interop;</div>
-<div class="line">        <a name="_a3"></a><a class="code" href="../../de/d4c/classnana_1_1paint_1_1image__process_1_1selector.html">nana::paint::image_process::selector</a> sl;</div>
-<div class="line">        sl.<a name="a4"></a><a class="code" href="../../de/d4c/classnana_1_1paint_1_1image__process_1_1selector.html#a31c3965ec91153d4a218733986a48f5f">stretch</a>(interop ? <span class="stringliteral">&quot;bilinear interoplation&quot;</span> : <span class="stringliteral">&quot;proximal interoplation&quot;</span>);</div>
+<div class="line">        <a name="_a20"></a><a class="code" href="../../de/d4c/classnana_1_1paint_1_1image__process_1_1selector.html">nana::paint::image_process::selector</a> sl;</div>
+<div class="line">        sl.<a name="a21"></a><a class="code" href="../../de/d4c/classnana_1_1paint_1_1image__process_1_1selector.html#a31c3965ec91153d4a218733986a48f5f">stretch</a>(interop ? <span class="stringliteral">&quot;bilinear interoplation&quot;</span> : <span class="stringliteral">&quot;proximal interoplation&quot;</span>);</div>
 <div class="line">        interop = !interop;</div>
+<div class="line">                <a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::cout</a> &lt;&lt; (interop ? <span class="stringliteral">&quot;Click: bilinear interoplation\n&quot;</span> </div>
+<div class="line">                                         : <span class="stringliteral">&quot;Click: proximal interoplation\n&quot;</span>) ;</div>
 <div class="line">    }</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">//When the window size is changed, it stretches the image to fit the window.</span></div>
-<div class="line">    <span class="keywordtype">void</span> _m_size()</div>
-<div class="line">    {</div>
-<div class="line">        drawing dw(*<span class="keyword">this</span>);</div>
-<div class="line">       </div>
-<div class="line">        dw.clear();  <span class="comment">//Before stretch, it should clear the operations that are generated before.</span></div>
-<div class="line">        dw.stretch(<a class="code" href="../../dc/d5e/namespacenana_1_1widgets_1_1skeletons.html#a15b3bae04116a938253c00cb951caccdaf7bd60b75b29d79b660a2859395c1a24">size</a>(), img_, img_.size());</div>
-<div class="line">        dw.update();</div>
-<div class="line">    }</div>
-<div class="line"><span class="keyword">private</span>:</div>
-<div class="line">    <a name="_a5"></a><a class="code" href="../../d9/de1/classnana_1_1paint_1_1image.html">nana::paint::image</a> img_;</div>
+<div class="line">  <span class="comment">//  //When the window size is changed, it stretches the image to fit the window.</span></div>
+<div class="line">  <span class="comment">//  void _m_size()</span></div>
+<div class="line">  <span class="comment">//  {</span></div>
+<div class="line">  <span class="comment">//      drawing dw(*this);</span></div>
+<div class="line">  <span class="comment">//     </span></div>
+<div class="line">  <span class="comment">//      dw.clear();  //Before stretch, it should clear the operations that are generated before.</span></div>
+<div class="line">  <span class="comment">//      </span></div>
+<div class="line">                <span class="comment">//img_.stretch(rectangle{ point{ 0,0 }, img_.size() },</span></div>
+<div class="line">                <span class="comment">//      gr_,</span></div>
+<div class="line">                <span class="comment">//      size());</span></div>
+<div class="line"></div>
+<div class="line">                <span class="comment">//dw.update();</span></div>
+<div class="line">                <span class="comment">//std::cout &lt;&lt; &quot;resize\n&quot;;</span></div>
+<div class="line">  <span class="comment">//  }</span></div>
 <div class="line">};</div>
 <div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
 <div class="line">    tsform fm;</div>
 <div class="line">    fm.show();</div>
-<div class="line">    <a name="a6"></a><a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">exec</a>();</div>
+<div class="line">    <a name="a22"></a><a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">exec</a>();</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue May 5 2015 21:50:57 for Nana C++ Library. Reference for users. by
+    <li class="footer">Generated on Sat May 30 2015 05:03:03 for Nana C++ Library. Reference for users. by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

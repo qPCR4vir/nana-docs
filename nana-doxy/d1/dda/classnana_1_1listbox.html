@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Nana C++ Library. Reference for users.
-   &#160;<span id="projectnumber">v1.0.2</span>
+   &#160;<span id="projectnumber">v1.0.2 with examples</span>
    </div>
    <div id="projectbrief">What we need to use nana</div>
   </td>
@@ -115,7 +115,7 @@ $(document).ready(function(){initNavTree('d1/dda/classnana_1_1listbox.html','../
 </div><!--header-->
 <div class="contents">
 
-<p>A rectangle containing a list of strings from which the user can select. This widget contain a list of <em>categories</em>, with in turn contain a list of <em>items</em>. A category is a text with can be <em>selected</em>, <em>checked</em> and <em>expanded</em> to show the items. An item is formed by <em>column-fields</em>, each corresponding to one of the <em>headers</em>. An item can be <em>selected</em> and <em>checked</em>. The user can <em>drag</em> the header to <em>reisize</em> it or to <em>reorganize</em> it. By <em>clicking</em> on a header the list get <em>reordered</em>, first up, and then down alternatively.  
+<p>A rectangle containing a list of strings from which the user can select. This widget contain a list of <em>categories</em>, with in turn contain a list of <em>items</em>. A category is a text with can be <em>selected</em>, <em>checked</em> and <em>expanded</em> to show the items. An item is formed by <em>column-fields</em>, each corresponding to one of the <em>headers</em>. An item can be <em>selected</em> and <em>checked</em>. The user can <em>drag</em> the header to <em>resize</em> it or to <em>reorganize</em> it. By <em>clicking</em> on one header the list get <em>reordered</em>, first up, and then down alternatively.  
  <a href="../../d1/dda/classnana_1_1listbox.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for nana::listbox:</div>
@@ -169,13 +169,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa61156411eb9e7dff109f462fa220475"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dda/classnana_1_1listbox.html#aa61156411eb9e7dff109f462fa220475">auto_draw</a> (bool)</td></tr>
 <tr class="memdesc:aa61156411eb9e7dff109f462fa220475"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set state: Redraw automatically after an operation?  <a href="#aa61156411eb9e7dff109f462fa220475">More...</a><br/></td></tr>
 <tr class="separator:aa61156411eb9e7dff109f462fa220475"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c4d38a062b756e4b7de9e204d5c1515"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dda/classnana_1_1listbox.html#a7c4d38a062b756e4b7de9e204d5c1515">append_header</a> (<a class="el" href="../../d2/d76/namespacenana.html#a2c61daedac4021de1dc57f8b5924a1b7">nana::string</a>, unsigned width=120)</td></tr>
-<tr class="memdesc:a7c4d38a062b756e4b7de9e204d5c1515"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a new column with a header text and the specified width at the end.  <a href="#a7c4d38a062b756e4b7de9e204d5c1515">More...</a><br/></td></tr>
-<tr class="separator:a7c4d38a062b756e4b7de9e204d5c1515"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abef2bfa27e69115676a8828b870027b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dda/classnana_1_1listbox.html">listbox</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dda/classnana_1_1listbox.html#abef2bfa27e69115676a8828b870027b9">header_width</a> (<a class="el" href="../../d1/dda/classnana_1_1listbox.html#a5b6a5902b5aee28e6386cebe9028fbe9">size_type</a> <a class="el" href="../../d9/dd8/classnana_1_1widget.html#acc4a83b2a224b0e4f9670fcd56ea6302">pos</a>, unsigned pixels)</td></tr>
-<tr class="separator:abef2bfa27e69115676a8828b870027b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab35d6fd2db2ab920d25963d087dc1d27"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dda/classnana_1_1listbox.html#ab35d6fd2db2ab920d25963d087dc1d27">header_width</a> (<a class="el" href="../../d1/dda/classnana_1_1listbox.html#a5b6a5902b5aee28e6386cebe9028fbe9">size_type</a> <a class="el" href="../../d9/dd8/classnana_1_1widget.html#acc4a83b2a224b0e4f9670fcd56ea6302">pos</a>) const </td></tr>
-<tr class="separator:ab35d6fd2db2ab920d25963d087dc1d27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fb6019697cc302d3269b6be431ce04b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dda/classnana_1_1listbox.html#a5b6a5902b5aee28e6386cebe9028fbe9">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dda/classnana_1_1listbox.html#a4fb6019697cc302d3269b6be431ce04b">append_header</a> (<a class="el" href="../../d2/d76/namespacenana.html#a2c61daedac4021de1dc57f8b5924a1b7">nana::string</a> header_text, unsigned width=120)</td></tr>
+<tr class="memdesc:a4fb6019697cc302d3269b6be431ce04b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a new column with a header text and the specified width at the end, and return it position.  <a href="#a4fb6019697cc302d3269b6be431ce04b">More...</a><br/></td></tr>
+<tr class="separator:a4fb6019697cc302d3269b6be431ce04b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc173b8972679fb926e36c12ba25a4dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dda/classnana_1_1listbox.html">listbox</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dda/classnana_1_1listbox.html#afc173b8972679fb926e36c12ba25a4dc">header_width</a> (<a class="el" href="../../d1/dda/classnana_1_1listbox.html#a5b6a5902b5aee28e6386cebe9028fbe9">size_type</a> position, unsigned pixels)</td></tr>
+<tr class="separator:afc173b8972679fb926e36c12ba25a4dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb8e251e73eb64572e073544a6b3fad2"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dda/classnana_1_1listbox.html#adb8e251e73eb64572e073544a6b3fad2">header_width</a> (<a class="el" href="../../d1/dda/classnana_1_1listbox.html#a5b6a5902b5aee28e6386cebe9028fbe9">size_type</a> position) const </td></tr>
+<tr class="separator:adb8e251e73eb64572e073544a6b3fad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71a1359640e91bf9d09b3e757a890cbf"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dda/classnana_1_1listbox.html#a71a1359640e91bf9d09b3e757a890cbf">auto_width</a> (<a class="el" href="../../d1/dda/classnana_1_1listbox.html#a5b6a5902b5aee28e6386cebe9028fbe9">size_type</a> position, unsigned max=3000)</td></tr>
+<tr class="separator:a71a1359640e91bf9d09b3e757a890cbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8ceeac48aeca9b9a0d5d2cbb27cba0a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dda/classnana_1_1listbox.html#a48dbb987c4951d1bd5b7a0febeab406d">cat_proxy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dda/classnana_1_1listbox.html#ad8ceeac48aeca9b9a0d5d2cbb27cba0a">append</a> (<a class="el" href="../../d2/d76/namespacenana.html#a2c61daedac4021de1dc57f8b5924a1b7">nana::string</a>)</td></tr>
 <tr class="memdesc:ad8ceeac48aeca9b9a0d5d2cbb27cba0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a new category at the end.  <a href="#ad8ceeac48aeca9b9a0d5d2cbb27cba0a">More...</a><br/></td></tr>
 <tr class="separator:ad8ceeac48aeca9b9a0d5d2cbb27cba0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -437,70 +439,16 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a73c88c6dd1cc75c126012bf104d25114 inherit pro_methods_classnana_1_1widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A rectangle containing a list of strings from which the user can select. This widget contain a list of <em>categories</em>, with in turn contain a list of <em>items</em>. A category is a text with can be <em>selected</em>, <em>checked</em> and <em>expanded</em> to show the items. An item is formed by <em>column-fields</em>, each corresponding to one of the <em>headers</em>. An item can be <em>selected</em> and <em>checked</em>. The user can <em>drag</em> the header to <em>reisize</em> it or to <em>reorganize</em> it. By <em>clicking</em> on a header the list get <em>reordered</em>, first up, and then down alternatively. </p>
-<p>A rectangle containing a list of strings from which the user can select. This widget contain a list of <em>categories</em>, with in turn contain <em>items</em>. A category is a text with can be <em>selected</em>, <em>checked</em> and <em>expanded</em> to show the items. An item is formed by <em>column-fields</em>, each corresponding to one of the <em>headers</em>. An item can be <em>selected</em> and <em>checked</em>. The user can <em>drag</em> the header to <em>reisize</em> it or to <em>reorganize</em> it. By <em>clicking</em> on a header the list get <em>reordered</em>, first up, and then down alternatively,.</p>
+<div class="textblock"><p>A rectangle containing a list of strings from which the user can select. This widget contain a list of <em>categories</em>, with in turn contain a list of <em>items</em>. A category is a text with can be <em>selected</em>, <em>checked</em> and <em>expanded</em> to show the items. An item is formed by <em>column-fields</em>, each corresponding to one of the <em>headers</em>. An item can be <em>selected</em> and <em>checked</em>. The user can <em>drag</em> the header to <em>resize</em> it or to <em>reorganize</em> it. By <em>clicking</em> on one header the list get <em>reordered</em>, first up, and then down alternatively. </p>
 <ol type="1">
 <li>The resolver is used to resolute an object of the specified type for a listbox item.</li>
-<li>The any_objective of listbox have a 2-Dimension indexing. The first dimension is for the category, and the second one is for the item of the specified category. <pre class="fragment">         int main()
-         {
-            using namespace nana::gui;
-            form fm;
-            listbox lb(fm, nana::rectangle(10, 10, 280, 120));
-            lb.append_header(STR("Header"), 200);
-            lb.append_item(STR("int"));
-            lb.append_item(STR("double"));
-
-            lb.anyobj(0, 0, 10);
-            lb.anyobj(0, 1, 0.1);
-
-            int * pi = lb.anyobj&lt;int&gt;(0, 0);       // it returns a nullptr if there is not an int object specified.
-            double * pd = lb.anyobj&lt;double&gt;(0, 1); // it returns a nullptr if there is not an double object specified.
-
-            fm.show();
-            exec();
-          }
-</pre></li>
 <li><a class="el" href="../../d1/dda/classnana_1_1listbox.html" title="A rectangle containing a list of strings from which the user can select. This widget contain a list o...">nana::listbox</a> creates the category 0 by default. The member functions without the categ parameter operate the items that belong to category 0.</li>
-<li>A sort compare is used for sorting the items. It is a strict weak ordering comparer that must meet the requirement: <pre class="fragment">         Irreflexivity (comp(x, x) returns false) 
-
- and 
-
-         antisymmetry(comp(a, b) != comp(b, a) returns true)
-
- A simple example.
-
-         bool sort_compare( const nana::string&amp; s1, nana::any*, 
-                                            const nana::string&amp; s2, nana::any*, bool reverse)
-         {
-                 return (reverse ? s1 &gt; s2 : s1 &lt; s2);
-         }
-
-         listbox.set_sort_compare(0, sort_compare);
-
- The listbox supports attaching a customer's object for each item, therefore the items can be 
- sorted by comparing these customer's object.
-
-         bool sort_compare( const nana::string&amp;, nana::any* o1, 
-                                            const nana::string&amp;, nana::any* o2, bool reverse)
-         {
-                 if(o1 &amp;&amp; o2)    //some items may not attach a customer object.
-                 {
-                         int * i1 = o1-&gt;get&lt;int&gt;();
-                         int * i2 = o2-&gt;get&lt;int&gt;();
-                         return (i1 &amp;&amp; i2 &amp;&amp; (reverse ? *i1 &gt; *i2 : *i1 &lt; *i2));
-                                                 ;//some types may not be int.
-                 }
-                 return false;
-         }
-
-         listbox.anyobj(0, 0, 10); //the type of customer's object is int.
-         listbox.anyobj(0, 0, 20);
-</pre></li>
-</ol>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="../../da/d11/classnana_1_1drawerbase_1_1listbox_1_1cat__proxy.html">nana::drawerbase::listbox::cat_proxy</a> </dd>
+<li>A sort compare is used for sorting the items. It is a strict weak ordering comparer that must meet the requirement: Irreflexivity (comp(x, x) returns false) and antisymmetry(comp(a, b) != comp(b, a) returns true) A simple example. bool sort_compare( const <a class="el" href="../../d2/d76/namespacenana.html#a2c61daedac4021de1dc57f8b5924a1b7" title="An alias of std::wstring or std::string, depending on the macro NANA_UNICODE. ">nana::string</a>&amp; s1, <a class="el" href="../../d4/d36/classnana_1_1any.html">nana::any</a>*, const <a class="el" href="../../d2/d76/namespacenana.html#a2c61daedac4021de1dc57f8b5924a1b7" title="An alias of std::wstring or std::string, depending on the macro NANA_UNICODE. ">nana::string</a>&amp; s2, <a class="el" href="../../d4/d36/classnana_1_1any.html">nana::any</a>*, bool reverse) { return (reverse ? s1 &gt; s2 : s1 &lt; s2); } listbox.set_sort_compare(0, sort_compare); The listbox supports attaching a customer's object for each item, therefore the items can be sorted by comparing these customer's object. bool sort_compare( const <a class="el" href="../../d2/d76/namespacenana.html#a2c61daedac4021de1dc57f8b5924a1b7" title="An alias of std::wstring or std::string, depending on the macro NANA_UNICODE. ">nana::string</a>&amp;, <a class="el" href="../../d4/d36/classnana_1_1any.html">nana::any</a>* o1, const <a class="el" href="../../d2/d76/namespacenana.html#a2c61daedac4021de1dc57f8b5924a1b7" title="An alias of std::wstring or std::string, depending on the macro NANA_UNICODE. ">nana::string</a>&amp;, <a class="el" href="../../d4/d36/classnana_1_1any.html">nana::any</a>* o2, bool reverse) { if(o1 &amp;&amp; o2) //some items may not attach a customer object. { int * i1 = o1-&gt;get&lt;int&gt;(); int * i2 = o2-&gt;get&lt;int&gt;(); return (i1 &amp;&amp; i2 &amp;&amp; (reverse ? *i1 &gt; *i2 : *i1 &lt; *i2)); ;//some types may not be int. } return false; } listbox.anyobj(0, 0, 10); //the type of customer's object is int. listbox.anyobj(0, 0, 20); <dl class="section see"><dt>See Also</dt><dd><a class="el" href="../../da/d11/classnana_1_1drawerbase_1_1listbox_1_1cat__proxy.html">nana::drawerbase::listbox::cat_proxy</a> </dd>
 <dd>
 <a class="el" href="../../df/d3e/classnana_1_1drawerbase_1_1listbox_1_1item__proxy.html" title="item_proxy self, it references and iterators are not invalidated by sort() ">nana::drawerbase::listbox::item_proxy</a> </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d3/de9/widget_show_8cpp-example.html#_a5">widget_show.cpp</a>, and <a class="el" href="../../df/d14/widget_show2_8cpp-example.html#_a2">widget_show2.cpp</a>.</dd>
+</li>
+</ol>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/dda/example_listbox_8cpp-example.html#_a1">example_listbox.cpp</a>, <a class="el" href="../../d7/d91/file_explorer_8cpp-example.html#_a6">file_explorer.cpp</a>, <a class="el" href="../../d8/de2/listbox__resolver_8cpp-example.html#_a5">listbox_Resolver.cpp</a>, <a class="el" href="../../d3/de9/widget_show_8cpp-example.html#_a5">widget_show.cpp</a>, and <a class="el" href="../../df/d14/widget_show2_8cpp-example.html#_a2">widget_show2.cpp</a>.</dd>
 </dl></div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a48dbb987c4951d1bd5b7a0febeab406d"></a>
 <div class="memitem">
@@ -743,15 +691,15 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7c4d38a062b756e4b7de9e204d5c1515"></a>
+<a class="anchor" id="a4fb6019697cc302d3269b6be431ce04b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void nana::listbox::append_header </td>
+          <td class="memname"><a class="el" href="../../d1/dda/classnana_1_1listbox.html#a5b6a5902b5aee28e6386cebe9028fbe9">listbox::size_type</a> nana::listbox::append_header </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d2/d76/namespacenana.html#a2c61daedac4021de1dc57f8b5924a1b7">nana::string</a>&#160;</td>
-          <td class="paramname"><em>text</em>, </td>
+          <td class="paramname"><em>header_text</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -767,8 +715,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Appends a new column with a header text and the specified width at the end. </p>
-
+<p>Appends a new column with a header text and the specified width at the end, and return it position. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/dda/example_listbox_8cpp-example.html#a3">example_listbox.cpp</a>.</dd>
+</dl>
 </div>
 </div>
 <a class="anchor" id="a71254ea5f0a66e06d8cf6fbba530d3cc"></a>
@@ -784,7 +733,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/dda/example_listbox_8cpp-example.html#a4">example_listbox.cpp</a>.</dd>
+</dl>
 </div>
 </div>
 <a class="anchor" id="abd283184c3101f2c01409df73f488eeb"></a>
@@ -820,6 +770,32 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set state: Redraw automatically after an operation? </p>
+
+</div>
+</div>
+<a class="anchor" id="a71a1359640e91bf9d09b3e757a890cbf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned nana::listbox::auto_width </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/dda/classnana_1_1listbox.html#a5b6a5902b5aee28e6386cebe9028fbe9">size_type</a>&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>max</em> = <code>3000</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -1067,7 +1043,7 @@ template&lt;typename Key &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="abef2bfa27e69115676a8828b870027b9"></a>
+<a class="anchor" id="afc173b8972679fb926e36c12ba25a4dc"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1075,7 +1051,7 @@ template&lt;typename Key &gt; </div>
           <td class="memname"><a class="el" href="../../d1/dda/classnana_1_1listbox.html">listbox</a> &amp; nana::listbox::header_width </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d1/dda/classnana_1_1listbox.html#a5b6a5902b5aee28e6386cebe9028fbe9">size_type</a>&#160;</td>
-          <td class="paramname"><em>pos</em>, </td>
+          <td class="paramname"><em>position</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1093,7 +1069,7 @@ template&lt;typename Key &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ab35d6fd2db2ab920d25963d087dc1d27"></a>
+<a class="anchor" id="adb8e251e73eb64572e073544a6b3fad2"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1101,7 +1077,7 @@ template&lt;typename Key &gt; </div>
           <td class="memname">unsigned nana::listbox::header_width </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d1/dda/classnana_1_1listbox.html#a5b6a5902b5aee28e6386cebe9028fbe9">size_type</a>&#160;</td>
-          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1484,7 +1460,7 @@ template&lt;typename Key &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/d76/namespacenana.html">nana</a></li><li class="navelem"><a class="el" href="../../d1/dda/classnana_1_1listbox.html">listbox</a></li>
-    <li class="footer">Generated on Tue May 5 2015 21:51:09 for Nana C++ Library. Reference for users. by
+    <li class="footer">Generated on Sat May 30 2015 05:03:11 for Nana C++ Library. Reference for users. by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

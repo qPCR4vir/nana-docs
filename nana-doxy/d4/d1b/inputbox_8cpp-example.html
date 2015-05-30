@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Nana C++ Library. Reference for users.
-   &#160;<span id="projectnumber">v1.0.2</span>
+   &#160;<span id="projectnumber">v1.0.2 with examples</span>
    </div>
    <div id="projectbrief">What we need to use nana</div>
   </td>
@@ -106,71 +106,72 @@ $(document).ready(function(){initNavTree('d4/d1b/inputbox_8cpp-example.html','..
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;nana/gui.hpp&gt;</span></div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
-<div class="line">        <span class="keyword">using</span> namspace nana;</div>
-<div class="line">        form fm;</div>
+<div class="line">        <span class="keyword">using namespace </span>nana;</div>
+<div class="line">    <a name="_a0"></a><a class="code" href="../../d6/d57/classnana_1_1form.html">form</a> fm;</div>
+<div class="line">    fm.<a name="a1"></a><a class="code" href="../../d9/dd8/classnana_1_1widget.html#ab4a216a092654c3c539d00fb1db76934">caption</a>(STR(<span class="stringliteral">&quot;Click me.&quot;</span>));</div>
 <div class="line">        </div>
 <div class="line">        fm.show();</div>
 <div class="line">        </div>
-<div class="line">        internationalization i18n;</div>
+<div class="line">        <a name="_a2"></a><a class="code" href="../../d2/d2a/classnana_1_1internationalization.html">internationalization</a> i18n;</div>
 <div class="line">        <span class="comment">//Translate these 2 words into Chinese.</span></div>
-<div class="line">        i18n.set(<span class="stringliteral">&quot;OK&quot;</span>, <a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;确定&quot;</span>);</div>
+<div class="line">        i18n.<a name="a3"></a><a class="code" href="../../d2/d2a/classnana_1_1internationalization.html#a4ad1a78519d0a8e102dfaa60267c3cfb">set</a>(<span class="stringliteral">&quot;OK&quot;</span>, <a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;确定&quot;</span>);</div>
 <div class="line">        i18n.set(<span class="stringliteral">&quot;Cancel&quot;</span>, <a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;取消&quot;</span>);</div>
 <div class="line">                </div>
 <div class="line">        <span class="comment">//Show an inputbox when the form is clicked.</span></div>
 <div class="line">        fm.events().click([&amp;fm]</div>
 <div class="line">        {</div>
-<div class="line">                inputbox::text name(<a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;&lt;bold blue&gt;Name&lt;/&gt;&quot;</span>);     <span class="comment">//The format text is also available.</span></div>
-<div class="line">                inputbox::text gender(<a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Gender&quot;</span>, {<a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Male&quot;</span>, <a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Female&quot;</span>});</div>
-<div class="line">                inputbox::date birth(<a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Date of birth&quot;</span>);</div>
-<div class="line">                inputbox::real height(<a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Height(cm)&quot;</span>, 100, 1, 300, 1);</div>
-<div class="line">                inputbox::integer kids(<a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Kids&quot;</span>, 0, 0, 100, 1);</div>
+<div class="line">                <a name="_a4"></a><a class="code" href="../../d3/dd2/classnana_1_1inputbox_1_1text.html">inputbox::text</a> name(<a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;&lt;bold blue&gt;Name&lt;/&gt;&quot;</span>);     <span class="comment">//The format text is also available.</span></div>
+<div class="line">                <a class="code" href="../../d3/dd2/classnana_1_1inputbox_1_1text.html">inputbox::text</a> gender(<a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Gender&quot;</span>, {<a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Male&quot;</span>, <a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Female&quot;</span>});</div>
+<div class="line">                <a name="_a5"></a><a class="code" href="../../db/d35/classnana_1_1inputbox_1_1date.html">inputbox::date</a> birth(<a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Date of birth&quot;</span>);</div>
+<div class="line">                <a name="_a6"></a><a class="code" href="../../d3/ddd/classnana_1_1inputbox_1_1real.html">inputbox::real</a> height(<a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Height(cm)&quot;</span>, 100, 1, 300, 1);</div>
+<div class="line">                <a name="_a7"></a><a class="code" href="../../dc/d61/classnana_1_1inputbox_1_1integer.html">inputbox::integer</a> kids(<a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Kids&quot;</span>, 0, 0, 100, 1);</div>
 <div class="line">                </div>
-<div class="line">                inputbox inbox(fm, <a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Please input &lt;bold&gt;your personal information&lt;/&gt;.&quot;</span>, <a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Personal information&quot;</span>);</div>
+<div class="line">                <a name="_a8"></a><a class="code" href="../../d0/d9b/classnana_1_1inputbox.html">inputbox</a> inbox(fm, <a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Please input &lt;bold&gt;your personal information&lt;/&gt;.&quot;</span>, <a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Personal information&quot;</span>);</div>
 <div class="line">                </div>
 <div class="line">                <span class="comment">//Open the image file</span></div>
-<div class="line">                paint::image img(<a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;inputbox.bmp&quot;</span>);</div>
+<div class="line">                <a name="_a9"></a><a class="code" href="../../d9/de1/classnana_1_1paint_1_1image.html">paint::image</a> img(<a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;inputbox.bmp&quot;</span>);</div>
 <div class="line">                </div>
 <div class="line">                <span class="comment">//Use &#39;copy&#39; to assign the image, these image objects refer to the same</span></div>
 <div class="line">                <span class="comment">//image resource.</span></div>
-<div class="line">                inbox.image(img, <span class="keyword">true</span>, { 380, 0, 40, 100 });</div>
-<div class="line">                inbox.image(img, <span class="keyword">false</span>, { 420, 0, 40, 100 });</div>
-<div class="line">                inbox.image_v(img, <span class="keyword">true</span>, { 0, 0, 380, 50 });</div>
-<div class="line">                inbox.image_v(img, <span class="keyword">false</span>, { 0, 50, 380, 50 });</div>
+<div class="line">                inbox.<a name="a10"></a><a class="code" href="../../d0/d9b/classnana_1_1inputbox.html#a096da8ea9be906c4521bd1da36378d45">image</a>(img, <span class="keyword">true</span>, { 380, 0, 40, 100 });</div>
+<div class="line">                inbox.<a class="code" href="../../d0/d9b/classnana_1_1inputbox.html#a096da8ea9be906c4521bd1da36378d45">image</a>(img, <span class="keyword">false</span>, { 420, 0, 40, 100 });</div>
+<div class="line">                inbox.<a name="a11"></a><a class="code" href="../../d0/d9b/classnana_1_1inputbox.html#a7d64f987da3c2aae503e1f91926aff6a">image_v</a>(img, <span class="keyword">true</span>, { 0, 0, 380, 50 });</div>
+<div class="line">                inbox.<a class="code" href="../../d0/d9b/classnana_1_1inputbox.html#a7d64f987da3c2aae503e1f91926aff6a">image_v</a>(img, <span class="keyword">false</span>, { 0, 50, 380, 50 });</div>
 <div class="line">                </div>
 <div class="line">                <span class="comment">//Sets a verifier</span></div>
-<div class="line">                inbox.verify([&amp;name](<a class="code" href="../../d2/d76/namespacenana.html#a569d8074a6e3f0717f9b17b3da4dd57f">window</a> handle)</div>
+<div class="line">                inbox.<a name="a12"></a><a class="code" href="../../d0/d9b/classnana_1_1inputbox.html#a947dbc8ebefe3c8eab7d1e815a8e51b1">verify</a>([&amp;name](<a name="_a13"></a><a class="code" href="../../d2/d87/structnana_1_1detail_1_1window__handle__impl.html">window</a> handle)</div>
 <div class="line">                {</div>
-<div class="line">                        <span class="keywordflow">if</span> (name.value().empty())</div>
+<div class="line">                        <span class="keywordflow">if</span> (name.<a name="a14"></a><a class="code" href="../../d3/dd2/classnana_1_1inputbox_1_1text.html#adbcd25d1162eba9e60efd03ef0198cf4">value</a>().<a name="a15"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/string/basic_string/empty.html">empty</a>())</div>
 <div class="line">                        {</div>
-<div class="line">                                msgbox mb(handle, <a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Invalid input&quot;</span>);</div>
+<div class="line">                                <a name="_a16"></a><a class="code" href="../../d8/d97/classnana_1_1msgbox.html">msgbox</a> mb(handle, <a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Invalid input&quot;</span>);</div>
 <div class="line">                                mb &lt;&lt; <a class="code" href="../../d9/d0f/namespacenana_1_1bidi__charmap.html#a35c8c909095bdaeefe7ffcba2fa54828a1d8100999aa7b93a2f397b8f631f13d7">L</a><span class="stringliteral">&quot;Name should not be empty, Please input your name.&quot;</span>;</div>
-<div class="line">                                mb.show();</div>
+<div class="line">                                mb.<a name="a17"></a><a class="code" href="../../d8/d97/classnana_1_1msgbox.html#a486a0eac35c3043ccc63b4478e225dcd">show</a>();</div>
 <div class="line">                                <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">//verification failed</span></div>
 <div class="line">                        }</div>
 <div class="line">                        <span class="keywordflow">return</span> <span class="keyword">true</span>; <span class="comment">//verified successfully</span></div>
 <div class="line">                });</div>
 <div class="line">                </div>
-<div class="line">                <span class="keywordflow">if</span>(inbox.show(name, gender, birth, height, kids))</div>
+<div class="line">                <span class="keywordflow">if</span>(inbox.<a name="a18"></a><a class="code" href="../../d0/d9b/classnana_1_1inputbox.html#ab7f1a10007514ec3e65a70842c87f6b4">show</a>(name, gender, birth, height, kids))</div>
 <div class="line">                {</div>
-<div class="line">                        <span class="keyword">auto</span> n = name.value();          <span class="comment">//nana::string</span></div>
+<div class="line">                        <span class="keyword">auto</span> n = name.<a class="code" href="../../d3/dd2/classnana_1_1inputbox_1_1text.html#adbcd25d1162eba9e60efd03ef0198cf4">value</a>();          <span class="comment">//nana::string</span></div>
 <div class="line">                        <span class="keyword">auto</span> g = gender.value();        <span class="comment">//nana::string</span></div>
 <div class="line">                        <span class="keyword">auto</span> b = birth.value();         <span class="comment">//nana::string</span></div>
 <div class="line">                        <span class="keyword">auto</span> year = birth.year();       <span class="comment">//int</span></div>
 <div class="line">                        <span class="keyword">auto</span> month = birth.month(); <span class="comment">//int</span></div>
 <div class="line">                        <span class="keyword">auto</span> day = birth.day();         <span class="comment">//int</span></div>
-<div class="line">                        <span class="keyword">auto</span> h = height.value();        <span class="comment">//double</span></div>
-<div class="line">                        <span class="keyword">auto</span> k = kids.value();          <span class="comment">//int</span></div>
+<div class="line">                        <span class="keyword">auto</span> h = height.<a name="a19"></a><a class="code" href="../../d3/ddd/classnana_1_1inputbox_1_1real.html#a7f45684d740990b605f77f3be150711c">value</a>();        <span class="comment">//double</span></div>
+<div class="line">                        <span class="keyword">auto</span> k = kids.<a name="a20"></a><a class="code" href="../../dc/d61/classnana_1_1inputbox_1_1integer.html#a0ac0c5f901810067e966223d0f234133">value</a>();          <span class="comment">//int</span></div>
 <div class="line">                }</div>
 <div class="line">        });</div>
 <div class="line">        </div>
-<div class="line">        <a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">exec</a>();</div>
+<div class="line">        <a name="a21"></a><a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">exec</a>();</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue May 5 2015 21:50:57 for Nana C++ Library. Reference for users. by
+    <li class="footer">Generated on Sat May 30 2015 05:03:03 for Nana C++ Library. Reference for users. by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

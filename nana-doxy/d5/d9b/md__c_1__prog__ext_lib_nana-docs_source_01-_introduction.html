@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Nana C++ Library. Reference for users.
-   &#160;<span id="projectnumber">v1.0.2</span>
+   &#160;<span id="projectnumber">v1.0.2 with examples</span>
    </div>
    <div id="projectbrief">What we need to use nana</div>
   </td>
@@ -119,12 +119,15 @@ $(document).ready(function(){initNavTree('d5/d9b/md__c_1__prog__ext_lib_nana-doc
 </div>
 <div class="textblock"><h1><a class="anchor" id="WhatIs"></a>
 What is Nana C++ Library?</h1>
-<p>The Nana project is aimed at providing a software framework for cross-platform GUI programming, with commponents, such as graphics user interface and threads. Nana is a free/open-source library written in C++ with Object Oriented and Generic programing.</p>
-<p>Nana is a C++ library, in Standard C++, that means it work great with modern C++ features, such as lambdas, concurrency and so on. It will give you wonderful experiences on GUI programming with C++11. Using its own widgets, drawing functions abstracted from the Nana abstract GUI system, it allows for writting programs on supported OS, such as Windows/Linux(X11).</p>
-<p>Nana is a free/open-source library, it is distributed under <em>Boost Software License</em>, which is a lax, permissive non-copyleft free software license. Now, Nana is trying to build an active developer community to give help in using this library.</p>
+<p>The Nana project is aimed at providing a software framework for cross-platform GUI programming in standard and modern C++, with components, such as graphics user interface and threads, written with Object Oriented and Generic programing. Being written in Standard C++ means that Nana works great with modern C++ features, such as lambdas, concurrency, the STL and so on. It will give you wonderful experiences on GUI programming with C++11.</p>
+<p>It also means that you will not need to use or learn any non standard extension or magic macros for obscure code generation. Only standard use of templates will make some kind of code generation. In fact only <b>very few</b> macros are used, and <b>exclusively for configuration</b>.</p>
+<p>It also means that there aren't any re implementation of string or any other std:: containers. Using its own widgets and drawing functions abstracted with the Nana abstract GUI system, it allows for writing portables programs on supported OS, such as Windows/Linux(X11).</p>
+<p>Aimed solely at GUI, Nana not pollute your executable with anything innecesary: typical statically linked release-executables will be of few MB (1 to 3 even for non trivial application, less than 1 MB for the demos). This make Nana ideal for beginners (no need of any installation to distribute - you will not have the problem: it works only in my machine!), but also to distribute applications in many large organizations where users can run programs but not change the systems.</p>
+<p>Nana is a free/open-source library distributed under <em>Boost Software License</em>, which is a lax, permissive non-copyleft free software license. Now, Nana is trying to build an active developer community to give help in using this library.</p>
 <h1><a class="anchor" id="Install"></a>
 Installation</h1>
-<p><a href="http://nanapro.org/en-us/help/instl_lib_doc.htm">This page can be outdated. Please visit the original</a>.</p>
+<p><a href="http://nanapro.org/en-us/help/instl_lib_doc.htm">This page can be outdated. Please visit the original</a>, or the <a href="https://github.com/qPCR4vir/nana-docs/wiki/Installation">Installation Wiki</a></p>
+<p>Is very simple. Basically you copy the source code of nana (which is tiny: 0.5 MB in zip) and tell your build system where it is. Follow the <a href="https://github.com/qPCR4vir/nana-docs/wiki/Installation">link</a> for detailed information.</p>
 <p>When you extract the library from its zip files, you have to install the library and configurate it before using. There is a general steps to install the library. </p>
 <h2><a class="anchor" id="General"></a>
 General</h2>
@@ -373,7 +376,7 @@ Screenshot</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue May 5 2015 21:50:58 for Nana C++ Library. Reference for users. by
+    <li class="footer">Generated on Sat May 30 2015 05:03:03 for Nana C++ Library. Reference for users. by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

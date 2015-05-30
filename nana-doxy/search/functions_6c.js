@@ -6,6 +6,7 @@ var searchData=
   ['last',['last',['../d8/d5e/classnana_1_1detail_1_1handle__manager.html#ab8715490ea3db6ceb6335856f2f312d4',1,'nana::detail::handle_manager::last()'],['../d5/d57/classnana_1_1drawerbase_1_1listbox_1_1es__header.html#a17dee6d42fb355a8e548a6bbea1391e8',1,'nana::drawerbase::listbox::es_header::last()'],['../dc/d94/classnana_1_1drawerbase_1_1listbox_1_1es__lister.html#a8f7de14ec330d81fdb75db7966ff1401',1,'nana::drawerbase::listbox::es_lister::last()']]],
   ['last_5fdispl',['last_displ',['../dc/d94/classnana_1_1drawerbase_1_1listbox_1_1es__lister.html#a58baedfc6028306a57a9cfbbf5d6bf35',1,'nana::drawerbase::listbox::es_lister']]],
   ['lazy_5frefresh',['lazy_refresh',['../d5/d1e/namespacenana_1_1_a_p_i.html#a91a7f8cf23689ffa353728efbe7ba2bc',1,'nana::API']]],
+  ['lbl',['lbl',['../d6/d61/classnana_1_1group.html#a63adcca3079e3d558f65544fca05699c',1,'nana::group']]],
   ['ldexp',['ldexp',['http://en.cppreference.com/w/cpp/numeric/math/ldexp.html',1,'std']]],
   ['ldiv',['ldiv',['http://en.cppreference.com/w/cpp/numeric/math/div.html',1,'std']]],
   ['leave',['leave',['../da/d79/classnana_1_1drawerbase_1_1tabbar_1_1layouter.html#a610345eae557de90c237277f7c05cfa3',1,'nana::drawerbase::tabbar::layouter']]],

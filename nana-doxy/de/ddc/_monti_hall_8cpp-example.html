@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Nana C++ Library. Reference for users.
-   &#160;<span id="projectnumber">v1.0.2</span>
+   &#160;<span id="projectnumber">v1.0.2 with examples</span>
    </div>
    <div id="projectbrief">What we need to use nana</div>
   </td>
@@ -108,35 +108,34 @@ $(document).ready(function(){initNavTree('de/ddc/_monti_hall_8cpp-example.html',
 <div class="line"><span class="preprocessor">#include &lt;nana/system/platform.hpp&gt;</span> </div>
 <div class="line"></div>
 <div class="line"><span class="keyword">class </span>monty_hall </div>
-<div class="line">      : <span class="keyword">public</span> nana::gui::form </div>
+<div class="line">      : <span class="keyword">public</span> <a name="_a0"></a><a class="code" href="../../d6/d57/classnana_1_1form.html">nana::form</a> </div>
 <div class="line">{ </div>
 <div class="line">    <span class="keyword">enum</span> state_t{state_begin, state_picked, state_over}; </div>
 <div class="line">  <span class="keyword">public</span>: </div>
 <div class="line">    monty_hall(); </div>
 <div class="line">  <span class="keyword">private</span>: </div>
-<div class="line">    <span class="keywordtype">void</span> _m_pick_door  (<span class="keyword">const</span> nana::gui::eventinfo&amp; ei); </div>
+<div class="line">    <span class="keywordtype">void</span> _m_pick_door  (<span class="keyword">const</span> <a name="_a1"></a><a class="code" href="../../d6/d7c/structnana_1_1arg__mouse.html">nana::arg_mouse</a>&amp; ei); </div>
 <div class="line">    <span class="keywordtype">void</span> _m_play       (<span class="keywordtype">int</span> door); </div>
 <div class="line">    <span class="keywordtype">void</span> _m_remove_door(<span class="keywordtype">int</span> exclude); </div>
 <div class="line">  <span class="keyword">private</span>: </div>
-<div class="line">    state_t    state_; </div>
+<div class="line">      state_t    state_{state_begin}; </div>
 <div class="line">    <span class="keywordtype">int</span>        door_has_car_; </div>
-<div class="line">    nana::gui::label  label_; </div>
-<div class="line">    nana::gui::button door_[3]; </div>
+<div class="line">    <a name="_a2"></a><a class="code" href="../../dd/d8c/classnana_1_1label.html">nana::label</a>  label_; </div>
+<div class="line">    <a name="_a3"></a><a class="code" href="../../d7/dc0/classnana_1_1button.html">nana::button</a> door_[3]; </div>
 <div class="line"> }; </div>
+<div class="line"></div>
 <div class="line"> <span class="keywordtype">int</span> main() </div>
 <div class="line"> { </div>
 <div class="line">    monty_hall mh; </div>
 <div class="line">    mh.show(); </div>
-<div class="line">    nana::gui::exec(); </div>
+<div class="line">    <a name="a4"></a><a class="code" href="../../d2/d76/namespacenana.html#adfeaf4a48fd8f02161268cde0ae797d9">nana::exec</a>(); </div>
 <div class="line"> }</div>
 <div class="line"></div>
 <div class="line">monty_hall::monty_hall() </div>
-<div class="line">      : nana::gui::form(  nana::gui::API::<a class="code" href="../../d5/d1e/namespacenana_1_1_a_p_i.html#aeda48472927c65f3f790297e5fb2df84">make_center</a>(400, 150)</div>
-<div class="line">                              , appear::decorate&lt;appear::taskbar&gt;()   ) </div>
-<div class="line">       ,state_(state_begin) </div>
+<div class="line">      : nana::form(  nana::API::<a class="code" href="../../d5/d1e/namespacenana_1_1_a_p_i.html#aeda48472927c65f3f790297e5fb2df84">make_center</a>(400, 150) , appear::decorate&lt;appear::taskbar&gt;()   ) </div>
 <div class="line"> { </div>
 <div class="line">  this-&gt;caption(STR(<span class="stringliteral">&quot;The Monty Hall Problem&quot;</span>)); </div>
-<div class="line">  <a name="_a0"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/string/basic_string.html">nana::string</a> <a class="code" href="../../d0/d60/namespacenana_1_1drawerbase_1_1treebox.html#a264d0232fc4a37766c0f8d30ebab824ba1cb251ec0d568de6a929b520c4aed8d1">text</a> = STR(<span class="stringliteral">&quot;Hi, I am the host, you are on a Game Show:\n&quot;</span>) </div>
+<div class="line">  <a name="_a5"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/string/basic_string.html">nana::string</a> <a class="code" href="../../d0/d60/namespacenana_1_1drawerbase_1_1treebox.html#a264d0232fc4a37766c0f8d30ebab824ba1cb251ec0d568de6a929b520c4aed8d1">text</a> = STR(<span class="stringliteral">&quot;Hi, I am the host, you are on a Game Show:\n&quot;</span>) </div>
 <div class="line">  STR(&quot;You are given the choice of one of tree Doors.\n&quot;) </div>
 <div class="line">  STR(&quot;One door has a new Car behind it and the other two: Goats.\n&quot;) </div>
 <div class="line">  STR(&quot;Now pick a door to win the Car.&quot;); </div>
@@ -148,22 +147,21 @@ $(document).ready(function(){initNavTree('de/ddc/_monti_hall_8cpp-example.html',
 <div class="line">                            {STR(<span class="stringliteral">&quot;Door No.&amp;1&quot;</span>), STR(<span class="stringliteral">&quot;Door No.&amp;2&quot;</span>), STR(<span class="stringliteral">&quot;Door No.&amp;3&quot;</span>)}; </div>
 <div class="line">  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 3; ++i) </div>
 <div class="line">  { </div>
-<div class="line">    door_[i].create(*<span class="keyword">this</span>, <a name="_a1"></a><a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">nana::rectangle</a>(50 + 110 * i, 110, 100, 24)); </div>
+<div class="line">    door_[i].create(*<span class="keyword">this</span>, <a name="_a6"></a><a class="code" href="../../dd/d2d/structnana_1_1rectangle.html">nana::rectangle</a>(50 + 110 * i, 110, 100, 24)); </div>
 <div class="line">    door_[i].caption(door_name[i]); </div>
-<div class="line">    door_[i].make_event&lt;nana::gui::events::click&gt;(*<span class="keyword">this</span>, </div>
-<div class="line">                                                        &amp;monty_hall::_m_pick_door); </div>
+<div class="line">    door_[i].events().click([<span class="keyword">this</span>](<span class="keyword">const</span> <a class="code" href="../../d6/d7c/structnana_1_1arg__mouse.html">nana::arg_mouse</a>&amp; ei){ _m_pick_door(ei); });</div>
 <div class="line">  } </div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line"> <span class="keywordtype">void</span> monty_hall::_m_pick_door(<span class="keyword">const</span> nana::gui::eventinfo&amp; ei) </div>
+<div class="line"> <span class="keywordtype">void</span> monty_hall::_m_pick_door(<span class="keyword">const</span> <a class="code" href="../../d6/d7c/structnana_1_1arg__mouse.html">nana::arg_mouse</a>&amp; ei) </div>
 <div class="line">{ </div>
-<div class="line"> <span class="keywordtype">int</span> index = 0; </div>
-<div class="line"> <span class="keywordflow">for</span>(; index &lt; 3; ++index) </div>
-<div class="line"> { </div>
-<div class="line">     <span class="keywordflow">if</span>(door_[index] == ei.window) </div>
-<div class="line">        <span class="keywordflow">break</span>; </div>
-<div class="line"> } </div>
-<div class="line"> _m_play(index); </div>
+<div class="line">     <span class="keywordtype">int</span> index = 0; </div>
+<div class="line">     <span class="keywordflow">for</span>(; index &lt; 3; ++index) </div>
+<div class="line">     { </div>
+<div class="line">         <span class="keywordflow">if</span>(door_[index] == ei.<a name="a7"></a><a class="code" href="../../d6/d7c/structnana_1_1arg__mouse.html#a50641b86783c83c3519ff379052ee3a8">window_handle</a>) </div>
+<div class="line">            <span class="keywordflow">break</span>; </div>
+<div class="line">     } </div>
+<div class="line">     _m_play(index); </div>
 <div class="line">}</div>
 <div class="line"></div>
 <div class="line"><span class="keywordtype">void</span> monty_hall::_m_play(<span class="keywordtype">int</span> door) </div>
@@ -171,7 +169,7 @@ $(document).ready(function(){initNavTree('de/ddc/_monti_hall_8cpp-example.html',
 <div class="line">   <span class="keywordflow">switch</span>(state_) </div>
 <div class="line">   { </div>
 <div class="line">      <span class="keywordflow">case</span> state_begin: </div>
-<div class="line">                     door_has_car_ = (<a name="a2"></a><a class="code" href="../../d4/dfd/namespacenana_1_1system.html#a15cff5419658230658db5607ca4388cc">nana::system::timestamp</a>() / 1000) % 3; </div>
+<div class="line">                     door_has_car_ = (<a name="a8"></a><a class="code" href="../../d4/dfd/namespacenana_1_1system.html#a15cff5419658230658db5607ca4388cc">nana::system::timestamp</a>() / 1000) % 3; </div>
 <div class="line">                     _m_remove_door(door); </div>
 <div class="line">                     state_ = state_picked; </div>
 <div class="line">                <span class="keywordflow">break</span>; </div>
@@ -185,17 +183,17 @@ $(document).ready(function(){initNavTree('de/ddc/_monti_hall_8cpp-example.html',
 <div class="line"></div>
 <div class="line"><span class="keywordtype">void</span> monty_hall::_m_remove_door(<span class="keywordtype">int</span> exclude) </div>
 <div class="line">{ </div>
-<div class="line">     <a name="_a3"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector&lt;int&gt;</a> doors; </div>
+<div class="line">     <a name="_a9"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector&lt;int&gt;</a> doors; </div>
 <div class="line">     <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 3; ++i) </div>
 <div class="line">     { </div>
 <div class="line">         <span class="keywordflow">if</span>(i != exclude) </div>
-<div class="line">             doors.<a name="a4"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/container/vector/push_back.html">push_back</a>(i); </div>
+<div class="line">             doors.<a name="a10"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/container/vector/push_back.html">push_back</a>(i); </div>
 <div class="line">     } </div>
 <div class="line">     <span class="keywordtype">unsigned</span> ts = (<a class="code" href="../../d4/dfd/namespacenana_1_1system.html#a15cff5419658230658db5607ca4388cc">nana::system::timestamp</a>() / 1000) % 2; </div>
 <div class="line">     <span class="keywordflow">if</span>(door_has_car_ == doors[ts]) </div>
 <div class="line">         ts = (ts ? 0: 1); </div>
 <div class="line">     door_[doors[ts]].enabled(<span class="keyword">false</span>); </div>
-<div class="line">     doors.<a name="a5"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/container/vector/erase.html">erase</a>(doors.<a name="a6"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/container/vector/begin.html">begin</a>() + ts); </div>
+<div class="line">     doors.<a name="a11"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/container/vector/erase.html">erase</a>(doors.<a name="a12"></a><a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/container/vector/begin.html">begin</a>() + ts); </div>
 <div class="line">     <a class="codeRef" doxygen="C:/Prog/ExtLib/nana-docs/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w//" href="http://en.cppreference.com/w/cpp/string/basic_string.html">nana::string</a> text = STR(<span class="stringliteral">&quot;I know what&#39;s behind all the doors and&quot;</span>) </div>
 <div class="line">         STR(&quot;I remove a door which a goat behind it. \n&quot;) </div>
 <div class="line">         STR(&quot;And now, do you want to stick with your decision&quot;) </div>
@@ -214,7 +212,7 @@ $(document).ready(function(){initNavTree('de/ddc/_monti_hall_8cpp-example.html',
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue May 5 2015 21:50:57 for Nana C++ Library. Reference for users. by
+    <li class="footer">Generated on Sat May 30 2015 05:03:03 for Nana C++ Library. Reference for users. by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

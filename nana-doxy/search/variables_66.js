@@ -29,6 +29,7 @@ var searchData=
   ['frames',['frames',['../d4/d97/structnana_1_1detail_1_1basic__window_1_1other__tag_1_1attr__root__tag.html#ab4df9369737d2e2d9d093f916d2237b1',1,'nana::detail::basic_window::other_tag::attr_root_tag::frames()'],['../d3/d54/structnana_1_1frameset_1_1impl.html#a3e5d84b628fe65c2adc031ca212f8664',1,'nana::frameset::impl::frames()']]],
   ['framesets',['framesets',['../db/d06/structnana_1_1animation_1_1impl.html#abd710dd9724f996c52f9ba55da673b85',1,'nana::animation::impl']]],
   ['frbuilder',['frbuilder',['../d7/df6/structnana_1_1framebuilder.html#a5eb28df8d9a366c20e81b9fcd6c7c061',1,'nana::framebuilder::frbuilder()'],['../df/d8f/unionnana_1_1frame_1_1uframes.html#a4bbdff46d61e1bd196ffd0b09055acad',1,'nana::frame::uframes::frbuilder()']]],
+  ['free',['free',['../d7/dfd/structnana_1_1experimental_1_1filesystem_1_1space__info.html#aa86c98535fc2dd0bb081256d715a6b52',1,'nana::experimental::filesystem::space_info']]],
   ['frequency',['frequency',['../d2/d54/structpng__s_p_l_t__entry__struct.html#ad8095a15bb5a054c12ef911478c5f3a3',1,'png_sPLT_entry_struct']]],
   ['fullscreen',['fullscreen',['../dc/d6d/structnana_1_1detail_1_1basic__window_1_1flags__type.html#ace83da0cf3c46fabcd4ab5f7ad651ba2',1,'nana::detail::basic_window::flags_type']]],
   ['functor',['functor',['../da/d89/structnana_1_1drawerbase_1_1menu_1_1menu__item__type.html#afa00bf2472aa061cae259d58e7fd005b',1,'nana::drawerbase::menu::menu_item_type']]]

@@ -32,6 +32,9 @@ var hierarchy =
     [ "std::iterator< std::input_iterator_tag, cat_proxy >", "http://en.cppreference.com/w/cpp/iterator/iterator.html", [
       [ "nana::drawerbase::listbox::cat_proxy", "da/d11/classnana_1_1drawerbase_1_1listbox_1_1cat__proxy.html", null ]
     ] ],
+    [ "std::iterator< std::input_iterator_tag, directory_entry >", "http://en.cppreference.com/w/cpp/iterator/iterator.html", [
+      [ "nana::experimental::filesystem::directory_iterator", "de/d1b/classnana_1_1experimental_1_1filesystem_1_1directory__iterator.html", null ]
+    ] ],
     [ "std::iterator< std::input_iterator_tag, FileInfo >", "http://en.cppreference.com/w/cpp/iterator/iterator.html", [
       [ "nana::filesystem::basic_file_iterator< FileInfo >", "da/d49/classnana_1_1filesystem_1_1basic__file__iterator.html", null ]
     ] ],
@@ -387,6 +390,11 @@ var hierarchy =
       [ "nana::arg_treebox", "df/df9/structnana_1_1arg__treebox.html", null ],
       [ "nana::arg_unload", "d0/d2c/structnana_1_1arg__unload.html", null ]
     ] ],
+    [ "nana::experimental::filesystem::attribute", "d8/d05/structnana_1_1experimental_1_1filesystem_1_1attribute.html", null ],
+    [ "nana::experimental::filesystem::directory_entry", "de/d41/structnana_1_1experimental_1_1filesystem_1_1directory__entry.html", null ],
+    [ "nana::experimental::filesystem::file_status", "d3/db2/classnana_1_1experimental_1_1filesystem_1_1file__status.html", null ],
+    [ "nana::experimental::filesystem::path", "dc/d03/classnana_1_1experimental_1_1filesystem_1_1path.html", null ],
+    [ "nana::experimental::filesystem::space_info", "d7/dfd/structnana_1_1experimental_1_1filesystem_1_1space__info.html", null ],
     [ "nana::facade< Element >", "d7/d15/classnana_1_1facade.html", null ],
     [ "nana::filebox", "d0/d73/classnana_1_1filebox.html", null ],
     [ "nana::filebox::implement", "da/ddb/structnana_1_1filebox_1_1implement.html", null ],
@@ -578,7 +586,10 @@ var hierarchy =
         ] ],
         [ "nana::widget_object< std::conditional< HasBackground, category::widget_tag, category::lite_widget_tag >::type, drawerbase::panel::drawer >", "d3/d95/classnana_1_1widget__object.html", [
           [ "nana::panel< HasBackground >", "d1/d87/classnana_1_1panel.html", null ],
-          [ "nana::panel< false >", "d1/d87/classnana_1_1panel.html", null ]
+          [ "nana::panel< false >", "d1/d87/classnana_1_1panel.html", null ],
+          [ "nana::panel< true >", "d1/d87/classnana_1_1panel.html", [
+            [ "nana::group", "d6/d61/classnana_1_1group.html", null ]
+          ] ]
         ] ],
         [ "nana::widget_object< std::conditional< IsLite, category::lite_widget_tag, category::widget_tag >::type, splitter_dtrigger >", "d3/d95/classnana_1_1widget__object.html", [
           [ "nana::place_parts::splitter< IsLite >", "dd/dcd/classnana_1_1place__parts_1_1splitter.html", null ],
