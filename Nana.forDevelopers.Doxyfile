@@ -743,8 +743,9 @@ WARN_LOGFILE           =
 # spaces.
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = ../nana \
-                         source
+INPUT                  = source \
+                         ../nana/include \
+                         ../nana/source
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses
@@ -812,7 +813,20 @@ RECURSIVE              = YES
 # Note that relative paths are relative to the directory from which doxygen is
 # run.
 
-EXCLUDE                = 
+EXCLUDE                = ../nana/.git \
+                         ../nana/.idea \
+                         ../nana/build \
+                         ../nana/cmake-build-debug \
+                         ../nana/extrlib \
+                         ../nana/lib \
+                         ../nana-demo/.git \
+                         ../nana-demo/.idea \
+                         ../nana-demo/bin \
+                         ../nana-demo/cmake-build-debug \
+                         ../nana-demo/codelite \
+                         ../nana-demo/nana-demo-projects-vc2013 \
+                         ../nana-demo/nana-demo-projects-vc2015 \
+                         ../nana-demo/nana-demo-projects-vc2017
 
 # The EXCLUDE_SYMLINKS tag can be used to select whether or not files or
 # directories that are symbolic links (a Unix file system feature) are excluded
@@ -828,7 +842,20 @@ EXCLUDE_SYMLINKS       = NO
 # Note that the wildcards are matched against the file with absolute path, so to
 # exclude all test directories for example use the pattern */test/*
 
-EXCLUDE_PATTERNS       = 
+EXCLUDE_PATTERNS       = ../nana/.git/* \
+                         ../nana/.idea/* \
+                         ../nana/build/* \
+                         ../nana/cmake-build-debug/* \
+                         ../nana/extrlib/* \
+                         ../nana/lib/* \
+                         ../nana-demo/.git/* \
+                         ../nana-demo/.idea/* \
+                         ../nana-demo/bin/* \
+                         ../nana-demo/cmake-build-debug/* \
+                         ../nana-demo/codelite/* \
+                         ../nana-demo/nana-demo-projects-vc2013/* \
+                         ../nana-demo/nana-demo-projects-vc2015/* \
+                         ../nana-demo/nana-demo-projects-vc2017/*
 
 # The EXCLUDE_SYMBOLS tag can be used to specify one or more symbol names
 # (namespaces, classes, functions, etc.) that should be excluded from the
