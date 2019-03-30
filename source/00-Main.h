@@ -1,6 +1,6 @@
 /**
 Automatically generated from the source code of Nana.
-\mainpage Reference documentation. {for nana users, hotfix-1.6.1, 2018-07-14}
+\mainpage Reference documentation. {for nana users, hotfix-1.7, 2019-03-30} 
 
 # GUI programming in modern C++ style
 
