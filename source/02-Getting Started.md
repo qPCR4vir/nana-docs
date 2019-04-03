@@ -1,7 +1,7 @@
 
 # Getting Started #
 
-See also:
+See also:   \todo check and actualise links. Add new themes from the Reference and blogs post.
  
  + [An application of Clone Method to Nana C++ Library](http://nanaproject.wordpress.com/2011/03/20/clone_method/) (March 20, 2011 )
  + [An introduction to the image processing interfaces from release of 0.2.2](http://nanaproject.wordpress.com/2012/04/17/an-introduction-to-the-image-processing-interfaces-from-release-of-0-2-2/) (April 17, 2012)
@@ -24,16 +24,16 @@ This chapter shows how to create an small graphical user interface (GUI) applica
 Let's start with a simple program, we will study it line by line. 
 
 \code{.cpp}
-	1 #include <nana/gui/wvl.hpp> 
-	2 #include <nana/gui/widgets/label.hpp> 
-	3 int main() 
-	4 { 
-	5 	nana::form form; 
-	6 	nana::label label(form, nana::rectangle(0, 0, 100, 20)); 
-	7 	label.caption("Hello Nana");
-	8 	form.show(); 
-	9 	nana::exec(); 
-	  } 
+    1 #include <nana/gui/wvl.hpp> 
+    2 #include <nana/gui/widgets/label.hpp> 
+    3 int main() 
+    4 { 
+    5     nana::form form; 
+    6     nana::label label(form, nana::rectangle(0, 0, 100, 20)); 
+    7     label.caption("Hello Nana");
+    8     form.show(); 
+    9     nana::exec(); 
+      } 
 \endcode
 
 Lines 1 and 2 include the definitions of class `form` and class `label` in namespace `nana`. 
@@ -43,13 +43,14 @@ Line 5 defines a `nana::form object`. It is a window used for placing a label wi
 
 Line 6 defines a `nana::label` object to display a text string. The label object is created in the form. A widget is a visual element in the user interface. 
 
-Line 7 sets the caption of the label object. Every widget has a caption for displaying a title. 
+Line 7 sets the caption of the label object. Every widget has a "caption" to display a title or similar function, like a text in a label. 
 
 Line 8 makes the form visible. 
 
 Line 9 passes the control of the application to Nana. At this point, the program enters the event loop for waiting for and receiving a user action, such as mouse move, mouse click and keyboard press. The function `nana::exec` blocks till `form` is destroyed, and what the example demonstrate is that the program exits when a user closes the window. 
 
 ![Figure 1.1 Hello Nana](HelloNana.jpg)
+\todo correct links
 
 Now, you can run the program on your own machine. But firstly you should have Nana C++ Library 
 installed in your system. A method to install is explained in [Installation Library Documentation](http://nanapro.org/en-us/help/instl_lib_doc.htm) in Nana Programmer`s Guide or [in the wiki](https://github.com/qPCR4vir/nana-docs/wiki/Installation) 
@@ -61,15 +62,14 @@ installed in your system. A method to install is explained in [Installation Libr
 
 The second example shows how to respond a user action. To receive a user action, an event 
 handler should be registered to a widget. Nana waits for a user action and invokes the event 
-handler of the corresponding event. The example application consists of a button that the user can click to quit. 
+handler of the corresponding event. This example application consists of a button that the user can click to quit. 
 
 \include Examples\helloword_quit.cpp
 This source code is similar to Hello Nana, except that we are using a button instead of a label, and 
-we are making an event to respond a user click. Every widget class has a set of methods to make events, 
-they are named "events()". The parameter of the member function is an 
-event handler. As above code shown, we make the `API::exit()` as an event handler for the button's click event. 
-The `exit()` function is an API in Nana C++ Library. It closes all windows in current GUI thread and terminates 
-the event loop. It will be called when the user clicks the button. 
+we are making an event to respond a user click. Every widget class has a set of methods to set events handlers. 
+They are named "events()". The parameter of the member function is an 
+event handler. As above code shown, we set `nana::API::exit_all()` as an event handler for the button's click event. 
+The `exit_all()` function is one of the  nana::API functions offered by the Nana C++ Library. It closes all windows in current GUI thread and terminates the event loop. In this example it will be called when the user clicks the button. 
 
 ![Figure 1.2 Event Example](Quit.jpg)
  
@@ -84,7 +84,7 @@ A few comments:
 \dontinclude notepad.cpp
 
 \skipline notepad_form
-We need among others to create the `menubar` and `textbox`, and set the layout for the form.
+We need a form among others to create a `menubar` and a `textbox`, and to set the layout.
 
 \skip  borderless(true);
 \until API::effects_edge_nimbus 
@@ -92,27 +92,28 @@ Disables the border and edge numbus effect of the textbox.
 
 \skip  events().mouse_dropfiles
 \until });
-Sets a Drag'n Drop event for the textbox, it allows user to open a file by dragging the file outside of the program and dropping the file inside the program. 
-The call of _m_ask_save() here is to try to ask user to save the edited text.
+Sets a Drag'n Drop event for the textbox. It allows user to open a file by dragging the file from outside of the program and dropping it inside the program. 
+The call of _m_ask_save() here is to try to ask the user to save the edited text.
 
 \skip  events().unload
 \until  });
-Sets an unload event for the form, it enables program to ask user to save the edited text when closing the program, and if user cancels the messagebox, the program stops closing.
+Sets an unload event for the form. It enables the program to ask the user to save the edited text when closing the program, and if the user cancels the messagebox, the program stops closing.
 
 \skipline _m_pick_file
-We start with a private member function `_m_pick_file()`, this function is to tell user to select a file.
+We start with private member functions. `_m_pick_file()` is to tell user to select a file.
 
-\skipline return (fbox.show() ?  
-If the user clicks the "cancel" button or closes the dialogue by clicking the 'X' close button, `fbox.show()` returns `false` for no file selection.
+\skipline fbox.show() 
+\until  return (
+If the user clicks the "cancel" button or closes the dialogue by clicking the 'X' close button, `fbox.show()` returns an empty vector of file names.
 
 \skipline _m_ask_save()
-This function will have asked user to save the text to a file by the time the text is closed.
+This function will ask the user to save the text to a file by the time the text is closed.
  
 \skipline (textbox_.edited())
 Determines whether the text has been edited. If there are modifications to the text, then it ask to save it.
 
 \skipline  textbox_.filename
-When the textbox opens a file or saves a text to a file, the textbox will keep the filename. If `fs` is empty, the program asks user to select a file to save the text. `_m_ask_save()` has a return type `bool`. It returns `false` if and only if the user cancel the selection.
+When the textbox opens a file or saves a text to a file, the textbox will keep the filename. If `fs` is empty, the program asks the user to select a file to save the text. 
 
 \skipline _m_make_menus()
 Sets menus for the menubar.
@@ -130,135 +131,90 @@ The function object is an impressive technology. A function object is a more gen
 
 \code{.cpp}
 
-	class sum 
-	{ public: 
-		sum() : i_(0) {} 
-		operator int() const volatile { return i_; } 
-					   //this makes the objects of this class can be used like a function. 
-		void operator()(int x) volatile { i_ += x; } 
-	  private: 
-		int i_; 
-	}; 
+    class sum 
+    { public: 
+        sum() : i_(0) {} 
+        operator int() const volatile { return i_; } 
+                       
+        //this makes the objects of this class usable like a function. 
+        void operator()(int x) volatile { i_ += x; } 
+      private: 
+        int i_; 
+    }; 
 
-	void foo(const std::vector<int>& v) 
-	{ 			//gather the sum of all elements. 
-	   std::cout<<std::for_each(v.begin(), v.end(), sum())<<std::endl; 
-	} 
+    void foo(const std::vector<int>& v) 
+    {             
+       //gather the sum of all elements. 
+       std::cout<<std::for_each(v.begin(), v.end(), sum())<<std::endl; 
+    } 
 \endcode
 
 `std::for_each()` returns a copy of the object `sum`, and we are able to retrieve the state or result. 
-On the basis of the feature that function objects retain its own state, it is easy used for concurrency process, and it is extensively used for providing flexibility in the library implementation.
 
-Nana C++ Library uses a large number of function objects to make the framework work. To make the framework flexible enough, Nana C++ Library uses the general std::function class template.
+On the basis of the feature that function objects retain its own state, it is easy used for concurrent process, and it is extensively used for providing flexibility in the library implementation. To make the framework flexible enough, Nana C++ Library uses the general std::function class template. There are four different types of event handlers that can be processed. It is flexible and reduce the complexity of study and use. 
 
-There are four different types of event handlers that can be processed. It is flexible and reduce the complexity of study and use. 
-
-In the previous example, we illustrated the use of std::function and the flexibility of using a 
-function object. Practically, creating a functor object is not required. Using these 
-functions this way instead of creating a functor: ?????
+But creating a functor object is not required. Using functions directly is also allowed: 
 
 \code{.cpp}
-	int main() 
-	{ 
-		using namespace nana; 
-		form fm; 
-		click_stat cs; 
-		fm.events().click(foo); 
-		fm.events().click(cs, &click_stat::respond); 
-		fm.events().click(foo_with_eventinfo); 
-		fm.events().click(cs, &click_stat::respond_ei); 
-		fm.show(); 
-		exec(); 
-	} 
+    int main() 
+    { 
+        using namespace nana; 
+        form fm; 
+        click_stat cs; 
+        fm.events().click(foo); 
+        fm.events().click(cs, &click_stat::respond); 
+        fm.events().click(foo_with_eventinfo); 
+        fm.events().click(cs, &click_stat::respond_ei); 
+        fm.show(); 
+        exec(); 
+    } 
 \endcode
 ![Figure 2.1 Various methods to make events to respond click.] (make_event.jpg)
 
 Or  more elaborated:
-\include C:\Prog\ExtLib\nana-demo\Examples\various_events.cpp
+\include Examples\various_events.cpp
 ![](https://raw.githubusercontent.com/qPCR4vir/nana-demo/master/Examples/events.png)
 
-\subsection Predefined Predefined Function Objects (is this in use?)
-
-Nana C++ Library includes many different predefined function objects. Using these 
-function objects together with function templates increases the expressive power of 
-the library as well as making the resulting code much more efficient. For example, if
-a C++ program wants to close the form when the form is being clicked. 
-
-\code{.CPP}
-	form.events().click(destroy(form)); 
-\endcode
-
-Please include <nana/gui/functional.hpp> before using these function objects. 
-
-\code{.CPP}
-	class destroy 
-	{ public: 
-		destroy(nana::window wd); 
-		void operator()() const; 
-	}; 
-\endcode
-
-Destroy the window. 
-
-\code{.CPP}
-	class hide 
-	{ public: 
-		hide(nana::window wd); 
-		void operator()() const; 
-	}; 
-\endcode
-
-Hide the window.
- 
-\code{.CPP}
-	class show 
-	{ public: 
-		show(nana::window wd); 
-		void operator()() const; 
-	}; 
-\endcode
-
-Show the window. 
 
 \subsection Lambda The Lambda Expression 
 
 A lambda expression is a mechanism for specifying a function object. The lambda 
-is a new feature that introduced into C++ language recently, the primary use for a 
+is a feature introduced in C++11. The primary use for a 
 lambda is to specify a simple action to be performed by some functions. For example: 
 
 \code{.CPP}
-	#include <nana/gui/wvl.hpp> 
-	#include <iostream> 
-	int main() 
-	{ 
-		nana::form form; 
-		form.events().click( 
-			[]{ std::cout<<"form is clicked"<<std::endl; } 
-			); 
-		form.show(); 
-		nana::exec(); 
-	} 
+#include <nana/gui/wvl.hpp> 
+#include <iostream> 
+int main() 
+{ 
+    nana::form form; 
+    form.events().click( 
+                         []{ std::cout<<"form is clicked"<<std::endl; } 
+                        ); 
+    form.show(); 
+    nana::exec(); 
+} 
 \endcode
 
-The argument []{ std::cout<<"form is clicked"<<std::endl; } is a "lambda" 
-(or "lambda function" or "lambda expression") in C++11 language. A lambda starts with plain [],
-and compound-state block {} defines a function body. In fact, A lambda defines an anonymous 
-function object, and therefore a lambda could be invoked through a function-call syntax. 
+The argument: 
+\code{.CPP}
+[]{ std::cout<<"hello, Nana"<<std::endl; }(); 
+\endcode
+
+is a "lambda" (or "lambda function" or "lambda expression") in C++11 language. A lambda starts with plain `[]`,
+and the compound-state block `{}` defines a function body. In fact, A lambda defines an anonymous 
+function object, and therefore a lambda could be invoked through a function-call syntax. The use of lambda is creating an anonymous function object and so arguments can be specified. For example: 
 
 \code{.CPP}
-	[]{ std::cout<<"hello, Nana"<<std::endl; }(); 
+   form.events().click( [](const nana::arg_click& ei) 
+                        {  if (ei.mouse_args)
+                              std::cout << "mouse pos=(" << ei.mouse_args.pos.x << ", "
+                                                         << ei.mouse_args.pos.y << std::endl;
+                        } 
+                      ); 
 \endcode
 
-The use of lambda is creating an anonymous function object and so the arguments should be specified. For example: 
-
-\code{.CPP}
-	form.events().click( 
-			[](const nana::arg_mouse& ei) 
-			{ std::cout<<"mouse pos=("<<ei.pos.x<<", "<<ei.pos.y <<std::endl;} 
-		); 
-\endcode
-
-The lambda-declarator () is used like a parameter-list. Let's stop the introduction to the lambda, if you want more details of lambda, please refer to other C++ books. 
+The lambda-declarator () is used like a parameter-list. Let's stop the introduction to the lambda, if you want more details of lambda, please refer to other [C++ documentation](https://en.cppreference.com/w/cpp/language/lambda). 
 
 
 \section forms   Creating forms  
@@ -380,16 +336,16 @@ Nana C++ Library will manage the form objects created by form_loader and destroy
 
 \include loader_1.cpp
 nana::form_loader is a template functor class. It creates an object of the template 
-parameter class. nana::form_loader is useful when you create a form and don't want to 
+parameter class. This is useful when you create a form and don't want to 
 take care about the lifetime of the object. Continuing with the next example, we see a form 
 is created when the button is being clicked. 
 
 \include loader_2.cpp
-In fact, a form_loader object can be passed to make_event because it is a functor. 
-Take a look at above code: form would not be shown immediately after initialization, 
+In fact, a form_loader object can be passed to some events() because it is a functor. 
+Take a look at the above code: form would not be shown immediately after initialization, 
 and the show() method is need to call explicitly after creating the form by form_loader. 
 Therefore, only an invisible form created by the form_loader object we can get, if we pass 
-the form_loader object like above code to the make_event. A way to achieve it is calling the 
+the form_loader object like above code to the event. A way to achieve it is calling the 
 show() method in that constructor of class, but in most instances, we are not enable to modify 
 the code of the classes, and therefore we need a correct solution. The form_loader has two 
 template parameters, the first is used for specifying a type of form, the second is a non-type 
@@ -397,7 +353,7 @@ template parameter and its type is bool named IsMakeVisible, used for determinin
 the form visible. So, we can specify the second template parameter by giving true, like this. 
 
 \code{.CPP}
-	btn.events().click(form_loader<form, true>()); 
+    btn.events().click(form_loader<form, true>()); 
 \endcode
 
 See also [this discussion](https://nanapro.codeplex.com/discussions/443128).
@@ -410,15 +366,16 @@ while the form is active. This is what makes the form modal, the user can not in
 with its owner window until the form is closed. Modal form is useful to block the program 
 execution and wait for a user input. For example:
 
-\ include modal_form.cpp
-Call nana::API::modal_window() to enable modal form. Only if an owner is 
-specified for the form initialization, will the form enable as modal form. The 
-object fm in function foo() is created and specified ei.window as its owner. The 
-ei.window refers to the form that is defined in function main(), and passed by event argument. 
+\include modal_form.cpp
 
+Call nana::API::modal_window() to enable modal form. Only if an owner is 
+specified for the form initialization, will be the form enable as modal form. The 
+object `fm` in function `foo()` is created and specified `ei.window` as its owner. The 
+`ei.window` refers to the form that is defined in function `main()`, and passed by the event argument. 
 
 
 \section appear_doc Appearance of Window 
+\todo add doxy comments to nana::appearance
 
 A window has an appearance. This appearance can be specified when a window is being created. 
 To determine the appearance of a window there is a structure named nana::appearance with 
@@ -437,30 +394,30 @@ that return a corresponding nana::appearance with predefined values.
  
 \code{.CPP}
 namespace nana {
-	struct appear 
-	{ 
-		struct minimize; 
-		struct maximize; 
-		struct sizable; 
-		struct taskbar; 
-		struct floating; 
-		struct no_activate; 
-		template<   typename Minimize = null_type, 
-					typename Maximize = null_type, 
-					typename Sizable = null_type, 
-					typename Floating = null_type, 
-					typename NoActive = null_type   > struct decorate; 
-		template<   typename Taskbar = null_type, 
-					typename Floating = null_type, 
-					typename NoActive = null_type, 
-					typename Minimize = null_type, 
-					typename Maximize = null_type, 
-					typename Sizable = null_type   > struct bald; 
-		template<   bool HasDecoration = true, 
-					typename Taskbar = null_type, 
-					typename Floating = null_type, 
-					typename NoActive = null_type > struct optional; 
-	}; }}
+    struct appear 
+    { 
+        struct minimize; 
+        struct maximize; 
+        struct sizable; 
+        struct taskbar; 
+        struct floating; 
+        struct no_activate; 
+        template<   typename Minimize = null_type, 
+                    typename Maximize = null_type, 
+                    typename Sizable = null_type, 
+                    typename Floating = null_type, 
+                    typename NoActive = null_type   > struct decorate; 
+        template<   typename Taskbar = null_type, 
+                    typename Floating = null_type, 
+                    typename NoActive = null_type, 
+                    typename Minimize = null_type, 
+                    typename Maximize = null_type, 
+                    typename Sizable = null_type   > struct bald; 
+        template<   bool HasDecoration = true, 
+                    typename Taskbar = null_type, 
+                    typename Floating = null_type, 
+                    typename NoActive = null_type > struct optional; 
+    }; }}
 \endcode
 
 These templates generate appearances. Every template receives the template parameters for specifying the attributes of the appearance. 
@@ -547,20 +504,20 @@ int main()
 } 
 \endcode
 
-As shown in above code, `event()` is a member template of class widget, and it is
+As shown in above code, `events()` is a member template of class widget, and it is
 used for registering an event handler. The above code makes a click event for the `form` object.
 When the user clicks the body of the form, Nana is responsible for invoking the function `foo()`
 registered as a handler of the specified event. Additionally, the function `foo()` can be 
-specified with a parameter of type `const nana::arg_mouse&` to receive the information 
-of the event. See details of `eventinfo` are described in section 6.2. 
+specified with a parameter of type `const nana::arg_click&` to receive the information 
+of the event. See details of `nana::general_events` are described in section 6.2. 
 \see 
 
-The `event()` returns a handle of event handler if the registration is successful. 
+The `events()` returns a handle of event handler if the registration is successful. 
 The type of the return value is nana::event_handle. With this handle, we can delete the event handler manually. For example:
 
 \code{.cpp}
-	event_handle handle = fm.events().click(foo); 
-	fm.umake_event(handle); 
+    event_handle handle = fm.events().click(foo); 
+    fm.umake_event(handle); 
 \endcode
 
 After calling the umake_event(), the `foo()` function would be not invoked when the user clicks the body of form. 
@@ -575,19 +532,19 @@ The classes for event types are defined in the namespace nana, such as `click`, 
 Every event contains some information. The information is sent to the application through a (const) reference to an `eventinfo` object in event handler. 
 
 \code{.cpp}
-	#include <nana/gui/wvl.hpp> 
-	void foo(const nana::arg_click& ei) 
-	{ 
-		//Refer to ei for information of event. 
-	} 
-	int main() 
-	{ 
-		using namespace nana; 
-		form fm; 
-		fm.events().click(foo); 
-		fm.show(); 
-		exec(); 
-	} 
+    #include <nana/gui/wvl.hpp> 
+    void foo(const nana::arg_click& ei) 
+    { 
+        //Refer to ei for information of event. 
+    } 
+    int main() 
+    { 
+        using namespace nana; 
+        form fm; 
+        fm.events().click(foo); 
+        fm.show(); 
+        exec(); 
+    } 
 \endcode
 
 Nana.GUI provides some raw events, such as `click`, `mouse_move` and so on. 
@@ -596,49 +553,49 @@ like `unload` for `root widget` and `elapse` for `timer`.
 
 Every widget has an interface for registering an event, named `events()`.    \todo Actualize events and arg!
 
-The events are:
+\See: nana::general_events and nana::event_arg
 
-Event	     	    | argument	|	Description
+Event                 | argument    |    Description
 --------------------|----|-----------------------------------
-nana::general_events::click		    | nana::arg_click	| A mouse click event.
- dbl_click	    | nana::arg_mouse	| A mouse double click event.
- mouse_enter	| nana::arg_mouse	| A mouse enters a widget.
- mouse_move	| nana::arg_mouse	| A mouse moves over a widget.
- mouse_leave	| nana::arg_mouse	| A mouse leaves a widget.
- mouse_down	| nana::arg_mouse	| A mouse button is pressed on a widget.
- mouse_up	    | nana::arg_mouse	| A mouse button is released on a widget.
- mouse_wheel	| nana::arg_wheel	| A mouse scrolls the wheel on a widget.
- mouse_dropfiles	| nana::arg_dropfiles	| A mouse release over a window that is registered as recipient of drag and drop.
+nana::general_events::click            | nana::arg_click    | A mouse click event.
+ dbl_click        | nana::arg_mouse    | A mouse double click event.
+ mouse_enter    | nana::arg_mouse    | A mouse enters a widget.
+ mouse_move    | nana::arg_mouse    | A mouse moves over a widget.
+ mouse_leave    | nana::arg_mouse    | A mouse leaves a widget.
+ mouse_down    | nana::arg_mouse    | A mouse button is pressed on a widget.
+ mouse_up        | nana::arg_mouse    | A mouse button is released on a widget.
+ mouse_wheel    | nana::arg_wheel    | A mouse scrolls the wheel on a widget.
+ mouse_dropfiles    | nana::arg_dropfiles    | A mouse release over a window that is registered as recipient of drag and drop.
  expose        | nana::arg_expose | the visibility changes
- resizing	    |  nana::arg_resizing | A widget's size is changing.
+ resizing        |  nana::arg_resizing | A widget's size is changing.
  resized       |  nana::arg_resized  | A widget's size changed.
- destroy		| nana::arg_destroy	| The window is destroyed, but occurs when all children have been destroyed
- focus		    | nana::arg_focus	| A widget's focus is changed.
+ destroy        | nana::arg_destroy    | The window is destroyed, but occurs when all children have been destroyed
+ focus            | nana::arg_focus    | A widget's focus is changed.
  key_press     | nana::arg_keyboard | a key is pressed while the window has focus. event code is event_code::key_press
  key_release   | nana::arg_keyboard | a key is released while the window has focus. event code is event_code::key_release
- key_char	    | nana::arg_keyboard | a character, whitespace or backspace is pressed. event code is event_code::key_char. The nana::focus widget received a character.
- shortkey	    | nana::arg_keyboard	| a defined short key is pressed. event code is event_code::shortkey. The widgets received a shortkey message.
+ key_char        | nana::arg_keyboard | a character, whitespace or backspace is pressed. event code is event_code::key_char. The nana::focus widget received a character.
+ shortkey        | nana::arg_keyboard    | a defined short key is pressed. event code is event_code::shortkey. The widgets received a shortkey message.
 nana::move          | nana::arg_move  | the window changes position
 
 \deprecated  ?
- elapse		|	| A widget received a tick that is sended by timer.
- unload		|	| A form is closed by clicking the X button, only works for root widget.
- key_up		|	| A keyboard is released on a focus widget.
- key_down	|	| A keyboard is pressed on a focus widget.
+ elapse        |    | A widget received a tick that is sended by timer.
+ unload        |    | A form is closed by clicking the X button, only works for root widget.
+ key_up        |    | A keyboard is released on a focus widget.
+ key_down    |    | A keyboard is pressed on a focus widget.
 
-				
+                
 A user-defined event function may have a parameter of type `const nana::event_arg&` for querying the event information, such as mouse position.
 
 \code{.cpp}
-	void foo();
-	void foo_with_parameter(const nana::arg_click&);
-	class user_def_functor
-	{ public:
-	   void operator()(const nana::arg_click&); 		 //user-defined function must have the parameter.
-	};
-	nana::button().events().click( foo                );
-	nana::button().events().click( foo_with_parameter );
-	nana::button().events().click( user_def_functor{} );
+    void foo();
+    void foo_with_parameter(const nana::arg_click&);
+    class user_def_functor
+    { public:
+       void operator()(const nana::arg_click&);          //user-defined function must have the parameter.
+    };
+    nana::button().events().click( foo                );
+    nana::button().events().click( foo_with_parameter );
+    nana::button().events().click( user_def_functor{} );
 \endcode
 
 `events()` members like click() return a handle for uninstalling the associated user-defined event function and Nana.GUI destroys the user-defined event function automatically when the widget is beginning to get destroyed.
@@ -646,7 +603,7 @@ A user-defined event function may have a parameter of type `const nana::event_ar
 This just describes these raw events, but some widgets like nana::treebox provides some high-level events, 
 such as expanding a node. These details are only described in its reference. 
 
-For different events, the `event_arg` contains different structures for these event types. The following paragraphs describe the details of event_arg. 
+For different events, the `event_arg` contains different structures for these event types. The following paragraphs describe the details of nana::event_arg. 
 
 
 \subsubsection mous Mouse Events  
@@ -657,43 +614,43 @@ the system would generate a `nana::general_events::mouse_move` event to notify t
 The structure of mouse events uses the nana::arg_mouse: 
 
 \code{.cpp}
-	struct arg_mouse
-		: public event_arg
-	{
-		event_code evt_code; ///< 
-		::nana::window window_handle;  ///< A handle to the event window
-		::nana::point pos;   ///< cursor position in the event window
-		::nana::mouse button;	///< indicates a button which triggers the event
+    struct arg_mouse
+        : public event_arg
+    {
+        event_code evt_code;           ///< kind of mouse event
+        ::nana::window window_handle;  ///< A handle to the event window
+        ::nana::point pos;             ///< cursor position in the event window
+        ::nana::mouse button;          ///< indicates a button which triggers the event
 
-		bool left_button;	///< mouse left button is pressed?
-		bool mid_button;	///< mouse middle button is pressed?
-		bool right_button;	///< mouse right button is pressed?
-		bool alt;			///< keyboard alt is pressed?
-		bool shift;			///< keyboard Shift is pressed?
-		bool ctrl;			///< keyboard Ctrl is pressed?
+        bool left_button;     ///< mouse left button is pressed?
+        bool mid_button;      ///< mouse middle button is pressed?
+        bool right_button;    ///< mouse right button is pressed?
+        bool alt;             ///< keyboard alt is pressed?
+        bool shift;           ///< keyboard Shift is pressed?
+        bool ctrl;            ///< keyboard Ctrl is pressed?
 
-		/// Checks if left button is operated,
-		bool is_left_button() const
-		{
-			return (event_code::mouse_move == evt_code ? left_button : (mouse::left_button == button));
-		}
-	};
+        /// Checks if left button is operated,
+        bool is_left_button() const
+        {
+            return (event_code::mouse_move == evt_code ? left_button : (mouse::left_button == button));
+        }
+    };
 \endcode
 
 The structure of mouse wheel event contains nana::arg_wheel: 
 
 \code{.cpp}
-	struct arg_wheel : public arg_mouse
-	{
-		enum class wheel{
-			vertical,
-			horizontal
-		};
+    struct arg_wheel : public arg_mouse
+    {
+        enum class wheel{
+            vertical,
+            horizontal
+        };
 
-		wheel	which;		///< which wheel is rotated
-		bool	upwards;	///< true if the wheel is rotated to the top/left, depends on which and false otherwise
-		unsigned distance;	///< expressed in multiples or divisions of 120
-	};
+        wheel    which;        ///< which wheel is rotated
+        bool    upwards;    ///< true if the wheel is rotated to the top/left, depends on which and false otherwise
+        unsigned distance;    ///< expressed in multiples or divisions of 120
+    };
 \endcode
 
 In an event handler function, we can refer to the structure by using nana::event_arg or some other base argument. For example: 
@@ -706,8 +663,8 @@ void foo(const nana::arg_mouse& ae)
     { default:            
                           //refers to the structure of mouse events in arg_mouse. 
              break; 
-    case evt_code::mouse_wheel: 
-                         //refers to the structure of mouse_wheel event. 
+      case evt_code::mouse_wheel: 
+                          //refers to the structure of mouse_wheel event. 
             break; 
     } 
 } 
@@ -726,19 +683,19 @@ void foo(const nana::event_arg& ea)
 } 
 \endcode
 
-To receive a mouse event, register the event with the specific type.
-\code{.cpp}
-	click/dbl_click 
-\endcode
-
 When the user clicks a mouse button and the mouse cursor is in a widget, the widget receives a click event that is generated by Nana.
 \code{.cpp}
-	mouse_enter/mouse_move/mouse_leave 
+    click
+\endcode
+
+To receive a mause event, register the event with the types:
+\code{.cpp}
+    mouse_enter/mouse_move/mouse_leave/dbl_click  
 \endcode
 
 This event is sent to a widget when the mouse cursor enters/leaves the widget. 
 \code{.cpp}
-	mouse_down/mouse_up 
+    mouse_down/mouse_up 
 \endcode
 
 This event is sent when the user presses/releases/moves the mouse while the mouse cursor is in a widget. 
@@ -756,18 +713,19 @@ There are four different kinds of keyboard events in the Nana C++ Library:
 
 A window system usually uses an input focus to represent a window which would receive the keyboard events. In general, the user clicks on a window to set the input focus in the Nana C++ Library. Additionally, the program can set which window gets the input focus by calling nana::API::focus_window(window wd) or the member function nana::widget::focus().
  
-The structure of a keyboard event contains:
+The structure of a keyboard events contains:
  
 \code{.cpp}
-	struct arg_keyboard : public event_arg
-	{
-		event_code evt_code;	    ///< it is event_code::key_press in current event
-		::nana::window window_handle;	///< A handle to the event window
-		mutable wchar_t key;	    ///< the key corresponding to the key pressed
-		mutable bool ignore;	    ///< this member is not used
-		bool ctrl;	                ///< keyboard Ctrl is pressed?
-		bool shift;	                ///< keyboard Shift is pressed
-	};
+    struct arg_keyboard : public event_arg
+    {
+        event_code evt_code;             ///< it is event_code::key_press in current event
+        ::nana::window window_handle;    ///< A handle to the event window
+        mutable wchar_t key;             ///< the key corresponding to the key pressed
+        mutable bool ignore;             ///< this member is not used
+        bool alt
+        bool ctrl;                       ///< keyboard Ctrl is pressed?
+        bool shift;                      ///< keyboard Shift is pressed
+    };
 \endcode
 
 As the definition shown, the members `key` and `ignore` are defined as `mutable`, this feature will be explained later.
