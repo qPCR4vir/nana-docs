@@ -146,6 +146,7 @@ Draw a 10 X 10 red rectangle at the point(5, 5).
 */
 
 /**\example animate-bmp.cpp
+![](animate-bmp.png)
 */
 
 /**\example filebox-txt.cpp
@@ -238,16 +239,12 @@ and [nana::drawing and nana::API::update_window ](https://nanapro.codeplex.com/d
 */
 
 /**\example widget_show.cpp
-![]( )
-
 */
 
 /**\example widget_show2.cpp
-![]( )
-
+![](widget_show2.png)
 */
 
 /**\example listbox_inline_widget.cpp
 ![Inline Widget Screenshot](http://nanapro.org/wiki_img/listbox_inline_widget/screenshot.png)
-
 */

@@ -1,19 +1,26 @@
 /**
 Automatically generated from the source code of Nana.
-\mainpage Reference documentation. {for nana users, hotfix-1.7, 2019-03-30} 
+\mainpage Reference documentation. {for nana users, hotfix-1.7.2, 2019-12-04}
 
 # GUI programming in modern C++ style
 
 ![by Jinhao](nana.jpg)
 
- 
-+ [Nana C++ Library - An Open Source C++ Project](http://nanapro.org/):,  [Discussion: ideas, questions, bugs](http://nanapro.org/en-us/discuss.htm)
-+ Repository & issues on [GitHub ](https://github.com/cnjinhao/nana), Download & tickets on [Sourceforge](https://sourceforge.net/projects/nanapro/), old code and discussions on [CodePlex](https://nanapro.codeplex.com/)
-+ Documentation: [Reference Manuals](http://nanapro.org/en-us/help/index.htm), [Nana Wiki](https://github.com/qPCR4vir/nana-docs/wiki), [Doxygen-sources for this site](https://github.com/qPCR4vir/nana-docs), [this on-line Doxy-Docs](http://qpcr4vir.github.io/nana-doxy/html/index.html) 
+[TOC]
+
+\section repo Repository, downloads and documentation:
+
++ The official page: [Nana C++ Library - An Open Source C++ Project](http://nanapro.org/):,  (Include a FORUM)
++ Repository, PR, download & issues on [GitHub ](https://github.com/cnjinhao/nana), Additional download from [Sourceforge](https://sourceforge.net/projects/nanapro/).
+ Old code and discussions on [CodePlex](https://nanapro.codeplex.com/)
++ Documentation: [Reference Manuals](http://nanapro.org/en-us/help/index.htm), [Nana Wiki](https://github.com/qPCR4vir/nana-docs/wiki),
+ [Doxygen-sources for this site](https://github.com/qPCR4vir/nana-docs), [this on-line Doxy-Docs](http://qpcr4vir.github.io/nana-doxy/html/index.html)
 + Blogs: [Sourceforge](https://sourceforge.net/p/nanapro/blog/), [Nana's Mill - WordPress](https://nanaproject.wordpress.com/)
 + [User reference documentation](../../nana.Doxygen/html/index.html), [Developers reference documentation](../../nana.dev.Doxygen/html/index.html)
-+ \link nana::widget Widgets\endlink: 
-\link nana::button button\endlink, 
+
+\section widgets Widgets:
+
++ \link nana::button button\endlink,
 \link nana::categorize categorize\endlink, 
 \link nana::checkbox checkbox\endlink,  
 \link nana::combox combox\endlink, 
@@ -37,16 +44,19 @@ Automatically generated from the source code of Nana.
 \link nana::textbox textbox\endlink,  
 \link nana::toolbar toolbar\endlink,  
 \link nana::treebox treebox\endlink,  
+\link nana::widget \endlink
 
-+ \link nana::paint Paint\endlink: 
-\link nana::animation animation\endlink,  
+\section paint Paint:
+
++ \link nana::animation animation\endlink,
 \link nana::color color\endlink: (
 \link nana::colors colors\endlink, 
 \link nana::color_proxy color_proxy\endlink, 
 \link nana::widget_colors widget_colors\endlink,  
 \link nana::paint::pixel_buffer pixel_buffer\endlink),  
 \link nana::display display\endlink,  
-\link nana::real_display real_display\endlink,  
+\link nana::real_display real_display\endlink,
+\link nana::paint \endlink,
 \link nana::paint::font font\endlink,  
 \link nana::paint::graphics graphics\endlink,  
 \link nana::drawing drawing\endlink,  
@@ -55,8 +65,10 @@ Automatically generated from the source code of Nana.
 \link nana::paint::pixel_buffer pixel_buffer\endlink,  
 \link nana::screen screen\endlink,  
 
-+ Others: 
-\link nana::API API\endlink,  
+
+\section others Others:
+
++ \link nana::API API\endlink,
 \link nana::any any\endlink,  
 \link nana::appearance (appearance)\endlink, 
 \link nana::appear appear\endlink, 
@@ -96,8 +108,9 @@ Automatically generated from the source code of Nana.
 \link nana::threads threads\endlink,  
 \link nana::tooltip tooltip\endlink
 
-+ Exceptions:
-\link nana::thrd_exit thrd_exit\endlink, 
+\section excep Exceptions:
+
++ \link nana::thrd_exit thrd_exit\endlink,
 \link nana::bad_member bad_member\endlink, 
 \link nana::bad_syntax bad_syntax\endlink, 
 \link nana::bad_error bad_error\endlink, 
