@@ -15,38 +15,13 @@
 
 /** \example calculator.cpp
 
-Requires: C++11, Nana 0.5
-
 In this tutorial, we will make a GUI calculator with Nana C++ Library. The calculator that we build will look like:
 
 ![Screenshot of Calculator](calculator.png)
 
-Using nana::place which was introduced in Nana version 0.5, we can create such a GUI easily.
+Using nana::place we can create such a GUI easily.
 
-Let's start the code.
-*/
-
-/** \example freeme.cpp
-
-[The FreeMe](http://nanapro.sourceforge.net/help/tutorials/thefreeme.htm)
-
-![UI of The FreeMe](freeme.png)
-
-The FreeMe is a sample of Nana under Windows, it cleans junk files on system partition. It cleans
-- All files in Windows DLLCache directory.
-- All files in Windows Prefetch dirctory.
-- All files in Temporary Directory.
-- All files in Internet Cache Directory.
-
-What components make up the FreeMe:
-
-form, picture, label, button, progressbar, file_iterator, thread and less than 400 lines source code. Click here to download the package that contains the source code and binrary.
-*/
-
-/**\example demo.cpp11.cpp
-![Widgets Demo on Windows](widget_demo_win.jpg)
-![Widgets Demo on Linux (Fedora17)](widget_demo_linux.jpg)
-[Code](http://searchcode.com/codesearch/view/27847828)
+Let's see the code.
 */
 
 /** \example helloword.cpp

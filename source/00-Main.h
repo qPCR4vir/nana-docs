@@ -117,7 +117,10 @@ Automatically generated from the source code of Nana.
 \link nana::bad_handle bad_handle\endlink, 
 \link nana::bad_window bad_window\endlink, 
 
- 
+\section demo Hello world demo
 
+![Screenshot of helloworld_demo](helloworld_demo.png)
+
+\include helloworld_demo.cpp
 
 */
