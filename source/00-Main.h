@@ -1,6 +1,6 @@
 /**
 Automatically generated from the source code of Nana.
-\mainpage Reference documentation. {for nana users, hotfix-1.7.2, 2019-12-04}
+\mainpage Home.     Reference documentation. {for nana users, hotfix-1.7.2, 2019-12-04}
 
 # GUI programming in modern C++ style
 
@@ -18,7 +18,8 @@ Automatically generated from the source code of Nana.
 + Blogs: [Sourceforge](https://sourceforge.net/p/nanapro/blog/), [Nana's Mill - WordPress](https://nanaproject.wordpress.com/)
 + [User reference documentation](../../nana.Doxygen/html/index.html), [Developers reference documentation](../../nana.dev.Doxygen/html/index.html)
 
-\section widgets Widgets:
+\section qidx Quick index:
+\subsection widgets Widgets:
 
 + \link nana::button button\endlink,
 \link nana::categorize categorize\endlink, 
@@ -46,7 +47,7 @@ Automatically generated from the source code of Nana.
 \link nana::treebox treebox\endlink,  
 \link nana::widget \endlink
 
-\section paint Paint:
+\subsection paint Paint:
 
 + \link nana::animation animation\endlink,
 \link nana::color color\endlink: (
@@ -66,7 +67,7 @@ Automatically generated from the source code of Nana.
 \link nana::screen screen\endlink,  
 
 
-\section others Others:
+\subsection others Others:
 
 + \link nana::API API\endlink,
 \link nana::any any\endlink,  
@@ -108,7 +109,7 @@ Automatically generated from the source code of Nana.
 \link nana::threads threads\endlink,  
 \link nana::tooltip tooltip\endlink
 
-\section excep Exceptions:
+\subsection excep Exceptions:
 
 + \link nana::thrd_exit thrd_exit\endlink,
 \link nana::bad_member bad_member\endlink, 
